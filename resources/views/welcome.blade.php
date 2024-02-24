@@ -44,7 +44,7 @@
             <b class="undangan-pernikahan">Isra Rafi Shidqi & Partner</b>
           </div>
           <div class="buka-undangan-wrapper">
-            <div class="undangan-pernikahan">Buka Undangan</div>
+            <a class="undangan-pernikahan" style="color: white; text-decoration:none;" href="index">Buka Undangan</a>
           </div>
         </div>
       </div>

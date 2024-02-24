@@ -141,3 +141,42 @@
   color: var(--color-peru);
   font-family: var(--font-cormorant-infant);
 }
+
+@media only screen and (max-width: 720px) {
+  .asset-4-icon {
+    width: 230px; /* Sesuaikan lebar sesuai kebutuhan */
+    height: auto; /* Biarkan ketinggian menyesuaikan proporsi */
+    left: -10%; /* Sesuaikan posisi gambar jika diperlukan */
+    opacity: 1; /* Sesuaikan opasitas jika diperlukan */
+    top: 850px;
+  }
+
+  .asset-3-1 {
+    width: 150px; /* Sesuaikan lebar sesuai kebutuhan */
+    height: auto; /* Biarkan ketinggian menyesuaikan proporsi */
+    left: 100%; /* Sesuaikan posisi gambar jika diperlukan */
+    transform: translateX(-50%); /* Pusatkan gambar horizontal */
+    top: 850px;
+  }
+
+  .asset-2-11 {
+    width: 200px; /* Sesuaikan lebar sesuai kebutuhan */
+    height: auto; /* Biarkan ketinggian menyesuaikan proporsi */
+    left: 100%; /* Sesuaikan posisi gambar jika diperlukan */
+    transform: translateX(-50%); /* Pusatkan gambar horizontal */
+    top: -150px; /* Sesuaikan posisi gambar jika diperlukan */
+    opacity: 1; /* Sesuaikan opasitas jika diperlukan */
+    
+  }
+
+  .asset-4-3 {
+    width: 150px; /* Sesuaikan lebar sesuai kebutuhan */
+    height: auto; /* Biarkan ketinggian menyesuaikan proporsi */
+    left: 0; /* Sesuaikan posisi gambar jika diperlukan */
+    top: -50px; /* Sesuaikan posisi gambar jika diperlukan */
+    transform: translateX(-50%); /* Pusatkan gambar horizontal */
+  }
+}
+
+
+
