@@ -13,11 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/undangan-aldi', function () {
+    return view('undangan-aldi.home');
 });
 
-Route::get('/index', function () {
-    return view('index');
+Route::get('/undangan-aldi/index', function () {
+    return view('undangan-aldi.index');
 });
 
+
+Route::get('/undangan-nanang', function () {
+    return view('undangan-nanang.home');
+});
+
+Route::get('/undangan-nanang/index', function () {
+    return view('undangan-nanang.index');
+});
