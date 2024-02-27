@@ -29,3 +29,7 @@ Route::get('/undangan-nanang', function () {
 Route::get('/undangan-nanang/index', function () {
     return view('undangan-nanang.index');
 });
+
+Route::get('/coba', function () {
+    return view('undangan-aldi.coba');
+});
