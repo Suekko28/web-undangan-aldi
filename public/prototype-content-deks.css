@@ -22,7 +22,6 @@
     position: absolute;
     top: calc(50% - 649px);
     left: calc(50% - 973px);
-    width: 1947px;
     height: 1298px;
     object-fit: cover;
 }
@@ -38,14 +37,9 @@
     height: 1080px;
     overflow: hidden;
 }
-.image-14-icon {
-    top: calc(50% - 579px);
-    left: calc(50% - 960px);
-    height: 1156px;
-    object-fit: contain;
-}
+
 .icon1 {
-    position: absolute;
+    position: relative;
     top: -461px;
     left: -540px;
     width: 3000px;
@@ -577,13 +571,15 @@
 }
 .aku-tak-pernah-container {
     position: absolute;
-    top: calc(50% - 256px);
-    left: calc(50% - 107.7px);
+    top: 50%; /* Sesuaikan dengan posisi yang diinginkan */
+    left: 40%; /* Sesuaikan dengan posisi yang diinginkan */
+    transform: translate(-50%, -50%); /* Untuk menengahkan elemen */
     line-height: 140%;
     display: inline-block;
-    width: 216px;
-    height: 511px;
+    width: auto; /* Sesuaikan dengan lebar konten */
+    height: auto; /* Sesuaikan dengan tinggi konten */
 }
+
 .caption,
 .frame-child6 {
     width: 703.4px;
@@ -871,6 +867,7 @@
     align-self: stretch;
     border-radius: var(--br-5xl);
     background-color: #ffefe0;
+    overflow-x: auto;
     align-items: center;
     gap: 24px 0;
     text-align: justify;
@@ -1098,12 +1095,11 @@
 }
 .button2,
 .piringan-1-icon {
-    position: absolute;
+    position: fixed;
     width: 80px;
     height: 80px;
 }
 .piringan-1-icon {
-    top: 0;
     right: 0;
     object-fit: cover;
 }
@@ -1143,6 +1139,7 @@
     align-items: center;
     padding: 12px var(--padding-base);
     gap: 3px 8px;
+    z-index: 999;
 }
 .prototype-content-deks {
     width: 100%;
@@ -1154,12 +1151,33 @@
     font-family: var(--font-rouge-script);
 }
 
-@media only screen and (min-width: 1536px) {
-    .bg,
-    .image-14-icon {
+body {
+    border-radius: var(--br-61xl);
+    background-image: url("./assets/5447182-1-1@2x.png");
+    background-size: cover; /* atau background-size: 100% 100%; */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Background tetap di tempat ketika di-scroll */
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+}
+
+@media only screen and ( max-width: 1536px) {
+    body {
+        border-radius: var(--br-61xl);
+        background-image: url("./assets/5447182-1-1@2x.png");
+        background-size: cover; /* atau background-size: 100% 100%; */
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Background tetap di tempat ketika di-scroll */
         position: absolute;
         width: 1536px;
+        height: 1080px;
     }
+
+    .icon {
+      position: absolute;
+      object-fit: cover;
+  }
     .banner {
         width: 1536px;
         position: relative;
@@ -1188,15 +1206,6 @@
         text-align: right;
     }
 
-    /* .frame-parent6 {
-  flex: 1;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 0 12px;
-} */
-
     .jadwal {
         width: 1536px;
         border-radius: var(--br-61xl);
@@ -1219,7 +1228,7 @@
         justify-content: center;
         padding: var(--padding-61xl);
         box-sizing: border-box;
-        gap: 12px 0;
+        gap: 24px 0;
         text-align: left;
     }
 
@@ -1232,56 +1241,78 @@
         font-family: var(--font-cormorant-infant);
     }
 
-    .cerita-cinta {
-        width: 1536px;
-        border-radius: var(--br-61xl);
-        background-color: var(--color-seashell);
-        backdrop-filter: blur(10px);
-        padding: var(--padding-61xl) 400px;
-        box-sizing: border-box;
+    .aku-tak-pernah-container {
+        position: absolute;
+        top: 50%; /* Sesuaikan dengan posisi yang diinginkan */
+        left: 50%; /* Sesuaikan dengan posisi yang diinginkan */
+        transform: translate(-50%, -50%); /* Untuk menengahkan elemen */
+        line-height: 140%;
+        display: inline-block;
+        width: auto; /* Sesuaikan dengan lebar konten */
+        height: auto; /* Sesuaikan dengan tinggi konten */
     }
-
-    .rsvp {
-        width: 1536px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: center;
-        padding: var(--padding-61xl);
-        box-sizing: border-box;
-        gap: 0 48px;
-        font-size: var(--font-size-5xl);
-        font-family: var(--font-cormorant-infant);
-    }
-
-    .hadiah {
-        border-radius: var(--br-61xl) var(--br-61xl) 0 0;
-        background-color: var(--color-seashell);
-        backdrop-filter: blur(10px);
-        flex-direction: row;
-        padding: var(--padding-61xl);
-        font-size: var(--font-size-13xl);
-        font-family: var(--font-cormorant-infant);
-    }
-
-    .kirim-hadiah {
-        display: flex; /* Mengaktifkan layout flexbox */
-        justify-content: center; /* Menyentuh elemen secara horizontal di tengah */
-        align-items: center; /* Menyentuh elemen secara vertikal di tengah */
-        width: 1563px;
-        border-radius: var(--br-29xl);
-        background-color: var(--neutral-0);
-        border: 6px solid var(--color-navajowhite);
-        box-sizing: border-box;
+    .frame-parent16 {
         flex-direction: column;
-        padding: var(--padding-61xl);
-        gap: 48px 0;
+        justify-content: center;
+        gap: 12px 0;
     }
 
-    .button2 {
-        top: 959px;
-        left: 500px;
-        border-radius: 120px;
-        overflow: hidden;
+    .caption,
+    .frame-child6 {
+        width: 700px;
+        position: relative;
+        height: 664px;
     }
+    .frame-child6 {
+        width: 240px;
+        height: 240px;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+
+    .cerita-cinta {
+      width: 1536px;
+      border-radius: var(--br-61xl);
+      background-color: var(--color-seashell);
+      backdrop-filter: blur(10px);
+      padding: var(--padding-61xl) 400px;
+      box-sizing: border-box;
+  }
+
+  .rsvp {
+    width: 1536px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: var(--padding-61xl);
+    box-sizing: border-box;
+    gap: 0 48px;
+    font-size: var(--font-size-5xl);
+    font-family: var(--font-cormorant-infant);
+}
+
+/* .hadiah {
+  border-radius: var(--br-61xl) var(--br-61xl) 0 0;
+  background-color: var(--color-seashell);
+  backdrop-filter: blur(10px);
+  flex-direction: row;
+  padding: var(--padding-29xl);
+  font-size: var(--font-size-13xl);
+  font-family: var(--font-cormorant-infant);
+}
+
+.kirim-hadiah {
+  width: 1536px;
+  border-radius: var(--br-29xl);
+  background-color: var(--neutral-0);
+  border: 6px solid var(--color-navajowhite);
+  box-sizing: border-box;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-61xl);
+  gap: 48px 0;
+} */
+
+
 }

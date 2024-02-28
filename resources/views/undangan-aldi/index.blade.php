@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
     <link rel="stylesheet" href="{{ asset('./global.css') }}" />
     <link rel="stylesheet" href="{{ asset('./prototype-content-deks.css') }}" />
@@ -25,12 +25,11 @@
 
             <img class="icon" alt="" src="{{ asset('./assets/5447182-1@2x.png') }}" />
 
+
         </div>
+
         <div class="body">
             <div class="banner">
-
-                <img class="icon1" alt="" src="{{ asset('./assets/5447182-1@2x.png') }}" />
-
                 <div class="frame-container">
                     <div class="undangan-pernikahan-group">
                         <b class="undangan-pernikahan1">Undangan Pernikahan</b>
@@ -134,8 +133,9 @@
                                     </div>
                                     <div class="tempat-parent">
                                         <div class="days-until-we">Tempat</div>
-                                        <b class="jl-ir-h">Jl. Ir. H. Juanda No.16, Paledang, Kecamatan Bogor Tengah,
-                                            Kota Bogor, Jawa Barat 16122 Royal Hotel Bogor</b>
+                                        <b class="jl-ir-h">Jl. Ir. H. Juanda No.16, Paledang, Kecamatan Bogor
+                                            Tengah, Kota Bogor, Jawa Barat 16122 Royal Hotel
+                                            Bogor</b>
                                     </div>
                                 </div>
                                 <div class="frame-parent9">
@@ -143,6 +143,7 @@
                                         <div class="frame-parent10">
                                             <img class="frame-child2" alt=""
                                                 src="{{ asset('./assets/frame-274.svg') }}" />
+
                                             <div class="buka-map">Buka Map</div>
                                         </div>
                                     </div>
@@ -150,12 +151,14 @@
                                         <div class="frame-parent11">
                                             <img class="frame-child2" alt=""
                                                 src="{{ asset('./assets/frame-274.svg') }}" />
+
                                             <div class="buka-map">Tambah Ke Kalender</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <img class="frame-icon1" alt="" src="{{ asset('./assets/frame.svg') }}" />
+
                             <div class="frame-parent12">
                                 <div class="resepsi-parent">
                                     <div class="akad">Resepsi</div>
@@ -169,8 +172,9 @@
                                     </div>
                                     <div class="tempat-group">
                                         <div class="days-until-we">Tempat</div>
-                                        <b class="jl-ir-h1">Jl. Ir. H. Juanda No.16, Paledang, Kecamatan Bogor Tengah,
-                                            Kota Bogor, Jawa Barat 16122 Royal Hotel Bogor</b>
+                                        <b class="jl-ir-h1">Jl. Ir. H. Juanda No.16, Paledang, Kecamatan Bogor
+                                            Tengah, Kota Bogor, Jawa Barat 16122 Royal Hotel
+                                            Bogor</b>
                                     </div>
                                 </div>
                                 <div class="frame-parent13">
@@ -178,6 +182,7 @@
                                         <div class="frame-parent10">
                                             <img class="frame-child2" alt=""
                                                 src="{{ asset('./assets/frame-274.svg') }}" />
+
                                             <div class="buka-map">Buka Map</div>
                                         </div>
                                     </div>
@@ -185,6 +190,7 @@
                                         <div class="frame-parent11">
                                             <img class="frame-child2" alt=""
                                                 src="{{ asset('./assets/frame-274.svg') }}" />
+
                                             <div class="buka-map">Tambah Ke Kalender</div>
                                         </div>
                                     </div>
@@ -193,64 +199,75 @@
                         </div>
                     </div>
                     <img class="asset-2-5" alt="" src="{{ asset('./assets/asset-2-5@2x.png') }}" />
+
                     <img class="asset-2-6" alt="" src="{{ asset('./assets/asset-2-6@2x.png') }}" />
                 </div>
             </div>
 
 
-            {{-- <div class="gallery">
+            <div class="gallery">
                 <div class="galeri">Galeri</div>
                 <div class="caption-parent">
                     <div class="caption">
-                        <img class="caption-child" alt="" src="{{ asset('./assets/polygon-3.svg') }}" />
-                        <img class="polygon-3-stroke" alt=""
-                            src="{{ asset('./assets/polygon-3-stroke.svg') }}" />
-                        <img class="caption-item" alt="" src="{{ asset('./assets/polygon-4.svg') }}" />
-                        <img class="polygon-4-stroke" alt=""
-                            src="{{ asset('./assets/polygon-4-stroke.svg') }}" />
-                        <img class="caption-inner" alt="" src="{{ asset('./assets/polygon-5.svg') }}" />
-                        <img class="polygon-5-stroke" alt=""
-                            src="{{ asset('./assets/polygon-5-stroke.svg') }}" />
-                        <img class="caption-child" alt="" src="{{ asset('./assets/polygon-3.svg') }}" />
-                        <img class="polygon-3-stroke" alt=""
-                            src="{{ asset('./assets/polygon-3-stroke.svg') }}" />
-                        <img class="caption-item" alt="" src="{{ asset('./assets/polygon-4.svg') }}" />
-                        <img class="polygon-4-stroke" alt=""
-                            src="{{ asset('./assets/polygon-4-stroke.svg') }}" />
-                        <img class="caption-inner" alt="" src="{{ asset('./assets/polygon-5.svg') }}" />
-                        <img class="polygon-5-stroke" alt=""
-                            src="{{ asset('./assets/polygon-5-stroke.svg') }}" />
+                        {{-- <img class="caption-child" alt="" src="{{ asset('./assets/polygon-3.svg') }}" />
+
+                    <img class="polygon-3-stroke" alt=""
+                        src="{{ asset('./assets/polygon-3-stroke.svg') }}" />
+
+                    <img class="caption-item" alt="" src="{{ asset('./assets/polygon-4.svg') }}" />
+
+                    <img class="polygon-4-stroke" alt=""
+                        src="{{ asset('./assets/polygon-4-stroke.svg') }}" />
+
+                    <img class="caption-inner" alt="" src="{{ asset('./assets/polygon-5.svg') }}" />
+
+                    <img class="polygon-5-stroke" alt=""
+                        src="{{ asset('./assets/polygon-5-stroke.svg') }}" />
+
+                    <img class="caption-child" alt="" src="{{ asset('./assets/polygon-3.svg') }}" />
+
+                    <img class="polygon-3-stroke" alt=""
+                        src="{{ asset('./assets/polygon-3-stroke.svg') }}" />
+
+                    <img class="caption-item" alt="" src="{{ asset('./assets/polygon-4.svg') }}" />
+
+                    <img class="polygon-4-stroke" alt=""
+                        src="{{ asset('./assets/polygon-4-stroke.svg') }}" />
+
+                    <img class="caption-inner" alt="" src="{{ asset('./assets/polygon-5.svg') }}" />
+
+                    <img class="polygon-5-stroke" alt=""
+                        src="{{ asset('./assets/polygon-5-stroke.svg') }}" /> --}}
+
                         <b class="aku-tak-pernah-container">
-                            <p class="aku-tak-pernah">
-                                Aku tak pernah menunggumu. Kamu tak pernah sengaja datang.
-                                Tapi kita sengaja dipertemukan Tuhan. Entah untuk saling duduk
-                                berdampingan atau saling memberi pelajaran. Entah untuk saling
-                                mengirim undangan pernikahan, atau duduk bersama di pelaminan.
-                            </p>
-                            <p class="aku-tak-pernah">&nbsp;</p>
+                                <img src="{{ asset('./assets/caption.png') }}" />
+
                         </b>
                     </div>
                     <div class="frame-parent16">
                         <div class="frame-parent17">
                             <img class="frame-child6" alt=""
                                 src="{{ asset('./assets/frame-99@2x.png') }}" />
+
                             <img class="frame-child6" alt=""
                                 src="{{ asset('./assets/frame-100@2x.png') }}" />
+
                             <img class="frame-child6" alt=""
                                 src="{{ asset('./assets/frame-101@2x.png') }}" />
                         </div>
                         <div class="frame-parent18">
                             <img class="frame-child6" alt=""
                                 src="{{ asset('./assets/frame-104@2x.png') }}" />
+
                             <img class="frame-child6" alt=""
                                 src="{{ asset('./assets/frame-103@2x.png') }}" />
+
                             <img class="frame-child6" alt=""
                                 src="{{ asset('./assets/frame-102@2x.png') }}" />
                         </div>
                     </div>
                 </div>
-            </div> --}}
-
+            </div>
 
 
             <div class="cerita-cinta">
@@ -341,6 +358,7 @@
                     </div>
                     <div class="frame-parent26">
                         <img class="frame-child2" alt="" src="{{ asset('./assets/frame-277.svg') }}" />
+
                         <div class="buka-map">Kirim Ucapan</div>
                     </div>
                 </div>
@@ -386,6 +404,7 @@
                                 <div class="mail">
                                     <img class="vector-icon" alt=""
                                         src="{{ asset('./assets/vector.svg') }}" />
+
                                     <div class="badge">
                                         <div class="div1">12</div>
                                     </div>
@@ -399,6 +418,7 @@
                                 <div class="mail">
                                     <img class="vector-icon" alt=""
                                         src="{{ asset('./assets/vector.svg') }}" />
+
                                     <div class="badge">
                                         <div class="div1">12</div>
                                     </div>
@@ -431,28 +451,32 @@
 
 
         </div>
+    </div>
 
-        <div class="button2">
-            <div class="whatsapp-video-2024-02-12-at-1"></div>
-            <img class="piringan-1-icon" alt="" src="{{ asset('./assets/piringan-1@2x.png') }}" />
+    <div class="button2">
+        <div class="whatsapp-video-2024-02-12-at-1"></div>
+        <img class="piringan-1-icon" alt="" src="{{ asset('./assets/piringan-1@2x.png') }}" />
+    </div>
+
+
+    <div class="navbar-mobile">
+        <div class="button3" id="buttonContainer">
+            <img class="icon-home" alt="" src="{{ asset('./assets/icon-home.svg') }}" />
         </div>
-        <div class="navbar-mobile">
-            <div class="button3" id="buttonContainer">
-                <img class="icon-home" alt="" src="{{ asset('./assets/icon-home.svg') }}" />
-            </div>
-            <div class="button3" id="buttonContainer1">
-                <img class="icon-home" alt="" src="{{ asset('./assets/icon-rings.svg') }}" />
-            </div>
-            <div class="button3" id="buttonContainer2">
-                <img class="icon-home" alt="" src="{{ asset('./assets/icon-letter.svg') }}" />
-            </div>
-            <div class="button3" id="buttonContainer3">
-                <img class="icon-home" alt="" src="{{ asset('./assets/icon-post-card.svg') }}" />
-            </div>
-            <div class="button3" id="buttonContainer4">
-                <img class="icon-home" alt="" src="{{ asset('./assets/icon-gift.svg') }}" />
-            </div>
+        <div class="button3" id="buttonContainer1">
+            <img class="icon-home" alt="" src="{{ asset('./assets/icon-rings.svg') }}" />
         </div>
+        <div class="button3" id="buttonContainer2">
+            <img class="icon-home" alt="" src="{{ asset('./assets/icon-letter.svg') }}" />
+        </div>
+        <div class="button3" id="buttonContainer3">
+            <img class="icon-home" alt="" src="{{ asset('./assets/icon-post-card.svg') }}" />
+        </div>
+        <div class="button3" id="buttonContainer4">
+            <img class="icon-home" alt="" src="{{ asset('./assets/icon-gift.svg') }}" />
+        </div>
+    </div>
+
 
     </div>
 

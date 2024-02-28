@@ -19,23 +19,26 @@
 </head>
 
 <body>
-    <section class="text-[--color-peru]">
+    <section class="text-[--color-peru] bg-cover bg-center">
         <div class="banner">
-            <div
-                class="relative w-[1920px] h-[1080px] 2xl:w-auto 2xl:h-auto xl:w-auto xl:h-auto lg:w-auto lg:h-auto md:w-auto md:h-auto sm:w-auto sm:h-auto">
-                <div class="absolute top-[-400px] left-[-520px] object-cover">
-                    <img alt="" src="./assets/5447182-1@2x.png" data-scroll-to="image14" />
+            <div class="relative w-full mx-auto">
+                <div class="relative">
+                    <img alt="" src="./assets/5447182-1@2x.png" data-scroll-to="image14"
+                        class="mx-auto max-w-full h-auto" />
                 </div>
-            </div>
-            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div style="font-family: var(--font-cormorant-infant); font-size: var(--font-size-5xl);"
-                    class="text-black text-center font-bold text-[--color-peru] 2xl:text-center xl:text-center lg:text-center md:text-center sm:text-center">
-                    Undangan Pernikahan
+                <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <div style="font-family: var(--font-cormorant-infant);"
+                        class="text-black text-center font-bold text-peru text-29xl sm:text-lg md:text-lg lg:text-5xl xl:text-5xl 2xl:text-5xl mb-8 sm:mb-4 md:mb-4 lg:mb-8 xl:mb-8 2xl:mb-8">
+                        Undangan Pernikahan
+                    </div>
+                    <div style="font-family: var(--font-rouge-script);"
+                        class="text-black text-center text-peru text-29xl sm:text-4xl md:text-4xl lg:text-29xl xl:text-29xl 2xl:text-6xl mb-8 sm:mb-8 md:mb-8 lg:mb-8 xl:mb-8 2xl:mb-8">
+                        Jamaludin & Maryam
+                    </div>
+                  
+
                 </div>
-                <div style="font-family: var(--font-rouge-script); font-size: var(--font-size-29xl);"
-                    class="text-black text-center text-[--color-peru] 2xl:text-center xl:text-center lg:text-center md:text-center sm:text-center">
-                    Jamaludin & Maryam
-                </div>
+
             </div>
         </div>
     </section>
