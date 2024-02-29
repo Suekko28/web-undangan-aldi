@@ -454,7 +454,6 @@
     </div>
 
     <div class="button2">
-        <div class="whatsapp-video-2024-02-12-at-1"></div>
         <img class="piringan-1-icon" alt="" src="{{ asset('./assets/piringan-1@2x.png') }}" />
     </div>
 
