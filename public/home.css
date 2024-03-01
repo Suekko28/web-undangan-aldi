@@ -1,3 +1,8 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .young-japanese-couple-1-icon1 {
     height: 1285px;
     width: 2283px;
@@ -439,10 +444,13 @@
 }
 .navigation {
     width: 424px;
-    margin: 0 !important;
-    position: absolute;
-    right: -212px;
+    margin: 0 auto; /* Mengatur margin menjadi auto untuk posisi horizontal di tengah */
+    position: fixed;
     bottom: 40px;
+    left: 50%; /* Mengatur posisi awal menjadi di tengah */
+    transform: translateX(
+        -50%
+    ); /* Menggeser posisi sejauh setengah dari lebar elemen */
     background-color: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(6px);
     align-items: flex-start;
@@ -453,6 +461,7 @@
     font-size: 10px;
     font-family: Optima;
 }
+
 .card-list2,
 .card4 {
     display: flex;
@@ -497,12 +506,14 @@
     background-color: #fff;
     width: 64px;
     height: 64px;
-    position: relative;
+    position: fixed;
     border-radius: 120px;
     box-shadow: -8px 8px 9.8px rgba(0, 0, 0, 0.07);
     overflow: hidden;
     flex-shrink: 0;
     z-index: 2;
+    bottom: 80px; /* Ubah nilai bottom */
+    left: 1800px; /* Ubah nilai left */
 }
 .text1 {
     height: 144px;
@@ -1372,7 +1383,13 @@
     min-width: 368px;
     max-width: 100%;
 }
-.foto-icon2,
+.foto-icon2 {
+    height: 400px;
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+    object-fit: cover;
+}
 .foto-icon3 {
     height: 400px;
     position: relative;
@@ -1408,15 +1425,17 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 0 48px;
+    position: relative;
+    overflow-y: auto;
     flex-shrink: 0;
 }
+
 .foto-icon4 {
     width: 400px;
     height: 400px;
     position: absolute;
     margin: 0 !important;
-    right: -352px;
-    bottom: 160.5px;
+    right: -440px;
     overflow: hidden;
     flex-shrink: 0;
     object-fit: cover;
@@ -1683,7 +1702,6 @@
     justify-content: flex-start;
     padding: 20px 0;
     gap: 24px 0;
-    min-width: 645px;
 }
 .anonym-card-list,
 .the-groom3 {
@@ -2603,35 +2621,464 @@
     padding: 0 0 359px;
     letter-spacing: normal;
 }
-@media screen and (max-width: 1575px) {
-    .b-c-a-mandiri-card {
-        flex: 1;
+
+/* @media only screen and (max-width: 1920px) {
+
+    .banner2 {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        padding: 0 80px 0 0;
+        box-sizing: border-box;
+        gap: 20px;
+        text-align: center;
+        font-size: 32px;
+        color: #fff;
+        font-family: "DM Serif Display";
     }
-    .anonym-card-list {
-        flex-wrap: wrap;
+
+    .young-japanese-couple-1-icon1 {
+        height: 100vh;
+        width: 2283px;
+        position: absolute;
+        margin: 0 !important;
+        bottom: -102.5px;
+        left: -363px;
+        object-fit: cover;
     }
-    .foto-icon7,
-    .frame-form {
-        flex: 1;
+} */
+
+@media screen and (max-width: 1536px) {
+    .young-japanese-couple-1-icon1 {
+        position: absolute;
+        margin: 0 !important;
+        bottom: -102.5px;
+        left: -700px;
+        object-fit: cover;
     }
-    .frame-parent50 {
-        flex-wrap: wrap;
+
+    .floating-button {
+        cursor: pointer;
+        border: 0;
+        padding: 0;
+        background-color: #fff;
+        width: 64px;
+        height: 64px;
+        position: fixed;
+        border-radius: 120px;
+        box-shadow: -8px 8px 9.8px rgba(0, 0, 0, 0.07);
+        overflow: hidden;
+        flex-shrink: 0;
+        z-index: 2;
+        bottom: 80px; /* Ubah nilai bottom */
+        left: 1400px; /* Ubah nilai left */
     }
-    .multiple-cards {
+
+    .untitled-1-1-icon {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: 1px;
+        height: 100%;
+        object-fit: cover;
     }
-    .frame-parent53 {
+
+    .card6 {
+        align-self: stretch;
+        background-color: #fff;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 24px;
+        box-sizing: border-box;
+        gap: 0 24px;
+    }
+
+    .card-inner {
         flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 100px;
     }
-    .button-kirim {
-        min-height: auto;
+
+    .card-inner2 {
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 100px;
     }
-    .frame-parent52 {
+
+    .text-block {
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 100px;
+    }
+
+    .card-list-parent {
+        flex-direction: row;
         flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 16px;
+        gap: 0 48px;
+        text-align: left;
+        font-size: 16px;
+        color: #b0aea9;
+    }
+
+    .frame-parent44 {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 16px 0;
+    }
+
+    .pertama-bertemu {
+        font-size: 32px;
+        line-height: 130%;
+        font-family: "DM Serif Display";
+        color: #3b3b3b;
+    }
+
+    .kita-bertemu-pertama {
+        align-self: stretch;
+        position: relative;
+        font-size: 24px;
+        line-height: 150%;
+        color: #3b3b3b;
+    }
+
+    .foto-container {
+        align-self: stretch;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0 48px;
+        position: relative;
+        overflow-y: auto;
+        flex-shrink: 0;
+    }
+
+    .frame-video {
+        height: 560.3px;
+        width: 796px;
+        position: absolute;
+        margin: 0 !important;
+        top: calc(50% - 281.5px);
+        right: -630px;
+        background-color: #000;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .foto-icon7 {
+        height: 520px;
+        width: 800px;
+        position: relative;
+        overflow: hidden;
+        object-fit: cover;
+        max-width: 100%;
+    }
+
+    .foto-icon4 {
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        margin: 0 !important;
+        top: 0;
+        right: -880px;
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+
+    .foto-icon3 {
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        margin: 0 !important;
+        top: 100px;
+        right: -440px;
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: cover;
     }
 }
-@media screen and (max-width: 1275px) {
+
+@media screen and (max-width: 1280px) {
+    .young-japanese-couple-1-icon1 {
+        position: absolute;
+        margin: 0 !important;
+        bottom: -102.5px;
+        left: -900px;
+        object-fit: cover;
+    }
+
+    .floating-button {
+        cursor: pointer;
+        border: 0;
+        padding: 0;
+        background-color: #fff;
+        width: 64px;
+        height: 64px;
+        position: fixed;
+        border-radius: 120px;
+        box-shadow: -8px 8px 9.8px rgba(0, 0, 0, 0.07);
+        overflow: hidden;
+        flex-shrink: 0;
+        z-index: 2;
+        bottom: 80px; /* Ubah nilai bottom */
+        left: 1100px; /* Ubah nilai left */
+    }
+
+    .card6 {
+        align-self: stretch;
+        background-color: #fff;
+        flex-direction: row;
+        justify-content: flex-start;
+        padding: 24px;
+        box-sizing: border-box;
+        gap: 0 24px;
+    }
+
+    .card-inner {
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 100px;
+    }
+
+    .card-inner2 {
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 100px;
+    }
+
+    .text-block {
+        flex: 1;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 100px;
+    }
+
+    .card-list-parent {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0 16px;
+        gap: 0 48px;
+        text-align: left;
+        font-size: 16px;
+        color: #b0aea9;
+    }
+
+    .frame-parent44 {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 16px 0;
+    }
+
+    .pertama-bertemu {
+        font-size: 32px;
+        line-height: 130%;
+        font-family: "DM Serif Display";
+        color: #3b3b3b;
+    }
+
+    .kita-bertemu-pertama {
+        align-self: stretch;
+        position: relative;
+        font-size: 24px;
+        line-height: 150%;
+        color: #3b3b3b;
+    }
+
+    .our-love-story-parent {
+        background-color: #9e9c98;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0;
+        gap: 48px 0;
+        flex-shrink: 0;
+        text-align: center;
+        font-size: 24px;
+        color: #fff;
+        font-family: NanumMyeongjo;
+        padding-bottom: 30px;
+    }
+
+    .our-love-story {
+        padding-top: 30px;
+        position: relative;
+        letter-spacing: 0.26em;
+        line-height: 130%;
+    }
+
+    .text-block-path {
+        width: 500px;
+        position: relative;
+    }
+
+    .frame-video {
+        height: 560.3px;
+        width: 800px;
+        position: absolute;
+        margin: 0 !important;
+        top: calc(50% - 281.5px);
+        right: -680px;
+        background-color: #000;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .input-alamat {
+        flex: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 20px 0;
+        gap: 24px 0;
+    }
+
+    .foto-icon7 {
+        height: 520px;
+        width: 600px;
+        position: relative;
+        overflow: hidden;
+        object-fit: cover;
+        max-width: 100%;
+    }
+
+    .foto-icon2 {
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        margin: 0 !important;
+        top: 0;
+        right: -450px;
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+
+    .foto-icon4 {
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        margin: 0 !important;
+        top: 0;
+        right: -1350px;
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+
+    .foto-icon3 {
+        width: 400px;
+        height: 400px;
+        position: absolute;
+        margin: 0 !important;
+        top: 100px;
+        right: -900px;
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+
+    .question4 {
+        margin-bottom: 30px;
+        width: 943px;
+        gap: 24px 0;
+        min-width: 613px;
+    }
+
+    .frame-parent53 {
+        width: 800px;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 20px 0;
+        gap: 48px 0;
+        min-width: 600px;
+        max-width: 100%;
+    }
+
+    .button-kirim {
+        flex: 1;
+        background-color: #3b3b3b;
+        padding: 48px;
+        gap: 24px 0;
+        min-width: 500px;
+        min-height: 682px;
+        max-width: 100%;
+        font-size: 32px;
+        color: #3b3b3b;
+        font-family: "DM Serif Display";
+    }
+}
+
+@media screen and (max-width:768px) {
+    .young-japanese-couple-1-icon1 {
+        height: 100vh;
+        width: 2283px;
+        position: absolute;
+        margin: 0 !important;
+        bottom: 0;
+        left: -1200px; /* Menggeser gambar ke kiri sebanyak 100px (Anda dapat menyesuaikan angka sesuai kebutuhan) */
+        object-fit: cover;
+    }
+
+    .pertemuan-yang-kuimpikan-kini-container {
+        top: 100px;
+        position: absolute;
+        line-height: 150%;
+        display: inline-block;
+        max-width: 100%;
+    }
+
+    .rhoma-irama {
+        position: absolute;
+        top: 300px;
+        font-size: 24px;
+        line-height: 150%;
+        font-family: NanumMyeongjo;
+    }
+
+    .row-input {
+        align-items: center;
+        position: absolute;
+        right: 40px;
+        bottom: 50px;
+    }
+
+    .button-primary {
+        align-self: stretch;
+        flex-direction: column;
+        align-items:flex-start;
+        gap: 0 24px;
+        max-width: 100%;
+    }
+
+    .button-primary1 {
+        align-self: stretch;
+        flex-direction: column-reverse;
+        align-items:flex-end;
+        gap: 0 24px;
+        max-width: 100%;
+    }
+
+    
+}
+
+
+/* @media screen and (max-width: 1275px) {
     .banner2,
     .card4 {
         box-sizing: border-box;
@@ -3189,4 +3636,4 @@
         padding-top: 34px;
         padding-bottom: 34px;
     }
-}
+} */

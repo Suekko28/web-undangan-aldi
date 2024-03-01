@@ -297,7 +297,7 @@
             <div class="rectangle-path">
                 <div class="text-block-path">
                     <div class="frame-video">
-                        <div class="y2matecom-wedding-free-sto"></div>
+                        <video autoplay loop controls src="{{ asset('./assets/video.mp4') }}"></video>
                     </div>
                     <div class="column">
                         <div class="pertemuan-yang-kuimpikan-kini-container1">
@@ -326,12 +326,15 @@
                 <img class="foto-icon2" loading="eager" alt=""
                     src="{{ asset('./assets/foto-2@2x.png') }}" />
 
-                <div class="inner-frame1">
-                    <img class="foto-icon3" loading="eager" alt=""
-                        src="{{ asset('./assets/foto-3@2x.png') }}" />
-                </div>
+                    <div class="inner-frame1">
+                        <img class="foto-icon3" loading="eager" alt=""
+                            src="{{ asset('./assets/foto-3@2x.png') }}" />
+                    </div>
+
+                    <img class="foto-icon4" loading="eager" alt=""
+                        src="{{ asset('./assets/foto-4@2x.png') }}" />
+
             </div>
-            <img class="foto-icon4" loading="eager" alt="" src="{{ asset('./assets/foto-4@2x.png') }}" />
         </section>
 
 
@@ -389,6 +392,7 @@
                     </button>
                 </div>
             </div>
+
             <div class="frame-parent50">
                 <form class="frame-form">
                     <div class="frame-parent51">
@@ -426,6 +430,7 @@
                 <img class="foto-icon7" loading="eager" alt=""
                     src="{{ asset('./assets/foto-7@2x.png') }}" />
             </div>
+
         </section>
 
 
