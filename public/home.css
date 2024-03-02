@@ -2618,7 +2618,7 @@
     background-color: #f6f6f6;
     overflow: hidden;
     align-items: flex-start;
-    padding: 0 0 359px;
+    padding: 0 0;
     letter-spacing: normal;
 }
 
@@ -2760,6 +2760,11 @@
         position: relative;
         overflow-y: auto;
         flex-shrink: 0;
+    }
+
+    .text-block-path {
+        width: 750px;
+        position: relative;
     }
 
     .frame-video {
@@ -3024,7 +3029,7 @@
     }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width: 768px) {
     .young-japanese-couple-1-icon1 {
         height: 100vh;
         width: 2283px;
@@ -3061,7 +3066,7 @@
     .button-primary {
         align-self: stretch;
         flex-direction: column;
-        align-items:flex-start;
+        align-items: flex-start;
         gap: 0 24px;
         max-width: 100%;
     }
@@ -3069,14 +3074,84 @@
     .button-primary1 {
         align-self: stretch;
         flex-direction: column-reverse;
-        align-items:flex-end;
+        align-items: flex-end;
         gap: 0 24px;
         max-width: 100%;
     }
 
-    
-}
+    .card6 {
+        width: 50%;
+        height: 100%;
+        align-self: stretch;
+        background-color: #fff;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 24px;
+        box-sizing: border-box;
+        gap: 0 24px;
+    }
 
+    .card-inner {
+        margin-top: 10px;
+    }
+
+    .visual-icon2 {
+        height: 204px;
+        width: 204px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+
+    .card7 {
+        width: 50%;
+        height: 100%;
+        align-self: stretch;
+        background-color: #fff;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 24px;
+        box-sizing: border-box;
+        gap: 0 24px;
+    }
+
+    .card8 {
+        width: 50%;
+        height: 100%;
+        align-self: stretch;
+        background-color: #fff;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 24px;
+        box-sizing: border-box;
+        gap: 0 24px;
+    }
+
+    .card9 {
+        width: 50%;
+        height: 100%;
+        align-self: stretch;
+        background-color: #fff;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 24px;
+        box-sizing: border-box;
+        gap: 0 24px;
+    }
+
+    .card10 {
+        width: 50%;
+        height: 100%;
+        align-self: stretch;
+        background-color: #fff;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 24px;
+        box-sizing: border-box;
+        gap: 0 24px;
+    }
+}
 
 /* @media screen and (max-width: 1275px) {
     .banner2,
