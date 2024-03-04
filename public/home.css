@@ -2222,7 +2222,6 @@
 .kirim-hadiah5 {
     border: 1px solid #3b3b3b;
     flex-direction: row;
-    flex-wrap: wrap;
     align-items: flex-start;
     justify-content: center;
     padding: 80px 81px 80px 79px;
@@ -2785,6 +2784,10 @@
         flex-shrink: 0;
     }
 
+    .foto-icon1 {
+        object-fit: contain;
+    }
+
     .foto-icon7 {
         height: 520px;
         width: 800px;
@@ -2986,37 +2989,50 @@
         max-width: 100%;
     }
 
-    .foto-icon2 {
-        width: 400px;
-        height: 400px;
-        position: absolute;
-        margin: 0 !important;
-        top: 0;
-        right: -450px;
-        overflow: hidden;
-        flex-shrink: 0;
-        object-fit: cover;
+    .foto-icon {
+        height: 450px;
+        width: 450px;
+        object-fit: contain;
     }
 
-    .foto-icon4 {
-        width: 400px;
-        height: 400px;
+    .foto-icon1 {
+        height: 450px;
+        width: 450px;
+        object-fit: contain;
+        right: 35px;
+    }
+
+    .foto-icon2 {
+        width: 450px;
+        height: 450px;
         position: absolute;
         margin: 0 !important;
         top: 0;
-        right: -1350px;
+        right: -400px;
         overflow: hidden;
         flex-shrink: 0;
         object-fit: cover;
     }
 
     .foto-icon3 {
-        width: 400px;
-        height: 400px;
+        width: 450px;
+        height: 450px;
         position: absolute;
         margin: 0 !important;
         top: 100px;
         right: -900px;
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+
+    .foto-icon4 {
+        width: 450px;
+        height: 450px;
+        position: absolute;
+        margin: 0 !important;
+        top: 0;
+        right: -1400px;
         overflow: hidden;
         flex-shrink: 0;
         object-fit: cover;
@@ -3063,7 +3079,7 @@
         box-sizing: border-box;
         gap: 16px 0;
         z-index: 1;
-        margin-right: 200px ;
+        margin-right: 200px;
     }
 
     .text-block-path {
@@ -3075,6 +3091,48 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+    }
+
+    .kirim-hadiah-container {
+        border-radius: 0 0 32px 32px;
+        flex-direction: column;
+        padding: 10px;
+        align-items: flex-start;
+        gap: 16px 0;
+    }
+
+    .substitute-present {
+        align-self: stretch;
+        gap: 16px 0;
+        padding: 20px;
+        text-align: center;
+        font-size: 10px;
+        color: #fff;
+        font-family: Optima;
+    }
+
+    .card12 {
+        align-self: stretch;
+        border: 1px solid #1d1c16;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 24px;
+        gap: 16px 0;
+        margin-right: 10px;
+    }
+
+    .card13 {
+        align-self: stretch;
+        border: 1px solid #1d1c16;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 24px;
+        gap: 16px 0;
+        margin-right: 10px;
     }
 }
 
@@ -3128,7 +3186,7 @@
         max-width: 100%;
     }
 
-    .card6 {
+    /* .card6 {
         width: 50%;
         height: 100%;
         align-self: stretch;
@@ -3177,6 +3235,15 @@
         gap: 0 24px;
     }
 
+    .visual-icon4 {
+        height: 204px;
+        width: 204px;
+        position: relative;
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: contain;
+    }
+
     .card9 {
         width: 50%;
         height: 100%;
@@ -3218,7 +3285,7 @@
         font-size: 24px;
         color: #3b3b3b;
         font-family: NanumMyeongjo;
-    }
+    } */
 
     .column {
         flex: 1;
@@ -3252,577 +3319,468 @@
         flex-shrink: 0;
     }
 
-    
-
     .frame-video video {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
 
-    
-
     .foto-container {
         margin-top: 13em;
     }
+
+    .foto-icon {
+        left: -100px;
+        height: 450px; /* Menggunakan 'auto' untuk mengizinkan gambar menyesuaikan tinggi sesuai kebutuhan */
+        width: 450px; /* Mengatur lebar agar mengikuti lebar kontainer */
+        object-fit: contain; /* Memastikan gambar sepenuhnya terlihat di dalam kotak tanpa merubah rasio aspek */
+    }
+
+    .foto-icon1 {
+        width: 450px;
+        height: 450px;
+        position: absolute;
+        margin: 0 !important;
+        top: 100px;
+        right: -330px;
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+
+    .foto-icon2 {
+        width: 450px;
+        height: 450px;
+        position: absolute;
+        margin: 0 !important;
+        top: 0;
+        right: -830px;
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+
+    .foto-icon3 {
+        width: 450px;
+        height: 450px;
+        position: absolute;
+        margin: 0 !important;
+        top: 100px;
+        right: -1330px;
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+
+    .foto-icon4 {
+        width: 450px;
+        height: 450px;
+        position: absolute;
+        margin: 0 !important;
+        top: 0;
+        right: -1830px;
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: cover;
+    }
+
+    .anonym-card-list {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0 48px;
+        max-width: 100%;
+    }
+
+    .input-alamat {
+        flex: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 48px 0;
+        gap: 24px 0;
+    }
+
+    .frame-parent50 {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0 48px;
+        max-width: 100%;
+    }
+
+    .foto-icon7 {
+        height: 520px;
+        width: 600px;
+        position: relative;
+        overflow: hidden;
+        object-fit: cover;
+        max-width: 100%;
+        margin-bottom: 48px;
+    }
+
+    .question4 {
+        margin-bottom: 30px;
+        width: 943px;
+        gap: 24px 0;
+        min-width: 613px;
+    }
+
+    .kirim-hadiah5 {
+        border: 1px solid #3b3b3b;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding: 5px 5px 5px 5px;
+        gap: 0 48px;
+        text-align: left;
+        font-size: 32px;
+        font-family: "DM Serif Display";
+    }
+
+    .question4 {
+        margin-bottom: 30px;
+        width: 943px;
+        gap: 0 0;
+        min-width: 613px;
+    }
+
+    .kirim-hadiah-container {
+        border-radius: 0 0 32px 32px;
+        flex-direction: column;
+        padding: 20px;
+        align-items: flex-start;
+        gap: 16px 0;
+    }
+
+    .substitute-present {
+        align-self: stretch;
+        gap: 16px 0;
+        padding: 30px;
+        text-align: center;
+        font-size: 10px;
+        color: #fff;
+        font-family: Optima;
+    }
+
+    .multiple-cards {
+        height: 550px;
+        width: 1px;
+        margin: 0 auto;
+        position: relative;
+        background-color: #1d1c16;
+        overflow: hidden;
+        flex-shrink: 0;
+        transform: rotate(90deg);
+        top: -300px;
+        right: -10px;
+    }
+
+    .card-list5 {
+        width: 560px;
+        gap: 24px 0;
+        font-size: 24px;
+        color: #1d1c16;
+        font-family: NanumMyeongjo;
+        margin-top: -580px;
+        padding: 30px;
+    }
+
+    
+
+    .frame-parent52 {
+        align-self: stretch;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 32px 0 0;
+        gap: 0 48px;
+        max-width: 100%;
+        text-align: left;
+        font-size: 16px;
+        color: #b0aea9;
+    }
+
+    .button-kirim {
+        flex: 1;
+        background-color: #3b3b3b;
+        padding: 48px;
+        gap: 24px 0;
+        min-width: 650px;
+        min-height: 400px;
+        max-width: 100%;
+        font-size: 32px;
+        color: #3b3b3b;
+        font-family: "DM Serif Display";
+        margin-top: 48px;
+    }
 }
 
-/* @media screen and (max-width: 1275px) {
-    .banner2,
+@media screen and (max-width: 640px) {
+    .young-japanese-couple-1-icon1 {
+        height: 100vh;
+        width: auto;
+        position: absolute;
+        margin: 0 !important;
+        bottom: 0;
+        left: -1010px;
+        object-fit: contain;
+    }
+
     .card4 {
+        align-self: stretch;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding: 367px 25px 25px;
         box-sizing: border-box;
+        position: relative;
+        min-height: 1080px;
+        z-index: 1;
     }
-    .card4 {
-        padding: 239px 40px 52px;
+
+    .row-input {
+        align-items: center;
+        position: absolute;
+        right: 0px;
+        bottom: 50px;
     }
-    .banner2 {
-        flex-wrap: wrap;
-        padding-right: 40px;
+
+    .frame-video {
+        height: 360px;
+        width: 540px;
+        position: absolute;
+        margin: 0 auto !important;
+        top: 630px;
+        right: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #000;
+        overflow: hidden;
+        flex-shrink: 0;
     }
-    .our-love-story-parent,
-    .spacer,
-    .text-block-quote {
-        padding: 52px 40px;
-        box-sizing: border-box;
+
+    .text-block-path {
+        width: 800px;
+        position: relative;
     }
-    .spacer {
-        gap: 158px 0;
-        padding: 52px 48px 52px 40px;
-    }
-    .b-c-a-mandiri-card {
-        min-width: 100%;
-    }
-    .rekening-field {
-        padding: 34px 40px;
-        box-sizing: border-box;
-    }
-    .button21 {
-        padding-left: 23px;
-        padding-right: 24px;
-        box-sizing: border-box;
-    }
-    .question4 {
-        min-width: 100%;
-    }
-    .hadiah-area,
-    .kirim-hadiah5 {
-        padding-left: 39px;
-        padding-right: 40px;
-        box-sizing: border-box;
-    }
-    .hadiah-area {
-        padding-left: 40px;
-    }
-    .frame-parent53 {
-        min-width: 100%;
-    }
-    .button-kirim,
-    .request-prayers {
-        padding-left: 24px;
-        padding-right: 24px;
-        box-sizing: border-box;
-    }
-    .request-prayers {
-        padding-left: 40px;
-        padding-right: 40px;
-    }
-}
-@media screen and (max-width: 825px) {
-    .pertemuan-yang-kuimpikan-kini-container {
-        font-size: 26px;
-        line-height: 38px;
-    }
-    .div11,
-    .div12,
-    .div13,
-    .text {
-        font-size: 26px;
-        line-height: 33px;
-    }
-    .input {
-        flex-wrap: wrap;
-    }
-    .card4 {
-        padding-top: 155px;
-        padding-bottom: 34px;
-        box-sizing: border-box;
-    }
-    .visual-icon {
-        flex: 1;
-    }
-    .rudi-wibowo {
-        font-size: 26px;
-        line-height: 33px;
-    }
-    .question3 {
-        flex: 1;
-    }
-    .button-primary {
-        flex-wrap: wrap;
-    }
-    .arum-kurniawati {
-        font-size: 26px;
-        line-height: 33px;
-    }
-    .card-parent,
-    .visual-icon1 {
-        flex: 1;
-    }
-    .button-primary1 {
-        flex-wrap: wrap;
-    }
-    .text-block-quote {
-        gap: 48px 0;
-        padding-top: 34px;
-        padding-bottom: 34px;
-        box-sizing: border-box;
-    }
-    .visual-icon2 {
-        flex: 1;
-    }
-    .pertama-bertemu {
-        font-size: 26px;
-        line-height: 33px;
-    }
-    .card6 {
-        flex-wrap: wrap;
-    }
-    .visual-icon3 {
-        flex: 1;
-    }
-    .pertama-bertemu1 {
-        font-size: 26px;
-        line-height: 33px;
-    }
-    .card7 {
-        flex-wrap: wrap;
-    }
-    .visual-icon4 {
-        flex: 1;
-    }
-    .tunangan {
-        font-size: 26px;
-        line-height: 33px;
-    }
-    .card8 {
-        flex-wrap: wrap;
-    }
-    .card-list3 {
-        min-width: 100%;
-    }
-    .visual-icon5 {
-        flex: 1;
-    }
-    .pertama-bertemu2 {
-        font-size: 26px;
-        line-height: 33px;
-    }
-    .card9 {
-        flex-wrap: wrap;
-    }
-    .visual-icon6 {
-        flex: 1;
-    }
-    .jadian {
-        font-size: 26px;
-        line-height: 33px;
-    }
-    .card10 {
-        flex-wrap: wrap;
-    }
-    .visual-icon7 {
-        flex: 1;
-    }
-    .pertama-bertemu3 {
-        font-size: 26px;
-        line-height: 33px;
-    }
-    .card11 {
-        flex-wrap: wrap;
-    }
-    .card-list4 {
-        min-width: 100%;
-    }
-    .card-list-parent {
-        gap: 0 48px;
-    }
-    .our-love-story-parent {
-        gap: 48px 0;
-        padding-top: 34px;
-        padding-bottom: 34px;
-        box-sizing: border-box;
-    }
-    .pertemuan-yang-kuimpikan-kini-container1 {
-        font-size: 26px;
-        line-height: 38px;
-    }
-    .column {
-        padding-left: 24px;
-        padding-right: 24px;
-        box-sizing: border-box;
-    }
+
     .foto-icon {
-        min-width: 100%;
+        object-position: 70px;
+        width: 450px;
+        height: 450px;
     }
-    .inner-frame {
-        padding-top: 52px;
-        box-sizing: border-box;
+
+    .foto-icon1 {
+        width: 450px;
+        height: 450px;
+        position: absolute;
+        margin: 0 !important;
+        top: 100px;
+        right: -400px;
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: cover;
     }
-    .foto-icon2,
-    .inner-frame,
-    .inner-frame1 {
-        min-width: 100%;
+
+    .foto-icon2 {
+        width: 450px;
+        height: 450px;
+        position: absolute;
+        margin: 0 !important;
+        top: 0;
+        right: -900px;
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: cover;
     }
-    .inner-frame1 {
-        padding-top: 52px;
-        box-sizing: border-box;
+
+    .foto-icon3 {
+        width: 450px;
+        height: 450px;
+        position: absolute;
+        margin: 0 !important;
+        top: 100px;
+        right: -1400px;
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: cover;
     }
-    .foto-container {
-        gap: 0 48px;
+
+    .foto-icon4 {
+        width: 450px;
+        height: 450px;
+        position: absolute;
+        margin: 0 !important;
+        top: 0;
+        right: -1900px;
+        overflow: hidden;
+        flex-shrink: 0;
+        object-fit: cover;
     }
-    .spacer {
-        gap: 158px 0;
-        padding-top: 34px;
-        padding-right: 24px;
-        padding-bottom: 34px;
-        box-sizing: border-box;
-    }
-    .akad-nikah,
-    .resepsi2 {
-        font-size: 26px;
-        line-height: 33px;
-    }
-    .input-alamat {
-        min-width: 100%;
-    }
+
     .anonym-card-list {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
         gap: 0 48px;
+        max-width: 100%;
     }
-    .konfirmasi-kehadiran {
-        font-size: 26px;
-        line-height: 33px;
+
+    .foto-icon5, .foto-icon6 {
+        position: absolute;
+        top: -0.5px;
+        left: 70px;
+        width: 397px;
+        height: 764px;
+        overflow: hidden;
+        object-fit: cover;
     }
-    .frame-form {
-        gap: 48px 0;
-        min-width: 100%;
+
+    .foto-icon6 {
+        top: 225.5px;
+        left: 250px;
+        z-index: 1;
     }
-    .frame-parent50 {
-        gap: 0 48px;
+
+    .input-alamat {
+        flex: 1;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 24px 0;
+        gap: 24px 0;
     }
-    .rekening-field {
-        gap: 48px 0;
+
+    .substitute-present {
+        align-self: stretch;
+        gap: 16px 0;
+        padding: 30px;
+        text-align: center;
+        font-size: 10px;
+        color: #fff;
+        margin-right: 20px;
+        font-family: Optima;
     }
-    .kirim-hadiah6 {
-        font-size: 26px;
-        line-height: 33px;
+
+    .question4 {
+        margin-bottom: 30px;
+        width: 943px;
+        gap: 0 0;
+        min-width: 500px;
     }
-    .hadiah-area,
-    .kirim-hadiah5 {
-        gap: 0 48px;
-        padding-top: 52px;
-        padding-bottom: 52px;
+
+    .button20 {
+        width: 100%;
+        border: 0;
+        outline: 0;
+        background-color: #3b3b3b;
+        height: 56px;
+        flex-direction: row;
+        align-items: center;
+        padding: 16px 40px;
         box-sizing: border-box;
+        font-family: NanumMyeongjo;
+        font-weight: 700;
+        font-size: 24px;
+        color: #fff;
+        min-width: 250px;
     }
-    .hadiah-area {
-        gap: 48px 0;
+
+    .button21 {
+        align-self: stretch;
+        height: 66px;
+        border: 1px solid #3b3b3b;
+        box-sizing: border-box;
+        flex-direction: row;
+        align-items: center;
+        padding: 16px 49px 16px 47px;
+        gap: 0 16px;
     }
-    .desta,
-    .hari3,
-    .ucapan-doa3 {
-        font-size: 26px;
-        line-height: 33px;
+
+    .multiple-cards {
+        height: 420px;
+        margin: auto 0;
+        width: 1px;
+        margin: 0 auto;
+        position: relative;
+        background-color: #1d1c16;
+        overflow: hidden;
+        flex-shrink: 0;
+        transform: rotate(90deg);
+        top: -220px;
     }
-    .button-kirim {
-        min-width: 100%;
+
+    .card-list5 {
+        width: 560px;
+        gap: 24px 0;
+        font-size: 24px;
+        color: #1d1c16;
+        font-family: NanumMyeongjo;
+        padding: 30px;
+        margin-top: -420px;
     }
+
+    .card12 {
+        align-self: stretch;
+        border: 1px solid #1d1c16;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 24px;
+        gap: 16px 0;
+        margin-right: 60px;
+    }
+
+    .card13 {
+        align-self: stretch;
+        border: 1px solid #1d1c16;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 24px;
+        gap: 16px 0;
+        margin-right: 60px;
+    }
+
     .frame-parent52 {
+        align-self: stretch;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
         gap: 0 48px;
+        max-width: 100%;
+        text-align: left;
+        font-size: 16px;
+        color: #b0aea9;
     }
-    .request-prayers {
+
+    .frame-parent53 {
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 20px 0;
         gap: 48px 0;
-        padding-top: 52px;
-        padding-bottom: 52px;
-        box-sizing: border-box;
+        min-width: 500px;
+        max-width: 100%;
+    }
+
+    .button-kirim {
+        flex: 1;
+        background-color: #3b3b3b;
+        padding: 48px;
+        gap: 24px 0;
+        min-width: 550px;
+        min-height: 400px;
+        font-size: 32px;
+        color: #3b3b3b;
+        font-family: "DM Serif Display";
+        margin-top: 48px;
     }
 }
-@media screen and (max-width: 450px) {
-    .pertemuan-yang-kuimpikan-kini-container,
-    .rhoma-irama,
-    .text {
-        font-size: 19px;
-        line-height: 29px;
-    }
-    .text {
-        line-height: 25px;
-    }
-    .b17,
-    .div11,
-    .hari2 {
-        font-size: 19px;
-        line-height: 27px;
-    }
-    .div11 {
-        line-height: 25px;
-    }
-    .b18,
-    .div12,
-    .jam2 {
-        font-size: 19px;
-        line-height: 27px;
-    }
-    .div12 {
-        line-height: 25px;
-    }
-    .b19,
-    .div13,
-    .menit2 {
-        font-size: 19px;
-        line-height: 27px;
-    }
-    .div13 {
-        line-height: 25px;
-    }
-    .detik2,
-    .kamis-21-oktober {
-        font-size: 19px;
-        line-height: 27px;
-    }
-    .button17 {
-        padding-left: 20px;
-        padding-right: 20px;
-        box-sizing: border-box;
-    }
-    .navigation {
-        flex-wrap: wrap;
-    }
-    .rudi-wibowo {
-        font-size: 19px;
-        line-height: 25px;
-    }
-    .bapak-akbar-skom-container,
-    .rudi-wibowo1 {
-        font-size: 19px;
-        line-height: 29px;
-    }
-    .rudi-wibowo1 {
-        line-height: 27px;
-    }
-    .arum-kurniawati {
-        font-size: 19px;
-        line-height: 25px;
-    }
-    .bapak-akbar-skom-container1,
-    .rudi-wibowo2 {
-        font-size: 19px;
-        line-height: 29px;
-    }
-    .rudi-wibowo2 {
-        line-height: 27px;
-    }
-    .our-love-story,
-    .pertama-bertemu {
-        font-size: 19px;
-        line-height: 25px;
-    }
-    .kita-bertemu-pertama {
-        font-size: 19px;
-        line-height: 29px;
-    }
-    .card6 {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        box-sizing: border-box;
-    }
-    .pertama-bertemu1 {
-        font-size: 19px;
-        line-height: 25px;
-    }
-    .kita-bertemu-pertama1 {
-        font-size: 19px;
-        line-height: 29px;
-    }
-    .card7 {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        box-sizing: border-box;
-    }
-    .tunangan {
-        font-size: 19px;
-        line-height: 25px;
-    }
-    .kita-bertemu-pertama2 {
-        font-size: 19px;
-        line-height: 29px;
-    }
-    .card8 {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        box-sizing: border-box;
-    }
-    .card-list3 {
-        gap: 48px 0;
-    }
-    .pertama-bertemu2 {
-        font-size: 19px;
-        line-height: 25px;
-    }
-    .kita-bertemu-pertama3 {
-        font-size: 19px;
-        line-height: 29px;
-    }
-    .card9 {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        box-sizing: border-box;
-    }
-    .jadian {
-        font-size: 19px;
-        line-height: 25px;
-    }
-    .kita-bertemu-pertama4 {
-        font-size: 19px;
-        line-height: 29px;
-    }
-    .card10 {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        box-sizing: border-box;
-    }
-    .pertama-bertemu3 {
-        font-size: 19px;
-        line-height: 25px;
-    }
-    .kita-bertemu-pertama5 {
-        font-size: 19px;
-        line-height: 29px;
-    }
-    .card11 {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        box-sizing: border-box;
-    }
-    .card-list4 {
-        gap: 48px 0;
-    }
-    .our-moment {
-        font-size: 19px;
-        line-height: 25px;
-    }
-    .pertemuan-yang-kuimpikan-kini-container1,
-    .rhoma-irama1 {
-        font-size: 19px;
-        line-height: 29px;
-    }
-    .akad-nikah,
-    .our-moment1 {
-        font-size: 19px;
-        line-height: 25px;
-    }
-    .jumat-28-april-container,
-    .resepsi2 {
-        font-size: 19px;
-        line-height: 29px;
-    }
-    .resepsi2 {
-        line-height: 25px;
-    }
-    .jumat-28-april-container1 {
-        font-size: 19px;
-        line-height: 29px;
-    }
-    .simpan-acara-ke {
-        font-size: 19px;
-        line-height: 27px;
-    }
-    .konfirmasi-kehadiran {
-        font-size: 19px;
-        line-height: 25px;
-    }
-    .apakah-kamu-akan,
-    .kirim,
-    .masukkan-nama-kamu2,
-    .nama,
-    .silahkan-isi-form {
-        font-size: 19px;
-        line-height: 29px;
-    }
-    .kirim {
-        line-height: 27px;
-    }
-    .rekening-field {
-        padding-top: 22px;
-        padding-bottom: 22px;
-        box-sizing: border-box;
-    }
-    .kirim-hadiah4,
-    .kirim-hadiah6 {
-        font-size: 19px;
-        line-height: 25px;
-    }
-    .jika-kamu-tidak2 {
-        font-size: 19px;
-        line-height: 29px;
-    }
-    .an-rudi-hermina4,
-    .an-rudi-hermina5,
-    .b20,
-    .b21,
-    .bca2,
-    .kirim-kado-ke2,
-    .mandiri2 {
-        font-size: 19px;
-        line-height: 27px;
-    }
-    .hadiah-area {
-        padding-top: 34px;
-        padding-bottom: 34px;
-        box-sizing: border-box;
-    }
-    .our-moment2,
-    .ucapan-doa3 {
-        font-size: 19px;
-        line-height: 25px;
-    }
-    .alamat,
-    .kirim1,
-    .masukkan-alamat,
-    .masukkan-nama-kamu3,
-    .masukkan-ucapan-container,
-    .nama1,
-    .ucapan-doa4 {
-        font-size: 19px;
-        line-height: 29px;
-    }
-    .kirim1 {
-        line-height: 27px;
-    }
-    .frame-parent53 {
-        gap: 48px 0;
-    }
-    .hari3 {
-        font-size: 19px;
-        line-height: 25px;
-    }
-    .desta,
-    .selamat-yaa-luv {
-        font-size: 19px;
-        line-height: 29px;
-    }
-    .desta {
-        line-height: 25px;
-    }
-    .semoga-lancar-sampai {
-        font-size: 19px;
-        line-height: 29px;
-    }
-    .button-kirim,
-    .request-prayers {
-        padding-top: 31px;
-        padding-bottom: 31px;
-        box-sizing: border-box;
-    }
-    .request-prayers {
-        padding-top: 34px;
-        padding-bottom: 34px;
-    }
-} */
