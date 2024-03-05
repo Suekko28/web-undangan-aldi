@@ -359,6 +359,14 @@
     flex-shrink: 0;
     z-index: 3;
 }
+
+.play-icon {
+    transition: transform 0.3s ease; /* Animasi transformasi */
+}
+
+.playing {
+    transform: rotate(360deg); /* Putar 360 derajat */
+}
 .banner-image,
 .input-name-field {
     align-self: stretch;
@@ -2307,11 +2315,13 @@
 
 @media screen and (max-width: 768px) {
     .side-view-bride-groom-embraced-icon {
-        width: 100%;
-        height: auto;
-        right: 0;
-        bottom: 0;
-        transform: scale(1);
+        height: 2426px;
+        width: 2426px;
+        position: absolute;
+        margin: 0 !important;
+        bottom: -1200px;
+        left: calc(50% - 1213px);
+        object-fit: cover;
     }
 
     .card-list12 {
@@ -2384,7 +2394,7 @@
         position: absolute;
         margin: 0 !important;
         top: 0;
-        left: 120px;
+        left: 125px;
         border-radius: 200px 200px 32px 32px;
         overflow: hidden;
         flex-shrink: 0;
@@ -2397,7 +2407,7 @@
         position: absolute;
         margin: 0 !important;
         top: 450px;
-        left: 120px;
+        left: 125px;
         border-radius: 200px 200px 32px 32px;
         overflow: hidden;
         flex-shrink: 0;
@@ -2410,7 +2420,7 @@
         position: absolute;
         margin: 0 !important;
         top: 900px;
-        left: 120px;
+        left: 125px;
         border-radius: 200px 200px 32px 32px;
         overflow: hidden;
         flex-shrink: 0;
@@ -2423,7 +2433,7 @@
         position: absolute;
         margin: 0 !important;
         top: 1350px;
-        left: 120px;
+        left: 125px;
         border-radius: 200px 200px 32px 32px;
         overflow: hidden;
         flex-shrink: 0;
@@ -2436,7 +2446,7 @@
         position: absolute;
         margin: 0 !important;
         top: 1810px;
-        left: 120px;
+        left: 125px;
         border-radius: 200px 200px 32px 32px;
         overflow: hidden;
         flex-shrink: 0;
@@ -2449,7 +2459,7 @@
         position: absolute;
         margin: 0 !important;
         top: 2270px;
-        left: 120px;
+        left: 125px;
         border-radius: 200px 200px 32px 32px;
         overflow: hidden;
         flex-shrink: 0;
@@ -2457,16 +2467,164 @@
     }
 
     .event-title {
-        margin-right: 250px;
-        align-self: stretch;
+        align-self: center;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .date-info {
+        flex: 1;
+        text-align: center;
+        align-items: flex-end;
+        flex-direction: column;
+        padding: 20px 0;
+        box-sizing: border-box;
+        gap: 24px 0;
+        width: 100%;
+        margin-top: -24px;
+    }
+
+    .day-of-week {
+        display: flex;
+        margin-right: 30px;
+        /* text-align: center; */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px 0;
+        max-width: 100%;
+    }
+
+    .alexnor {
+        margin: 0;
+        position: relative;
+        font-size: inherit;
+        line-height: 115%;
+        font-weight: 400;
+        font-family: inherit;
+        text-align: center;
+    }
+
+    .putra-pertama-dari {
+        position: relative;
+        font-size: 24px;
+        line-height: 140%;
+        text-align: center;
+    }
+
+    .button-link7 {
+        margin-right: 170px;
+        flex-direction: row;
+        align-items: center;
+        gap: 0 8px;
+        font-size: 24px;
+        /* margin-left: auto; */
+    }
+
+    .location-details-icon {
+        right: -130px;
+    }
+
+    .event-title1 {
+        align-self: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .event-title-child {
+        left: -130px;
+    }
+
+    .venue-name-parent {
+        flex: 1;
+        text-align: center;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 20px 0;
+        box-sizing: border-box;
+        gap: 24px 0;
+        width: 100%;
+        margin-top: -32px;
+    }
+
+    .venue-name {
+        margin-left: 170px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 16px 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .exafator {
+        margin: 0;
+        text-align: center;
+        position: relative;
+        font-size: inherit;
+        line-height: 115%;
+        font-weight: 400;
+        font-family: inherit;
+    }
+
+    .putra-pertama-dari1 {
+        margin-left: -130px;
+        position: relative;
+        font-size: 24px;
+        line-height: 140%;
+    }
+
+    .button-link8 {
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 0 0;
-        max-width: 100%;
+        gap: 0 8px;
+        font-size: 24px;
+        margin-left: 180px;
     }
 
+    .love-story2 {
+        margin-top: -70px;
+    }
+
+    .side-view-bride-groom-hiding-f-icon {
+        width: 100%;
+        height: auto;
+        /* right: -3000px; */
+        /* bottom: -200px; */
+        transform: scale(0.8);
+    }
+
+    .lorem-ipsum-dolor,
+    .lorem-ipsum-dolor1,
+    .lorem-ipsum-dolor2 {
+        width: 500px;
+    }
+
+    .lihat-lokasi {
+        width: 608px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        max-width: 100%;
+        color: #fff;
+    }
+
+    .frame-wrapper10 {
+        width: 800px;
+        justify-content: flex-start;
+        padding: 0 20px 80px;
+        box-sizing: border-box;
+        max-width: 100%;
+        flex-shrink: 0;
+    }
     .card-list14 {
         height: 420px;
         transform: rotate(90deg);
@@ -2485,5 +2643,125 @@
         flex-direction: column;
         gap: 24px 0;
         font-family: Besley;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .side-view-bride-groom-embraced-icon {
+        height: 2426px;
+        width: 2426px;
+        position: absolute;
+        margin: 0 !important;
+        bottom: -1500px;
+        left: calc(50% - 1250px);
+        object-fit: cover;
+    }
+
+    .card-list12 {
+        left: 150px;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px 0;
+        margin: auto 0;
+        position: absolute;
+        top: 300px;
+    }
+
+    .navigation3 {
+        align-self: stretch;
+        border-radius: 24px;
+        position: fixed;
+        bottom: 40px;
+        left: 150px;
+        background-color: #fff;
+        box-shadow: -11px 13px 42px rgba(105, 102, 90, 0.2);
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 12px 24px;
+        gap: 20px;
+        z-index: 3;
+    }
+
+    .floating-button4 {
+        cursor: pointer;
+        border: 0;
+        padding: 0;
+        background-color: #fff;
+        height: 80px;
+        bottom: 150px;
+        left: 550px;
+        width: 80px;
+        position: fixed;
+        border-radius: 240px;
+        box-shadow: -9px 9px 42px rgba(105, 102, 90, 0.32);
+        overflow: hidden;
+        flex-shrink: 0;
+        z-index: 3;
+    }
+
+    .lorem-ipsum-dolor,
+    .lorem-ipsum-dolor1,
+    .lorem-ipsum-dolor2 {
+        width: 400px;
+    }
+
+    .lihat-lokasi {
+        width: 608px;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        max-width: 100%;
+        color: #fff;
+    }
+
+    .frame-wrapper10 {
+        width: 700px;
+        justify-content: flex-start;
+        padding: 0 20px 80px;
+        box-sizing: border-box;
+        max-width: 100%;
+        flex-shrink: 0;
+    }
+
+    .main-frame-child {
+        width: 1237.8px;
+        height: calc(100% - 150px);
+        position: absolute;
+        margin: 0 !important;
+        top: 5px;
+        bottom: 9px;
+        left: calc(50% - 619px);
+        max-height: 100%;
+        z-index: 1;
+    }
+
+    .noapplicabledataforthesenodes-icon,
+    .noapplicabledataforthesenodes-icon1,
+    .noapplicabledataforthesenodes-icon2,
+    .noapplicabledataforthesenodes-icon3,
+    .noapplicabledataforthesenodes-icon4,
+    .noapplicabledataforthesenodes-icon5 {
+        left: 70px;
+    }
+
+    .doa-hadiah {
+        padding: 50px;
+    }
+
+    .question7 {
+        width: 100%;
+        margin-left: -60px;
+        gap: 24px 0;
+        min-width: 500px;
+    }
+
+    .card-list14 {
+        height: 480px;
+        top: -190px;
+    }
+
+    .card-list15 {
+        margin-top: -390px;
     }
 }
