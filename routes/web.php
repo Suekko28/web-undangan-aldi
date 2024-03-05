@@ -21,6 +21,10 @@ Route::get('/undangan-aldi/index', function () {
     return view('undangan-aldi.index');
 });
 
+Route::get('/undangan-aldi/coba', function () {
+    return view('undangan-aldi.coba');
+});
+
 
 Route::get('/undangan-nanang', function () {
     return view('undangan-nanang.home');
@@ -32,4 +36,12 @@ Route::get('/undangan-nanang/index', function () {
 
 Route::get('/coba', function () {
     return view('undangan-aldi.coba');
+});
+
+Route::get('/undangan-mufli', function () {
+    return view('undangan-mufli.home');
+});
+
+Route::get('/undangan-mufli/index', function () {
+    return view('undangan-mufli.index');
 });

@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="{{ asset('./first.css') }}" />
+    <link rel="stylesheet" href="{{ asset('./first-nanang.css') }}" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Cormorant Infant:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rouge Script:wght@400&display=swap" />

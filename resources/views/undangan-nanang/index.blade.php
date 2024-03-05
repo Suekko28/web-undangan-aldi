@@ -5,10 +5,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="{{ asset('./home.css') }}" />
+    <link rel="stylesheet" href="{{ asset('./home-nanang.css') }}" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant Garamond:wght@700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marck Script:wght@400&display=swap" />
-    <link rel="stylesheet"
+    <link rel="stylesheet"12
         href="https://fonts.googleapis.com/css2?family=Cormorant Infant:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rouge Script:wght@400&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;700&display=swap" />
@@ -326,13 +326,13 @@
                 <img class="foto-icon2" loading="eager" alt=""
                     src="{{ asset('./assets/foto-2@2x.png') }}" />
 
-                    <div class="inner-frame1">
-                        <img class="foto-icon3" loading="eager" alt=""
-                            src="{{ asset('./assets/foto-3@2x.png') }}" />
-                    </div>
+                <div class="inner-frame1">
+                    <img class="foto-icon3" loading="eager" alt=""
+                        src="{{ asset('./assets/foto-3@2x.png') }}" />
+                </div>
 
-                    <img class="foto-icon4" loading="eager" alt=""
-                        src="{{ asset('./assets/foto-4@2x.png') }}" />
+                <img class="foto-icon4" loading="eager" alt=""
+                    src="{{ asset('./assets/foto-4@2x.png') }}" />
 
             </div>
         </section>
@@ -464,7 +464,7 @@
                         <div class="bca2">BCA</div>
                         <div class="body5">
                             <b class="b20">1223242442</b>
-                            <input class="copy" type="checkbox" />
+                            <img class="copy" alt="" src="{{asset ('./assets/copy.svg')}}" />
                         </div>
                         <div class="an-rudi-hermina4">an Rudi Hermina</div>
                     </div>
@@ -472,7 +472,7 @@
                         <div class="mandiri2">Mandiri</div>
                         <div class="body6">
                             <b class="b21">1223242442</b>
-                            <input class="copy1" type="checkbox" />
+                            <img class="copy" alt="" src="{{asset ('./assets/copy.svg')}}" />
                         </div>
                         <div class="an-rudi-hermina5">an Rudi Hermina</div>
                     </div>
