@@ -83,6 +83,7 @@
                         </div>
                     </div>
                 </div>
+
                 <audio autoplay loop controls id="myAudio" src="{{ asset('./assets/coba.mp3') }}"></audio>
 
                 <button class="floating-button4" id="floatingButton">
@@ -544,61 +545,22 @@
         //     });
         // }
 
-        // document.addEventListener("DOMContentLoaded", function() {
-        //     var playIcon = document.querySelector(".play-icon");
-        //     var pauseIcon = document.querySelector(".pause-1-icon");
-        //     var audio = document.getElementById("myAudio");
-
-
-        //     playIcon.addEventListener("click", function() {
-        //         // Mengganti gambar play dengan gambar pause
-        //         playIcon.style.display = "none";
-        //         pauseIcon.style.display = "inline-block";
-
-        //         // Memutar musik
-        //         audio.play();
-        //     });
-
-        //     pauseIcon.addEventListener("click", function() {
-        //         // Mengganti gambar pause dengan gambar play
-        //         pauseIcon.style.display = "none";
-        //         playIcon.style.display = "inline-block";
-
-        //         // Memberhentikan musik
-        //         audio.pause();
-        //     });
-        // });
-
         document.addEventListener("DOMContentLoaded", function() {
             var playIcon = document.querySelector(".play-icon");
             var pauseIcon = document.querySelector(".pause-1-icon");
             var audio = document.getElementById("myAudio");
 
-            function playAudio() {
-                // Memutar musik
-                audio.play().then(() => {
-                    // Mengganti gambar play dengan gambar pause
-                    playIcon.style.display = "none";
-                    pauseIcon.style.display = "inline-block";
-                }).catch(error => {
-                    console.error("Pemutaran otomatis gagal:", error);
-                });
-            }
 
-            // Memainkan audio saat pengguna berinteraksi
-            document.addEventListener("click", function() {
-                playAudio();
-                // Setelah interaksi pertama, hapus event listener ini agar tidak dipanggil lagi.
-                document.removeEventListener("click", playAudio);
-            });
-
-            // Tombol play/pause
             playIcon.addEventListener("click", function() {
-                playAudio();
+                // Mengganti gambar play dengan gambar pause
+                playIcon.style.display = "none";
+                pauseIcon.style.display = "inline-block";
+
+                // Memutar musik
+                audio.play();
             });
 
             pauseIcon.addEventListener("click", function() {
-                console.log("Tombol pause diklik"); // Periksa apakah event listener dipanggil
                 // Mengganti gambar pause dengan gambar play
                 pauseIcon.style.display = "none";
                 playIcon.style.display = "inline-block";
@@ -607,6 +569,45 @@
                 audio.pause();
             });
         });
+
+        // document.addEventListener("DOMContentLoaded", function() {
+        //     var playIcon = document.querySelector(".play-icon");
+        //     var pauseIcon = document.querySelector(".pause-1-icon");
+        //     var audio = document.getElementById("myAudio");
+
+        //     function playAudio() {
+        //         // Memutar musik
+        //         audio.play().then(() => {
+        //             // Mengganti gambar play dengan gambar pause
+        //             playIcon.style.display = "none";
+        //             pauseIcon.style.display = "inline-block";
+        //         }).catch(error => {
+        //             console.error("Pemutaran otomatis gagal:", error);
+        //         });
+        //     }
+
+        //     // Memainkan audio saat pengguna berinteraksi
+        //     document.addEventListener("click", function() {
+        //         playAudio();
+        //         // Setelah interaksi pertama, hapus event listener ini agar tidak dipanggil lagi.
+        //         document.removeEventListener("click", playAudio);
+        //     });
+
+        //     // Tombol play/pause
+        //     playIcon.addEventListener("click", function() {
+        //         playAudio();
+        //     });
+
+        //     pauseIcon.addEventListener("click", function() {
+        //         console.log("Tombol pause diklik"); // Periksa apakah event listener dipanggil
+        //         // Mengganti gambar pause dengan gambar play
+        //         pauseIcon.style.display = "none";
+        //         playIcon.style.display = "inline-block";
+
+        //         // Memberhentikan musik
+        //         audio.pause();
+        //     });
+        // });
     </script>
 </body>
 
