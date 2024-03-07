@@ -1211,13 +1211,14 @@ body {
 }
 .frame-parent17,
 .frame-parent18 {
-    align-self: stretch;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom yang setara */
+    grid-auto-rows: auto; /* Tinggi baris disesuaikan dengan konten */
+    gap: 24px; /* Jarak antar gambar */
     align-items: center;
     justify-content: center;
-    gap: 0 24px;
 }
+
 .frame-parent16 {
     flex-direction: column;
     justify-content: center;
@@ -1849,24 +1850,31 @@ body {
     padding: var(--padding-5xl);
 }
 .ucapan-mobile {
-    align-self: stretch;
-    border-radius: var(--br-5xl);
+    border-radius: 10px;
     background-color: #ffefe0;
-    overflow-x: auto;
-    align-items: center;
-    text-align: justify;
+    overflow-x: hidden; /* Menghindari scroll horizontal */
+    overflow-y: auto; /* Mengaktifkan scroll kebawah */
+    display: flex;
+    flex-direction: column; /* Mengatur susunan card secara vertikal */
+    align-items: flex-start;
+    gap: 24px; /* Jarak antara card */
+    font-size: 24px;
+    max-height: 500px; /* Atur tinggi maksimal agar memunculkan scroll */
 }
 
 .ucapan-mobile-inner {
     width: 376px;
-    border-radius: var(--br-base);
-    background-color: var(--neutral-0);
-    box-shadow: -10px 10px 10px rgba(187, 133, 84, 0.08);
-    border: 1px solid var(--color-peru);
-    box-sizing: border-box;
-    overflow: hidden;
+    border-radius: 16px;
+    background-color: #fff;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
     align-items: flex-start;
-    margin-bottom: 24px;
+    justify-content: flex-start;
+    padding: 40px;
+    box-sizing: border-box;
+    gap: 16px 0;
+    max-width: 100%;
 }
 
 .ahmad-parent {
@@ -2423,6 +2431,32 @@ body {
         width: 550px;
         margin-left: 200px;
     }
+
+    .ucapan-mobile {
+        overflow-x: hidden; /* Menghindari scroll horizontal */
+        overflow-y: auto; /* Mengaktifkan scroll kebawah */
+        display: flex;
+        flex-direction: column; /* Mengatur susunan card secara vertikal */
+        align-items: flex-start;
+        gap: 24px; /* Jarak antara card */
+        font-size: 24px;
+        max-height: 500px; /* Atur tinggi maksimal agar memunculkan scroll */
+    }
+
+    .ucapan-mobile-inner {
+        width: 376px;
+        border-radius: 16px;
+        background-color: #fff;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 40px;
+        box-sizing: border-box;
+        gap: 16px 0;
+        max-width: 100%;
+    }
 }
 
 @media screen and (max-width: 1280px) {
@@ -2556,18 +2590,43 @@ body {
 
     .frame-parent17,
     .frame-parent18 {
-        align-self: stretch;
-        display: flex;
-        flex-direction: row;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); /* Membuat 3 kolom yang setara */
+        grid-auto-rows: auto; /* Tinggi baris disesuaikan dengan konten */
+        gap: 24px; /* Jarak antar gambar */
         align-items: center;
         justify-content: center;
-        gap: 0 24px;
         margin-right: -350px;
     }
 
     .aku-tak-pernah-caption {
         width: 550px;
         /* margin-left: 200px; */
+    }
+    .ucapan-mobile {
+        overflow-x: hidden; /* Menghindari scroll horizontal */
+        overflow-y: auto; /* Mengaktifkan scroll kebawah */
+        display: flex;
+        flex-direction: column; /* Mengatur susunan card secara vertikal */
+        align-items: flex-start;
+        gap: 24px; /* Jarak antara card */
+        font-size: 24px;
+        max-height: 500px; /* Atur tinggi maksimal agar memunculkan scroll */
+    }
+
+    .ucapan-mobile-inner {
+        width: 864px;
+        border-radius: 16px;
+        background-color: #fff;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 40px;
+        box-sizing: border-box;
+        gap: 16px 0;
+        max-width: 100%;
     }
 }
 
@@ -2691,15 +2750,244 @@ body {
         display: inline-block;
     }
 
+    .seiring-berjalannya-waktu3 {
+        width: 520px;
+    }
+
+    .atas-kehendak-allah3 {
+        width: 650px;
+    }
+
+    .kami-memutuskan-untuk3 {
+        width: 500px;
+    }
+
     .rsvp5 {
         align-items: center;
         flex-direction: column;
     }
 
     .ucapan-mobile {
-        margin-top: 48px;
+        margin-top: 24px;
+        overflow-x: auto;
         flex-direction: row;
-        gap: 24px;
+        align-items: flex-start;
+        gap: 0 24px;
+        font-size: 24px;
+    }
+
+    .ucapan-mobile-inner {
+        border-radius: 16px;
+        background-color: #fff;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 40px;
+        box-sizing: border-box;
+        gap: 16px 0;
+        max-width: 100%;
+    }
+
+    .button62,
+    .button63 {
+        height: 65px;
+    }
+
+    .card-list17 {
+        flex-wrap: nowrap;
+    }
+    .ucapan-mobile {
+        width: 620px;
+        margin-top: 24px;
+        overflow-x: auto;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0 24px;
+        font-size: 24px;
+        margin-left: 100px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header-section-icon {
+        margin-left: -240px;
+    }
+
+    .navbar-mobile3 {
+        left: 240px;
+    }
+
+    .button61 {
+        right: 50px;
+    }
+
+    .undangan-pernikahan-parent2 {
+        max-width: 500px;
+    }
+
+    .image-placeholder {
+        width: 500px;
+    }
+
+    .days-until-we3 {
+        left: -570px;
+    }
+
+    .link-button {
+        left: 200px;
+    }
+
+    .card-mandiri {
+        flex-direction: column-reverse;
+    }
+
+    .jamaludin3 {
+        text-align: center;
+    }
+
+    .anak-dari-bapak6 {
+        text-align: center;
+        width: 500px;
+    }
+
+    .card-mandiri1 {
+        flex-direction: column;
+        margin-top: 24px;
+    }
+
+    .maryam-parent1 {
+        text-align: center;
+    }
+
+    .anak-dari-bapak7 {
+        width: 500px;
+    }
+
+    .asset-2-53 {
+        top: -10px;
+        left: -132px;
+        object-fit: cover;
+    }
+
+    .asset-2-63 {
+        right: -153px;
+        bottom: 103px;
+        object-fit: contain;
+    }
+
+    .gallery-frame-wrapper {
+        margin-bottom: 24px;
+    }
+
+    .frame-wrapper11 {
+        width: 500px;
+        padding: 14px 18px;
+    }
+    .frame-wrapper13 {
+        margin-top: 24px;
+        width: 500px;
+        padding: 14px 18px;
+    }
+
+    .jl-ir-h7,
+    .jl-ir-h6 {
+        width: 450px;
+        display: inline-block;
+        text-align: center;
+    }
+
+    .gallery {
+        margin-top: -120px;
+    }
+
+    .galeri {
+        margin-left: 1140px;
+    }
+
+    .caption {
+        left: 420px;
+    }
+
+    .frame-parent17,
+    .frame-parent18 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Membuat 2 kolom yang setara */
+        grid-auto-rows: auto; /* Tinggi baris disesuaikan dengan konten */
+        gap: 24px; /* Jarak antar gambar */
+        align-items: center;
+        justify-content: center;
+        margin-left: 250px;
+    }
+
+    .r-s-v-p-frame-title {
+        margin-right: 150px;
+    }
+
+    .tidak-ada-yang3 {
+        width: 500px;
+    }
+
+    .r-s-v-p-frame-title1 {
+        margin-left: 150px;
+    }
+
+    .seiring-berjalannya-waktu3 {
+        width: 400px;
+    }
+
+    .r-s-v-p-frame-title2 {
+        margin-right: 150px;
+    }
+
+    .atas-kehendak-allah3 {
+        margin-left: 150px;
+        width: 350px;
+    }
+
+    .r-s-v-p-frame-title3 {
+        margin-left: 150px;
+    }
+
+    .ucapan-mobile-inner {
+        margin-bottom: unset;
+        overflow-y: auto;
+    }
+
+    .kami-memutuskan-untuk3 {
+        width: 380px;
+    }
+
+    .button62 {
+        margin-bottom: 24px;
+    }
+
+    .card-list17 {
+        max-width: 500px;
+    }
+
+    .ucapan-mobile {
+        overflow-x: auto;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 0 24px;
+        font-size: 24px;
+    }
+
+    .ucapan-mobile-inner {
+        width: 376px;
+        border-radius: 16px;
+        background-color: #fff;
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 40px;
+        box-sizing: border-box;
+        gap: 16px 0;
+        max-width: 100%;
     }
 }
 /* @media screen and (max-width: 1525px) {

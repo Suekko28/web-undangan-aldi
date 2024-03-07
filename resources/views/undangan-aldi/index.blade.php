@@ -254,6 +254,7 @@
 
                             <img class="frame-child6" alt=""
                                 src="{{ asset('./assets/frame-101@2x.png') }}" />
+                                
                         </div>
                         <div class="frame-parent18">
                             <img class="frame-child6" alt=""
@@ -363,6 +364,49 @@
                     </div>
                 </div>
                 <div class="ucapan-mobile">
+                    <div class="ucapan-mobile-inner">
+                        <div class="ahmad-parent">
+                            <b class="pertemuan">Ahmad</b>
+                            <div class="devider"></div>
+                            <div class="seiring-berjalannya-waktu">
+                                <p class="aku-tak-pernah">“Selamat ya !”</p>
+                                <p class="aku-tak-pernah">&nbsp;</p>
+                                <p class="aku-tak-pernah">&nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ucapan-mobile-inner">
+                        <div class="ahmad-parent">
+                            <b class="pertemuan">Ahmad</b>
+                            <div class="devider"></div>
+                            <div class="seiring-berjalannya-waktu">
+                                <p class="aku-tak-pernah">“Selamat ya !”</p>
+                                <p class="aku-tak-pernah">&nbsp;</p>
+                                <p class="aku-tak-pernah">&nbsp;</p>
+                            </div>
+                        </div>
+                    </div><div class="ucapan-mobile-inner">
+                        <div class="ahmad-parent">
+                            <b class="pertemuan">Ahmad</b>
+                            <div class="devider"></div>
+                            <div class="seiring-berjalannya-waktu">
+                                <p class="aku-tak-pernah">“Selamat ya !”</p>
+                                <p class="aku-tak-pernah">&nbsp;</p>
+                                <p class="aku-tak-pernah">&nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ucapan-mobile-inner">
+                        <div class="ahmad-parent">
+                            <b class="pertemuan">Ahmad</b>
+                            <div class="devider"></div>
+                            <div class="seiring-berjalannya-waktu">
+                                <p class="aku-tak-pernah">“Selamat ya !”</p>
+                                <p class="aku-tak-pernah">&nbsp;</p>
+                                <p class="aku-tak-pernah">&nbsp;</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="ucapan-mobile-inner">
                         <div class="ahmad-parent">
                             <b class="pertemuan">Ahmad</b>
