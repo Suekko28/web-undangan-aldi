@@ -464,7 +464,7 @@
                         <div class="bca2">BCA</div>
                         <div class="body5">
                             <b class="b20">1223242442</b>
-                            <img class="copy" alt="" src="{{asset ('./assets/copy.svg')}}" />
+                            <img class="copy" alt="" src="{{ asset('./assets/copy.svg') }}" />
                         </div>
                         <div class="an-rudi-hermina4">an Rudi Hermina</div>
                     </div>
@@ -472,7 +472,7 @@
                         <div class="mandiri2">Mandiri</div>
                         <div class="body6">
                             <b class="b21">1223242442</b>
-                            <img class="copy" alt="" src="{{asset ('./assets/copy.svg')}}" />
+                            <img class="copy" alt="" src="{{ asset('./assets/copy.svg') }}" />
                         </div>
                         <div class="an-rudi-hermina5">an Rudi Hermina</div>
                     </div>
@@ -533,7 +533,25 @@
                         </div>
                         <div class="selamat-yaa-luv">“Selamat yaa luv”</div>
                     </div>
-                    <div class="frame-parent56">
+                    <div class="frame-parent55">
+                        <div class="desta-parent">
+                            <div class="desta">Desta</div>
+                            <b class="bogor1">Bogor</b>
+                        </div>
+                        <div class="semoga-lancar-sampai">
+                            “Semoga lancar sampai hari H”
+                        </div>
+                    </div>
+                    <div class="frame-parent55">
+                        <div class="desta-parent">
+                            <div class="desta">Desta</div>
+                            <b class="bogor1">Bogor</b>
+                        </div>
+                        <div class="semoga-lancar-sampai">
+                            “Semoga lancar sampai hari H”
+                        </div>
+                    </div>
+                    <div class="frame-parent55">
                         <div class="desta-parent">
                             <div class="desta">Desta</div>
                             <b class="bogor1">Bogor</b>

@@ -2563,17 +2563,17 @@
     padding: 24px;
     gap: 16px 0;
 }
+
 .button-kirim {
     flex: 1;
     background-color: #3b3b3b;
     padding: 48px;
     gap: 24px 0;
-    min-width: 572px;
-    min-height: 682px;
-    max-width: 100%;
     font-size: 32px;
     color: #3b3b3b;
     font-family: "DM Serif Display";
+    overflow-y: auto; /* Menambahkan overflow-y untuk mengaktifkan gulir vertikal */
+    max-height: 700px; /* Contoh tinggi maksimum yang dapat digulir, sesuaikan sesuai kebutuhan */
 }
 .button-kirim,
 .frame-parent52,
@@ -3136,6 +3136,156 @@
     }
 }
 
+@media screen and (max-width: 1024px) {
+    .young-japanese-couple-1-icon1 {
+        left: -1000px;
+    }
+
+    .pertemuan-yang-kuimpikan-kini-container {
+        top: -200px;
+    }
+
+    .rhoma-irama {
+        top: -190px;
+    }
+
+    .card-list-parent {
+        flex-wrap: nowrap;
+    }
+
+    .card-list3 {
+        flex: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 48px 0;
+        max-width: 550px;
+    }
+
+    .card6,
+    .card8,
+    .card10{
+        flex-direction: column;
+    }
+
+    .card6,
+    .card8{
+        
+        margin-left: 150px;
+    }
+
+    .card10 {
+        margin-right: 150px;
+    }
+
+    
+
+   
+
+    .frame-video {
+        height: 460px;
+        width: 740px;
+        position: absolute;
+        margin: 0 auto !important;
+        top: 520px;
+        /* right: 50%; */
+        /* left: 60%; */
+        transform: translate(-50%, -50%);
+        background-color: #000;
+        overflow: hidden;
+        flex-shrink: 0;
+    }
+
+    .column {
+        flex: 1;
+        background-color: rgba(59, 59, 59, 0.8);
+        backdrop-filter: blur(6px);
+        flex-direction: column;
+        align-items: center;
+        padding: 48px;
+        box-sizing: border-box;
+        gap: 16px 0;
+        z-index: 1;
+        margin-right: auto;
+        margin-left: 100px;
+    }
+
+    .foto-container {
+        margin-top: 18em;
+    }
+
+    .foto-icon1 {
+        right: 15px;
+    }
+
+    .foto-icon2 {
+        right: -470px;
+    }
+
+    .foto-icon3 {
+        right: -960px;
+    }
+
+    .foto-icon4 {
+        right: -1450px;
+    }
+
+    .anonym-card-list {
+        flex-direction: column;
+    }
+
+    .frame-parent50 {
+        flex-direction: column-reverse;
+    }
+
+    .foto-icon7 {
+        width: 700px;
+        height: 620px;
+    }
+
+    .frame-form {
+        width: 700px;
+    }
+
+    .frame-parent51 {
+        margin-top: 24px;
+    }
+
+    .kirim-hadiah5 {
+        flex-direction: column;
+    }
+
+    .multiple-cards {
+        height: 650px;
+        width: 1px;
+        position: relative;
+        background-color: #1d1c16;
+        overflow: hidden;
+        flex-shrink: 0;
+        transform: rotate(90deg);
+        right: -350px;
+        top: -330px;
+    }
+
+    .card-list5 {
+        margin-left: 25px;
+        margin-top: -600px;
+        width: 560px;
+        gap: 24px 0;
+        font-size: 24px;
+        color: #1d1c16;
+        font-family: NanumMyeongjo;
+    }
+
+    .frame-parent52 {
+        flex-direction: column;
+    }
+
+    .button-kirim {
+        min-width: 800px;
+    }
+}
+
 @media screen and (max-width: 768px) {
     .young-japanese-couple-1-icon1 {
         height: 100vh;
@@ -3490,8 +3640,6 @@
         padding: 30px;
     }
 
-    
-
     .frame-parent52 {
         align-self: stretch;
         flex-direction: column;
@@ -3631,7 +3779,8 @@
         max-width: 100%;
     }
 
-    .foto-icon5, .foto-icon6 {
+    .foto-icon5,
+    .foto-icon6 {
         position: absolute;
         top: -0.5px;
         left: 70px;
