@@ -3178,6 +3178,12 @@
         margin-right: 150px;
     }
 
+
+    .frame-parent44,
+    .frame-parent47,
+    .text-block {
+        margin-top: 24px;
+    }
     
 
    
@@ -3335,6 +3341,27 @@
         gap: 0 24px;
         max-width: 100%;
     }
+
+    .card6,
+    .card8 {
+        margin-left: 250px;
+    }
+
+    .card10 {
+        margin-right: 250px;
+    }
+
+    .visual-icon2,
+    .visual-icon6,
+    .visual-icon4 {
+        width: 220px;
+        height: 220px;
+    }
+
+    .column {
+        
+    }
+
 
     /* .card6 {
         width: 50%;

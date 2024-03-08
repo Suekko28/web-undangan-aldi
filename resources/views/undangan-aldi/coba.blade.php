@@ -120,9 +120,14 @@
 
             <div class="r-s-v-p-mobile1">
                 <div class="button61">
-                    <div class="whatsapp-video-2024-02-12-at-13"></div>
-                    <img class="piringan-1-icon3" alt="" src="{{ asset('./assets/piringan-1@2x.png') }}" />
+                    <audio autoplay loop controls id="myAudio" src="{{ asset('./assets/coba.mp3') }}"></audio>
+                    <div class="whatsapp-video-2024-02-12-at-13">
+                        <!-- Gambar GIF -->
+                        <img class="play-icon" alt="" src="{{ asset('./assets/Piringan.gif') }}" />
+                        <img class="pause-1-icon" alt="" src="{{ asset('./assets/piringan-1@2x.png') }}" />
+                    </div>
                 </div>
+
             </div>
 
         </section>
@@ -442,7 +447,7 @@
                         </div>
                     </div>
                 </div>
-                
+
 
                 <div class="ucapan-mobile-inner">
                     <div class="ahmad-parent">
@@ -585,6 +590,31 @@
                 }
             });
         }
+
+        document.addEventListener("DOMContentLoaded", function() {
+    var playIcon = document.querySelector(".r-s-v-p-mobile1 .play-icon");
+    var pauseIcon = document.querySelector(".r-s-v-p-mobile1 .pause-1-icon");
+    var audio = document.getElementById("myAudio");
+
+    playIcon.addEventListener("click", function() {
+        // Mengganti gambar play dengan gambar pause
+        playIcon.style.display = "none";
+        pauseIcon.style.display = "inline-block";
+
+        // Memutar musik
+        audio.play();
+    });
+
+    pauseIcon.addEventListener("click", function() {
+        // Mengganti gambar pause dengan gambar play
+        pauseIcon.style.display = "none";
+        playIcon.style.display = "inline-block";
+
+        // Memberhentikan musik
+        audio.pause();
+    });
+});
+
     </script>
 </body>
 

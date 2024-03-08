@@ -444,7 +444,7 @@
                             dalam bentuk :</b>
                     </div>
                     <div class="substitute-present">
-                        <input class="button20" placeholder="Transfer ke no. rekening tertera" type="text" />
+                        <button class="button20">Transfer ke no. rekening tertera</button>
                         <div class="button21">
                             <div class="mail8">
                                 <img class="vector-icon9" alt="" src="{{ asset('./assets/vector.svg') }}" />
@@ -452,8 +452,7 @@
                                     <div class="div19">12</div>
                                 </div>
                             </div>
-                            <input class="kirim-kado-ke2" placeholder="Kirim kado ke alamat tertera"
-                                type="text" />
+                            <button class="kirim-kado-ke2">Kirim kado ke alamat tertera</button>
                             <img class="add-icon8" alt="" src="{{ asset('./assets/add.svg') }}" />
                         </div>
                     </div>
@@ -503,6 +502,7 @@
                                     <input class="masukkan-alamat" placeholder="Masukkan alamat" type="text" />
                                 </div>
                             </div>
+                            
                             <div class="input12">
                                 <div class="ucapan-doa4">Ucapan & Doa</div>
                                 <div class="field9">

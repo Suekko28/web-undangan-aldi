@@ -1,3 +1,12 @@
+body {
+  background-image: url(./assets/coba1.jpg);
+  background-position: center;
+  background-size: cover;
+  /* z-index: 999; */
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -126,7 +135,6 @@
 .frame-parent119 {
     position: absolute;
     bottom: 0;
-    left: calc(50% - 199.5px);
     flex-direction: column;
     padding: 48px;
     gap: 48px 0;
@@ -134,14 +142,13 @@
 
 .first1 {
     width: 100%;
-    position: relative;
-    background-color: #fffefa;
-    height: 1080px;
-    overflow: hidden;
+    color: white;
     text-align: center;
     font-size: 24px;
-    color: #fff;
     font-family: NanumMyeongjo;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 @media only screen and (max-width: 1920px){

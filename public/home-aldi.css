@@ -475,11 +475,15 @@ body {
     border-radius: 120px;
     overflow: hidden;
     flex-shrink: 0;
-    background-image: url(./assets/piringan-1@2x.png);
+    background-image: url(./assets/Piringan.gif);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top;
     z-index: 999;
+}
+
+#myAudio {
+    display: none;
 }
 .banner6,
 .r-s-v-p-mobile1 {

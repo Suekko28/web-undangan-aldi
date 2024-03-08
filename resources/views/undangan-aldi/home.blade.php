@@ -17,13 +17,13 @@
   </head>
   <body>
     <div class="prototype-home-deks">
-      <img class="asset-4-icon" alt="" src="./assets/asset-4@2x.png" />
+      {{-- <img class="asset-4-icon" alt="" src="./assets/asset-4@2x.png" />
 
       <img class="asset-3-1" alt="" src="./assets/asset-3-1@2x.png" />
 
       <img class="asset-2-11" alt="" src="./assets/asset-2-11@2x.png" />
 
-      <img class="asset-4-3" alt="" src="./assets/asset-4-3@2x.png" />
+      <img class="asset-4-3" alt="" src="./assets/asset-4-3@2x.png" /> --}}
 
       <div class="frame-parent">
         <div class="undangan-pernikahan-parent">

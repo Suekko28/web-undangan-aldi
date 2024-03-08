@@ -21,8 +21,8 @@
 <body>
     <div class="first1">
     
-        <img class="young-japanese-couple-1-11" alt=""
-            src="./assets/youngjapanesecouple-1-1@2x.png" />
+        {{-- <img class="young-japanese-couple-1-11" alt=""
+            src="./assets/youngjapanesecouple-1-1@2x.png" /> --}}
 
 
         <div class="first-item"></div>
