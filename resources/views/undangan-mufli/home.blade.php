@@ -22,10 +22,10 @@
 <body>
     <div class="first2">
         <main class="transparent-background">
-            <div class="wrapper-side-view-bride-groom-">
+            {{-- <div class="wrapper-side-view-bride-groom-">
                 <img class="side-view-bride-groom-posing-s-icon" alt=""
                     src="{{ asset('./assets/sideviewbridegroomposingstreet-2@2x.png') }}" />
-            </div>
+            </div> --}}
             <img class="sideview-bridegroom-icon" loading="lazy" alt=""
                 src="{{ asset('./assets/2-1@2x.png') }}" />
 
@@ -34,6 +34,7 @@
         </main>
         <div class="mufli-frame"></div>
 
+        <div class="content">
         <div class="kepada-bapakibusaudarai">Kepada Bapak/Ibu/Saudara/i</div>
         <b class="mufli-keluarga">Mufli & Keluarga</b>
         <div class="kami-dengan-senang">
@@ -41,6 +42,7 @@
             kami
         </div>
         <h1 class="alexnor-exafator">Alexnor & Exafator</h1>
+        <div class="container-button">
         <button class="button44" id="button">
             <div class="mail26">
                 <img class="vector-icon29" alt="" src="{{ asset('./assets/vector.svg') }}" />
@@ -53,6 +55,8 @@
             <img class="add-icon26" alt="" src="{{ asset('./assets/add.svg') }}" />
         </button>
     </div>
+    </div>
+</div>
 
     <script>
         var button = document.getElementById("button");

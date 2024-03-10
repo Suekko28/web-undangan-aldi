@@ -2656,13 +2656,13 @@
 } */
 
 @media screen and (max-width: 1536px) {
-    .young-japanese-couple-1-icon1 {
+    /* .young-japanese-couple-1-icon1 {
         position: absolute;
         margin: 0 !important;
         bottom: -102.5px;
         left: -700px;
         object-fit: cover;
-    }
+    } */
 
     .floating-button {
         cursor: pointer;
@@ -2842,13 +2842,13 @@
 }
 
 @media screen and (max-width: 1280px) {
-    .young-japanese-couple-1-icon1 {
+    /* .young-japanese-couple-1-icon1 {
         position: absolute;
         margin: 0 !important;
         bottom: -102.5px;
         left: -900px;
         object-fit: cover;
-    }
+    } */
 
     .floating-button {
         cursor: pointer;
@@ -3137,9 +3137,9 @@
 }
 
 @media screen and (max-width: 1024px) {
-    .young-japanese-couple-1-icon1 {
+    /* .young-japanese-couple-1-icon1 {
         left: -1000px;
-    }
+    } */
 
     .pertemuan-yang-kuimpikan-kini-container {
         top: -200px;
@@ -3293,15 +3293,15 @@
 }
 
 @media screen and (max-width: 768px) {
-    .young-japanese-couple-1-icon1 {
+    /* .young-japanese-couple-1-icon1 {
         height: 100vh;
         width: 2283px;
         position: absolute;
         margin: 0 !important;
         bottom: 0;
-        left: -1200px; /* Menggeser gambar ke kiri sebanyak 100px (Anda dapat menyesuaikan angka sesuai kebutuhan) */
+        left: -1200px; 
         object-fit: cover;
-    }
+    } */
 
     .pertemuan-yang-kuimpikan-kini-container {
         top: 100px;
@@ -3695,7 +3695,7 @@
 }
 
 @media screen and (max-width: 640px) {
-    .young-japanese-couple-1-icon1 {
+    /* .young-japanese-couple-1-icon1 {
         height: 100vh;
         width: auto;
         position: absolute;
@@ -3703,7 +3703,7 @@
         bottom: 0;
         left: -1010px;
         object-fit: contain;
-    }
+    } */
 
     .card4 {
         align-self: stretch;

@@ -42,6 +42,10 @@ Route::get('/undangan-mufli', function () {
     return view('undangan-mufli.home');
 });
 
+Route::get('/undangan-coba', function () {
+    return view('undangan-mufli.coba');
+});
+
 Route::get('/undangan-mufli/index', function () {
     return view('undangan-mufli.index');
 });
