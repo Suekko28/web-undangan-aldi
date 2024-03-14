@@ -3141,6 +3141,23 @@
         left: -1000px;
     } */
 
+    .floating-button {
+        cursor: pointer;
+        border: 0;
+        padding: 0;
+        background-color: #fff;
+        width: 64px;
+        height: 64px;
+        position: fixed;
+        border-radius: 120px;
+        box-shadow: -8px 8px 9.8px rgba(0, 0, 0, 0.07);
+        overflow: hidden;
+        flex-shrink: 0;
+        z-index: 2;
+        bottom: 80px;
+        left: 900px;
+    }
+
     .pertemuan-yang-kuimpikan-kini-container {
         top: -200px;
     }
@@ -3303,6 +3320,9 @@
         object-fit: cover;
     } */
 
+    .floating-button {
+        left: 650px;
+    }
     .pertemuan-yang-kuimpikan-kini-container {
         top: 100px;
         position: absolute;
@@ -3705,6 +3725,10 @@
         object-fit: contain;
     } */
 
+    .floating-button {
+        left: 550px;
+    }
+
     .card4 {
         align-self: stretch;
         align-items: flex-start;
@@ -3741,6 +3765,8 @@
         width: 800px;
         position: relative;
     }
+
+    
 
     .foto-icon {
         object-position: 70px;
@@ -3821,6 +3847,31 @@
         top: 225.5px;
         left: 250px;
         z-index: 1;
+    }
+
+    .kita-bertemu-pertama2 {
+        height: unset;
+    }
+
+    .card6, .card8 {
+        margin-left: 280px;
+    }
+
+    .card10 {
+        margin-right: 280px;
+    }
+
+    .kita-bertemu-pertama4 {
+        height: unset;
+    }
+
+    .visual-icon2, .visual-icon6, .visual-icon4 {
+        width: 200px;
+        height: 200px;
+    }
+
+    .column {
+        margin-left: unset;
     }
 
     .input-alamat {

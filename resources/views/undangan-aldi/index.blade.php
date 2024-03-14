@@ -497,6 +497,9 @@
         </div>
     </div>
 
+    
+    <audio autoplay loop controls id="myAudio" src="{{ asset('./assets/coba.mp3') }}"></audio>
+
     <div class="button2">
         <img class="piringan-1-icon" alt="" src="{{ asset('./assets/piringan-1@2x.png') }}" />
     </div>
@@ -590,6 +593,32 @@
                 }
             });
         }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var playIcon = document.querySelector(".play-icon");
+            var pauseIcon = document.querySelector(".pause-1-icon");
+            var audio = document.getElementById("myAudio");
+
+
+            playIcon.addEventListener("click", function() {
+                // Mengganti gambar play dengan gambar pause
+                playIcon.style.display = "none";
+                pauseIcon.style.display = "inline-block";
+
+                // Memutar musik
+                audio.play();
+            });
+
+            pauseIcon.addEventListener("click", function() {
+                // Mengganti gambar pause dengan gambar play
+                pauseIcon.style.display = "none";
+                playIcon.style.display = "inline-block";
+
+                // Memberhentikan musik
+                audio.pause();
+            });
+        });
+
     </script>
 </body>
 

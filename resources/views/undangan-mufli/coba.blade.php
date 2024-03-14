@@ -32,7 +32,7 @@
                 </div>
                 <div class="alexnor-exafator">Alexnor & Exafator</div>
                 <button class="button44" id="button">
-                    <div class="buka-undangan4">Buka Undangan</div>
+                    <a class="buka-undangan4" style="text-decoration: none" href="undangan-mufli/index">Buka Undangan</a>
                 </button>
             </div>
         </div>

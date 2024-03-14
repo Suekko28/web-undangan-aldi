@@ -89,7 +89,7 @@
                 <button class="floating-button4" id="floatingButton">
                     <div class="whatsapp-video-2024-01-30-at-1"></div>
                     <img class="play-icon" alt="" src="{{ asset('./assets/play.svg') }}" />
-                    <img class="pause-1-icon" alt="" src="{{ asset('./assets/pause-1@2x.png') }}" />
+                    <img class="pause-1-icon" alt="" src="{{ asset('./assets/Piringan.gif') }}" />
                 </button>
 
             </div>
@@ -122,10 +122,10 @@
                                 </div>
                             </div>
                             <div class="button-link7">
-                                <img class="ig-icon6" loading="lazy" alt=""
-                                    src="{{ asset('./assets/ig1.svg') }}" />
-
-                                <div class="alexnor32">Alexnor32</div>
+                                <a class="alexnor32" href="https://www.instagram.com/" target="_blank"
+                                    style="text-direction:none;"> <img class="ig-icon6" loading="lazy"
+                                        alt="" src="{{ asset('./assets/ig1.svg') }}" />
+                                    Alexnor32</a>
                             </div>
                         </div>
                         <img class="location-details-icon" loading="lazy" alt=""
@@ -142,11 +142,11 @@
                                     Putra pertama dari Bapak Ilux & Ibu Risma
                                 </div>
                             </div>
-                            <div class="button-link8">
-                                <img class="ig-icon7" loading="lazy" alt=""
-                                    src="{{ asset('./assets/ig1.svg') }}" />
-
-                                <div class="exafator1">Exafator</div>
+                            <div class="button-link7">
+                                <a class="alexnor32" href="https://www.instagram.com/" target="_blank"
+                                    style="text-direction:none;"> <img class="ig-icon6" loading="lazy"
+                                        alt="" src="{{ asset('./assets/ig1.svg') }}" />
+                                    Exafator</a>
                             </div>
                         </div>
                     </div>
@@ -162,8 +162,7 @@
                     <b class="love-story3">Love Story</b>
                     <div class="jam-date-picker">
                         <div class="input-field">
-                            <input class="card-list13" placeholder="Perkenalan" type="text" />
-
+                            <label class="card-list13" placeholder="Perkenalan" type="text">Perkenalan</label>
                             <div class="doa-hadiah-form">
                                 <b class="january-2013">January, 2013</b>
                                 <div class="lorem-ipsum-dolor">
@@ -174,7 +173,7 @@
                             </div>
                         </div>
                         <div class="input-field1">
-                            <input class="input-field-child" placeholder="Jadian" type="text" />
+                            <label class="input-field-child" placeholder="Jadian" type="text">Jadian</label>
 
                             <div class="january-2013-parent">
                                 <b class="january-20131">January, 2013</b>
@@ -186,7 +185,7 @@
                             </div>
                         </div>
                         <div class="input-field2">
-                            <input class="input-field-item" placeholder="Tunangan" type="text" />
+                            <label class="input-field-item" placeholder="Tunangan" type="text">Tunangan</label>
 
                             <div class="january-2013-group">
                                 <b class="january-20132">January, 2013</b>
@@ -265,7 +264,7 @@
                                     <div class="div57">12</div>
                                 </div>
                             </div>
-                            <div class="lihat-lokasi1">Lihat Lokasi</div>
+                            <a class="lihat-lokasi1">Lihat Lokasi</a>
                             <img class="add-icon28" alt="" src="{{ asset('./assets/add.svg') }}" />
                         </div>
                     </div>
@@ -296,11 +295,15 @@
                                     <div class="div58">12</div>
                                 </div>
                             </div>
-                            <div class="lihat-lokasi2">Lihat Lokasi</div>
+                            <a class="lihat-lokasi2" href="https://www.google.com/maps" target="_blank">Lihat
+                                Lokasi</a>
                             <img class="add-icon29" alt="" src="{{ asset('./assets/add.svg') }}" />
                         </button>
                     </div>
-                    <img class="main-frame-child" alt="" src="{{ asset('./assets/group-56.svg') }}" />
+                    <img class="main-frame-child" alt=""
+                        src="{{ asset('./assets/wedding-time-flower.png') }}" />
+                    <img class="main-frame-child2" alt=""
+                        src="{{ asset('./assets/wedding-time-flower.png') }}" />
                 </div>
             </div>
         </section>
@@ -339,8 +342,8 @@
                         </div>
                     </div>
                     <div class="payment-methods">
-                        <input class="button48" placeholder="Transfer ke no. rekening tertera" type="text" />
-
+                        <button class="button48" placeholder="Transfer ke no. rekening tertera"
+                            type="text">Transfer ke no. rekening tertera</button>
                         <div class="button49">
                             <div class="mail30">
                                 <img class="vector-icon34" alt=""
@@ -350,8 +353,8 @@
                                     <div class="div59">12</div>
                                 </div>
                             </div>
-                            <input class="kirim-kado-ke6" placeholder="Kirim kado ke alamat tertera"
-                                type="text" />
+                            <button class="kirim-kado-ke6" placeholder="Kirim kado ke alamat tertera" type="text">
+                                Kirim kado ke alamat tertera</button>
 
                             <img class="add-icon30" alt="" src="{{ asset('./assets/add.svg') }}" />
                         </div>
@@ -362,22 +365,28 @@
                     <div class="card30">
                         <div class="bca6">BCA</div>
                         <div class="body16">
-                            <b class="copyan-rudi-hermina">1223242442</b>
-                            <img class="copy" alt="" src="{{ asset('./assets/copy.svg') }}" />
+                            <b class="copyan-rudi-hermina" id="copyText">1223242442</b>
+                            <img class="copy" alt="Copy" src="{{ asset('./assets/copy.svg') }}"
+                                id="copyButton" />
                         </div>
+
                         <div class="an-rudi-hermina12">an Rudi Hermina</div>
                     </div>
                     <div class="card31">
                         <div class="mandiri6">Mandiri</div>
                         <div class="body17">
-                            <b class="b44">1223242442</b>
-                            <img class="copy" alt="" src="{{ asset('./assets/copy.svg') }}" />
+                            <b class="b44" id="copyText2">1223242442</b>
+                            <img class="copy" alt="Copy" src="{{ asset('./assets/copy.svg') }}"
+                                id="copyButton2" />
                         </div>
+
                         <div class="an-rudi-hermina13">an Rudi Hermina</div>
                     </div>
                 </div>
+
+
             </div>
-            <div class="send-prayers">
+            {{-- <div class="send-prayers">
                 <b class="kirimkan-doa-dan">Kirimkan Doa dan Ucapan</b>
                 <div class="input-name-pesan">
                     <div class="frame-nama-pesan">
@@ -395,13 +404,14 @@
                     <div class="akan-hadir">
                         <div class="akan-hadir1">Akan Hadir?</div>
                         <div class="noapplicabledataforthesenodes2">
+                            <label class="field26">
+                                <input type="radio" name="ya" id="ya" class="ya">
+                                <button class="ya3">Ya</button>
+                            </label>
                             <div class="field26">
-                                <div class="ya3">Ya</div>
+                                <button class="ya3">Tidak</button>
                             </div>
-                            <div class="field27">
-                                <div class="tidak3">Tidak</div>
-                            </div>
-                            <div class="field28">
+                            <div class="field26">
                                 <div class="mungkin">Mungkin</div>
                             </div>
                         </div>
@@ -448,7 +458,7 @@
                     <p class="atas-doa">Atas doa & ucapan bapak/ibu/saudara/i, Kami</p>
                     <p class="mengucapkan-terima-kasih">mengucapkan terima kasih.</p>
                 </footer>
-            </div>
+            </div> --}}
         </section>
 
     </div>
@@ -608,6 +618,122 @@
         //         audio.pause();
         //     });
         // });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Mendapatkan elemen yang akan disalin
+            var copyText = document.getElementById("copyText");
+
+            // Mendapatkan tombol yang akan mengaktifkan fungsi penyalinan
+            var copyButton = document.getElementById("copyButton");
+
+            // Menambahkan event listener ke tombol
+            copyButton.addEventListener("click", function() {
+                // Membuat sebuah elemen textarea sementara
+                var textarea = document.createElement("textarea");
+
+                // Mengatur isi teks textarea dengan teks yang ingin disalin
+                textarea.value = copyText.innerText;
+
+                // Menyembunyikan textarea di luar jendela tampilan
+                textarea.style.position = "fixed";
+                textarea.style.top = 0;
+                textarea.style.left = 0;
+                textarea.style.opacity = 0;
+
+                // Menambahkan elemen textarea ke dalam dokumen
+                document.body.appendChild(textarea);
+
+                // Memilih teks di dalam textarea
+                textarea.select();
+
+                // Menyalin teks ke dalam papan klip
+                document.execCommand("copy");
+
+                // Menghapus textarea yang sementara dibuat
+                document.body.removeChild(textarea);
+
+                // Memberi tahu pengguna bahwa teks telah disalin
+                alert("Teks telah disalin: " + copyText.innerText);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Mendapatkan elemen yang akan disalin
+            var copyText = document.getElementById("copyText2");
+
+            // Mendapatkan tombol yang akan mengaktifkan fungsi penyalinan
+            var copyButton = document.getElementById("copyButton2");
+
+            // Menambahkan event listener ke tombol
+            copyButton.addEventListener("click", function() {
+                // Membuat sebuah elemen textarea sementara
+                var textarea = document.createElement("textarea");
+
+                // Mengatur isi teks textarea dengan teks yang ingin disalin
+                textarea.value = copyText.innerText;
+
+                // Menyembunyikan textarea di luar jendela tampilan
+                textarea.style.position = "fixed";
+                textarea.style.top = 0;
+                textarea.style.left = 0;
+                textarea.style.opacity = 0;
+
+                // Menambahkan elemen textarea ke dalam dokumen
+                document.body.appendChild(textarea);
+
+                // Memilih teks di dalam textarea
+                textarea.select();
+
+                // Menyalin teks ke dalam papan klip
+                document.execCommand("copy");
+
+                // Menghapus textarea yang sementara dibuat
+                document.body.removeChild(textarea);
+
+                // Memberi tahu pengguna bahwa teks telah disalin
+                alert("Teks telah disalin: " + copyText.innerText);
+            });
+        });
+
+        // Mendapatkan elemen tombol "Transfer ke no. rekening tertera"
+        var transferRekening = document.querySelector('.button48');
+
+        // Mendapatkan elemen tombol "Kirim kado ke alamat tertera"
+        var kirimAlamatButton = document.querySelector('.kirim-kado-ke6');
+
+        // Mendapatkan elemen div "card-list15"
+        var cardList = document.querySelector('.card-list15');
+
+        // Simpan konten asli dari cardList
+        var originalCardListContent = cardList.innerHTML;
+
+        // Menambahkan event listener untuk tombol transferRekening
+        transferRekening.addEventListener('click', function() {
+            // Mengembalikan cardList ke konten aslinya
+            cardList.innerHTML = originalCardListContent;
+        });
+
+        // Menambahkan event listener untuk tombol kirimAlamatButton
+        kirimAlamatButton.addEventListener('click', function() {
+            // Mengubah konten elemen cardList menjadi alamat
+            cardList.innerHTML =
+                '<div class="alamat-tertera">Alamat Anda:<br> Jl. Contoh No. 123, Kota Contoh</div>';
+        });
+
+        // Mendapatkan elemen tombol "Kirim kado ke alamat tertera"
+        var kirimAlamatButton = document.querySelector('.kirim-kado-ke6');
+
+        // Mendapatkan elemen tombol "Transfer ke no. rekening tertera"
+        var transferRekeningButton = document.querySelector('.button48');
+
+        // Mendefinisikan warna tombol yang berubah
+        var newButtonColor = '#605a4c'; // Warna yang sama seperti tombol transfer
+
+        // Menambahkan event listener untuk tombol kirimAlamatButton
+        kirimAlamatButton.addEventListener('click', function() {
+            // Mengubah warna background tombol transferRekeningButton
+            transferRekeningButton.style.backgroundColor = newButtonColor;
+        });
     </script>
 </body>
 

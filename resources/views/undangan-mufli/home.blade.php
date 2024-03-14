@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <link rel="stylesheet" href="{{ asset('./first-mufli.css') }}" />
+    <link rel="stylesheet" href="{{ asset('./coba.css') }}" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Cormorant Infant:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rouge Script:wght@400&display=swap" />
@@ -20,44 +20,23 @@
 </head>
 
 <body>
-    <div class="first2">
-        <main class="transparent-background">
-            {{-- <div class="wrapper-side-view-bride-groom-">
-                <img class="side-view-bride-groom-posing-s-icon" alt=""
-                    src="{{ asset('./assets/sideviewbridegroomposingstreet-2@2x.png') }}" />
-            </div> --}}
-            <img class="sideview-bridegroom-icon" loading="lazy" alt=""
-                src="{{ asset('./assets/2-1@2x.png') }}" />
 
-            <img class="transparent-white-roses-652f4f-icon" alt=""
-                src="{{ asset('./assets/transparentwhiteroses652f4fbe6fc320-1@2x.png') }}" />
-        </main>
-        <div class="mufli-frame"></div>
-
-        <div class="content">
-        <div class="kepada-bapakibusaudarai">Kepada Bapak/Ibu/Saudara/i</div>
-        <b class="mufli-keluarga">Mufli & Keluarga</b>
-        <div class="kami-dengan-senang">
-            Kami dengan senang hati mengundang Anda untuk menghadiri hari pernikahan
-            kami
-        </div>
-        <h1 class="alexnor-exafator">Alexnor & Exafator</h1>
-        <div class="container-button">
-        <button class="button44" id="button">
-            <div class="mail26">
-                <img class="vector-icon29" alt="" src="{{ asset('./assets/vector.svg') }}" />
-
-                <div class="badge32">
-                    <div class="div50">12</div>
+    <main>
+        <div class="container">
+            <div class="content">
+                <div class="kepada-bapak-ibu-content">Kepada Bapak/Ibu/Saudara/i</div>
+                <div class="yang-diundang">Mufli & Keluarga</div>
+                <div class="kami-dengan-senang">
+                    Kami dengan senang hati mengundang Anda untuk menghadiri hari pernikahan
+                    kami
                 </div>
+                <div class="alexnor-exafator">Alexnor & Exafator</div>
+                <button class="button44" id="button">
+                    <a class="buka-undangan4" style="text-decoration: none" href="undangan-mufli/index">Buka Undangan</a>
+                </button>
             </div>
-            <div class="buka-undangan4">Buka Undangan</div>
-            <img class="add-icon26" alt="" src="{{ asset('./assets/add.svg') }}" />
-        </button>
-    </div>
-    </div>
-</div>
-
+        </div>
+    </main>
     <script>
         var button = document.getElementById("button");
         if (button) {

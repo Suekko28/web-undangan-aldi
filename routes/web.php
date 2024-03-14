@@ -34,9 +34,6 @@ Route::get('/undangan-nanang/index', function () {
     return view('undangan-nanang.index');
 });
 
-Route::get('/coba', function () {
-    return view('undangan-aldi.coba');
-});
 
 Route::get('/undangan-mufli', function () {
     return view('undangan-mufli.home');

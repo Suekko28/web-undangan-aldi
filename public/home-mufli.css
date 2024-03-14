@@ -1,3 +1,5 @@
+
+
 * {
     margin: 0;
     padding: 0;
@@ -23,7 +25,7 @@
     left: 0;
     background-color: rgba(152, 149, 119, 0.4);
     backdrop-filter: blur(20px);
-    z-index: 1;
+    /* z-index: 1; */
 }
 .alexnor-exafator1,
 .the-wedding-of2 {
@@ -364,7 +366,7 @@
     transition: transform 0.3s ease; /* Animasi transformasi */
 }
 
-.playing {
+.play.icon {
     transform: rotate(360deg); /* Putar 360 derajat */
 }
 .banner-image,
@@ -466,7 +468,20 @@
     position: relative;
     line-height: 140%;
     font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
+a {
+    text-decoration: none;
+    color: black;
+    z-index: 999;
+}
+
+#myAudio {
+    display: none;
+}
+
 .button-link7,
 .date-info {
     display: flex;
@@ -579,6 +594,7 @@
     padding: 80px;
     box-sizing: border-box;
     gap: 24px 0;
+    z-index: 5;
 }
 .kedua-mempelai-child {
     margin-left: -200px;
@@ -586,7 +602,6 @@
     position: absolute;
     max-width: 124%;
     flex-shrink: 0;
-    z-index: 1;
 }
 .kedua-mempelai {
     align-self: stretch;
@@ -599,6 +614,7 @@
     justify-content: flex-start;
     gap: 1645px 0;
     max-width: 100%;
+    z-index: 1;
 }
 .side-view-bride-groom-hiding-f-icon {
     width: 2518px;
@@ -624,7 +640,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     padding: 24px;
     box-sizing: border-box;
     font-family: Lora;
@@ -677,7 +693,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     padding: 24px;
     box-sizing: border-box;
     font-family: Lora;
@@ -729,7 +745,7 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    /* justify-content: center; */
     padding: 24px;
     box-sizing: border-box;
     font-family: Lora;
@@ -1224,13 +1240,24 @@
     gap: 48px 0;
 }
 .main-frame-child {
-    width: 1237.8px;
     height: calc(100% - 14px);
     position: absolute;
     margin: 0 !important;
     top: 5px;
     bottom: 9px;
     left: calc(50% - 619px);
+    max-height: 100%;
+    z-index: 1;
+}
+
+.main-frame-child2 {
+    transform: rotate(180deg);
+    height: calc(100% - 14px);
+    position: absolute;
+    margin: 0 !important;
+    top: 5px;
+    bottom: 9px;
+    right: calc(50% - 619px);
     max-height: 100%;
     z-index: 1;
 }
@@ -1468,12 +1495,19 @@
 }
 .payment-methods {
     align-self: stretch;
-    gap: 16px 0;
     text-align: center;
     font-size: 10px;
     color: #fff;
+    gap: 16px;
     font-family: Optima;
 }
+
+.ya {
+    pointer-events: none;
+    position: absolute;
+    clip: rect(0,0,0,0);
+}
+
 .question7 {
     width: 634px;
     gap: 24px 0;
@@ -1698,6 +1732,12 @@
 .ya3 {
     flex: 1;
 }
+
+.ya3:focus {
+    background-color: #605A4C;
+    color: white;
+    box-shadow: none;
+}
 .field26 {
     height: 40px;
     width: 160px;
@@ -1710,6 +1750,18 @@
     justify-content: center;
     padding: 5px 23px;
 }
+
+.field26:target {
+    background-color: #605A4C;
+    color: white;
+    box-shadow: none;
+}
+
+
+/* .field26:hover {
+    transition: ease-in 0.5ms;
+} */
+
 .tidak3 {
     flex: 1;
     position: relative;

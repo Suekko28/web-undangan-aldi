@@ -118,17 +118,13 @@
 
             </div>
 
-            <div class="r-s-v-p-mobile1">
-                <div class="button61">
-                    <audio autoplay loop controls id="myAudio" src="{{ asset('./assets/coba.mp3') }}"></audio>
-                    <div class="whatsapp-video-2024-02-12-at-13">
-                        <!-- Gambar GIF -->
-                        <img class="play-icon" alt="" src="{{ asset('./assets/Piringan.gif') }}" />
-                        <img class="pause-1-icon" alt="" src="{{ asset('./assets/piringan-1@2x.png') }}" />
-                    </div>
-                </div>
+            <audio autoplay loop controls id="myAudio" src="{{ asset('./assets/coba.mp3') }}"></audio>
 
-            </div>
+            <button class="floating-button4" id="floatingButton">
+                <div class="whatsapp-video-2024-01-30-at-1"></div>
+                <img class="play-icon" alt="" src="{{ asset('./assets/piringan-1@2x.png') }}" />
+                <img class="pause-1-icon" alt="" src="{{ asset('./assets/Piringan.gif') }}" />
+            </button>
 
         </section>
 
@@ -592,29 +588,53 @@
         }
 
         document.addEventListener("DOMContentLoaded", function() {
-    var playIcon = document.querySelector(".r-s-v-p-mobile1 .play-icon");
-    var pauseIcon = document.querySelector(".r-s-v-p-mobile1 .pause-1-icon");
-    var audio = document.getElementById("myAudio");
+            var playIcon = document.querySelector(".r-s-v-p-mobile1 .play-icon");
+            var pauseIcon = document.querySelector(".r-s-v-p-mobile1 .pause-1-icon");
+            var audio = document.getElementById("myAudio");
 
-    playIcon.addEventListener("click", function() {
-        // Mengganti gambar play dengan gambar pause
-        playIcon.style.display = "none";
-        pauseIcon.style.display = "inline-block";
+            playIcon.addEventListener("click", function() {
+                // Mengganti gambar play dengan gambar pause
+                playIcon.style.display = "none";
+                pauseIcon.style.display = "inline-block";
 
-        // Memutar musik
-        audio.play();
-    });
+                // Memutar musik
+                audio.play();
+            });
 
-    pauseIcon.addEventListener("click", function() {
-        // Mengganti gambar pause dengan gambar play
-        pauseIcon.style.display = "none";
-        playIcon.style.display = "inline-block";
+            pauseIcon.addEventListener("click", function() {
+                // Mengganti gambar pause dengan gambar play
+                pauseIcon.style.display = "none";
+                playIcon.style.display = "inline-block";
 
-        // Memberhentikan musik
-        audio.pause();
-    });
-});
+                // Memberhentikan musik
+                audio.pause();
+            });
+        });
 
+        document.addEventListener("DOMContentLoaded", function() {
+            var playIcon = document.querySelector(".play-icon");
+            var pauseIcon = document.querySelector(".pause-1-icon");
+            var audio = document.getElementById("myAudio");
+
+
+            playIcon.addEventListener("click", function() {
+                // Mengganti gambar play dengan gambar pause
+                playIcon.style.display = "none";
+                pauseIcon.style.display = "inline-block";
+
+                // Memutar musik
+                audio.play();
+            });
+
+            pauseIcon.addEventListener("click", function() {
+                // Mengganti gambar pause dengan gambar play
+                pauseIcon.style.display = "none";
+                playIcon.style.display = "inline-block";
+
+                // Memberhentikan musik
+                audio.pause();
+            });
+        });
     </script>
 </body>
 

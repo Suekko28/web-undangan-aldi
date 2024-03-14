@@ -1,5 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    background-image: url('./assets/sideviewbridegroomposingstreet-2@2x.png');
+    background-image: url('./assets/bg-mufli.png');
     background-position: center;
     background-size: cover;
     /* z-index: 999; */
@@ -7,132 +12,47 @@ body {
     background-attachment: fixed;
   }
 
-* {
-    margin: 0;
-    padding: 0;
-}
-
-
-.side-view-bride-groom-posing-s-icon {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    position: absolute;
-    left: 0;
-    top: 8px;
-    transform: scale(1.014);
-}
-.wrapper-side-view-bride-groom- {
-    position: absolute;
-    top: 0;
-    left: 142px;
-    width: 2053px;
-    height: 1369px;
+.container {
     display: flex;
-    align-items: center;
     justify-content: center;
-}
-.sideview-bridegroom-icon,
-.transparent-white-roses-652f4f-icon {
-    position: absolute;
-    top: 727px;
-    left: 1768px;
-    width: 569.6px;
-    height: 569.6px;
-    object-fit: contain;
-    z-index: 1;
-}
-.transparent-white-roses-652f4f-icon {
-    left: 0;
-}
-.transparent-background {
-    position: absolute;
-    top: 0;
-    left: -209px;
-    width: 2338px;
-    height: 1297px;
+    align-items: center;
 }
 
 .content {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-.kepada-bapakibusaudarai,
-.mufli-keluarga {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    /* top: 670px; */
-    left: 790.5px;
-    line-height: 150%;
-    z-index: 1;
-}
-
-.mufli-keluarga {
-    top: 722px;
-    left: 863.5px;
-    line-height: 140%;
-}
-.alexnor-exafator,
-.kami-dengan-senang {
-    line-height: 150%;
-    z-index: 1;
-}
-.alexnor-exafator {
-    margin: 0;
-    top: 824px;
-    left: 749px;
-    font-size: 48px;
-    font-weight: 400;
-    font-family: inherit;
-}
-.vector-icon29 {
-    position: absolute;
-    height: 50.67%;
-    width: 67.67%;
-    top: 25%;
-    right: 15.67%;
-    bottom: 24.33%;
-    left: 16.67%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-}
-.div50 {
-    align-self: stretch;
-    height: 10px;
-    position: relative;
-    font-size: 10px;
-    line-height: 100%;
-    font-family: Optima;
+    font-size: 24px;
+    font-family: Lora;
     color: #fff;
     text-align: center;
-    display: inline-block;
-}
-.badge32 {
+    line-height: 150%;
     position: absolute;
-    top: calc(50% - 14px);
-    left: calc(50% - 2px);
-    border-radius: 20px;
-    background-color: #ed1c24;
-    display: none;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 1px 2px;
+    bottom: 1em;
+    left: 50%;
+    transform: translateX(-50%);
 }
-.mail26 {
-    height: 30px;
-    width: 30px;
-    position: relative;
-    display: none;
+
+
+.yang-diundang {
+    font-weight: bold;
+    margin: 16px;
 }
+
+.alexnor-exafator {
+    font-size: 48px;
+    margin: 48px;
+    line-height: 100%;
+}
+
+.button44 {
+    cursor: pointer;
+    border: 0;
+    padding: 11px;
+    background-color: #fff;
+    border-radius: 80px;
+    width: 276px;
+    gap: 0 16px;
+}
+
 .buka-undangan4 {
-    width: 220px;
-    position: relative;
     font-size: 24px;
     line-height: 140%;
     font-weight: 600;
@@ -144,463 +64,4 @@ body {
     padding-left: 20px;
     padding-right: 20px;
 }
-.add-icon26 {
-    height: 24px;
-    width: 24px;
-    position: relative;
-    overflow: hidden;
-    flex-shrink: 0;
-    display: none;
-}
-.button44 {
-    cursor: pointer;
-    border: 0;
-    padding: 11px;
-    background-color: #fff;
-    border-radius: 80px;
-    width: 276px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 0 16px;
-}
-.first2 {
-    width: 100%;
-    height: 1080px;
-    position: relative;
-    /* background-color: #fffefa; */
-    overflow: hidden;
-    text-align: left;
-    font-size: 24px;
-    color: #fff;
-    font-family: Lora;
-}
 
-.container-button {
-    display: flex;
-    justify-content: center; /* Mengatur kontainer agar konten berada di tengah secara horizontal */
-    align-items: center; /* Mengatur kontainer agar konten berada di tengah secara vertikal */
-    height: 100vh; /* Menggunakan tinggi viewport untuk kontainer */
-}
-
-/* @media screen and (max-width: 1536px) {
-    .side-view-bride-groom-posing-s-icon {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        position: absolute;
-        left: -150px;
-        top: 8px;
-        transform: scale(1.014);
-    }
-
-    .kepada-bapakibusaudarai {
-        position: absolute;
-        top: 670px;
-        left: 650px;
-        line-height: 150%;
-        margin: auto 0;
-        z-index: 1;
-    }
-
-    .mufli-keluarga {
-        top: 722px;
-        left: 730px;
-        line-height: 140%;
-    }
-
-    .kami-dengan-senang {
-        position: absolute;
-        top: 772px;
-        left: 360px;
-        line-height: 150%;
-        z-index: 1;
-    }
-
-    .alexnor-exafator {
-        margin: 0;
-        top: 824px;
-        left: 630px;
-        font-size: 48px;
-        font-weight: 400;
-        font-family: inherit;
-    }
-
-    .button44 {
-        cursor: pointer;
-        border: 0;
-        padding: 11px;
-        background-color: #fff;
-        position: absolute;
-        top: 944px;
-        left: 700px;
-        border-radius: 80px;
-        width: 276px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        box-sizing: border-box;
-        gap: 0 16px;
-        z-index: 1;
-    }
-
-    .sideview-bridegroom-icon {
-        position: absolute;
-        top: 727px;
-        left: 1385px;
-        width: 569.6px;
-        height: 569.6px;
-        object-fit: contain;
-        z-index: 1;
-    }
-} */
-
-/* @media screen and (max-width: 1280px) {
-    .side-view-bride-groom-posing-s-icon {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        position: absolute;
-        left: -270px;
-        top: 8px;
-        transform: scale(1.014);
-    }
-
-    .kepada-bapakibusaudarai {
-        position: absolute;
-        top: 670px;
-        left: 500px;
-        line-height: 150%;
-        margin: auto 0;
-        z-index: 1;
-    }
-
-    .mufli-keluarga {
-        top: 722px;
-        left: 580px;
-        line-height: 140%;
-    }
-
-    .kami-dengan-senang {
-        position: absolute;
-        top: 772px;
-        left: 200px;
-        line-height: 150%;
-        z-index: 1;
-    }
-
-    .alexnor-exafator {
-        margin: 0;
-        top: 824px;
-        left: 470px;
-        font-size: 48px;
-        font-weight: 400;
-        font-family: inherit;
-    }
-
-    .button44 {
-        cursor: pointer;
-        border: 0;
-        padding: 11px;
-        background-color: #fff;
-        position: absolute;
-        top: 944px;
-        left: 540px;
-        border-radius: 80px;
-        width: 276px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        box-sizing: border-box;
-        gap: 0 16px;
-        z-index: 1;
-    }
-
-    .sideview-bridegroom-icon {
-        position: absolute;
-        top: 727px;
-        left: 1130px;
-        width: 569.6px;
-        height: 569.6px;
-        object-fit: contain;
-        z-index: 1;
-    }
-} */
-
-/* @media screen and (max-width: 1024px) {
-    .side-view-bride-groom-posing-s-icon {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        position: absolute;
-        left: -350px;
-        top: 8px;
-        transform: scale(1.014);
-    }
-
-    .kepada-bapakibusaudarai {
-        position: absolute;
-        top: 670px;
-        left: 380px;
-        line-height: 150%;
-        margin: auto 0;
-        z-index: 1;
-    }
-
-    .mufli-keluarga {
-        top: 722px;
-        left: 460px;
-        line-height: 140%;
-    }
-
-    .kami-dengan-senang {
-        position: absolute;
-        top: 772px;
-        left: 50px;
-        line-height: 150%;
-        z-index: 1;
-    }
-
-    .alexnor-exafator {
-        margin: 0;
-        top: 824px;
-        left: 345px;
-        font-size: 48px;
-        font-weight: 400;
-        font-family: inherit;
-    }
-
-    .button44 {
-        cursor: pointer;
-        border: 0;
-        padding: 11px;
-        background-color: #fff;
-        position: absolute;
-        top: 944px;
-        left: 425px;
-        border-radius: 80px;
-        width: 276px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        box-sizing: border-box;
-        gap: 0 16px;
-        z-index: 1;
-    }
-
-    .sideview-bridegroom-icon {
-        position: absolute;
-        top: 780px;
-        left: 880px;
-        width: 569.6px;
-        height: 569.6px;
-        object-fit: contain;
-        z-index: 1;
-    }
-
-    .transparent-white-roses-652f4f-icon {
-        position: absolute;
-        top: 780px;
-        left: 0;
-        width: 569.6px;
-        height: 569.6px;
-        object-fit: contain;
-        z-index: 1;
-    }
-} */
-
-/* @media screen and (max-width: 768px) {
-    .mufli-frame {
-        width: 2620px;
-        height: 955px;
-        position: absolute;
-        margin: 0 !important;
-        right: -1550px;
-        bottom: -500px;
-        background-color: #1d1c16;
-        filter: blur(100px);
-        z-index: 1;
-    }
-
-    .side-view-bride-groom-posing-s-icon {
-        width: 60%;
-        height: auto; 
-        object-fit: contain;
-        position: absolute;
-        left: -150px;
-        z-index: 1;
-    }
-
-    .kepada-bapakibusaudarai {
-        position: absolute;
-        top: 670px;
-        left: 230px;
-        line-height: 150%;
-        margin: auto 0;
-        z-index: 2;
-    }
-
-    .mufli-keluarga {
-        top: 722px;
-        left: 300px;
-        line-height: 140%;
-    }
-
-    .kami-dengan-senang {
-        position: absolute;
-        top: 772px;
-        left: 20px;
-        line-height: 150%;
-        text-align: center;
-        z-index: 3;
-    }
-
-    .alexnor-exafator {
-        margin: 0;
-        top: 824px;
-        left: 190px;
-        font-size: 48px;
-        font-weight: 400;
-        font-family: inherit;
-        margin-top: 16px;
-    }
-
-    .button44 {
-        cursor: pointer;
-        border: 0;
-        padding: 11px;
-        background-color: #fff;
-        position: absolute;
-        top: 944px;
-        left: 270px;
-        border-radius: 80px;
-        width: 276px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        box-sizing: border-box;
-        gap: 0 16px;
-        z-index: 4;
-    }
-
-    .sideview-bridegroom-icon {
-        position: absolute;
-        top: 850px;
-        left: 620px;
-        width: 569.6px;
-        height: 569.6px;
-        object-fit: contain;
-        z-index: 2;
-    }
-
-    .transparent-white-roses-652f4f-icon {
-        position: absolute;
-        top: 850px;
-        left: 0;
-        width: 569.6px;
-        height: 569.6px;
-        object-fit: contain;
-        z-index: 5;
-    }
-} */
-
-/* @media screen and (max-width: 640px) {
-  .mufli-frame {
-      width: 2620px;
-      height: 955px;
-      position: absolute;
-      margin: 0 !important;
-      right: -1550px;
-      bottom: -500px;
-      background-color: #1d1c16;
-      filter: blur(100px);
-      z-index: 1;
-  }
-
-  .side-view-bride-groom-posing-s-icon {
-      width: 60%;
-      height: auto; 
-      object-fit: contain;
-      position: absolute;
-      left: -180px;
-      z-index: 1;
-  }
-
-  .kepada-bapakibusaudarai {
-      position: absolute;
-      top: 670px;
-      left: 170px;
-      line-height: 150%;
-      margin: auto 0;
-      z-index: 2;
-  }
-
-  .mufli-keluarga {
-      top: 722px;
-      left: 240px;
-      line-height: 140%;
-  }
-
-  .kami-dengan-senang {
-      position: absolute;
-      top: 772px;
-      left: 10px;
-      line-height: 150%;
-      text-align: center;
-      z-index: 3;
-  }
-
-  .alexnor-exafator {
-      margin: 0;
-      top: 824px;
-      left: 130px;
-      font-size: 48px;
-      font-weight: 400;
-      font-family: inherit;
-      margin-top: 16px;
-  }
-
-  .button44 {
-      cursor: pointer;
-      border: 0;
-      padding: 11px;
-      background-color: #fff;
-      position: absolute;
-      top: 944px;
-      left: 205px;
-      border-radius: 80px;
-      width: 276px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      box-sizing: border-box;
-      gap: 0 16px;
-      z-index: 4;
-  }
-
-  .sideview-bridegroom-icon {
-      position: absolute;
-      top: 890px;
-      left: 500px;
-      width: 569.6px;
-      height: 569.6px;
-      object-fit: contain;
-      z-index: 2;
-  }
-
-  .transparent-white-roses-652f4f-icon {
-      position: absolute;
-      top: 890px;
-      left: -10px;
-      width: 569.6px;
-      height: 569.6px;
-      object-fit: contain;
-      z-index: 5;
-  }
-} */
