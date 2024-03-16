@@ -254,6 +254,7 @@
     flex-shrink: 0;
     display: none;
 }
+
 .button17 {
     align-self: stretch;
     height: 64px;
@@ -1821,6 +1822,13 @@
     color: #000;
     min-width: 250px;
 }
+
+.field5:focus,
+.field6:focus {
+    background-color: #3b3b3b;
+    color: white;
+    box-shadow: none;
+}
 .frame-parent51,
 .input9,
 .row-input1 {
@@ -2310,7 +2318,7 @@
 }
 .alamat,
 .masukkan-alamat {
-    width: 239px;
+    width: 400px;
     position: relative;
     line-height: 150%;
     display: inline-block;
@@ -2655,14 +2663,14 @@
     }
 } */
 
-@media screen and (max-width: 1536px) {
-    /* .young-japanese-couple-1-icon1 {
+@media screen and (min-width: 1536px) {
+    .young-japanese-couple-1-icon1 {
         position: absolute;
         margin: 0 !important;
         bottom: -102.5px;
         left: -700px;
         object-fit: cover;
-    } */
+    }
 
     .floating-button {
         cursor: pointer;
@@ -2842,13 +2850,13 @@
 }
 
 @media screen and (max-width: 1280px) {
-    /* .young-japanese-couple-1-icon1 {
+    .young-japanese-couple-1-icon1 {
         position: absolute;
         margin: 0 !important;
         bottom: -102.5px;
         left: -900px;
         object-fit: cover;
-    } */
+    }
 
     .floating-button {
         cursor: pointer;
@@ -3137,9 +3145,9 @@
 }
 
 @media screen and (max-width: 1024px) {
-    /* .young-japanese-couple-1-icon1 {
+    .young-japanese-couple-1-icon1 {
         left: -1000px;
-    } */
+    }
 
     .floating-button {
         cursor: pointer;
@@ -3181,13 +3189,12 @@
 
     .card6,
     .card8,
-    .card10{
+    .card10 {
         flex-direction: column;
     }
 
     .card6,
-    .card8{
-        
+    .card8 {
         margin-left: 150px;
     }
 
@@ -3195,15 +3202,11 @@
         margin-right: 150px;
     }
 
-
     .frame-parent44,
     .frame-parent47,
     .text-block {
         margin-top: 24px;
     }
-    
-
-   
 
     .frame-video {
         height: 460px;
@@ -3293,11 +3296,16 @@
     .card-list5 {
         margin-left: 25px;
         margin-top: -600px;
-        width: 560px;
+        width: 650px;
         gap: 24px 0;
         font-size: 24px;
         color: #1d1c16;
         font-family: NanumMyeongjo;
+    }
+
+    .card12,
+    .card13 {
+        margin-right: unset;
     }
 
     .frame-parent52 {
@@ -3310,7 +3318,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    /* .young-japanese-couple-1-icon1 {
+    .young-japanese-couple-1-icon1 {
         height: 100vh;
         width: 2283px;
         position: absolute;
@@ -3318,7 +3326,7 @@
         bottom: 0;
         left: -1200px; 
         object-fit: cover;
-    } */
+    }
 
     .floating-button {
         left: 650px;
@@ -3379,9 +3387,7 @@
     }
 
     .column {
-        
     }
-
 
     /* .card6 {
         width: 50%;
@@ -3654,6 +3660,18 @@
         gap: 16px 0;
     }
 
+    .card12,
+    .card13 {
+        align-self: stretch;
+        border: 1px solid #1d1c16;
+        box-sizing: border-box;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 24px;
+        gap: 16px 0;
+        margin-right: 60px;
+    }
     .substitute-present {
         align-self: stretch;
         gap: 16px 0;
@@ -3715,7 +3733,7 @@
 }
 
 @media screen and (max-width: 640px) {
-    /* .young-japanese-couple-1-icon1 {
+    .young-japanese-couple-1-icon1 {
         height: 100vh;
         width: auto;
         position: absolute;
@@ -3723,7 +3741,7 @@
         bottom: 0;
         left: -1010px;
         object-fit: contain;
-    } */
+    }
 
     .floating-button {
         left: 550px;
@@ -3765,8 +3783,6 @@
         width: 800px;
         position: relative;
     }
-
-    
 
     .foto-icon {
         object-position: 70px;
@@ -3853,7 +3869,8 @@
         height: unset;
     }
 
-    .card6, .card8 {
+    .card6,
+    .card8 {
         margin-left: 280px;
     }
 
@@ -3865,7 +3882,9 @@
         height: unset;
     }
 
-    .visual-icon2, .visual-icon6, .visual-icon4 {
+    .visual-icon2,
+    .visual-icon6,
+    .visual-icon4 {
         width: 200px;
         height: 200px;
     }
@@ -3950,6 +3969,7 @@
         font-family: NanumMyeongjo;
         padding: 30px;
         margin-top: -420px;
+        margin-left: 5px;
     }
 
     .card12 {

@@ -393,7 +393,7 @@
                 </div>
             </div>
 
-            <div class="frame-parent50">
+            {{-- <div class="frame-parent50">
                 <form class="frame-form">
                     <div class="frame-parent51">
                         <div class="the-groom-group">
@@ -411,8 +411,8 @@
                             </div>
                             <div class="input9">
                                 <div class="apakah-kamu-akan">Apakah kamu akan hadir?</div>
-                                <input class="field5" placeholder="Ya, saya akan hadir" type="text" />
-                                <input class="field6" placeholder="Tidak, saya tidak bisa hadir" type="text" />
+                                <button class="field5" href="#">Ya, saya akan hadir</button>
+                                <button class="field6">Tidak, saya tidak bisa hadir</button>
                             </div>
                         </div>
                     </div>
@@ -429,7 +429,7 @@
                 </form>
                 <img class="foto-icon7" loading="eager" alt=""
                     src="{{ asset('./assets/foto-7@2x.png') }}" />
-            </div>
+            </div> --}}
 
         </section>
 
@@ -462,23 +462,23 @@
                     <div class="card12">
                         <div class="bca2">BCA</div>
                         <div class="body5">
-                            <b class="b20">1223242442</b>
-                            <img class="copy" alt="" src="{{ asset('./assets/copy.svg') }}" />
+                            <b class="b20" id="copyText">1223242442</b>
+                            <img class="copy" alt="" id="copyButton" src="{{ asset('./assets/copy.svg') }}" />
                         </div>
                         <div class="an-rudi-hermina4">an Rudi Hermina</div>
                     </div>
                     <div class="card13">
                         <div class="mandiri2">Mandiri</div>
                         <div class="body6">
-                            <b class="b21">1223242442</b>
-                            <img class="copy" alt="" src="{{ asset('./assets/copy.svg') }}" />
+                            <b class="b21" id="copyText2">1223242442</b>
+                            <img class="copy2" alt="" id="copyButton2" src="{{ asset('./assets/copy.svg') }}" />
                         </div>
                         <div class="an-rudi-hermina5">an Rudi Hermina</div>
                     </div>
                 </div>
             </div>
         </section>
-
+{{-- 
         <section class="request-prayers" data-scroll-to="requestPrayers">
             <div class="our-moment2">OUR MOMENT</div>
             <div class="frame-parent52">
@@ -502,7 +502,7 @@
                                     <input class="masukkan-alamat" placeholder="Masukkan alamat" type="text" />
                                 </div>
                             </div>
-                            
+
                             <div class="input12">
                                 <div class="ucapan-doa4">Ucapan & Doa</div>
                                 <div class="field9">
@@ -562,7 +562,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
     </div>
 
@@ -640,6 +640,144 @@
                 // Please sync "Home" to the project
             });
         }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Mendapatkan elemen yang akan disalin
+            var copyText = document.getElementById("copyText");
+
+            // Mendapatkan tombol yang akan mengaktifkan fungsi penyalinan
+            var copyButton = document.getElementById("copyButton");
+
+            // Menambahkan event listener ke tombol
+            copyButton.addEventListener("click", function() {
+                // Membuat sebuah elemen textarea sementara
+                var textarea = document.createElement("textarea");
+
+                // Mengatur isi teks textarea dengan teks yang ingin disalin
+                textarea.value = copyText.innerText;
+
+                // Menyembunyikan textarea di luar jendela tampilan
+                textarea.style.position = "fixed";
+                textarea.style.top = 0;
+                textarea.style.left = 0;
+                textarea.style.opacity = 0;
+
+                // Menambahkan elemen textarea ke dalam dokumen
+                document.body.appendChild(textarea);
+
+                // Memilih teks di dalam textarea
+                textarea.select();
+
+                // Menyalin teks ke dalam papan klip
+                document.execCommand("copy");
+
+                // Menghapus textarea yang sementara dibuat
+                document.body.removeChild(textarea);
+
+                // Memberi tahu pengguna bahwa teks telah disalin
+                alert("Teks telah disalin: " + copyText.innerText);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Mendapatkan elemen yang akan disalin
+            var copyText = document.getElementById("copyText2");
+
+            // Mendapatkan tombol yang akan mengaktifkan fungsi penyalinan
+            var copyButton = document.getElementById("copyButton2");
+
+            // Menambahkan event listener ke tombol
+            copyButton.addEventListener("click", function() {
+                // Membuat sebuah elemen textarea sementara
+                var textarea = document.createElement("textarea");
+
+                // Mengatur isi teks textarea dengan teks yang ingin disalin
+                textarea.value = copyText.innerText;
+
+                // Menyembunyikan textarea di luar jendela tampilan
+                textarea.style.position = "fixed";
+                textarea.style.top = 0;
+                textarea.style.left = 0;
+                textarea.style.opacity = 0;
+
+                // Menambahkan elemen textarea ke dalam dokumen
+                document.body.appendChild(textarea);
+
+                // Memilih teks di dalam textarea
+                textarea.select();
+
+                // Menyalin teks ke dalam papan klip
+                document.execCommand("copy");
+
+                // Menghapus textarea yang sementara dibuat
+                document.body.removeChild(textarea);
+
+                // Memberi tahu pengguna bahwa teks telah disalin
+                alert("Teks telah disalin: " + copyText.innerText);
+            });
+        });
+
+
+        // Mendapatkan elemen tombol "Transfer ke no. rekening tertera"
+        var transferRekening = document.querySelector('.button20');
+
+        // Mendapatkan elemen tombol "Kirim kado ke alamat tertera"
+        var kirimAlamatButton = document.querySelector('.button21');
+
+        // Mendapatkan elemen div "substitute-present"
+        var substitutePresent = document.querySelector('.card-list5');
+
+        var button49Text = document.querySelector('.button21 .kirim-kado-ke2');
+
+
+        // Simpan konten asli dari substitutePresent
+        var originalSubstitutePresentContent = substitutePresent.innerHTML;
+
+        // Menambahkan event listener untuk tombol transferRekening
+        transferRekening.addEventListener('click', function() {
+            // Mengembalikan substitutePresent ke konten aslinya
+            substitutePresent.innerHTML = originalSubstitutePresentContent;
+
+            transferRekening.style.backgroundColor = '#3b3b3b';
+            transferRekening.style.color = 'white';
+
+            button49Text.style.color = '#3b3b3b';
+
+
+            kirimAlamatButton.style.backgroundColor = 'white';
+            kirimAlamatButton.style.border = '1px solid #3b3b3b;';
+            kirimAlamatButton.style.color = 'white';
+        });
+
+        // Menambahkan event listener untuk tombol kirimAlamatButton
+        kirimAlamatButton.addEventListener('click', function() {
+            // Mengubah konten elemen substitutePresent menjadi alamat
+            substitutePresent.innerHTML =
+                '<div class="alamat">Alamat :<br>Kedung Waringin, Kecamatan Bojonggede, Kabupaten Bogor, Jawa Barat 16923</div>';
+
+            kirimAlamatButton.style.backgroundColor = '#3b3b3b';
+            kirimAlamatButton.style.color = 'white';
+
+            button49Text.style.color = 'white';
+
+
+            transferRekening.style.backgroundColor = 'white';
+            transferRekening.style.border = '1px solid #3b3b3b';
+            transferRekening.style.color = '#3b3b3b';
+        });
+
+        var buttons = document.querySelectorAll('.input9 button');
+
+        // Menambahkan event listener untuk setiap tombol
+        buttons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                // Mencegah perilaku default tombol (mengarahkan ke halaman baru)
+                event.preventDefault();
+
+                // Menambahkan logika lain yang ingin Anda lakukan saat tombol diklik
+                // Contoh: Mengubah warna tombol atau menampilkan pesan konfirmasi
+            });
+        });
     </script>
 </body>
 

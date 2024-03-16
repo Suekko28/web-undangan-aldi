@@ -142,7 +142,7 @@
                                     Putra pertama dari Bapak Ilux & Ibu Risma
                                 </div>
                             </div>
-                            <div class="button-link7">
+                            <div class="button-link8">
                                 <a class="alexnor32" href="https://www.instagram.com/" target="_blank"
                                     style="text-direction:none;"> <img class="ig-icon6" loading="lazy"
                                         alt="" src="{{ asset('./assets/ig1.svg') }}" />
@@ -301,8 +301,6 @@
                         </button>
                     </div>
                     <img class="main-frame-child" alt=""
-                        src="{{ asset('./assets/wedding-time-flower.png') }}" />
-                    <img class="main-frame-child2" alt=""
                         src="{{ asset('./assets/wedding-time-flower.png') }}" />
                 </div>
             </div>
@@ -695,11 +693,13 @@
             });
         });
 
+
+
         // Mendapatkan elemen tombol "Transfer ke no. rekening tertera"
         var transferRekening = document.querySelector('.button48');
 
         // Mendapatkan elemen tombol "Kirim kado ke alamat tertera"
-        var kirimAlamatButton = document.querySelector('.kirim-kado-ke6');
+        var kirimAlamatButton = document.querySelector('.button49');
 
         // Mendapatkan elemen div "card-list15"
         var cardList = document.querySelector('.card-list15');
@@ -707,32 +707,45 @@
         // Simpan konten asli dari cardList
         var originalCardListContent = cardList.innerHTML;
 
+        var button49Text = document.querySelector('.button49 .kirim-kado-ke6');
+
+
         // Menambahkan event listener untuk tombol transferRekening
         transferRekening.addEventListener('click', function() {
             // Mengembalikan cardList ke konten aslinya
             cardList.innerHTML = originalCardListContent;
+
+            transferRekening.style.backgroundColor = '#605a4c';
+            // Mengubah warna teks tombol kirimAlamatButtonText menjadi putih
+            transferRekening.style.color = 'white';
+
+            button49Text.style.color = '#605a4c';
+
+            kirimAlamatButton.style.backgroundColor = 'white';
+            kirimAlamatButton.style.border = '1px solid #605a4c';
+            kirimAlamatButton.style.color = '#605a4c';
+
+
         });
 
         // Menambahkan event listener untuk tombol kirimAlamatButton
         kirimAlamatButton.addEventListener('click', function() {
             // Mengubah konten elemen cardList menjadi alamat
             cardList.innerHTML =
-                '<div class="alamat-tertera">Alamat Anda:<br> Jl. Contoh No. 123, Kota Contoh</div>';
-        });
+                '<div class="alamat-tertera">Alamat :<br> Jl. Rancamaya Utama, RT.01/RW.06, Kertamaya, Kec. Bogor Sel., Kota Bogor, Jawa Barat 16139</div>';
+            // Mengubah warna latar belakang tombol kirimAlamatButton
+            kirimAlamatButton.style.backgroundColor = '#605a4c';
+            // Mengubah warna teks tombol kirimAlamatButtonText menjadi putih
+            kirimAlamatButton.style.color = 'white';
 
-        // Mendapatkan elemen tombol "Kirim kado ke alamat tertera"
-        var kirimAlamatButton = document.querySelector('.kirim-kado-ke6');
+            // Mengubah warna teks pada button49 menjadi putih
+           
+            button49Text.style.color = 'white';
 
-        // Mendapatkan elemen tombol "Transfer ke no. rekening tertera"
-        var transferRekeningButton = document.querySelector('.button48');
-
-        // Mendefinisikan warna tombol yang berubah
-        var newButtonColor = '#605a4c'; // Warna yang sama seperti tombol transfer
-
-        // Menambahkan event listener untuk tombol kirimAlamatButton
-        kirimAlamatButton.addEventListener('click', function() {
-            // Mengubah warna background tombol transferRekeningButton
-            transferRekeningButton.style.backgroundColor = newButtonColor;
+            // Mengubah gaya tombol button48
+            transferRekening.style.backgroundColor = 'white';
+            transferRekening.style.border = '1px solid #605a4c';
+            transferRekening.style.color = '#605a4c';
         });
     </script>
 </body>

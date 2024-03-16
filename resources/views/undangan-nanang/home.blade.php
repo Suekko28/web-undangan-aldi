@@ -41,7 +41,7 @@
                         <div class="div35">12</div>
                     </div>
                 </div>
-                <b class="buka-undangan3">Buka Undangan</b>
+                <a class="buka-undangan3" style="font-weight: bold; text-direction:none;" href="/undangan-nanang/index">Buka Undangan</a>
                 <img class="add-icon17" alt="" src="./assets/add.svg" />
             </div>
 

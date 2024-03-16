@@ -500,8 +500,8 @@
                     <div class="card35">
                         <b class="bca7">BCA</b>
                         <div class="body18">
-                            <div class="copy5">1223242442</div>
-                            <img class="copy-icon10" loading="lazy" alt=""
+                            <div class="copy5" id="copyText">1223242442</div>
+                            <img class="copy-icon10" id="copyButton" loading="lazy" alt=""
                                 src="{{ asset('./assets/copy2.svg') }}" />
                         </div>
                         <div class="an-rudi-hermina14">an Rudi Hermina</div>
@@ -509,8 +509,8 @@
                     <div class="card36">
                         <b class="mandiri7">Mandiri</b>
                         <div class="body19">
-                            <div class="div73">1223242442</div>
-                            <img class="copy-icon11" loading="lazy" alt=""
+                            <div class="div73" id="copyText2">1223242442</div>
+                            <img class="copy-icon11" id="copyButton2" loading="lazy" alt=""
                                 src="{{ asset('./assets/copy2.svg') }}" />
                         </div>
                         <div class="an-rudi-hermina15">an Rudi Hermina</div>
@@ -635,6 +635,131 @@
                 audio.pause();
             });
         });
+
+
+        var transferRekening = document.querySelector('.button62');
+
+        // Mendapatkan elemen tombol "Kirim kado ke alamat tertera"
+        var kirimAlamatButton = document.querySelector('.button63');
+
+        // Mendapatkan elemen div "substitute-present"
+        var substitutePresent = document.querySelector('.card-list17');
+
+        var button49Text = document.querySelector('.button63 .kirim-kado-ke7');
+
+
+        // Simpan konten asli dari substitutePresent
+        var originalSubstitutePresentContent = substitutePresent.innerHTML;
+
+        // Menambahkan event listener untuk tombol transferRekening
+        transferRekening.addEventListener('click', function() {
+            // Mengembalikan substitutePresent ke konten aslinya
+            substitutePresent.innerHTML = originalSubstitutePresentContent;
+
+            transferRekening.style.backgroundColor = '#bb8554';
+            transferRekening.style.color = 'white';
+
+            button49Text.style.color = '#bb8554';
+
+
+            kirimAlamatButton.style.backgroundColor = 'white';
+            kirimAlamatButton.style.border = '1px solid #bb8554;';
+            kirimAlamatButton.style.color = 'white';
+        });
+
+        // Menambahkan event listener untuk tombol kirimAlamatButton
+        kirimAlamatButton.addEventListener('click', function() {
+            // Mengubah konten elemen substitutePresent menjadi alamat
+            substitutePresent.innerHTML =
+                '<div class="alamat">Alamat :<br>Kedung Waringin, Kecamatan Bojonggede, Kabupaten Bogor, Jawa Barat 16923</div>';
+
+            kirimAlamatButton.style.backgroundColor = '#bb8554';
+            kirimAlamatButton.style.color = 'white';
+
+            button49Text.style.color = 'white';
+
+
+            transferRekening.style.backgroundColor = 'white';
+            transferRekening.style.border = '1px solid #bb8554';
+            transferRekening.style.color = '#bb8554';
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Mendapatkan elemen yang akan disalin
+            var copyText = document.getElementById("copyText");
+
+            // Mendapatkan tombol yang akan mengaktifkan fungsi penyalinan
+            var copyButton = document.getElementById("copyButton");
+
+            // Menambahkan event listener ke tombol
+            copyButton.addEventListener("click", function() {
+                // Membuat sebuah elemen textarea sementara
+                var textarea = document.createElement("textarea");
+
+                // Mengatur isi teks textarea dengan teks yang ingin disalin
+                textarea.value = copyText.innerText;
+
+                // Menyembunyikan textarea di luar jendela tampilan
+                textarea.style.position = "fixed";
+                textarea.style.top = 0;
+                textarea.style.left = 0;
+                textarea.style.opacity = 0;
+
+                // Menambahkan elemen textarea ke dalam dokumen
+                document.body.appendChild(textarea);
+
+                // Memilih teks di dalam textarea
+                textarea.select();
+
+                // Menyalin teks ke dalam papan klip
+                document.execCommand("copy");
+
+                // Menghapus textarea yang sementara dibuat
+                document.body.removeChild(textarea);
+
+                // Memberi tahu pengguna bahwa teks telah disalin
+                alert("Teks telah disalin: " + copyText.innerText);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Mendapatkan elemen yang akan disalin
+            var copyText = document.getElementById("copyText2");
+
+            // Mendapatkan tombol yang akan mengaktifkan fungsi penyalinan
+            var copyButton = document.getElementById("copyButton2");
+
+            // Menambahkan event listener ke tombol
+            copyButton.addEventListener("click", function() {
+                // Membuat sebuah elemen textarea sementara
+                var textarea = document.createElement("textarea");
+
+                // Mengatur isi teks textarea dengan teks yang ingin disalin
+                textarea.value = copyText.innerText;
+
+                // Menyembunyikan textarea di luar jendela tampilan
+                textarea.style.position = "fixed";
+                textarea.style.top = 0;
+                textarea.style.left = 0;
+                textarea.style.opacity = 0;
+
+                // Menambahkan elemen textarea ke dalam dokumen
+                document.body.appendChild(textarea);
+
+                // Memilih teks di dalam textarea
+                textarea.select();
+
+                // Menyalin teks ke dalam papan klip
+                document.execCommand("copy");
+
+                // Menghapus textarea yang sementara dibuat
+                document.body.removeChild(textarea);
+
+                // Memberi tahu pengguna bahwa teks telah disalin
+                alert("Teks telah disalin: " + copyText.innerText);
+            });
+        });
+
     </script>
 </body>
 
