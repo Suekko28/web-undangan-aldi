@@ -500,19 +500,53 @@
     height: 480px;
     display: none;
 }
+
+.play-icon {
+    position: absolute;
+    top: calc(50% - 40px);
+    left: calc(50% - 40px);
+    width: 80px;
+    height: 80px;
+}
+
+.pause-1-icon {
+    position: unset;
+    top: calc(50% - 65px);
+    left: calc(50% - 65px);
+    width: 100%;
+    height: auto;
+}
+.play-icon {
+    overflow: hidden;
+    display: none;
+}
+.pause-1-icon {
+    object-fit: cover;
+    z-index: 1;
+}
+
+.play-icon {
+    transition: transform 0.3s ease; /* Animasi transformasi */
+}
+
+.play.icon {
+    transform: rotate(360deg); /* Putar 360 derajat */
+}
 .floating-button {
     cursor: pointer;
     border: 0;
     padding: 0;
     background-color: #fff;
-    width: 64px;
-    height: 64px;
+    height: 80px;
+    bottom: 150px;
+    left: 550px;
+    width: 80px;
     position: fixed;
-    border-radius: 120px;
-    box-shadow: -8px 8px 9.8px rgba(0, 0, 0, 0.07);
+    border-radius: 240px;
+    box-shadow: -9px 9px 42px rgba(105, 102, 90, 0.32);
     overflow: hidden;
     flex-shrink: 0;
-    z-index: 2;
+    z-index: 3;
     bottom: 80px; /* Ubah nilai bottom */
     left: 1800px; /* Ubah nilai left */
 }
@@ -2663,7 +2697,7 @@
     }
 } */
 
-@media screen and (min-width: 1536px) {
+@media screen and (max-width: 1536px) {
     .young-japanese-couple-1-icon1 {
         position: absolute;
         margin: 0 !important;
@@ -3050,7 +3084,7 @@
         margin-bottom: 30px;
         width: 943px;
         gap: 24px 0;
-        min-width: 613px;
+        min-width: 500px;
     }
 
     .frame-parent53 {
@@ -3387,6 +3421,12 @@
     }
 
     .column {
+
+        margin-left: unset;
+    }
+
+    .spacer {
+        justify-content: center;
     }
 
     /* .card6 {
@@ -3890,7 +3930,12 @@
     }
 
     .column {
+
         margin-left: unset;
+    }
+
+    .spacer {
+        justify-content: center;
     }
 
     .input-alamat {

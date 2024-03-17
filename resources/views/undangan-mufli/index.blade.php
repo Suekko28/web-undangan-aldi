@@ -89,7 +89,7 @@
                 <button class="floating-button4" id="floatingButton">
                     <div class="whatsapp-video-2024-01-30-at-1"></div>
                     <img class="play-icon" alt="" src="{{ asset('./assets/play.svg') }}" />
-                    <img class="pause-1-icon" alt="" src="{{ asset('./assets/Piringan.gif') }}" />
+                    <img class="pause-1-icon" alt="" src="{{ asset('./assets/Pause.gif') }}" />
                 </button>
 
             </div>
@@ -739,7 +739,7 @@
             kirimAlamatButton.style.color = 'white';
 
             // Mengubah warna teks pada button49 menjadi putih
-           
+
             button49Text.style.color = 'white';
 
             // Mengubah gaya tombol button48
@@ -747,6 +747,35 @@
             transferRekening.style.border = '1px solid #605a4c';
             transferRekening.style.color = '#605a4c';
         });
+
+        // Tanggal target hitungan mundur
+        var countDownDate = new Date("Mar 24, 2024 08:00:00").getTime();
+
+        // Memperbarui hitungan mundur setiap detik
+        var x = setInterval(function() {
+
+            // Mendapatkan tanggal dan waktu saat ini
+            var now = new Date().getTime();
+
+            // Hitung selisih antara tanggal target dan tanggal saat ini
+            var distance = countDownDate - now;
+
+            // Hitung hari, jam, menit, dan detik
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Tampilkan hitungan mundur dalam elemen dengan ID "countdown"
+            document.getElementById("countdown").innerHTML = days + " hari " + hours + " jam " +
+                minutes + " menit " + seconds + " detik ";
+
+            // Jika hitungan mundur selesai, tampilkan pesan
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "Waktu pernikahan telah berlalu!";
+            }
+        }, 1000);
     </script>
 </body>
 

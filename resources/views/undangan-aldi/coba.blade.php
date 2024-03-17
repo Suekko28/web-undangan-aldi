@@ -274,45 +274,26 @@
             <div class="galeri">Galeri</div>
             <div class="caption-parent">
                 <div class="caption">
-
-
-                    <b class="aku-tak-pernah-container">
-                        <img class="aku-tak-pernah-caption" src="http://127.0.0.1:8000/./assets/caption.png">
-
-                    </b>
+                    <img src="{{ asset('./assets/caption.png') }}" alt="caption" width="600" height="600">
+                    
                 </div>
                 <div class="frame-parent16">
                     <div class="frame-parent17">
-                        <img class="frame-child6" alt=""
-                            src="http://127.0.0.1:8000/./assets/frame-99@2x.png">
-
-                        <img class="frame-child6" alt=""
-                            src="http://127.0.0.1:8000/./assets/frame-100@2x.png">
-
-                        <img class="frame-child6" alt=""
-                            src="http://127.0.0.1:8000/./assets/frame-101@2x.png">
-
-                        <img class="frame-child6" alt=""
-                            src="http://127.0.0.1:8000/./assets/frame-104@2x.png">
-
-                        <img class="frame-child6" alt=""
-                            src="http://127.0.0.1:8000/./assets/frame-103@2x.png">
-
-                        <img class="frame-child6" alt=""
-                            src="http://127.0.0.1:8000/./assets/frame-102@2x.png">
-
+                        <img class="frame-child6" alt="" src="{{asset('./assets/frame-99@2x.png')}}" />
+        
+                        <img class="frame-child6" alt="" src="{{asset('./assets/frame-100@2x.png')}}" />
+        
+                        <img class="frame-child6" alt="" src="{{asset('./assets/frame-101@2x.png')}}" />
+                        <img class="frame-child6" alt="" src="{{asset('./assets/frame-104@2x.png')}}" />
+        
+                        <img class="frame-child6" alt="" src="{{asset('./assets/frame-103@2x.png')}}" />
+        
+                        <img class="frame-child6" alt="" src="{{asset('./assets/frame-102@2x.png')}}" />
                     </div>
-                    {{-- <div class="frame-parent18">
-                        <img class="frame-child6" alt="" src="http://127.0.0.1:8000/./assets/frame-104@2x.png">
-
-                        <img class="frame-child6" alt="" src="http://127.0.0.1:8000/./assets/frame-103@2x.png">
-
-                        <img class="frame-child6" alt="" src="http://127.0.0.1:8000/./assets/frame-102@2x.png">
-                    </div> --}}
                 </div>
             </div>
         </div>
-
+        
 
 
         <section class="cerita-cinta4">

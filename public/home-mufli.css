@@ -2075,7 +2075,12 @@ a {
     text-align: center;
     font-size: 32px;
 }
-@media screen and (min-width: 1536px) {
+@media screen and (max-width: 1536px) {
+
+    .side-view-bride-groom-hiding-f-icon {
+        left: unset;
+    }
+
     .side-view-bride-groom-embraced-icon {
         width: 2426px;
         height: 2426px;
@@ -2275,13 +2280,13 @@ a {
     }
 
     .event-title {
-        margin-right: 250px;
         align-self: stretch;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         gap: 0 0;
+        margin-right: 250px;
         max-width: 100%;
     }
 
@@ -2537,12 +2542,13 @@ a {
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
+        margin-right: unset;
     }
 
     .date-info {
         flex: 1;
         text-align: center;
-        align-items: flex-end;
+        align-items: center;
         flex-direction: column;
         padding: 20px 0;
         box-sizing: border-box;
@@ -2553,8 +2559,6 @@ a {
 
     .day-of-week {
         display: flex;
-        margin-right: 30px;
-        /* text-align: center; */
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -2580,17 +2584,13 @@ a {
     }
 
     .button-link7 {
-        margin-right: 170px;
         flex-direction: row;
         align-items: center;
         gap: 0 8px;
         font-size: 24px;
-        /* margin-left: auto; */
     }
 
-    .location-details-icon {
-        right: -130px;
-    }
+   
 
     .event-title1 {
         align-self: center;
@@ -2598,16 +2598,14 @@ a {
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        margin-left: unset;
     }
 
-    .event-title-child {
-        left: -130px;
-    }
-
+    
     .venue-name-parent {
         flex: 1;
         text-align: center;
-        align-items: flex-start;
+        align-items: center;
         flex-direction: column;
         padding: 20px 0;
         box-sizing: border-box;
@@ -2617,10 +2615,9 @@ a {
     }
 
     .venue-name {
-        margin-left: 170px;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         justify-content: center;
         gap: 16px 0;
         max-width: 100%;
@@ -2638,7 +2635,6 @@ a {
     }
 
     .putra-pertama-dari1 {
-        margin-left: -130px;
         position: relative;
         font-size: 24px;
         line-height: 140%;
@@ -2651,20 +2647,13 @@ a {
         justify-content: center;
         gap: 0 8px;
         font-size: 24px;
-        margin-left: 180px;
     }
 
     .love-story2 {
         margin-top: -70px;
     }
 
-    .side-view-bride-groom-hiding-f-icon {
-        width: 100%;
-        height: auto;
-        /* right: -3000px; */
-        /* bottom: -200px; */
-        transform: scale(0.8);
-    }
+  
 
     .lorem-ipsum-dolor,
     .lorem-ipsum-dolor1,
@@ -2726,6 +2715,10 @@ a {
         bottom: -1500px;
         left: calc(50% - 1250px);
         object-fit: cover;
+    }
+
+    .side-view-bride-groom-hiding-f-icon {
+        bottom: unset;
     }
 
     .card-list12 {

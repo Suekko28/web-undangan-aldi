@@ -497,13 +497,20 @@ body {
     height: 360px;
     display: none;
 }
-.pause-1-icon,
 .play-icon {
     position: absolute;
-    top: calc(50% - 65px);
-    left: calc(50% - 65px);
+    top: calc(50% - 55px);
+    left: calc(50% - 75px);
     width: 130px;
     height: 130px;
+}
+
+.pause-1-icon {
+    position: unset;
+    top: calc(50% - 65px);
+    left: calc(50% - 65px);
+    width: 100%;
+    height: auto;
 }
 .play-icon {
     overflow: hidden;
@@ -517,7 +524,6 @@ body {
     cursor: pointer;
     border: 0;
     padding: 0;
-    background-color: #fff;
     height: 80px;
     bottom: 90px;
     left: 1750px;
@@ -528,6 +534,7 @@ body {
     overflow: hidden;
     flex-shrink: 0;
     z-index: 3;
+    
 }
 
 .play-icon {
@@ -537,7 +544,6 @@ body {
 .play.icon {
     transform: rotate(360deg); /* Putar 360 derajat */
 }
-
 
 audio {
     display: none;
@@ -556,8 +562,8 @@ audio {
     align-self: stretch;
     overflow: hidden;
     flex-direction: row;
-    justify-content: space-between;
-    padding: 125px 39px 26px 716px;
+    justify-content: center;
+    padding: 80px;
     box-sizing: border-box;
     max-width: 100%;
     gap: 20px;
@@ -1242,6 +1248,11 @@ audio {
     font-family: "Cormorant Infant";
 }
 
+.galeri {
+    position: relative;
+    line-height: 150%;
+}
+
 .aku-tak-pernah {
     margin: 0;
 }
@@ -1303,6 +1314,7 @@ audio {
 }
 .gallery {
     width: 1920px;
+    align-self: center;
     flex-direction: column;
     justify-content: center;
     padding: var(--padding-61xl);
@@ -2370,57 +2382,21 @@ audio {
         position: absolute;
         margin: 0 !important;
         bottom: -407px;
-        left: -980px;
         object-fit: cover;
         transform: scale(1.2);
     }
 
-    .text-node {
-        top: 18px;
-        width: 489px;
-        height: 489px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: flex-end;
-        left: -50px;
-        position: relative;
-        gap: 0 10px;
+    .floating-button4 {
+        top: 500px;
+        left: 1380px;
     }
 
-    .undangan-pernikahan5,
-    .jamaludin-maryam5 {
-        left: -190px;
-    }
 
-    .container-text-frame {
-        right: 100px;
-    }
-
-    .days-until-we3 {
-        left: -180px;
-    }
-
-    .link-button {
-        left: 570px;
-        top: 850px;
-        align-self: stretch;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
-        padding: 0 1px 0 0;
-        gap: 20px;
-        text-align: center;
-        font-size: 32px;
-        color: #fff;
-        position: absolute;
-    }
 
     .navbar-mobile3 {
         border-radius: 100px;
         top: 620px;
-        left: 610px;
+        left: 600px;
         background-color: #d8bd99;
         overflow: hidden;
         flex-wrap: wrap;
@@ -2474,13 +2450,7 @@ audio {
         padding: 0 370px 0 20px;
     }
 
-    .caption-parent {
-        margin-left: 250px;
-    }
 
-    .galeri {
-        margin-left: 380px;
-    }
 
     .frame-child6 {
         width: 280px;
@@ -2490,10 +2460,19 @@ audio {
         transform: scale(1);
     }
 
-    .aku-tak-pernah-caption {
-        width: 550px;
-        margin-left: 200px;
-    }
+   .gallery  {
+    width: 1536px;
+   }
+
+   .caption-parent {
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0 24px;
+    text-align: center;
+    font-size: var(--font-size-5xl);
+    font-family: var(--font-cormorant-infant);
+}
 
     .ucapan-mobile {
         overflow-x: hidden; /* Menghindari scroll horizontal */
@@ -2529,52 +2508,14 @@ audio {
         position: absolute;
         margin: 0 !important;
         bottom: -407px;
-        left: -980px;
         object-fit: cover;
         transform: scale(1.2);
     }
 
-    .text-node {
-        top: 18px;
-        width: 489px;
-        height: 489px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: flex-end;
-        left: -180px;
-        position: relative;
-        gap: 0 10px;
+    .floating-button4 {
+        left: 1100px;
     }
 
-    .undangan-pernikahan5,
-    .jamaludin-maryam5 {
-        left: -320px;
-    }
-
-    .container-text-frame {
-        right: 100px;
-    }
-
-    .days-until-we3 {
-        left: -320px;
-    }
-
-    .link-button {
-        left: 420px;
-        top: 850px;
-        align-self: stretch;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
-        padding: 0 1px 0 0;
-        gap: 20px;
-        text-align: center;
-        font-size: 32px;
-        color: #fff;
-        position: absolute;
-    }
 
     .navbar-mobile3 {
         border-radius: 100px;
@@ -2635,13 +2576,7 @@ audio {
         flex-direction: column;
     }
 
-    .caption {
-        left: 180px;
-    }
-
-    .galeri {
-        margin-left: 650px;
-    }
+   
 
     .frame-child6 {
         width: 320px;
@@ -2659,7 +2594,6 @@ audio {
         gap: 24px; /* Jarak antar gambar */
         align-items: center;
         justify-content: center;
-        margin-right: -350px;
     }
 
     .aku-tak-pernah-caption {
@@ -2700,39 +2634,16 @@ audio {
         position: absolute;
         margin: 0 !important;
         bottom: -407px;
-        left: -980px;
+        left: -900px;
         object-fit: cover;
         transform: scale(1.2);
     }
 
-    .header-section-icon {
-        margin-left: -110px;
+    .floating-button4 {
+        left: 850px;
     }
 
-    .undangan-pernikahan5 {
-        left: -310px;
-    }
-
-    .jamaludin-maryam5 {
-        width: 400px;
-        margin-left: 70px;
-    }
-
-    .link-button {
-        left: 320px;
-        top: 850px;
-        align-self: stretch;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: space-between;
-        padding: 0 1px 0 0;
-        gap: 20px;
-        text-align: center;
-        font-size: 32px;
-        color: #fff;
-        position: absolute;
-    }
+   
 
     .navbar-mobile3 {
         border-radius: 100px;
@@ -2785,21 +2696,13 @@ audio {
         text-align: center;
     }
 
-    .galeri {
-        margin-left: 900px;
-    }
+   
 
-    .caption {
-        left: 290px;
-    }
-
+   
     .aku-tak-pernah-caption {
         width: 550px;
     }
 
-    .frame-parent16 {
-        margin-left: 290px;
-    }
 
     .frame-child6 {
         width: 280px;
@@ -2830,14 +2733,7 @@ audio {
         flex-direction: column;
     }
 
-    .ucapan-mobile {
-        margin-top: 24px;
-        overflow-x: auto;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 0 24px;
-        font-size: 24px;
-    }
+    
 
     .ucapan-mobile-inner {
         border-radius: 16px;
@@ -2869,7 +2765,6 @@ audio {
         align-items: flex-start;
         gap: 0 24px;
         font-size: 24px;
-        margin-left: 100px;
     }
 }
 
@@ -2884,9 +2779,11 @@ audio {
         object-fit: cover;
         transform: scale(1.2);
     }
-    .header-section-icon {
-        margin-left: -240px;
+
+    .floating-button4 {
+        left: 650px;
     }
+   
 
     .navbar-mobile3 {
         left: 240px;
@@ -2971,18 +2868,9 @@ audio {
         text-align: center;
     }
 
-    .gallery {
-        margin-top: -120px;
-    }
+  
 
-    .galeri {
-        margin-left: 1140px;
-    }
-
-    .caption {
-        left: 420px;
-    }
-
+   
     .frame-parent17,
     .frame-parent18 {
         display: grid;
@@ -2991,7 +2879,6 @@ audio {
         gap: 24px; /* Jarak antar gambar */
         align-items: center;
         justify-content: center;
-        margin-left: 250px;
     }
 
     .r-s-v-p-frame-title {
@@ -3064,49 +2951,21 @@ audio {
     }
 }
 
-@media screen and (max-width: 854px) {
-    .header-section-icon {
-    margin-left: -190px;
-}
 
 
-}
+
 
 @media screen and (max-width: 640px) {
-    .text-node {
-        top: 18px;
-        width: 489px;
-        height: 489px;
-        display: flex;
-        flex-direction: row;
-        align-items: flex-start;
-        justify-content: flex-end;
-        left: -250px;
-        position: relative;
-        gap: 0 10px;
+  
+
+    .floating-button4 {
+        left: 550px;
     }
 
     .navbar-mobile3 {
         left: 170px;
     }
 
-    .undangan-pernikahan5 {
-        left: -380px;
-    }
-
-    .jamaludin-maryam5 {
-        width: 400px;
-        margin-right: 50px;
-        margin-left: unset;
-    }
-
-    .days-until-we3 {
-        left: -650px;
-    }
-
-    .link-button {
-        left: 120px;
-    }
 
     .jl-ir-h7,
     .jl-ir-h6 {
@@ -3123,14 +2982,6 @@ audio {
         width: 250px;
     }
 
-    .galeri {
-        margin-left: 1290px;
-    }
-
-    .caption {
-        left: 500px;
-    }
-
     .frame-parent17,
     .frame-parent18 {
         display: grid;
@@ -3139,7 +2990,6 @@ audio {
         gap: 24px;
         align-items: center;
         justify-content: center;
-        margin-left: 400px;
     }
 
     .r-s-v-p-nope-button,

@@ -121,10 +121,11 @@
                 </div>
             </div>
             <div class="text1">
-                <button class="floating-button" id="floatingButton">
-                    <img class="untitled-1-1-icon" alt="" src="{{ asset('./assets/untitled1-1@2x.png') }}" />
+                <audio autoplay loop controls id="myAudio" src="{{ asset('./assets/coba.mp3') }}"></audio>
 
-                    <div class="y2matecom-sampai-jadi-debu"></div>
+                <button class="floating-button" id="floatingButton">
+                    <img class="play-icon" alt="" src="{{ asset('./assets/untitled1-1@2x.png') }}" />
+                    <img class="pause-1-icon" alt="" src="{{ asset('./assets/Pause.gif') }}" />
                 </button>
             </div>
         </section>
@@ -387,7 +388,8 @@
                                 <div class="div17">12</div>
                             </div>
                         </div>
-                        <b class="simpan-acara-ke">Simpan Acara ke Kalender</b>
+                        <a class="simpan-acara-ke" style="font-weight: bold; text-decoration:none;"
+                            href="https://www.google.com/maps" target="_blank">Simpan Acara ke Kalender</a>
                         <img class="add-icon6" alt="" src="{{ asset('./assets/add.svg') }}" />
                     </button>
                 </div>
@@ -463,7 +465,8 @@
                         <div class="bca2">BCA</div>
                         <div class="body5">
                             <b class="b20" id="copyText">1223242442</b>
-                            <img class="copy" alt="" id="copyButton" src="{{ asset('./assets/copy.svg') }}" />
+                            <img class="copy" alt="" id="copyButton"
+                                src="{{ asset('./assets/copy.svg') }}" />
                         </div>
                         <div class="an-rudi-hermina4">an Rudi Hermina</div>
                     </div>
@@ -471,14 +474,15 @@
                         <div class="mandiri2">Mandiri</div>
                         <div class="body6">
                             <b class="b21" id="copyText2">1223242442</b>
-                            <img class="copy2" alt="" id="copyButton2" src="{{ asset('./assets/copy.svg') }}" />
+                            <img class="copy2" alt="" id="copyButton2"
+                                src="{{ asset('./assets/copy.svg') }}" />
                         </div>
                         <div class="an-rudi-hermina5">an Rudi Hermina</div>
                     </div>
                 </div>
             </div>
         </section>
-{{-- 
+        {{-- 
         <section class="request-prayers" data-scroll-to="requestPrayers">
             <div class="our-moment2">OUR MOMENT</div>
             <div class="frame-parent52">
@@ -640,6 +644,31 @@
                 // Please sync "Home" to the project
             });
         }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var playIcon = document.querySelector(".play-icon");
+            var pauseIcon = document.querySelector(".pause-1-icon");
+            var audio = document.getElementById("myAudio");
+
+
+            playIcon.addEventListener("click", function() {
+                // Mengganti gambar play dengan gambar pause
+                playIcon.style.display = "none";
+                pauseIcon.style.display = "inline-block";
+
+                // Memutar musik
+                audio.play();
+            });
+
+            pauseIcon.addEventListener("click", function() {
+                // Mengganti gambar pause dengan gambar play
+                pauseIcon.style.display = "none";
+                playIcon.style.display = "inline-block";
+
+                // Memberhentikan musik
+                audio.pause();
+            });
+        });
 
         document.addEventListener("DOMContentLoaded", function() {
             // Mendapatkan elemen yang akan disalin
