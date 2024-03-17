@@ -21,9 +21,9 @@ Route::get('/undangan-aldi/index', function () {
     return view('undangan-aldi.index');
 });
 
-Route::get('/undangan-aldi/coba', function () {
-    return view('undangan-aldi.coba');
-});
+// Route::get('/undangan-aldi/coba', function () {
+//     return view('undangan-aldi.coba');
+// });
 
 
 Route::get('/undangan-nanang', function () {
@@ -39,9 +39,9 @@ Route::get('/undangan-mufli', function () {
     return view('undangan-mufli.home');
 });
 
-Route::get('/undangan-coba', function () {
-    return view('undangan-mufli.coba');
-});
+// Route::get('/undangan-coba', function () {
+//     return view('undangan-mufli.coba');
+// });
 
 Route::get('/undangan-mufli/index', function () {
     return view('undangan-mufli.index');
