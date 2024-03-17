@@ -473,10 +473,11 @@
     align-self: stretch;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 367px 80px 80px;
+    padding: 64px;
     box-sizing: border-box;
+    width: 50%;
+    height: 720px;
     position: relative;
-    min-height: 1080px;
     z-index: 1;
 }
 .card-list2 {
@@ -541,6 +542,9 @@
     bottom: 150px;
     left: 550px;
     width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     position: fixed;
     border-radius: 240px;
     box-shadow: -9px 9px 42px rgba(105, 102, 90, 0.32);
@@ -549,6 +553,10 @@
     z-index: 3;
     bottom: 80px; /* Ubah nilai bottom */
     left: 1800px; /* Ubah nilai left */
+}
+
+audio {
+    display: none;
 }
 .text1 {
     height: 144px;
@@ -570,13 +578,16 @@
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
-    padding: 0 80px 0 0;
     box-sizing: border-box;
-    gap: 20px;
+    height: 720px;
+    width: 100%;
     text-align: center;
     font-size: 32px;
     color: #fff;
     font-family: "DM Serif Display";
+    background-image:url(./assets/BannerImage.jpg);
+    background-position: right;
+    background-size: cover;
 }
 .visual-icon {
     height: 512px;
@@ -1992,6 +2003,7 @@
     font-size: 24px;
     color: #3b3b3b;
     font-family: NanumMyeongjo;
+    z-index: 0;
 }
 .kirim-hadiah4 {
     position: relative;
@@ -2266,8 +2278,8 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    padding: 80px 81px 80px 79px;
-    gap: 0 48px;
+    padding: 64px;
+    gap: 48px;
     text-align: left;
     font-size: 32px;
     font-family: "DM Serif Display";
@@ -2707,18 +2719,6 @@
     }
 
     .floating-button {
-        cursor: pointer;
-        border: 0;
-        padding: 0;
-        background-color: #fff;
-        width: 64px;
-        height: 64px;
-        position: fixed;
-        border-radius: 120px;
-        box-shadow: -8px 8px 9.8px rgba(0, 0, 0, 0.07);
-        overflow: hidden;
-        flex-shrink: 0;
-        z-index: 2;
         bottom: 80px; /* Ubah nilai bottom */
         left: 1400px; /* Ubah nilai left */
     }
@@ -2765,7 +2765,7 @@
 
     .card-list-parent {
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: center;
         padding: 0 16px;
         gap: 0 48px;
@@ -2942,7 +2942,7 @@
 
     .card-list-parent {
         flex-direction: row;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: center;
         padding: 0 16px;
         gap: 0 48px;
@@ -3081,7 +3081,6 @@
     }
 
     .question4 {
-        margin-bottom: 30px;
         width: 943px;
         gap: 24px 0;
         min-width: 500px;
@@ -3146,7 +3145,6 @@
     .substitute-present {
         align-self: stretch;
         gap: 16px 0;
-        padding: 20px;
         text-align: center;
         font-size: 10px;
         color: #fff;
@@ -3200,12 +3198,8 @@
         left: 900px;
     }
 
-    .pertemuan-yang-kuimpikan-kini-container {
-        top: -200px;
-    }
-
-    .rhoma-irama {
-        top: -190px;
+    .card4 {
+        width: 60%;
     }
 
     .card-list-parent {
@@ -3316,21 +3310,16 @@
     }
 
     .multiple-cards {
-        height: 650px;
-        width: 1px;
+        height: 1px;
+        width: 100%;
         position: relative;
         background-color: #1d1c16;
         overflow: hidden;
         flex-shrink: 0;
-        transform: rotate(90deg);
-        right: -350px;
-        top: -330px;
     }
 
     .card-list5 {
-        margin-left: 25px;
-        margin-top: -600px;
-        width: 650px;
+        width: 100%;
         gap: 24px 0;
         font-size: 24px;
         color: #1d1c16;
@@ -3352,6 +3341,45 @@
 }
 
 @media screen and (max-width: 768px) {
+
+    .banner2 {
+        align-self: stretch;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        justify-content: space-between;
+        box-sizing: border-box;
+        height: 720px;
+        width: 100%;
+        text-align: center;
+        font-size: 32px;
+        color: #fff;
+        font-family: "DM Serif Display";
+        background-image: url(./assets/BannerImage.jpg);
+        background-position: right -120px bottom 0px;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .banner2::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background:  rgba(0,0,0,.4);
+        position: absolute;
+        bottom: 0;
+        }
+
+        .question2 {
+            align-self: stretch;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 16px 0;
+            max-width: 100%;
+            text-align: center;
+        }
     .young-japanese-couple-1-icon1 {
         height: 100vh;
         width: 2283px;
@@ -3362,20 +3390,28 @@
         object-fit: cover;
     }
 
+    .card-list2 {
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .card4 {
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+
     .floating-button {
         left: 650px;
     }
     .pertemuan-yang-kuimpikan-kini-container {
-        top: 100px;
-        position: absolute;
         line-height: 150%;
         display: inline-block;
         max-width: 100%;
     }
 
     .rhoma-irama {
-        position: absolute;
-        top: 300px;
         font-size: 24px;
         line-height: 150%;
         font-family: NanumMyeongjo;
@@ -3383,9 +3419,6 @@
 
     .row-input {
         align-items: center;
-        position: absolute;
-        right: 40px;
-        bottom: 50px;
     }
 
     .button-primary {
@@ -3666,36 +3699,29 @@
         margin-bottom: 48px;
     }
 
-    .question4 {
-        margin-bottom: 30px;
-        width: 943px;
-        gap: 24px 0;
-        min-width: 613px;
-    }
+
 
     .kirim-hadiah5 {
         border: 1px solid #3b3b3b;
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        padding: 5px 5px 5px 5px;
-        gap: 0 48px;
+        padding: 24px;
+        gap: 48px;
         text-align: left;
         font-size: 32px;
         font-family: "DM Serif Display";
     }
 
     .question4 {
-        margin-bottom: 30px;
-        width: 943px;
+        width: 100%;
         gap: 0 0;
-        min-width: 613px;
+        min-width: 100%
     }
 
     .kirim-hadiah-container {
         border-radius: 0 0 32px 32px;
         flex-direction: column;
-        padding: 20px;
         align-items: flex-start;
         gap: 16px 0;
     }
@@ -3710,19 +3736,17 @@
         justify-content: flex-start;
         padding: 24px;
         gap: 16px 0;
-        margin-right: 60px;
     }
     .substitute-present {
         align-self: stretch;
         gap: 16px 0;
-        padding: 30px;
         text-align: center;
         font-size: 10px;
         color: #fff;
         font-family: Optima;
     }
 
-    .multiple-cards {
+    /* .multiple-cards {
         height: 550px;
         width: 1px;
         margin: 0 auto;
@@ -3733,16 +3757,14 @@
         transform: rotate(90deg);
         top: -300px;
         right: -10px;
-    }
+    } */
 
     .card-list5 {
-        width: 560px;
+        width: 100%;
         gap: 24px 0;
         font-size: 24px;
         color: #1d1c16;
         font-family: NanumMyeongjo;
-        margin-top: -580px;
-        padding: 30px;
     }
 
     .frame-parent52 {
@@ -3787,7 +3809,7 @@
         left: 550px;
     }
 
-    .card4 {
+    /* .card4 {
         align-self: stretch;
         align-items: flex-start;
         justify-content: space-between;
@@ -3796,14 +3818,14 @@
         position: relative;
         min-height: 1080px;
         z-index: 1;
-    }
+    } */
 
-    .row-input {
+    /* .row-input {
         align-items: center;
         position: absolute;
         right: 0px;
         bottom: 50px;
-    }
+    } */
 
     .frame-video {
         height: 360px;
@@ -3947,99 +3969,99 @@
         gap: 24px 0;
     }
 
-    .substitute-present {
-        align-self: stretch;
-        gap: 16px 0;
-        padding: 30px;
-        text-align: center;
-        font-size: 10px;
-        color: #fff;
-        margin-right: 20px;
-        font-family: Optima;
-    }
+        /* .substitute-present {
+            align-self: stretch;
+            gap: 16px 0;
+            padding: 30px;
+            text-align: center;
+            font-size: 10px;
+            color: #fff;
+            margin-right: 20px;
+            font-family: Optima;
+        }
 
-    .question4 {
-        margin-bottom: 30px;
-        width: 943px;
-        gap: 0 0;
-        min-width: 500px;
-    }
+        .question4 {
+            margin-bottom: 30px;
+            width: 943px;
+            gap: 0 0;
+            min-width: 500px;
+        }
 
-    .button20 {
-        width: 100%;
-        border: 0;
-        outline: 0;
-        background-color: #3b3b3b;
-        height: 56px;
-        flex-direction: row;
-        align-items: center;
-        padding: 16px 40px;
-        box-sizing: border-box;
-        font-family: NanumMyeongjo;
-        font-weight: 700;
-        font-size: 24px;
-        color: #fff;
-        min-width: 250px;
-    }
+        .button20 {
+            width: 100%;
+            border: 0;
+            outline: 0;
+            background-color: #3b3b3b;
+            height: 56px;
+            flex-direction: row;
+            align-items: center;
+            padding: 16px 40px;
+            box-sizing: border-box;
+            font-family: NanumMyeongjo;
+            font-weight: 700;
+            font-size: 24px;
+            color: #fff;
+            min-width: 250px;
+        }
 
-    .button21 {
-        align-self: stretch;
-        height: 66px;
-        border: 1px solid #3b3b3b;
-        box-sizing: border-box;
-        flex-direction: row;
-        align-items: center;
-        padding: 16px 49px 16px 47px;
-        gap: 0 16px;
-    }
+        .button21 {
+            align-self: stretch;
+            height: 66px;
+            border: 1px solid #3b3b3b;
+            box-sizing: border-box;
+            flex-direction: row;
+            align-items: center;
+            padding: 16px 49px 16px 47px;
+            gap: 0 16px;
+        }
 
-    .multiple-cards {
-        height: 420px;
-        margin: auto 0;
-        width: 1px;
-        margin: 0 auto;
-        position: relative;
-        background-color: #1d1c16;
-        overflow: hidden;
-        flex-shrink: 0;
-        transform: rotate(90deg);
-        top: -220px;
-    }
+        .multiple-cards {
+            height: 420px;
+            margin: auto 0;
+            width: 1px;
+            margin: 0 auto;
+            position: relative;
+            background-color: #1d1c16;
+            overflow: hidden;
+            flex-shrink: 0;
+            transform: rotate(90deg);
+            top: -220px;
+        }
 
-    .card-list5 {
-        width: 560px;
-        gap: 24px 0;
-        font-size: 24px;
-        color: #1d1c16;
-        font-family: NanumMyeongjo;
-        padding: 30px;
-        margin-top: -420px;
-        margin-left: 5px;
-    }
+        .card-list5 {
+            width: 560px;
+            gap: 24px 0;
+            font-size: 24px;
+            color: #1d1c16;
+            font-family: NanumMyeongjo;
+            padding: 30px;
+            margin-top: -420px;
+            margin-left: 5px;
+        }
 
-    .card12 {
-        align-self: stretch;
-        border: 1px solid #1d1c16;
-        box-sizing: border-box;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: 24px;
-        gap: 16px 0;
-        margin-right: 60px;
-    }
+        .card12 {
+            align-self: stretch;
+            border: 1px solid #1d1c16;
+            box-sizing: border-box;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 24px;
+            gap: 16px 0;
+            margin-right: 60px;
+        }
 
-    .card13 {
-        align-self: stretch;
-        border: 1px solid #1d1c16;
-        box-sizing: border-box;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: flex-start;
-        padding: 24px;
-        gap: 16px 0;
-        margin-right: 60px;
-    }
+        .card13 {
+            align-self: stretch;
+            border: 1px solid #1d1c16;
+            box-sizing: border-box;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            padding: 24px;
+            gap: 16px 0;
+            margin-right: 60px;
+        } */
 
     .frame-parent52 {
         align-self: stretch;

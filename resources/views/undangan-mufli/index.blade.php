@@ -27,24 +27,22 @@
                 src="{{ asset('./assets/sideviewbridegroomembracedstreet-1@2x.png') }}" />
 
             <div class="hero-section"></div>
-            <div class="call-to-action">
-                <div class="card-list12">
-                    <div class="card-item">
-                        <div class="the-wedding-of2">THE WEDDING OF</div>
-                        <h1 class="alexnor-exafator1">Alexnor & Exafator</h1>
-                    </div>
-                    <button class="button45">
-                        <div class="mail27">
-                            <img class="vector-icon30" alt="" src="{{ asset('./assets/vector.svg') }}" />
-
-                            <div class="badge33">
-                                <div class="div51">12</div>
-                            </div>
-                        </div>
-                        <div class="detail" id="detail" style="font-size: 24px; color:white;">Lihat Detail</div>
-                        <img class="add-icon27" alt="" src="{{ asset('./assets/add.svg') }}" />
-                    </button>
+            <div class="card-list12">
+                <div class="card-item">
+                    <div class="the-wedding-of2">THE WEDDING OF</div>
+                    <h1 class="alexnor-exafator1">Alexnor & Exafator</h1>
                 </div>
+                <button class="button45">
+                    <div class="mail27">
+                        <img class="vector-icon30" alt="" src="{{ asset('./assets/vector.svg') }}" />
+
+                        <div class="badge33">
+                            <div class="div51">12</div>
+                        </div>
+                    </div>
+                    <div class="detail" id="detail" style="font-size: 24px; color:white;">Lihat Detail</div>
+                    <img class="add-icon27" alt="" src="{{ asset('./assets/add.svg') }}" />
+                </button>
             </div>
             <div class="input-name-field">
                 <div class="input-message-field">
@@ -84,7 +82,7 @@
                     </div>
                 </div>
 
-                <audio autoplay loop controls id="myAudio" src="{{ asset('./assets/coba.mp3') }}"></audio>
+                <audio autoplay loop controls id="myAudio" src="{{ asset('./assets/lagu-mufli.mp3') }}"></audio>
 
                 <button class="floating-button4" id="floatingButton">
                     <div class="whatsapp-video-2024-01-30-at-1"></div>
@@ -384,7 +382,7 @@
 
 
             </div>
-            {{-- <div class="send-prayers">
+            <div class="send-prayers">
                 <b class="kirimkan-doa-dan">Kirimkan Doa dan Ucapan</b>
                 <div class="input-name-pesan">
                     <div class="frame-nama-pesan">
@@ -456,7 +454,7 @@
                     <p class="atas-doa">Atas doa & ucapan bapak/ibu/saudara/i, Kami</p>
                     <p class="mengucapkan-terima-kasih">mengucapkan terima kasih.</p>
                 </footer>
-            </div> --}}
+            </div>
         </section>
 
     </div>

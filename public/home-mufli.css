@@ -130,6 +130,8 @@
 }
 .card-list12 {
     flex-direction: column;
+    position: absolute;
+    top: 35%;
     align-items: center;
     gap: 48px 0;
 }
@@ -303,6 +305,7 @@
     border-radius: 24px;
     position: fixed;
     bottom: 40px;
+    left: 40%;
     background-color: #fff;
     box-shadow: -11px 13px 42px rgba(105, 102, 90, 0.2);
     flex-direction: row;
@@ -336,10 +339,8 @@
 }
 
 .pause-1-icon {
-    position: unset;
-    top: calc(50% - 65px);
-    left: calc(50% - 65px);
-    width: 100%;
+   
+    width: 160%;
     height: auto;
 }
 .play-icon {
@@ -351,6 +352,9 @@
     z-index: 1;
 }
 .floating-button4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     cursor: pointer;
     border: 0;
     padding: 0;
@@ -394,7 +398,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 426px 65px 23px 748px;
+    width: 100%;
+    height: 720px;
     box-sizing: border-box;
     position: relative;
     gap: 296px 0;

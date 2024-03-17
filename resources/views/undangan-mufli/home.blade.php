@@ -24,8 +24,8 @@
     <main>
         <div class="container">
             <div class="content">
-                <div class="kepada-bapak-ibu-content">Kepada Bapak/Ibu/Saudara/i</div>
-                <div class="yang-diundang">Mufli & Keluarga</div>
+                {{-- <div class="kepada-bapak-ibu-content">Kepada Bapak/Ibu/Saudara/i</div> --}}
+                {{-- <div class="yang-diundang">Mufli & Keluarga</div> --}}
                 <div class="kami-dengan-senang">
                     Kami dengan senang hati mengundang Anda untuk menghadiri hari pernikahan
                     kami

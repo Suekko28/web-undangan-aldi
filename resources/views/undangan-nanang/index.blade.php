@@ -21,21 +21,15 @@
 <body>
     <div class="home">
         <section class="banner2">
-            <img class="young-japanese-couple-1-icon1" alt=""
-                src="{{ asset('./assets/youngjapanesecouple-1@2x.png') }}" data-scroll-to="youngJapaneseCouple1Image" />
+            {{-- <img class="young-japanese-couple-1-icon1" alt=""
+                src="{{ asset('./assets/BannerImage.jpg') }}" data-scroll-to="youngJapaneseCouple1Image" /> --}}
 
-            <div class="card-list2">
                 <div class="card4">
                     <div class="question2">
                         <div class="pertemuan-yang-kuimpikan-kini-container">
                             <p class="pertemuan-yang-kuimpikan">
-                                “Pertemuan yang kuimpikan
+                                “Pertemuan yang kuimpikan Kini jadi kenyataan Pertemuan yang kudambakan Ternyata bukan khayalan”
                             </p>
-                            <p class="kini-jadi-kenyataan">Kini jadi kenyataan</p>
-                            <p class="pertemuan-yang-kudambakan">
-                                Pertemuan yang kudambakan
-                            </p>
-                            <p class="ternyata-bukan-khayalan">Ternyata bukan khayalan”</p>
                         </div>
                         <b class="rhoma-irama">Rhoma Irama</b>
                     </div>
@@ -119,13 +113,12 @@
                         </div>
                     </div>
                 </div>
-            </div>
             <div class="text1">
-                <audio autoplay loop controls id="myAudio" src="{{ asset('./assets/coba.mp3') }}"></audio>
+                <audio autoplay loop controls id="myAudio" src="{{ asset('./assets/lagu-nanang.mp3') }}"></audio>
 
                 <button class="floating-button" id="floatingButton">
                     <img class="play-icon" alt="" src="{{ asset('./assets/untitled1-1@2x.png') }}" />
-                    <img class="pause-1-icon" alt="" src="{{ asset('./assets/Pause.gif') }}" />
+                    <img class="pause-1-icon" alt="" src="{{ asset('./assets/pause2.gif') }}" />
                 </button>
             </div>
         </section>
@@ -303,13 +296,8 @@
                     <div class="column">
                         <div class="pertemuan-yang-kuimpikan-kini-container1">
                             <p class="pertemuan-yang-kuimpikan1">
-                                “Pertemuan yang kuimpikan
+                                “Pertemuan yang kuimpikan Kini jadi kenyataan Pertemuan yang kudambakan Ternyata bukan khayalan”
                             </p>
-                            <p class="kini-jadi-kenyataan1">Kini jadi kenyataan</p>
-                            <p class="pertemuan-yang-kudambakan1">
-                                Pertemuan yang kudambakan
-                            </p>
-                            <p class="ternyata-bukan-khayalan1">Ternyata bukan khayalan”</p>
                         </div>
                         <div class="fill-space">
                             <b class="rhoma-irama1">Rhoma Irama</b>
@@ -389,7 +377,7 @@
                             </div>
                         </div>
                         <a class="simpan-acara-ke" style="font-weight: bold; text-decoration:none;"
-                            href="https://www.google.com/maps" target="_blank">Simpan Acara ke Kalender</a>
+                            href="https://www.google.com/maps" target="_blank">Lihat Lokasi</a>
                         <img class="add-icon6" alt="" src="{{ asset('./assets/add.svg') }}" />
                     </button>
                 </div>

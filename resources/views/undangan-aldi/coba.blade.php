@@ -26,33 +26,23 @@
 
 <body>
     <div class="home5">
-        <section class="banner6">
-            <b class="b48">11 . 01 . 2024</b>
-            <div class="yth-bapakibusaudarai-parent3">
-                <b class="yth-bapakibusaudarai5">Yth Bapak/Ibu/Saudara/I</b>
-                <div class="ust-isra-rafi3">Ust. Isra Rafi Shidqi</div>
-                <b class="anda-diundang-dengan3">Anda diundang dengan hormat ke pernikahan kami</b>
-            </div>
+        <section class="banner6" data-scroll-to="HeaderSection">
             <div class="rectangle">
                 <div class="undangan-pernikahan-parent2">
-                    <b class="undangan-pernikahan5">Undangan Pernikahan</b>
+                    <b class="undangan-pernikahan5" >Undangan Pernikahan</b>
                     <h1 class="jamaludin-maryam5">Jamaludin & Maryam</h1>
                 </div>
                 <div class="text-input-field">
-                    <img class="button-icon" alt="" src="{{ asset('./assets/button@2x.png') }}"
-                        data-scroll-to="buttonImage" />
+                    {{-- <img class="button-icon" alt="" src="{{ asset('./assets/button@2x.png') }}"
+                        data-scroll-to="buttonImage" /> --}}
 
-                    <div class="text-node">
-                        <div class="container-text-frame">
-                            <img class="header-section-icon" loading="lazy" alt=""
-                                src="{{ asset('./assets/ellipse-15@2x.png') }}" />
+                    <img class="header-section-icon" loading="lazy" alt=""
+                        src="{{ asset('./assets/ellipse-15@2x.png') }}" />
 
-                            <div class="frame-inner"></div>
-                            <div class="frame-inner2"></div>
+                    <div class="frame-inner"></div>
+                    <div class="frame-inner2"></div>
 
 
-                        </div>
-                    </div>
                 </div>
 
                 <div class="image-placeholder">
@@ -183,15 +173,15 @@
                                     <div class="gallery-frame2">
                                         <img class="map-button-icon" alt=""
                                             src="{{ asset('./assets/location.svg') }}" />
-                                        <div class="buka-map6">Buka Map</div>
+                                            <a class="buka-map6" href="https://www.google.com/maps" target="_blank">Buka Map</a>
                                     </div>
                                 </button>
                                 <button class="frame-wrapper11">
                                     <div class="frame-parent145">
                                         <img class="frame-child41" alt=""
                                             src="{{ asset('./assets/frame-274.svg') }}" />
-                                        <div class="tambah-ke-kalender6">Tambah Ke Kalender</div>
-                                    </div>
+                                            <a class="tambah-ke-kalender6" href="https://calendar.google.com/calendar/u/0/r" target="_blank">Simpan Tanggal</a>
+                                        </div>
                                 </button>
                             </div>
                         </div>
@@ -214,20 +204,19 @@
                                         Tengah, Kota Bogor, Jawa Barat 16122 Royal Hotel Bogor</b>
                                 </div>
                             </div>
-                            <div class="frame-parent146">
-                                <button class="frame-wrapper12">
-                                    <div class="frame-parent147">
-                                        <img class="frame-child42" alt=""
+                            <div class="frame-parent144">
+                                <button class="gallery-frame-wrapper">
+                                    <div class="gallery-frame2">
+                                        <img class="map-button-icon" alt=""
                                             src="{{ asset('./assets/location.svg') }}" />
-
-                                        <div class="buka-map7">Buka Map</div>
-                                    </div>
+                                            <a class="buka-map6" href="https://www.google.com/maps" target="_blank">Buka Map</a>
+                                        </div>
                                 </button>
-                                <button class="frame-wrapper13">
-                                    <div class="frame-parent148">
-                                        <img class="frame-child43" alt=""
+                                <button class="frame-wrapper11">
+                                    <div class="frame-parent145">
+                                        <img class="frame-child41" alt=""
                                             src="{{ asset('./assets/frame-274.svg') }}" />
-                                        <div class="tambah-ke-kalender7">Tambah Ke Kalender</div>
+                                            <a class="tambah-ke-kalender6" href="https://calendar.google.com/calendar/u/0/r" target="_blank">Simpan Tanggal</a>
                                     </div>
                                 </button>
                             </div>
@@ -274,26 +263,30 @@
             <div class="galeri">Galeri</div>
             <div class="caption-parent">
                 <div class="caption">
-                    <img src="{{ asset('./assets/caption.png') }}" alt="caption" width="600" height="600">
-                    
+                    <p class="aku-tak-pernah1">
+                        Aku tak pernah menunggumu. Kamu tak pernah sengaja datang.
+                        Tapi kita sengaja dipertemukan Tuhan. Entah untuk saling duduk
+                        berdampingan atau saling memberi pelajaran. Entah untuk saling
+                        mengirim undangan pernikahan, atau duduk bersama di pelaminan.
+                      </p>
                 </div>
                 <div class="frame-parent16">
                     <div class="frame-parent17">
-                        <img class="frame-child6" alt="" src="{{asset('./assets/frame-99@2x.png')}}" />
-        
-                        <img class="frame-child6" alt="" src="{{asset('./assets/frame-100@2x.png')}}" />
-        
-                        <img class="frame-child6" alt="" src="{{asset('./assets/frame-101@2x.png')}}" />
-                        <img class="frame-child6" alt="" src="{{asset('./assets/frame-104@2x.png')}}" />
-        
-                        <img class="frame-child6" alt="" src="{{asset('./assets/frame-103@2x.png')}}" />
-        
-                        <img class="frame-child6" alt="" src="{{asset('./assets/frame-102@2x.png')}}" />
+                        <img class="frame-child6" alt="" src="{{ asset('./assets/frame-99@2x.png') }}" />
+
+                        <img class="frame-child6" alt="" src="{{ asset('./assets/frame-100@2x.png') }}" />
+
+                        <img class="frame-child6" alt="" src="{{ asset('./assets/frame-101@2x.png') }}" />
+                        <img class="frame-child6" alt="" src="{{ asset('./assets/frame-104@2x.png') }}" />
+
+                        <img class="frame-child6" alt="" src="{{ asset('./assets/frame-103@2x.png') }}" />
+
+                        <img class="frame-child6" alt="" src="{{ asset('./assets/frame-102@2x.png') }}" />
                     </div>
                 </div>
             </div>
         </div>
-        
+
 
 
         <section class="cerita-cinta4">
@@ -355,7 +348,7 @@
         </section>
 
 
-        <section class="rsvp5" data-scroll-to="rSVP">
+        {{-- <section class="rsvp5" data-scroll-to="rSVP">
             <div class="rsvp-mobile3">
                 <h1 class="rsvp6">RSVP</h1>
                 <div class="frame-parent151">
@@ -438,7 +431,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
         <section class="hadiah3" data-scroll-to="hadiah">
             <footer class="kirim-hadiah17">
@@ -487,7 +480,7 @@
                         </div>
                         <div class="an-rudi-hermina14">an Rudi Hermina</div>
                     </div>
-                    <div class="card36">
+                    <div class="card35">
                         <b class="mandiri7">Mandiri</b>
                         <div class="body19">
                             <div class="div73" id="copyText2">1223242442</div>
@@ -496,6 +489,16 @@
                         </div>
                         <div class="an-rudi-hermina15">an Rudi Hermina</div>
                     </div>
+                    <div class="card35">
+                        <b class="mandiri7">Mandiri</b>
+                        <div class="body19">
+                            <div class="div73" id="copyText2">1223242442</div>
+                            <img class="copy-icon11" id="copyButton2" loading="lazy" alt=""
+                                src="{{ asset('./assets/copy2.svg') }}" />
+                        </div>
+                        <div class="an-rudi-hermina15">an Rudi Hermina</div>
+                    </div>
+                  
                 </div>
             </footer>
         </section>
@@ -506,7 +509,7 @@
         var buttonContainer = document.getElementById("buttonContainer");
         if (buttonContainer) {
             buttonContainer.addEventListener("click", function() {
-                var anchor = document.querySelector("[data-scroll-to='buttonImage']");
+                var anchor = document.querySelector("[data-scroll-to='HeaderSection']");
                 if (anchor) {
                     anchor.scrollIntoView({
                         block: "start",
@@ -740,7 +743,6 @@
                 alert("Teks telah disalin: " + copyText.innerText);
             });
         });
-
     </script>
 </body>
 

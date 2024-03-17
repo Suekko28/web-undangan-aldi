@@ -6,10 +6,20 @@
 body {
     background-image: url("./assets/5447182-1-1@2x.png");
     background-size: cover; /* atau background-size: 100% 100%; */
+    background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed; /* Background tetap di tempat ketika di-scroll */
     width: auto;
     height: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.aku-tak-pernah1 {
+    line-height: 150%;
+    padding: 160px;
 }
 
 .b48 {
@@ -69,10 +79,8 @@ body {
     object-fit: cover;
 }
 .header-section-icon {
-    width: 411px;
-    top: calc(50% - 205px);
-    left: calc(50% - 205px);
-    height: 411px;
+    width: 390px;
+    height: 390px;
     object-fit: cover;
     z-index: 0;
 }
@@ -132,10 +140,8 @@ body {
     gap: 0 10px;
 }
 .text-input-field {
-    align-self: stretch;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: relative;
+    align-items: center;
+    justify-content: center;
 }
 .days-until-we3,
 .label {
@@ -534,7 +540,6 @@ body {
     overflow: hidden;
     flex-shrink: 0;
     z-index: 3;
-    
 }
 
 .play-icon {
@@ -548,7 +553,6 @@ body {
 audio {
     display: none;
 }
-
 
 .banner6,
 .r-s-v-p-mobile1 {
@@ -571,6 +575,9 @@ audio {
     font-size: 12px;
     color: #fff;
     font-family: "Cormorant Garamond";
+    background-image: url(./assets/button@2x.png);
+    background-position: center;
+    background-size: cover;
 }
 .jamaludin3,
 .mempelai7 {
@@ -919,7 +926,7 @@ audio {
     gap: 16px 0;
 }
 .text-frame1 {
-    gap: 24px 0;
+    gap: 24px;
 }
 .map-button-icon {
     height: 36px;
@@ -950,6 +957,7 @@ audio {
     padding: 6px 18px;
     background-color: #c79d70;
     flex: 1;
+    width: 50%;
     border-radius: 240px;
     overflow: hidden;
     display: flex;
@@ -957,7 +965,6 @@ audio {
     align-items: flex-start;
     justify-content: flex-start;
     box-sizing: border-box;
-    min-width: 240px;
 }
 .frame-child41 {
     height: 36px;
@@ -994,27 +1001,26 @@ audio {
     background-color: #c79d70;
     border-radius: 240px;
     overflow: hidden;
+    width: 50%;
     flex-direction: column;
     align-items: center;
     box-sizing: border-box;
     min-height: 56px;
 }
 .frame-parent144 {
-    width: 648px;
+    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    gap: 0 8px;
-    max-width: 100%;
+    gap: 16px;
 }
 .text-frame {
-    width: 880px;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 48px 0;
-    max-width: 100%;
+    gap: 48px;
 }
 .story-frame-icon {
     width: 370px;
@@ -1186,8 +1192,8 @@ audio {
     border-radius: 40px;
     border: 6px solid #ffcf9c;
     box-sizing: border-box;
-    padding: 80px 74px;
-    gap: 24px 0;
+    padding: 80px;
+    gap: 24px;
 }
 .asset-2-53,
 .asset-2-63 {
@@ -1229,8 +1235,8 @@ audio {
 .jadwal9 {
     flex: 1;
     border-radius: 80px;
-    background-color: rgba(255, 245, 235, 0.2);
-    backdrop-filter: blur(10px);
+    background-color: rgba(255, 245, 235, 0.5);
+    backdrop-filter: blur(25px);
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -1267,9 +1273,22 @@ audio {
     height: auto; /* Sesuaikan dengan tinggi konten */
 }
 
-.caption,
-.frame-child6 {
+.caption {
+    justify-content: center;
+    align-items: center;
     width: 703.4px;
+    display: flex;
+    position: relative;
+    height: 664px;
+    background-image: url(./assets/Caption.png);
+    background-position: right;
+    background-size: cover;
+}
+.frame-child6 {
+    justify-content: center;
+    align-items: center;
+    width: 703.4px;
+    display: flex;
     position: relative;
     height: 664px;
 }
@@ -1451,9 +1470,7 @@ audio {
     white-space: nowrap;
 }
 .tidak-ada-yang3 {
-    width: 776px;
     position: relative;
-    white-space: pre-wrap;
     display: inline-block;
 }
 .r-s-v-p-name-field {
@@ -1461,11 +1478,9 @@ audio {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    padding: 20px 0;
+    justify-content: flex-start;
     box-sizing: border-box;
-    gap: 16px 0;
-    min-width: 504px;
+    gap: 16px;
     max-width: 100%;
 }
 .r-s-v-p-nope-button {
@@ -1483,7 +1498,7 @@ audio {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 0 24px;
+    gap: 24px;
     max-width: 100%;
 }
 .r-s-v-p-frame-title-child {
@@ -1518,11 +1533,11 @@ audio {
     max-width: 100%;
 }
 .pendekatan-parent1 {
+    align-items: flex-start;
     flex: 1;
     flex-direction: column;
-    gap: 16px 0;
-    min-width: 504px;
-    min-height: 320px;
+    justify-content: flex-start;
+    gap: 16px;
 }
 .r-s-v-p-frame-title1 {
     align-self: stretch;
@@ -1550,11 +1565,8 @@ audio {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    gap: 16px 0;
-    min-width: 504px;
-    min-height: 320px;
-    max-width: 100%;
+    justify-content: flex-start;
+    gap: 16px;
 }
 .r-s-v-p-frame-title-item {
     height: 320px;
@@ -1571,7 +1583,7 @@ audio {
     flex-direction: row;
     align-items: flex-start;
     justify-content: center;
-    gap: 0 24px;
+    gap: 24px;
     max-width: 100%;
 }
 .r-s-v-p-frame-title-inner {
@@ -1597,7 +1609,6 @@ audio {
     margin: 0;
 }
 .kami-memutuskan-untuk-container3 {
-    width: 776px;
     height: 136px;
     position: relative;
     line-height: 140%;
@@ -1613,14 +1624,12 @@ audio {
 .pernikahan-parent1 {
     flex: 1;
     flex-direction: column;
-    gap: 8px 0;
-    min-width: 504px;
-    min-height: 320px;
+    gap: 16px;
 }
 .r-s-v-p-frame-title3 {
     align-self: stretch;
     flex-direction: row;
-    gap: 0 24px;
+    gap: 24px;
     text-align: left;
 }
 .r-s-v-p-mobile-frame {
@@ -1642,8 +1651,8 @@ audio {
 .cerita-cinta4 {
     align-self: stretch;
     border-radius: 80px;
-    background-color: rgba(255, 245, 235, 0.2);
-    backdrop-filter: blur(10px);
+    background-color: rgba(255, 245, 235, 0.5);
+    backdrop-filter: blur(25px);
     flex-direction: column;
     padding: 80px 20px;
     box-sizing: border-box;
@@ -2051,14 +2060,17 @@ audio {
     display: none;
 }
 .transfer-ke-no6 {
+    overflow: hidden;
     flex: 1;
     position: relative;
+    white-space: nowrap;
     font-size: 24px;
     line-height: 140%;
     font-weight: 600;
     font-family: "Cormorant Infant";
     display: inline-block;
     max-width: 100%;
+    text-overflow: ellipsis;
 }
 .add-icon37 {
     height: 24px;
@@ -2125,6 +2137,9 @@ audio {
     display: none;
 }
 .kirim-kado-ke7 {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     flex: 1;
     position: relative;
     font-size: 24px;
@@ -2168,20 +2183,20 @@ audio {
     max-width: 100%;
 }
 .button-parent4 {
-    width: 974px;
+    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    gap: 0 16px;
+    gap: 16px;
     font-size: 10px;
     color: #fff;
     font-family: Optima;
 }
 .question8 {
-    width: 1600px;
+    width: 100%;
     flex-direction: column;
     align-items: center;
-    gap: 24px 0;
+    gap: 24px;
 }
 .bca7,
 .copy5 {
@@ -2223,7 +2238,7 @@ audio {
     flex-shrink: 0;
 }
 .card35 {
-    width: 365px;
+    width: 100%;
     border-radius: 24px;
     border: 1px solid #bb8554;
     box-sizing: border-box;
@@ -2232,9 +2247,7 @@ audio {
     align-items: flex-start;
     justify-content: flex-start;
     padding: 24px;
-    gap: 16px 0;
-    min-width: 237px;
-    max-width: 100%;
+    gap: 16px;
 }
 .div73,
 .mandiri7 {
@@ -2268,22 +2281,18 @@ audio {
 }
 
 .frame-inner {
-    width: 433px;
-    top: calc(50% - 235px);
-    left: calc(50% - 255px);
+    width: 420px;
     border: 1px solid var(--color-navajowhite);
     box-sizing: border-box;
-    height: 433px;
+    height: 420px;
     z-index: 1;
 }
 
 .frame-inner2 {
-    width: 450px;
-    top: calc(50% - 245px);
-    left: calc(50% - 265px);
+    width: 430px;
     border: 1px solid var(--color-navajowhite);
     box-sizing: border-box;
-    height: 450px;
+    height: 430px;
     z-index: 1;
 }
 .an-rudi-hermina15,
@@ -2321,12 +2330,15 @@ audio {
     min-width: 237px;
 }
 .card-list17 {
-    width: 754px;
+    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 0 24px;
+    gap: 24px;
     text-align: left;
     font-size: 24px;
+    display: grid;
+    overflow-x: auto;
+    grid-template-areas: "a a a";
 }
 .kirim-hadiah17 {
     flex: 1;
@@ -2336,7 +2348,7 @@ audio {
     box-sizing: border-box;
     flex-direction: column;
     align-items: center;
-    padding: 80px 74px;
+    padding: 80px;
     gap: 48px 0;
     max-width: 100%;
     text-align: center;
@@ -2353,8 +2365,6 @@ audio {
 .hadiah3 {
     align-self: stretch;
     border-radius: 80px 80px 0 0;
-    background-color: rgba(255, 245, 235, 0.2);
-    backdrop-filter: blur(10px);
     flex-direction: row;
     align-items: flex-start;
     padding: 80px;
@@ -2390,8 +2400,6 @@ audio {
         top: 500px;
         left: 1380px;
     }
-
-
 
     .navbar-mobile3 {
         border-radius: 100px;
@@ -2450,29 +2458,27 @@ audio {
         padding: 0 370px 0 20px;
     }
 
-
-
     .frame-child6 {
-        width: 280px;
+        width: 320px;
         height: 320px;
         flex-shrink: 0;
         object-fit: contain;
         transform: scale(1);
     }
 
-   .gallery  {
-    width: 1536px;
-   }
+    .gallery {
+        width: 1536px;
+    }
 
-   .caption-parent {
-    width: 100%;
-    flex-direction: row;
-    justify-content: center;
-    gap: 0 24px;
-    text-align: center;
-    font-size: var(--font-size-5xl);
-    font-family: var(--font-cormorant-infant);
-}
+    .caption-parent {
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        gap: 24px;
+        text-align: center;
+        font-size: var(--font-size-5xl);
+        font-family: var(--font-cormorant-infant);
+    }
 
     .ucapan-mobile {
         overflow-x: hidden; /* Menghindari scroll horizontal */
@@ -2499,6 +2505,8 @@ audio {
         gap: 16px 0;
         max-width: 100%;
     }
+
+
 }
 
 @media screen and (max-width: 1280px) {
@@ -2515,7 +2523,6 @@ audio {
     .floating-button4 {
         left: 1100px;
     }
-
 
     .navbar-mobile3 {
         border-radius: 100px;
@@ -2575,8 +2582,6 @@ audio {
     .caption-parent {
         flex-direction: column;
     }
-
-   
 
     .frame-child6 {
         width: 320px;
@@ -2643,8 +2648,6 @@ audio {
         left: 850px;
     }
 
-   
-
     .navbar-mobile3 {
         border-radius: 100px;
         top: 620px;
@@ -2696,13 +2699,9 @@ audio {
         text-align: center;
     }
 
-   
-
-   
     .aku-tak-pernah-caption {
         width: 550px;
     }
-
 
     .frame-child6 {
         width: 280px;
@@ -2710,9 +2709,7 @@ audio {
     }
 
     .tidak-ada-yang3 {
-        width: 640px;
         position: relative;
-        white-space: pre-wrap;
         display: inline-block;
     }
 
@@ -2732,8 +2729,6 @@ audio {
         align-items: center;
         flex-direction: column;
     }
-
-    
 
     .ucapan-mobile-inner {
         border-radius: 16px;
@@ -2768,7 +2763,7 @@ audio {
     }
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .button-icon {
         height: 1176px;
         width: 2090px;
@@ -2783,7 +2778,6 @@ audio {
     .floating-button4 {
         left: 650px;
     }
-   
 
     .navbar-mobile3 {
         left: 240px;
@@ -2868,9 +2862,6 @@ audio {
         text-align: center;
     }
 
-  
-
-   
     .frame-parent17,
     .frame-parent18 {
         display: grid;
@@ -2881,33 +2872,12 @@ audio {
         justify-content: center;
     }
 
-    .r-s-v-p-frame-title {
-        margin-right: 150px;
-    }
-
-    .tidak-ada-yang3 {
-        width: 500px;
-    }
-
-    .r-s-v-p-frame-title1 {
-        margin-left: 150px;
-    }
-
     .seiring-berjalannya-waktu3 {
-        width: 400px;
-    }
-
-    .r-s-v-p-frame-title2 {
-        margin-right: 150px;
+        width: unset;
     }
 
     .atas-kehendak-allah3 {
-        margin-left: 150px;
-        width: 350px;
-    }
-
-    .r-s-v-p-frame-title3 {
-        margin-left: 150px;
+        width: unset;
     }
 
     .ucapan-mobile-inner {
@@ -2951,13 +2921,7 @@ audio {
     }
 }
 
-
-
-
-
 @media screen and (max-width: 640px) {
-  
-
     .floating-button4 {
         left: 550px;
     }
@@ -2965,7 +2929,6 @@ audio {
     .navbar-mobile3 {
         left: 170px;
     }
-
 
     .jl-ir-h7,
     .jl-ir-h6 {
@@ -3036,41 +2999,17 @@ audio {
         width: 430px;
     }
 
-    .r-s-v-p-frame-title {
-        margin-right: 170px;
-    }
-
-    .tidak-ada-yang3 {
-        width: 510px;
-    }
-
-    .seiring-berjalannya-waktu3 {
-        width: 350px;
-    }
-
-    .r-s-v-p-frame-title2 {
-        margin-right: 170px;
-    }
-
-    .atas-kehendak-allah3 {
-        margin-left: 160px;
-        width: 350px;
-    }
-
-    .seiring-berjalannya-waktu3 {
-        width: 350px;
-    }
-
-    .r-s-v-p-frame-title1 {
-        margin-left: 170px;
-    }
-
-    .r-s-v-p-frame-title3 {
-        margin-left: 170px;
-    }
-
     .kami-memutuskan-untuk3 {
-        width: 340px;
+        width: unset;
+    }
+
+    .aku-tak-pernah1 {
+        padding: 120px;
+    }
+
+    .caption {
+        width: 560px;
+        height: 528.61px;
     }
 }
 /* @media screen and (max-width: 1525px) {
