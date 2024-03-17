@@ -504,11 +504,8 @@ a {
     display: none;
 }
 .play-icon {
-    position: absolute;
-    top: calc(50% - 55px);
-    left: calc(50% - 75px);
-    width: 130px;
-    height: 130px;
+    width: 80px;
+    height: 80px;
 }
 
 .pause-1-icon {
@@ -2397,13 +2394,11 @@ audio {
     }
 
     .floating-button4 {
-        top: 500px;
         left: 1380px;
     }
 
     .navbar-mobile3 {
         border-radius: 100px;
-        top: 620px;
         left: 600px;
         background-color: #d8bd99;
         overflow: hidden;
@@ -2526,7 +2521,6 @@ audio {
 
     .navbar-mobile3 {
         border-radius: 100px;
-        top: 620px;
         left: 480px;
         background-color: #d8bd99;
         overflow: hidden;
@@ -2650,8 +2644,7 @@ audio {
 
     .navbar-mobile3 {
         border-radius: 100px;
-        top: 620px;
-        left: 360px;
+        left: 340px;
         background-color: #d8bd99;
         overflow: hidden;
         flex-wrap: wrap;
@@ -2780,7 +2773,7 @@ audio {
     }
 
     .navbar-mobile3 {
-        left: 240px;
+        left: 230px;
     }
 
     .button61 {
@@ -2923,11 +2916,11 @@ audio {
 
 @media screen and (max-width: 640px) {
     .floating-button4 {
-        left: 550px;
+        left: 540px;
     }
 
     .navbar-mobile3 {
-        left: 170px;
+        left: 150px;
     }
 
     .jl-ir-h7,
