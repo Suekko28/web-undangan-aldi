@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return view('undangan-aldi.home');
+});
+
 Route::get('/undangan-aldi', function () {
     return view('undangan-aldi.home');
 });
