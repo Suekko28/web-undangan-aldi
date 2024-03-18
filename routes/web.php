@@ -17,11 +17,11 @@ Route::get('/', function () {
     return view('undangan-aldi.home');
 });
 
-Route::get('/undangan-aldi', function () {
+Route::get('/undangan-alt1', function () {
     return view('undangan-aldi.home');
 });
 
-Route::get('/undangan-aldi/index', function () {
+Route::get('/undangan-alt1/index', function () {
     return view('undangan-aldi.index');
 });
 
@@ -30,16 +30,16 @@ Route::get('/undangan-aldi/index', function () {
 // });
 
 
-Route::get('/undangan-nanang', function () {
+Route::get('/undangan-alt2', function () {
     return view('undangan-nanang.home');
 });
 
-Route::get('/undangan-nanang/index', function () {
+Route::get('/undangan-alt2/index', function () {
     return view('undangan-nanang.index');
 });
 
 
-Route::get('/undangan-mufli', function () {
+Route::get('/undangan-alt3', function () {
     return view('undangan-mufli.home');
 });
 
@@ -47,6 +47,6 @@ Route::get('/undangan-mufli', function () {
 //     return view('undangan-mufli.coba');
 // });
 
-Route::get('/undangan-mufli/index', function () {
+Route::get('/undangan-alt3/index', function () {
     return view('undangan-mufli.index');
 });
