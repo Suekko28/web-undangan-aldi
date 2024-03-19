@@ -3,47 +3,15 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 * {
     margin: 0;
     padding: 0;
 }
-.asset-3-1,
-.asset-4-icon {
-    position: absolute;
-    top: 641px;
-    object-fit: cover;
-}
-.asset-4-icon {
-    left: -33px;
-    width: 460px;
-    height: 508px;
-    opacity: 1;
-}
-.asset-3-1 {
-    left: 1697px;
-    width: 254px;
-    height: 460px;
-}
-.asset-2-11,
-.asset-4-3 {
-    position: absolute;
-    object-fit: contain;
-}
-.asset-2-11 {
-    top: -302px;
-    left: 1537px;
-    width: 446px;
-    height: 874px;
-    opacity: 1;
-}
-.asset-4-3 {
-    top: -69.2px;
-    left: -32.7px;
-    width: 234.1px;
-    height: 433.4px;
-}
+
+
 .undangan-pernikahan {
     position: relative;
     line-height: 140%;
@@ -91,18 +59,12 @@ body {
     overflow: hidden;
     max-height: 100%;
 }
-.asset-2-3 {
-    top: 0;
-    left: 0;
-    width: 82px;
-    height: 164px;
-    display: none;
-}
+
 .ellipse-parent {
-    width: 320px;
+    width: 300px;
     position: relative;
     border-radius: 400px;
-    height: 320px;
+    height: 300px;
 }
 .yth-bapakibusaudarai-parent {
     display: flex;
@@ -143,11 +105,8 @@ body {
     padding: 24px;
 }
 .prototype-home-deks {
-    /* width: 100vw; Lebar sesuai dengan lebar layar */
-    height: 100vh;
     position: relative;
     background-color: var(--color-white);
-    /* height: 1080px; */
     overflow: hidden;
     text-align: left;
     font-size: var(--font-size-5xl);
@@ -155,90 +114,4 @@ body {
     font-family: var(--font-cormorant-infant);
 }
 
-@media screen and (min-width: 1536px) {
-    .asset-2-11 {
-        left: 1300px;
-    }
 
-    .asset-3-1 {
-        left: 1400px;
-    }
-
-    .asset-4-3 {
-        left: -70px;
-    }
-
-    .asset-4-icon {
-        left: -200px;
-    }
-}
-
-@media screen and (min-width: 1280px) {
-    .asset-2-11 {
-        left: 1100px;
-    }
-
-    .asset-3-1 {
-        left: 1150px;
-    }
-    .asset-4-3 {
-        left: -90px;
-    }
-
-    .asset-4-icon {
-        left: -250px;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .asset-4-icon {
-        left: -270px;
-    }
-
-    .asset-4-3 {
-        left: -100px;
-    }
-
-    .asset-2-11 {
-        left: 850px;
-    }
-
-    .asset-3-1 {
-        left: 900px;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .asset-4-icon {
-        width: 230px; /* Sesuaikan lebar sesuai kebutuhan */
-        height: auto; /* Biarkan ketinggian menyesuaikan proporsi */
-        left: -10%; /* Sesuaikan posisi gambar jika diperlukan */
-        opacity: 1; /* Sesuaikan opasitas jika diperlukan */
-        top: 850px;
-    }
-
-    .asset-3-1 {
-        width: 150px; /* Sesuaikan lebar sesuai kebutuhan */
-        height: auto; /* Biarkan ketinggian menyesuaikan proporsi */
-        left: 100%; /* Sesuaikan posisi gambar jika diperlukan */
-        transform: translateX(-50%); /* Pusatkan gambar horizontal */
-        top: 850px;
-    }
-
-    .asset-2-11 {
-        width: 200px; /* Sesuaikan lebar sesuai kebutuhan */
-        height: auto; /* Biarkan ketinggian menyesuaikan proporsi */
-        left: 100%; /* Sesuaikan posisi gambar jika diperlukan */
-        transform: translateX(-50%); /* Pusatkan gambar horizontal */
-        top: -150px; /* Sesuaikan posisi gambar jika diperlukan */
-        opacity: 1; /* Sesuaikan opasitas jika diperlukan */
-    }
-
-    .asset-4-3 {
-        width: 150px; /* Sesuaikan lebar sesuai kebutuhan */
-        height: auto; /* Biarkan ketinggian menyesuaikan proporsi */
-        left: 0; /* Sesuaikan posisi gambar jika diperlukan */
-        top: -50px; /* Sesuaikan posisi gambar jika diperlukan */
-        transform: translateX(-50%); /* Pusatkan gambar horizontal */
-    }
-}

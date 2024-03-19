@@ -36,7 +36,6 @@
 
           <img class="asset-1-4" alt="" src="./assets/asset-1-4@2x.png" />
 
-          <img class="asset-2-3" alt="" src="./assets/asset-2-3@2x.png" />
         </div>
         <div class="frame-group">
           <div class="yth-bapakibusaudarai-parent">
@@ -44,7 +43,7 @@
             <b class="undangan-pernikahan">Isra Rafi Shidqi & Partner</b>
           </div>
           <div class="buka-undangan-wrapper">
-            <a class="undangan-pernikahan" style="color: white; text-decoration:none;" href="undangan-aldi/index">Buka Undangan</a>
+            <a class="undangan-pernikahan" style="color: white; text-decoration:none;" href="undangan-alt1/index">Buka Undangan</a>
           </div>
         </div>
       </div>

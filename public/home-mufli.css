@@ -2080,7 +2080,7 @@ a {
     text-align: center;
     font-size: 32px;
 }
-@media screen and (max-width: 1536px) {
+@media only screen and (max-width: 1536px) {
 
     .side-view-bride-groom-hiding-f-icon {
         left: unset;
@@ -2175,7 +2175,7 @@ a {
     }
 }
 
-@media screen and (max-width: 1280px) {
+@media only screen and (max-width: 1280px) {
     .side-view-bride-groom-embraced-icon {
         width: 2426px;
         height: 2426px;
@@ -2257,7 +2257,7 @@ a {
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
     .side-view-bride-groom-embraced-icon {
         width: 100%;
         height: auto;
@@ -2388,7 +2388,7 @@ a {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
     .side-view-bride-groom-embraced-icon {
         height: 2426px;
         width: 2426px;
@@ -2711,7 +2711,7 @@ a {
     }
 }
 
-@media screen and (max-width: 640px) {
+@media only screen and (max-width: 640px) {
     .side-view-bride-groom-embraced-icon {
         height: 2426px;
         width: 2426px;
@@ -2825,5 +2825,15 @@ a {
 
     .card-list15 {
         margin-top: -390px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .card-list12 {
+        left: 80px;
+    }
+
+    .alexnor-exafator1 {
+        font-size: unset;
     }
 }
