@@ -19,7 +19,8 @@ a {
 
 .aku-tak-pernah1 {
     line-height: 150%;
-    padding: 160px;
+    padding: 200px;
+    font-size: 16px;
 }
 
 .b48 {
@@ -48,15 +49,15 @@ a {
     align-items: center;
     justify-content: flex-start;
 }
-.jamaludin-maryam5,
 .undangan-pernikahan5 {
     position: relative;
     line-height: 140%;
     z-index: 1;
+    font-size: 20px;
 }
 .jamaludin-maryam5 {
     margin: 0;
-    font-size: 48px;
+    font-size: 36px;
     line-height: 150%;
     font-weight: 400;
     font-family: "Rouge Script";
@@ -143,10 +144,10 @@ a {
     align-items: center;
     justify-content: center;
 }
-.days-until-we3,
-.label {
+.days-until-we3 {
     position: relative;
     line-height: 140%;
+    font-size: 16px;
 }
 .input-text {
     align-self: stretch;
@@ -319,7 +320,7 @@ a {
     padding: 0 1px 0 0;
     gap: 20px;
     text-align: center;
-    font-size: 32px;
+    font-size: 24px;
     color: #fff;
 }
 .image-placeholder {
@@ -588,14 +589,16 @@ audio {
 .mempelai7 {
     width: 312px;
     display: inline-block;
+    font-size: 36px;
 }
 .jamaludin3 {
     align-self: stretch;
+    font-size: 36px;
 }
 .anak-dari-bapak6 {
     width: 387px;
     position: relative;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 140%;
     font-family: Cormorant;
     display: inline-block;
@@ -604,7 +607,7 @@ audio {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-end;
     justify-content: flex-start;
     padding: 20px 0;
     box-sizing: border-box;
@@ -635,12 +638,14 @@ audio {
     font-size: inherit;
     line-height: 150%;
     font-weight: 400;
+    font-size: 36px;
     font-family: inherit;
     text-align: center;
 }
-.card-mandiri-child {
-    height: 320px;
-    width: 320px;
+.card-mandiri-child,
+.container-frame-icon {
+    height: 250px;
+    width: 250px;
     position: relative;
     object-fit: cover;
 }
@@ -652,11 +657,12 @@ audio {
     line-height: 150%;
     font-weight: 400;
     font-family: inherit;
+    font-size: 36px;
 }
 .anak-dari-bapak7 {
     width: 387px;
     position: relative;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 140%;
     font-family: Cormorant;
     display: inline-block;
@@ -869,7 +875,7 @@ audio {
 .akad9 {
     margin: 0;
     position: relative;
-    font-size: 48px;
+    font-size: 36px;
     line-height: 150%;
     font-weight: 400;
     font-family: "Rouge Script";
@@ -924,6 +930,8 @@ audio {
 }
 .text-frame1 {
     gap: 24px;
+    font-size: 20px;
+    text-align: center;
 }
 .map-button-icon {
     height: 36px;
@@ -932,7 +940,7 @@ audio {
 }
 .buka-map6 {
     position: relative;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 140%;
     font-weight: 600;
     font-family: "Cormorant Infant";
@@ -946,7 +954,7 @@ audio {
     align-items: center;
     justify-content: center;
     gap: 0 6px;
-    min-height: 44px;
+    height: 40px;
 }
 .gallery-frame-wrapper {
     cursor: pointer;
@@ -971,7 +979,7 @@ audio {
 }
 .tambah-ke-kalender6 {
     position: relative;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 140%;
     font-weight: 600;
     font-family: "Cormorant Infant";
@@ -1030,7 +1038,7 @@ audio {
 .resepsi8 {
     margin: 0;
     position: relative;
-    font-size: 48px;
+    font-size: 24px;
     line-height: 150%;
     font-weight: 400;
     font-family: "Rouge Script";
@@ -1085,6 +1093,8 @@ audio {
 }
 .resepsi-parent3 {
     gap: 16px 0;
+    font-size: 16px;
+    text-align: center;
 }
 .frame-child42 {
     height: 36px;
@@ -1254,6 +1264,7 @@ audio {
 .galeri {
     position: relative;
     line-height: 150%;
+    font-size: 24px;
 }
 
 .aku-tak-pernah {
@@ -1273,10 +1284,10 @@ audio {
 .caption {
     justify-content: center;
     align-items: center;
-    width: 703.4px;
+    width: 582.66px;
     display: flex;
     position: relative;
-    height: 664px;
+    height: 550px;
     background-image: url(./assets/Caption.png);
     background-position: right;
     background-size: cover;
@@ -2500,8 +2511,6 @@ audio {
         gap: 16px 0;
         max-width: 100%;
     }
-
-
 }
 
 @media screen and (max-width: 1280px) {
@@ -2788,10 +2797,6 @@ audio {
         width: 500px;
     }
 
-    .days-until-we3 {
-        left: -570px;
-    }
-
     .link-button {
         left: 200px;
     }
@@ -3005,6 +3010,251 @@ audio {
         height: 528.61px;
     }
 }
+
+@media only screen and (max-width: 500px) {
+    .header-section-icon {
+        width: 230px;
+        height: 230px;
+    }
+
+    .mempelai6 {
+        padding: 16px;
+    }
+
+    .navbar-mobile3 {
+        left: unset;
+        flex-wrap: nowrap;
+    }
+
+    .jamaludin-maryam5 {
+        font-size: 24px;
+    }
+
+    .undangan-pernikahan5 {
+        font-size: 16px;
+    }
+
+    .frame-inner {
+        width: 240px;
+        height: 240px;
+    }
+
+    .frame-inner2 {
+        width: 250px;
+        height: 250px;
+    }
+
+    .image-placeholder {
+        width: unset;
+    }
+
+    .link-button {
+        justify-content: center;
+        font-size: 16px;
+        gap: 6px;
+    }
+
+    .days-until-we3 {
+        font-size: 16px;
+    }
+
+    .input-text,
+    .wrapper38,
+    .wrapper39,
+    .wrapper40 {
+        width: 50px;
+        height: 50px;
+        border-radius: 20px;
+    }
+
+    .hari11,
+    .jam8,
+    .menit8,
+    .detik8 {
+        font-size: 16px;
+    }
+
+    .floating-button4 {
+        left: 85%;
+        height: 40px;
+        width: 40px;
+        top: 350px;
+        z-index: 999;
+    }
+
+    .mempelai7 {
+        font-size: 24px;
+    }
+
+    .card-b-c-a {
+        flex-direction: row;
+    }
+
+    .container-frame-icon,
+    .card-mandiri-child {
+        width: 250px;
+        height: 250px;
+    }
+
+    .jamaludin3,
+    .frame3,
+    .maryam3 {
+        font-size: 24px;
+    }
+
+    .anak-dari-bapak6,
+    .anak-dari-bapak7 {
+        font-size: 16px;
+    }
+
+    .jadwal-wrapper {
+        justify-content: center;
+        align-self: center;
+    }
+
+    .jadwal9 {
+        padding: 16px;
+    }
+
+    .jadwal10,
+    .jadwal-wrapper,
+    .jadwal9 {
+        box-sizing: unset;
+        width: 90%;
+    }
+
+    .jadwal11 {
+        padding: unset;
+    }
+
+    .asset-2-53 {
+        top: -10px;
+        left: -160px;
+        object-fit: cover;
+    }
+
+    .text-frame,
+    .resepsi-parent3 {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .akad9,
+    .resepsi8 {
+        font-size: 24px;
+    }
+
+    .jl-ir-h6,
+    .jl-ir-h7 {
+        width: 200px;
+    }
+
+    .map-button-icon,
+    .frame-child41 {
+        width: 30px;
+        height: 30px;
+    }
+
+    .tambah-ke-kalender6,
+    .tambah-ke-kalender7 {
+        font-size: 16px;
+    }
+    .buka-map6,
+    .buka-map7 {
+        font-size: 16px;
+    }
+
+    .gallery-frame-wrapper {
+        margin-bottom: unset;
+    }
+
+    .frame-wrapper11,
+    .gallery-frame-wrapper {
+        padding: 6px;
+    }
+
+    .frame-parent144 {
+        width: 80%;
+        margin-bottom: 24px;
+    }
+
+    .aku-tak-pernah1 {
+        font-size: 16px;
+        padding: 60px;
+    }
+
+    .gallery {
+        padding: 16px;
+    }
+    .galeri {
+        font-size: 24px;
+    }
+
+    .caption {
+        width: 350px;
+        height: 330.38px;
+    }
+
+    .frame-child6 {
+        width: 150px;
+        height: 150px;
+    }
+
+    .cerita-cinta-kami3 {
+        font-size: 24px;
+    }
+
+    .r-s-v-p-frame-title {
+        align-items: flex-start;
+    }
+
+    .pertemuan3,
+    .tidak-ada-yang3,
+    .pendekatan-parent1,
+    .lamaran-parent1,
+    .pernikahan-parent1 {
+        font-size: 16px;
+    }
+
+    .r-s-v-p-nope-button,
+    .r-s-v-p-frame-title-child,
+    .r-s-v-p-frame-title-item,
+    .r-s-v-p-frame-title-inner {
+        width: 150px;
+        height: 150px;
+    }
+
+    .cerita-cinta-kami3 {
+        padding: 16px;
+    }
+
+    .hadiah3 {
+        justify-content: center;
+        max-width: unset;
+        padding: 16px;
+    }
+
+    .kirim-hadiah17 {
+    }
+
+    .question8,
+    .jika-kamu-tidak7,
+    .transfer-ke-no6,
+    .kirim-kado-ke7 {
+        font-size: 16px;
+    }
+
+    .button62,
+    .button63 {
+        width: 100%;
+        min-width: unset;
+    }
+
+    .card-list17 {
+        font-size: 16px;
+    }
+}
+
 /* @media screen and (max-width: 1525px) {
     .banner6 {
         flex-wrap: wrap;
