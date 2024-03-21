@@ -39,7 +39,6 @@
 
           <img class="asset-1-4" alt="" src="./assets/asset-1-4@2x.png" />
 
-          <img class="asset-2-3" alt="" src="./assets/asset-2-3@2x.png" />
         </div>
         <div class="frame-group">
           <div class="yth-bapakibusaudarai-parent">

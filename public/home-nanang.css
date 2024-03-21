@@ -26,7 +26,7 @@
 }
 .rhoma-irama {
     position: relative;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 150%;
     font-family: NanumMyeongjo;
 }
@@ -38,6 +38,7 @@
     justify-content: flex-start;
     gap: 16px 0;
     max-width: 100%;
+    font-size: 24px;
     text-align: left;
 }
 .text {
@@ -272,6 +273,7 @@
 .row-input {
     width: 455px;
     display: flex;
+    font-size: 24px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -458,7 +460,7 @@
     padding: 12px 24px;
     gap: 0 24px;
     max-width: 100%;
-    z-index: 2;
+    z-index: 998;
     font-size: 10px;
     font-family: Optima;
 }
@@ -539,8 +541,6 @@
     padding: 0;
     background-color: #fff;
     height: 80px;
-    bottom: 150px;
-    left: 550px;
     width: 80px;
     display: flex;
     justify-content: center;
@@ -550,9 +550,9 @@
     box-shadow: -9px 9px 42px rgba(105, 102, 90, 0.32);
     overflow: hidden;
     flex-shrink: 0;
-    z-index: 3;
+    z-index: 999;
     bottom: 80px; /* Ubah nilai bottom */
-    left: 1800px; /* Ubah nilai left */
+    left: 90%; /* Ubah nilai left */
 }
 
 audio {
@@ -585,7 +585,7 @@ audio {
     font-size: 32px;
     color: #fff;
     font-family: "DM Serif Display";
-    background-image:url(./assets/BannerImage.jpg);
+    background-image: url(./assets/BannerImage.jpg);
     background-position: right;
     background-size: cover;
 }
@@ -602,7 +602,7 @@ audio {
 .rudi-wibowo {
     align-self: stretch;
     position: relative;
-    font-size: 32px;
+    font-size: 16px;
     line-height: 130%;
     font-family: "DM Serif Display";
     color: #3b3b3b;
@@ -622,7 +622,7 @@ audio {
 }
 .bapak-akbar-skom-container {
     position: relative;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 150%;
     color: #3b3b3b;
 }
@@ -642,11 +642,12 @@ audio {
 }
 .rudi-wibowo1 {
     position: relative;
+    font-size: 16px;
     line-height: 140%;
 }
 .button-link {
     flex-direction: row;
-    align-items: flex-end;
+    align-items: center;
     gap: 0 8px;
     font-size: 24px;
     color: #3b3b3b;
@@ -679,7 +680,7 @@ audio {
 }
 .arum-kurniawati {
     position: relative;
-    font-size: 32px;
+    font-size: 24px;
     line-height: 130%;
     font-family: "DM Serif Display";
     color: #3b3b3b;
@@ -698,7 +699,7 @@ audio {
 }
 .bapak-akbar-skom-container1 {
     position: relative;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 150%;
     color: #3b3b3b;
     text-align: right;
@@ -719,6 +720,7 @@ audio {
 }
 .rudi-wibowo2 {
     position: relative;
+    font-size: 16px;
     line-height: 140%;
 }
 .button-link1,
@@ -729,6 +731,7 @@ audio {
 }
 .button-link1 {
     flex-direction: row;
+    align-items: center;
     gap: 0 8px;
     font-size: 24px;
     color: #3b3b3b;
@@ -794,7 +797,7 @@ audio {
     line-height: 140%;
 }
 .pertama-bertemu {
-    font-size: 32px;
+    font-size: 24px;
     line-height: 130%;
     font-family: "DM Serif Display";
     color: #3b3b3b;
@@ -810,7 +813,7 @@ audio {
 .kita-bertemu-pertama {
     align-self: stretch;
     position: relative;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 150%;
     color: #3b3b3b;
 }
@@ -832,7 +835,6 @@ audio {
     flex: 1;
     flex-direction: column;
     justify-content: center;
-    min-width: 265px;
 }
 .card6 {
     align-self: stretch;
@@ -877,7 +879,7 @@ audio {
 .kita-bertemu-pertama1 {
     align-self: stretch;
     position: relative;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 150%;
     color: #3b3b3b;
 }
@@ -931,7 +933,7 @@ audio {
 }
 .tunangan {
     position: relative;
-    font-size: 32px;
+    font-size: 24px;
     line-height: 130%;
     font-family: "DM Serif Display";
     color: #3b3b3b;
@@ -947,7 +949,7 @@ audio {
     align-self: stretch;
     height: 72px;
     position: relative;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 150%;
     color: #3b3b3b;
     display: inline-block;
@@ -989,7 +991,7 @@ audio {
     align-items: center;
     justify-content: center;
     gap: 48px 0;
-    min-width: 520px;
+    width: 100%;
 }
 .dot {
     height: 24px;
@@ -1150,7 +1152,7 @@ audio {
     line-height: 140%;
 }
 .jadian {
-    font-size: 32px;
+    font-size: 24px;
     line-height: 130%;
     font-family: "DM Serif Display";
     color: #3b3b3b;
@@ -1167,7 +1169,7 @@ audio {
     align-self: stretch;
     height: 72px;
     position: relative;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 150%;
     color: #3b3b3b;
     display: inline-block;
@@ -1236,7 +1238,7 @@ audio {
     align-self: stretch;
     height: 72px;
     position: relative;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 150%;
     display: inline-block;
     color: #3b3b3b;
@@ -1279,7 +1281,7 @@ audio {
     align-items: center;
     justify-content: center;
     gap: 48px 0;
-    min-width: 520px;
+    width: 100%;
 }
 .card-list-parent,
 .our-love-story-parent {
@@ -1315,9 +1317,11 @@ audio {
     position: relative;
     letter-spacing: 0.26em;
     line-height: 130%;
+    font-size: 24px;
 }
 .our-moment-wrapper {
     display: flex;
+    margin-bottom: 3%;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
@@ -1338,7 +1342,7 @@ audio {
     position: absolute;
     margin: 0 !important;
     top: calc(50% - 281.5px);
-    right: -960px;
+    right: -100%;
     background-color: #000;
     overflow: hidden;
     flex-shrink: 0;
@@ -1353,10 +1357,12 @@ audio {
     align-self: stretch;
     position: relative;
     line-height: 150%;
+    font-size: 24px;
 }
 .rhoma-irama1 {
     position: relative;
     line-height: 150%;
+    font-size: 16px;
 }
 .fill-space {
     align-self: stretch;
@@ -1383,7 +1389,6 @@ audio {
     padding: 48px;
     box-sizing: border-box;
     gap: 16px 0;
-    z-index: 1;
 }
 .rectangle-path,
 .text-block-path {
@@ -1391,10 +1396,11 @@ audio {
     align-items: flex-start;
 }
 .text-block-path {
-    width: 800px;
+    width: 50%;
     position: relative;
 }
 .rectangle-path {
+    width: 100%;
     align-self: stretch;
     flex-shrink: 0;
     text-align: left;
@@ -1468,9 +1474,10 @@ audio {
 .foto-container {
     align-self: stretch;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: center;
-    gap: 0 48px;
+    gap: 48px;
+    margin-top: 5%;
     position: relative;
     overflow-y: auto;
     flex-shrink: 0;
@@ -1481,23 +1488,24 @@ audio {
     height: 400px;
     position: absolute;
     margin: 0 !important;
-    right: -440px;
+    top: 0;
+    right: -26%;
     overflow: hidden;
     flex-shrink: 0;
     object-fit: cover;
 }
 .spacer {
-    align-self: stretch;
+    align-self: center;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    padding: 80px 96px 80px 80px;
+    justify-content: center;
+    padding: 80px;
     box-sizing: border-box;
     position: relative;
-    gap: 158px 0;
-    max-width: 100%;
+    gap: 158px;
+    width: 100%;
     flex-shrink: 0;
     text-align: center;
     font-size: 24px;
@@ -1551,7 +1559,7 @@ audio {
 }
 .akad-nikah {
     position: relative;
-    font-size: 32px;
+    font-size: 24px;
     line-height: 130%;
     font-family: "DM Serif Display";
     color: #fff;
@@ -1569,7 +1577,7 @@ audio {
 }
 .jumat-28-april-container {
     position: relative;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 150%;
     color: #fff;
 }
@@ -1583,6 +1591,7 @@ audio {
 }
 .plataran-menteng-jalan {
     align-self: stretch;
+    font-size: 16px;
     position: relative;
     letter-spacing: 0.01em;
     line-height: 140%;
@@ -1616,7 +1625,7 @@ audio {
 }
 .resepsi2 {
     position: relative;
-    font-size: 32px;
+    font-size: 24px;
     line-height: 130%;
     font-family: "DM Serif Display";
     color: #fff;
@@ -1634,7 +1643,7 @@ audio {
 }
 .jumat-28-april-container1 {
     position: relative;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 150%;
     color: #fff;
 }
@@ -1652,6 +1661,7 @@ audio {
     letter-spacing: 0.01em;
     line-height: 140%;
     color: #fff;
+    font-size: 16px;
 }
 .akad3,
 .frame-hari-bogor {
@@ -1710,7 +1720,7 @@ audio {
 }
 .simpan-acara-ke {
     position: relative;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 140%;
     font-family: NanumMyeongjo;
     color: #fff;
@@ -1739,6 +1749,7 @@ audio {
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    height: 56px;
     gap: 0 16px;
 }
 .input-alamat {
@@ -2008,6 +2019,7 @@ audio {
 .kirim-hadiah4 {
     position: relative;
     letter-spacing: 0.26em;
+    font-size: 24px;
     line-height: 130%;
 }
 .jika-kamu-tidak2,
@@ -2015,9 +2027,10 @@ audio {
     align-self: stretch;
     position: relative;
     line-height: 130%;
+    font-size: 24px;
 }
 .jika-kamu-tidak2 {
-    font-size: 24px;
+    font-size: 20px;
     line-height: 150%;
     font-family: NanumMyeongjo;
 }
@@ -2045,7 +2058,7 @@ audio {
     box-sizing: border-box;
     font-family: NanumMyeongjo;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 20px;
     color: #fff;
     min-width: 250px;
 }
@@ -2093,7 +2106,7 @@ audio {
     outline: 0;
     display: inline-block;
     font-family: NanumMyeongjo;
-    font-size: 24px;
+    font-size: 20px;
     background-color: transparent;
     height: 34px;
     flex: 1;
@@ -2128,6 +2141,7 @@ audio {
     align-items: center;
     padding: 16px 49px 16px 47px;
     gap: 0 16px;
+    font-size: 20px;
 }
 .question4,
 .substitute-present {
@@ -2262,7 +2276,7 @@ audio {
 .card-list5 {
     width: 560px;
     gap: 24px 0;
-    font-size: 24px;
+    font-size: 20px;
     color: #1d1c16;
     font-family: NanumMyeongjo;
 }
@@ -2720,7 +2734,7 @@ audio {
 
     .floating-button {
         bottom: 80px; /* Ubah nilai bottom */
-        left: 1400px; /* Ubah nilai left */
+        left: 90%; /* Ubah nilai left */
     }
 
     .untitled-1-1-icon {
@@ -2746,7 +2760,6 @@ audio {
         flex: 1;
         flex-direction: column;
         justify-content: center;
-        min-width: 100px;
     }
 
     .card-inner2 {
@@ -2784,7 +2797,6 @@ audio {
     }
 
     .pertama-bertemu {
-        font-size: 32px;
         line-height: 130%;
         font-family: "DM Serif Display";
         color: #3b3b3b;
@@ -2793,7 +2805,6 @@ audio {
     .kita-bertemu-pertama {
         align-self: stretch;
         position: relative;
-        font-size: 24px;
         line-height: 150%;
         color: #3b3b3b;
     }
@@ -2809,18 +2820,13 @@ audio {
         flex-shrink: 0;
     }
 
-    .text-block-path {
-        width: 750px;
-        position: relative;
-    }
-
     .frame-video {
         height: 500px;
         width: 796px;
         position: absolute;
         margin: 0 !important;
         top: calc(50% - 281.5px);
-        right: -630px;
+        right: -100%;
         background-color: #000;
         overflow: hidden;
         flex-shrink: 0;
@@ -2863,7 +2869,7 @@ audio {
         object-fit: cover;
     }
 
-    .column {
+    /* .column {
         flex: 1;
         background-color: rgba(59, 59, 59, 0.8);
         backdrop-filter: blur(6px);
@@ -2872,15 +2878,13 @@ audio {
         padding: 48px;
         box-sizing: border-box;
         gap: 16px 0;
-        z-index: 1;
-        margin-right: 130px;
-    }
+        margin-right: 130px; */
+}
 
-    .frame-video video {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+.frame-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 @media screen and (max-width: 1280px) {
@@ -2893,30 +2897,20 @@ audio {
     }
 
     .floating-button {
-        cursor: pointer;
-        border: 0;
-        padding: 0;
-        background-color: #fff;
-        width: 64px;
-        height: 64px;
-        position: fixed;
-        border-radius: 120px;
-        box-shadow: -8px 8px 9.8px rgba(0, 0, 0, 0.07);
-        overflow: hidden;
-        flex-shrink: 0;
-        z-index: 2;
         bottom: 80px; /* Ubah nilai bottom */
-        left: 1100px; /* Ubah nilai left */
+        left: 90%; /* Ubah nilai left */
     }
 
-    .card6 {
-        align-self: stretch;
-        background-color: #fff;
-        flex-direction: row;
-        justify-content: flex-start;
-        padding: 24px;
-        box-sizing: border-box;
-        gap: 0 24px;
+    .card6,
+    .card8,
+    .card10 {
+        align-self: unset;
+    }
+
+    .card6,
+    .card8,
+    .card10 {
+        flex-direction: column;
     }
 
     .card-inner {
@@ -2947,7 +2941,6 @@ audio {
         padding: 0 16px;
         gap: 0 48px;
         text-align: left;
-        font-size: 16px;
         color: #b0aea9;
     }
 
@@ -2961,7 +2954,6 @@ audio {
     }
 
     .pertama-bertemu {
-        font-size: 32px;
         line-height: 130%;
         font-family: "DM Serif Display";
         color: #3b3b3b;
@@ -2970,7 +2962,6 @@ audio {
     .kita-bertemu-pertama {
         align-self: stretch;
         position: relative;
-        font-size: 24px;
         line-height: 150%;
         color: #3b3b3b;
     }
@@ -2983,7 +2974,6 @@ audio {
         gap: 48px 0;
         flex-shrink: 0;
         text-align: center;
-        font-size: 24px;
         color: #fff;
         font-family: NanumMyeongjo;
         padding-bottom: 30px;
@@ -2996,18 +2986,12 @@ audio {
         line-height: 130%;
     }
 
-    .text-block-path {
-        width: 500px;
-        position: relative;
-    }
-
     .frame-video {
-        height: 480px;
-        width: 750px;
+        height: 471.11px;
+        width: 700px;
         position: absolute;
         margin: 0 !important;
-        top: calc(50% - 281.5px);
-        right: -400px;
+        right: -100%;
         background-color: #000;
         overflow: hidden;
         flex-shrink: 0;
@@ -3110,7 +3094,7 @@ audio {
         font-family: "DM Serif Display";
     }
 
-    .column {
+    /* .column {
         flex: 1;
         background-color: rgba(59, 59, 59, 0.8);
         backdrop-filter: blur(6px);
@@ -3119,14 +3103,13 @@ audio {
         padding: 48px;
         box-sizing: border-box;
         gap: 16px 0;
-        z-index: 1;
         margin-right: 200px;
-    }
+    } */
 
-    .text-block-path {
+    /* .text-block-path {
         width: 750px;
         position: relative;
-    }
+    } */
 
     .frame-video video {
         width: 100%;
@@ -3182,20 +3165,8 @@ audio {
     }
 
     .floating-button {
-        cursor: pointer;
-        border: 0;
-        padding: 0;
-        background-color: #fff;
-        width: 64px;
-        height: 64px;
-        position: fixed;
-        border-radius: 120px;
-        box-shadow: -8px 8px 9.8px rgba(0, 0, 0, 0.07);
-        overflow: hidden;
-        flex-shrink: 0;
-        z-index: 2;
         bottom: 80px;
-        left: 900px;
+        left: 90%;
     }
 
     .card4 {
@@ -3212,7 +3183,6 @@ audio {
         align-items: center;
         justify-content: center;
         gap: 48px 0;
-        max-width: 550px;
     }
 
     .card6,
@@ -3222,12 +3192,14 @@ audio {
     }
 
     .card6,
-    .card8 {
-        margin-left: 150px;
+    .card8,
+    .card10 {
+        align-self: center;
     }
 
-    .card10 {
-        margin-right: 150px;
+    .card-list4,
+    .card-list3 {
+        width: 50%;
     }
 
     .frame-parent44,
@@ -3236,21 +3208,19 @@ audio {
         margin-top: 24px;
     }
 
-    .frame-video {
+    /* .frame-video {
         height: 460px;
         width: 740px;
         position: absolute;
         margin: 0 auto !important;
-        top: 520px;
-        /* right: 50%; */
-        /* left: 60%; */
+        top: 450px;
         transform: translate(-50%, -50%);
         background-color: #000;
         overflow: hidden;
         flex-shrink: 0;
-    }
+    } */
 
-    .column {
+    /* .column {
         flex: 1;
         background-color: rgba(59, 59, 59, 0.8);
         backdrop-filter: blur(6px);
@@ -3259,14 +3229,9 @@ audio {
         padding: 48px;
         box-sizing: border-box;
         gap: 16px 0;
-        z-index: 1;
         margin-right: auto;
         margin-left: 100px;
-    }
-
-    .foto-container {
-        margin-top: 18em;
-    }
+    } */
 
     .foto-icon1 {
         right: 15px;
@@ -3341,7 +3306,6 @@ audio {
 }
 
 @media screen and (max-width: 768px) {
-
     .banner2 {
         align-self: stretch;
         display: flex;
@@ -3361,32 +3325,32 @@ audio {
         background-repeat: no-repeat;
     }
     .banner2::after {
-        content: '';
+        content: "";
         display: block;
         width: 100%;
         height: 100%;
-        background:  rgba(0,0,0,.4);
+        background: rgba(0, 0, 0, 0.4);
         position: absolute;
         bottom: 0;
-        }
+    }
 
-        .question2 {
-            align-self: stretch;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 16px 0;
-            max-width: 100%;
-            text-align: center;
-        }
+    .question2 {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px 0;
+        max-width: 100%;
+        text-align: center;
+    }
     .young-japanese-couple-1-icon1 {
         height: 100vh;
         width: 2283px;
         position: absolute;
         margin: 0 !important;
         bottom: 0;
-        left: -1200px; 
+        left: -1200px;
         object-fit: cover;
     }
 
@@ -3403,7 +3367,7 @@ audio {
     }
 
     .floating-button {
-        left: 650px;
+        left: 85%;
     }
     .pertemuan-yang-kuimpikan-kini-container {
         line-height: 150%;
@@ -3437,13 +3401,9 @@ audio {
         max-width: 100%;
     }
 
-    .card6,
-    .card8 {
-        margin-left: 250px;
-    }
-
-    .card10 {
-        margin-right: 250px;
+    .card-list3,
+    .card-list4 {
+        width: 30%;
     }
 
     .visual-icon2,
@@ -3453,14 +3413,13 @@ audio {
         height: 220px;
     }
 
-    .column {
-
+    /* .column {
         margin-left: unset;
     }
 
     .spacer {
         justify-content: center;
-    }
+    } */
 
     /* .card6 {
         width: 50%;
@@ -3572,7 +3531,6 @@ audio {
         padding: 48px;
         box-sizing: border-box;
         gap: 16px 0;
-        z-index: 1;
         margin-right: auto;
     }
 
@@ -3586,7 +3544,7 @@ audio {
         width: 640px;
         position: absolute;
         margin: 0 auto !important;
-        top: 460px;
+        top: 150%;
         right: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
@@ -3699,8 +3657,6 @@ audio {
         margin-bottom: 48px;
     }
 
-
-
     .kirim-hadiah5 {
         border: 1px solid #3b3b3b;
         flex-direction: column;
@@ -3716,7 +3672,7 @@ audio {
     .question4 {
         width: 100%;
         gap: 0 0;
-        min-width: 100%
+        min-width: 100%;
     }
 
     .kirim-hadiah-container {
@@ -3806,7 +3762,8 @@ audio {
     }
 
     .floating-button {
-        left: 550px;
+        left: 85%;
+        bottom: 130px;
     }
 
     /* .card4 {
@@ -3828,22 +3785,8 @@ audio {
     } */
 
     .frame-video {
-        height: 360px;
-        width: 540px;
-        position: absolute;
-        margin: 0 auto !important;
-        top: 630px;
-        right: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #000;
-        overflow: hidden;
-        flex-shrink: 0;
-    }
-
-    .text-block-path {
-        width: 800px;
-        position: relative;
+        width: 550px;
+        height: 345.48px;
     }
 
     .foto-icon {
@@ -3931,15 +3874,6 @@ audio {
         height: unset;
     }
 
-    .card6,
-    .card8 {
-        margin-left: 280px;
-    }
-
-    .card10 {
-        margin-right: 280px;
-    }
-
     .kita-bertemu-pertama4 {
         height: unset;
     }
@@ -3952,13 +3886,12 @@ audio {
     }
 
     .column {
-
         margin-left: unset;
     }
 
-    .spacer {
+    /* .spacer {
         justify-content: center;
-    }
+    } */
 
     .input-alamat {
         flex: 1;
@@ -3969,7 +3902,7 @@ audio {
         gap: 24px 0;
     }
 
-        /* .substitute-present {
+    /* .substitute-present {
             align-self: stretch;
             gap: 16px 0;
             padding: 30px;
@@ -4097,4 +4030,87 @@ audio {
         font-family: "DM Serif Display";
         margin-top: 48px;
     }
+}
+
+@media screen and (max-width: 500px) {
+    .card4 {
+        padding: 16px;
+    }
+
+    .input {
+        gap: 16px;
+    }
+
+    .button17 {
+        padding: 16px;
+    }
+
+    .text-block-quote {
+        padding: 16px;
+    }
+
+    .visual-icon,
+    .visual-icon1 {
+        height: 250px;
+        width: 250px;
+    }
+
+    .our-love-story-parent {
+        padding: 16px;
+    }
+
+    .card-list3 {
+        width: 35%;
+    }
+
+    .card6,
+    .card10,
+    .card8 {
+        max-width: unset;
+    }
+
+    .visual-icon2, .visual-icon6, .visual-icon4 {
+        width: 100px;
+        height: 100px;
+    }
+
+    .frame-video {
+        width: 350px;
+        height: 219.85px;
+    }
+
+    .foto-container {
+        margin-top: 9em;
+    }
+
+    .frame-video {
+        top: 120%;
+    }
+
+    .spacer {
+        gap: 48px;
+    }
+
+    .foto-icon6 {
+        top: 225.5px;
+        left: 44%;
+        width: 197px;
+        height: 564px;
+        z-index: 1;
+    }
+
+    .foto-icon5{
+        position: absolute;
+        top: -0.5px;
+        left: 30%;
+        width: 197px;
+        height: 564px;
+        overflow: hidden;
+        object-fit: cover;
+    }
+
+    .b-c-a-mandiri-card {
+        height: 900px;
+    }
+
 }

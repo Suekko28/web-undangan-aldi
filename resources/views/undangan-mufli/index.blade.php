@@ -3,12 +3,9 @@
 
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="initial-scale=1, width=device-width" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
 
     <link rel="stylesheet" href="{{ asset('./home-mufli.css') }}" />
-
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Cormorant Infant:wght@400;500;600;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rouge Script:wght@400&display=swap" />
