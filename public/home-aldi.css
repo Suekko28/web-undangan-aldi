@@ -2298,18 +2298,18 @@ audio {
 }
 
 .frame-inner {
-    width: 420px;
+    width: 410px;
     border: 1px solid var(--color-navajowhite);
     box-sizing: border-box;
-    height: 420px;
+    height: 410px;
     z-index: 1;
 }
 
 .frame-inner2 {
-    width: 430px;
+    width: 420px;
     border: 1px solid var(--color-navajowhite);
     box-sizing: border-box;
-    height: 430px;
+    height: 420px;
     z-index: 1;
 }
 .an-rudi-hermina15,
@@ -3028,6 +3028,11 @@ audio {
 
     .mempelai6 {
         padding: 16px;
+    }
+
+    .play-icon {
+        width: 40px;
+        height: 40px;
     }
 
     .navbar-mobile3 {
