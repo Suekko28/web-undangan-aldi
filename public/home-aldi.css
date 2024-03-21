@@ -537,7 +537,7 @@ a {
     box-shadow: -9px 9px 42px rgba(105, 102, 90, 0.32);
     overflow: hidden;
     flex-shrink: 0;
-    z-index: 3;
+    z-index: 998;
 }
 
 .play-icon {
@@ -2020,6 +2020,7 @@ audio {
     align-self: stretch;
     position: relative;
     line-height: 130%;
+    font-size: 20px;
 
 }
 .jika-kamu-tidak7 {
@@ -2078,7 +2079,7 @@ audio {
     flex: 1;
     position: relative;
     white-space: nowrap;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 140%;
     font-weight: 600;
     font-family: "Cormorant Infant";
@@ -2258,6 +2259,7 @@ audio {
     border: 1px solid #bb8554;
     box-sizing: border-box;
     display: flex;
+    font-size: 20px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -3117,26 +3119,22 @@ audio {
     .jadwal-wrapper {
         justify-content: center;
         align-self: center;
+        
     }
 
     .jadwal9 {
         padding: 16px;
     }
 
-    .jadwal10,
-    .jadwal-wrapper,
-    .jadwal9 {
-        box-sizing: unset;
-        width: 90%;
-    }
+   
 
-    .jadwal11 {
-        padding: unset;
-    }
+        .jadwal11 {
+            padding: 16px;
+        }
 
     .asset-2-53 {
         top: -10px;
-        left: -160px;
+        left: -175px;
         object-fit: cover;
     }
 
@@ -3247,7 +3245,7 @@ audio {
     .jika-kamu-tidak7,
     .transfer-ke-no6,
     .kirim-kado-ke7 {
-        font-size: 16px;
+        font-size: 20px;
     }
 
     .button62,

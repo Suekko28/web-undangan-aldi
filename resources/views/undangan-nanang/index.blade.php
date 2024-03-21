@@ -24,95 +24,96 @@
             {{-- <img class="young-japanese-couple-1-icon1" alt=""
                 src="{{ asset('./assets/BannerImage.jpg') }}" data-scroll-to="youngJapaneseCouple1Image" /> --}}
 
-                <div class="card4">
-                    <div class="question2">
-                        <div class="pertemuan-yang-kuimpikan-kini-container">
-                            <p class="pertemuan-yang-kuimpikan">
-                                “Pertemuan yang kuimpikan Kini jadi kenyataan Pertemuan yang kudambakan Ternyata bukan khayalan”
-                            </p>
-                        </div>
-                        <b class="rhoma-irama">Rhoma Irama</b>
+            <div class="card4">
+                <div class="question2">
+                    <div class="pertemuan-yang-kuimpikan-kini-container">
+                        <p class="pertemuan-yang-kuimpikan">
+                            “Pertemuan yang kuimpikan Kini jadi kenyataan Pertemuan yang kudambakan Ternyata bukan
+                            khayalan”
+                        </p>
                     </div>
-                    <div class="row-input">
-                        <div class="input">
-                            <div class="input1">
-                                <div class="text-wrapper">
-                                    <div class="text">04</div>
-                                </div>
-                                <div class="hari2">Hari</div>
+                    <b class="rhoma-irama">Rhoma Irama</b>
+                </div>
+                <div class="row-input">
+                    <div class="input">
+                        <div class="input1">
+                            <div class="text-wrapper">
+                                <div class="text">04</div>
                             </div>
-                            <div class="input2">
-                                <b class="b17">:</b>
-                            </div>
-                            <div class="input3">
-                                <div class="wrapper8">
-                                    <div class="div11">01</div>
-                                </div>
-                                <div class="jam2">Jam</div>
-                            </div>
-                            <div class="input4">
-                                <b class="b18">:</b>
-                            </div>
-                            <div class="input5">
-                                <div class="wrapper9">
-                                    <div class="div12">20</div>
-                                </div>
-                                <div class="menit2">Menit</div>
-                            </div>
-                            <div class="input6">
-                                <b class="b19">:</b>
-                            </div>
-                            <div class="input7">
-                                <div class="wrapper10">
-                                    <div class="div13">50</div>
-                                </div>
-                                <div class="detik2">Detik</div>
-                            </div>
+                            <div class="hari2">Hari</div>
                         </div>
-                        <div class="button17">
-                            <div class="mail5">
-                                <img class="vector-icon5" alt="" src="{{ asset('./assets/vector.svg') }}" />
-
-                                <div class="badge5">
-                                    <div class="div14">12</div>
-                                </div>
+                        <div class="input2">
+                            <b class="b17">:</b>
+                        </div>
+                        <div class="input3">
+                            <div class="wrapper8">
+                                <div class="div11">01</div>
                             </div>
-                            <b class="kamis-21-oktober">Kamis, 21 Oktober 2024</b>
-                            <img class="add-icon5" alt="" src="{{ asset('./assets/add.svg') }}" />
+                            <div class="jam2">Jam</div>
+                        </div>
+                        <div class="input4">
+                            <b class="b18">:</b>
+                        </div>
+                        <div class="input5">
+                            <div class="wrapper9">
+                                <div class="div12">20</div>
+                            </div>
+                            <div class="menit2">Menit</div>
+                        </div>
+                        <div class="input6">
+                            <b class="b19">:</b>
+                        </div>
+                        <div class="input7">
+                            <div class="wrapper10">
+                                <div class="div13">50</div>
+                            </div>
+                            <div class="detik2">Detik</div>
                         </div>
                     </div>
-                    <div class="navigation">
-                        <button class="menu" id="menu">
-                            <img class="home-icon" alt="" src="{{ asset('./assets/home.svg') }}" />
-                        </button>
-                        <button class="menu1" id="menu1">
-                            <div class="love">
-                                <img class="vector-stroke-icon" alt=""
-                                    src="{{ asset('./assets/vector-stroke.svg') }}" />
+                    <div class="button17">
+                        <div class="mail5">
+                            <img class="vector-icon5" alt="" src="{{ asset('./assets/vector.svg') }}" />
 
-                                <div class="badge6">
-                                    <div class="div15">12</div>
-                                </div>
+                            <div class="badge5">
+                                <div class="div14">12</div>
                             </div>
-                        </button>
-                        <button class="menu2" id="menu2">
-                            <img class="image-icon" alt="" src="{{ asset('./assets/image.svg') }}" />
-                        </button>
-                        <button class="menu3" id="menu3">
-                            <img class="calendar-icon" alt="" src="{{ asset('./assets/calendar.svg') }}" />
-                        </button>
-                        <div class="menu4" id="menuContainer">
-                            <div class="chat">
-                                <img class="vector-icon6" loading="eager" alt=""
-                                    src="{{ asset('./assets/vector-1.svg') }}" />
+                        </div>
+                        <b class="kamis-21-oktober">Kamis, 21 Oktober 2024</b>
+                        <img class="add-icon5" alt="" src="{{ asset('./assets/add.svg') }}" />
+                    </div>
+                </div>
+                <div class="navigation">
+                    <button class="menu" id="menu">
+                        <img class="home-icon" alt="" src="{{ asset('./assets/home.svg') }}" />
+                    </button>
+                    <button class="menu1" id="menu1">
+                        <div class="love">
+                            <img class="vector-stroke-icon" alt=""
+                                src="{{ asset('./assets/vector-stroke.svg') }}" />
 
-                                <div class="badge7">
-                                    <div class="div16">12</div>
-                                </div>
+                            <div class="badge6">
+                                <div class="div15">12</div>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="menu2" id="menu2">
+                        <img class="image-icon" alt="" src="{{ asset('./assets/image.svg') }}" />
+                    </button>
+                    <button class="menu3" id="menu3">
+                        <img class="calendar-icon" alt="" src="{{ asset('./assets/calendar.svg') }}" />
+                    </button>
+                    <div class="menu4" id="menuContainer">
+                        <div class="chat">
+                            <img class="vector-icon6" loading="eager" alt=""
+                                src="{{ asset('./assets/vector-1.svg') }}" />
+
+                            <div class="badge7">
+                                <div class="div16">12</div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
             <div class="text1">
                 <audio autoplay loop controls id="myAudio" src="{{ asset('./assets/lagu-nanang.mp3') }}"></audio>
 
@@ -135,9 +136,10 @@
                             <div class="rudi-wibowo">Rudi Wibowo</div>
                         </div>
                         <b class="bapak-akbar-skom-container">
-                            <p class="bapak-akbar-skom">Bapak Akbar S.kom dan</p>
-                            <p class="ibu-siti-maimunah">Ibu Siti maimunah</p>
-                            <p class="dari-jakarta-indonesia">dari jakarta, Indonesia</p>
+                            <p class="bapak-akbar-skom">Bapak Akbar S.kom dan<br>Ibu Siti maimunah <br>dari jakarta,
+                                Indonesia
+                            </p>
+
                         </b>
                     </div>
                     <div class="button-link">
@@ -155,9 +157,9 @@
                             <div class="arum-kurniawati">Arum Kurniawati</div>
                         </div>
                         <b class="bapak-akbar-skom-container1">
-                            <p class="bapak-akbar-skom1">Bapak Akbar S.kom dan</p>
-                            <p class="ibu-siti-maimunah1">Ibu Siti maimunah</p>
-                            <p class="dari-jakarta-indonesia1">dari jakarta, Indonesia</p>
+                            <p class="bapak-akbar-skom">Bapak Akbar S.kom dan<br>Ibu Siti maimunah <br>dari jakarta,
+                                Indonesia
+                            </p>
                         </b>
                     </div>
                     <div class="button-link1">
@@ -285,6 +287,7 @@
 
 
         <section class="spacer" data-scroll-to="spacer">
+            
             <div class="our-moment-wrapper">
                 <div class="our-moment">OUR MOMENT</div>
             </div>
@@ -296,7 +299,8 @@
                     <div class="column">
                         <div class="pertemuan-yang-kuimpikan-kini-container1">
                             <p class="pertemuan-yang-kuimpikan1">
-                                “Pertemuan yang kuimpikan Kini jadi kenyataan Pertemuan yang kudambakan Ternyata bukan khayalan”
+                                “Pertemuan yang kuimpikan Kini jadi kenyataan Pertemuan yang kudambakan Ternyata bukan
+                                khayalan”
                             </p>
                         </div>
                         <div class="fill-space">
@@ -319,6 +323,7 @@
                     <img class="foto-icon3" loading="eager" alt=""
                         src="{{ asset('./assets/foto-3@2x.png') }}" />
                 </div>
+
 
                 <img class="foto-icon4" loading="eager" alt=""
                     src="{{ asset('./assets/foto-4@2x.png') }}" />
