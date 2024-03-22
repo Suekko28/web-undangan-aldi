@@ -7,7 +7,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-
     <link rel="stylesheet" href="{{ asset('./global.css') }}" />
 
     <link rel="stylesheet" href="{{ asset('./home-aldi.css') }}" />
@@ -32,7 +31,7 @@
         <section class="banner6" data-scroll-to="HeaderSection">
             <div class="rectangle">
                 <div class="undangan-pernikahan-parent2">
-                    <b class="undangan-pernikahan5" >Undangan Pernikahan</b>
+                    <b class="undangan-pernikahan5">Undangan Pernikahan</b>
                     <h1 class="jamaludin-maryam5">Jamaludin & Maryam</h1>
                 </div>
                 <div class="text-input-field">
@@ -172,15 +171,18 @@
                                     <div class="gallery-frame2">
                                         <img class="map-button-icon" alt=""
                                             src="{{ asset('./assets/location.svg') }}" />
-                                            <a class="buka-map6" href="https://www.google.com/maps" target="_blank">Buka Map</a>
+                                        <a class="buka-map6" href="https://www.google.com/maps" target="_blank">Buka
+                                            Map</a>
                                     </div>
                                 </button>
                                 <button class="frame-wrapper11">
                                     <div class="frame-parent145">
                                         <img class="frame-child41" alt=""
                                             src="{{ asset('./assets/frame-274.svg') }}" />
-                                            <a class="tambah-ke-kalender6" href="https://calendar.google.com/calendar/u/0/r" target="_blank">Simpan Tanggal</a>
-                                        </div>
+                                        <a class="tambah-ke-kalender6"
+                                            href="https://calendar.google.com/calendar/u/0/r" target="_blank">Simpan
+                                            Tanggal</a>
+                                    </div>
                                 </button>
                             </div>
                         </div>
@@ -208,14 +210,17 @@
                                     <div class="gallery-frame2">
                                         <img class="map-button-icon" alt=""
                                             src="{{ asset('./assets/location.svg') }}" />
-                                            <a class="buka-map6" href="https://www.google.com/maps" target="_blank">Buka Map</a>
-                                        </div>
+                                        <a class="buka-map6" href="https://www.google.com/maps" target="_blank">Buka
+                                            Map</a>
+                                    </div>
                                 </button>
                                 <button class="frame-wrapper11">
                                     <div class="frame-parent145">
                                         <img class="frame-child41" alt=""
                                             src="{{ asset('./assets/frame-274.svg') }}" />
-                                            <a class="tambah-ke-kalender6" href="https://calendar.google.com/calendar/u/0/r" target="_blank">Simpan Tanggal</a>
+                                        <a class="tambah-ke-kalender6"
+                                            href="https://calendar.google.com/calendar/u/0/r" target="_blank">Simpan
+                                            Tanggal</a>
                                     </div>
                                 </button>
                             </div>
@@ -267,7 +272,7 @@
                         Tapi kita sengaja dipertemukan Tuhan. Entah untuk saling duduk
                         berdampingan atau saling memberi pelajaran. Entah untuk saling
                         mengirim undangan pernikahan, atau duduk bersama di pelaminan.
-                      </p>
+                    </p>
                 </div>
                 <div class="frame-parent16">
                     <div class="frame-parent17">
@@ -497,7 +502,7 @@
                         </div>
                         <div class="an-rudi-hermina15">an Rudi Hermina</div>
                     </div>
-                  
+
                 </div>
             </footer>
         </section>

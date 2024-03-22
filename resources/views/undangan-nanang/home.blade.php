@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <link rel="stylesheet" href="{{ asset('./first-nanang.css') }}" />
     <link rel="stylesheet"
@@ -20,7 +22,7 @@
 
 <body>
     <div class="first1">
-    
+
         {{-- <img class="young-japanese-couple-1-11" alt=""
             src="./assets/youngjapanesecouple-1-1@2x.png" /> --}}
 
@@ -41,7 +43,8 @@
                         <div class="div35">12</div>
                     </div>
                 </div>
-                <a class="buka-undangan3" style="font-weight: bold; text-direction:none;" href="/undangan-alt3/index">Buka Undangan</a>
+                <a class="buka-undangan3" style="font-weight: bold; text-direction:none;" href="/undangan-2/index">Buka
+                    Undangan</a>
                 <img class="add-icon17" alt="" src="./assets/add.svg" />
             </div>
 
