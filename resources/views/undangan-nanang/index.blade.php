@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, width=device-width" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
     <link rel="stylesheet" href="{{ asset('./home-nanang.css') }}" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant Garamond:wght@700&display=swap" />
@@ -287,7 +289,7 @@
 
 
         <section class="spacer" data-scroll-to="spacer">
-            
+
             <div class="our-moment-wrapper">
                 <div class="our-moment">OUR MOMENT</div>
             </div>

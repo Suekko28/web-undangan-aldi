@@ -3025,7 +3025,7 @@ audio {
         height: 450px;
         width: 450px;
         object-fit: contain;
-        right: 35px;
+        right: 7%;
     }
 
     .foto-icon2 {
@@ -3034,7 +3034,7 @@ audio {
         position: absolute;
         margin: 0 !important;
         top: 0;
-        right: -400px;
+        right: -34%;
         overflow: hidden;
         flex-shrink: 0;
         object-fit: cover;
@@ -3046,7 +3046,7 @@ audio {
         position: absolute;
         margin: 0 !important;
         top: 100px;
-        right: -900px;
+        right: -79%;
         overflow: hidden;
         flex-shrink: 0;
         object-fit: cover;
@@ -3058,7 +3058,7 @@ audio {
         position: absolute;
         margin: 0 !important;
         top: 0;
-        right: -1400px;
+        right: -124%;
         overflow: hidden;
         flex-shrink: 0;
         object-fit: cover;
@@ -3234,19 +3234,19 @@ audio {
     } */
 
     .foto-icon1 {
-        right: 15px;
+        right: 2%;
     }
 
     .foto-icon2 {
-        right: -470px;
+        right: -57%;
     }
 
     .foto-icon3 {
-        right: -960px;
+        right: -115%;
     }
 
     .foto-icon4 {
-        right: -1450px;
+        right: -173%;
     }
 
     .anonym-card-list {
@@ -3564,7 +3564,7 @@ audio {
     }
 
     .foto-icon {
-        left: -100px;
+        left: -15%;
         height: 450px; /* Menggunakan 'auto' untuk mengizinkan gambar menyesuaikan tinggi sesuai kebutuhan */
         width: 450px; /* Mengatur lebar agar mengikuti lebar kontainer */
         object-fit: contain; /* Memastikan gambar sepenuhnya terlihat di dalam kotak tanpa merubah rasio aspek */
@@ -3575,8 +3575,8 @@ audio {
         height: 450px;
         position: absolute;
         margin: 0 !important;
-        top: 100px;
-        right: -330px;
+        right: -55%;
+        top: 17%;
         overflow: hidden;
         flex-shrink: 0;
         object-fit: cover;
@@ -3588,7 +3588,7 @@ audio {
         position: absolute;
         margin: 0 !important;
         top: 0;
-        right: -830px;
+        right: -140%;
         overflow: hidden;
         flex-shrink: 0;
         object-fit: cover;
@@ -3600,7 +3600,7 @@ audio {
         position: absolute;
         margin: 0 !important;
         top: 100px;
-        right: -1330px;
+        right: -223%;
         overflow: hidden;
         flex-shrink: 0;
         object-fit: cover;
@@ -3612,7 +3612,7 @@ audio {
         position: absolute;
         margin: 0 !important;
         top: 0;
-        right: -1830px;
+        right: -308%;
         overflow: hidden;
         flex-shrink: 0;
         object-fit: cover;
@@ -3790,7 +3790,7 @@ audio {
     }
 
     .foto-icon {
-        object-position: 70px;
+        object-position: 100%;
         width: 450px;
         height: 450px;
     }
@@ -3800,8 +3800,7 @@ audio {
         height: 450px;
         position: absolute;
         margin: 0 !important;
-        top: 100px;
-        right: -400px;
+        right: -90%;
         overflow: hidden;
         flex-shrink: 0;
         object-fit: cover;
@@ -3813,7 +3812,7 @@ audio {
         position: absolute;
         margin: 0 !important;
         top: 0;
-        right: -900px;
+        right: -195%;
         overflow: hidden;
         flex-shrink: 0;
         object-fit: cover;
@@ -3824,8 +3823,8 @@ audio {
         height: 450px;
         position: absolute;
         margin: 0 !important;
-        top: 100px;
-        right: -1400px;
+        top: 17%;
+        right: -301%;
         overflow: hidden;
         flex-shrink: 0;
         object-fit: cover;
@@ -3837,7 +3836,7 @@ audio {
         position: absolute;
         margin: 0 !important;
         top: 0;
-        right: -1900px;
+        right: -405%;
         overflow: hidden;
         flex-shrink: 0;
         object-fit: cover;
@@ -4033,6 +4032,12 @@ audio {
 }
 
 @media screen and (max-width: 500px) {
+    
+    .floating-button {
+        left: 80%;
+        bottom: 150px;
+    }
+    
     .card4 {
         padding: 16px;
     }
@@ -4089,6 +4094,37 @@ audio {
 
     .spacer {
         gap: 48px;
+    }
+
+    .foto-icon,
+    .foto-icon1 {
+    }
+
+    .foto-icon {
+        left: unset;
+        min-width: unset
+    }
+
+    .foto-icon1{
+        right: -90%
+
+    }
+
+    .foto-icon2{
+        right: -500%
+
+    }
+
+    .foto-icon3 {
+
+        right: -900%
+
+    }
+
+    .foto-icon4 {
+        right: -1500%
+
+
     }
 
     .foto-icon6 {
