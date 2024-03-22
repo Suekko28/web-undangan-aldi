@@ -16,6 +16,26 @@ a {
   text-decoration: none;
 }
 
+.primary-button {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 24px;
+  font-size: 16px;
+  line-height: 140%;
+  background-color: #fff;
+  color: #3B3B3B;
+  font-family: NanumMyeongjo;
+  cursor: pointer;
+  border: none;
+}
+
+.primary-button:hover {
+  background-color: #fafafa;
+  cursor: pointer;
+}
+
 .young-japanese-couple-1-11 {
     position: absolute;
     top: -107px;
@@ -33,6 +53,19 @@ a {
     height: 1360px;
     display: none;
 }
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 140%;
+  font-family: "DM Serif Display";
+  color: #ffc436;
+}
+.paragraph {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  line-height: 140%;
+}
 .the-wedding-of1 {
     position: relative;
     letter-spacing: 0.26em;
@@ -46,7 +79,7 @@ a {
     color: #ffc436;
     text-align: left;
 }
-.devider7 {
+.small-devider {
     align-self: stretch;
     position: relative;
     background-color: #fff;
@@ -141,7 +174,7 @@ a {
     bottom: 0;
     flex-direction: column;
     padding: 48px;
-    gap: 48px 0;
+    gap: 24px;
 }
 
 .first1 {

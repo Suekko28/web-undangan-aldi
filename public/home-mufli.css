@@ -2,7 +2,145 @@
     margin: 0;
     padding: 0;
 }
-
+.navigation3 {
+    align-self: stretch;
+    border-radius: 24px;
+    background-color: #fff;
+    box-shadow: -11px 13px 42px rgba(105, 102, 90, 0.2);
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 16px;
+    gap: 20px;
+    z-index: 3;
+    position: fixed;
+    display: flex;
+    bottom: 24px;
+    left: 50%; /* Mengatur posisi awal menjadi di tengah */
+    transform: translateX(
+        -50%
+    );
+}
+.info-mempelai-wanita {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+}
+input {
+    background-color: transparent;
+    border: none;
+    font-family: Lora;
+    font-size: 16px;
+    color: #1D1C16;
+}
+#timer {  
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #1D1C16;
+      border-radius: 16px;
+      font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    width: 64px;
+    height: 64px;
+    background-color: #1D1C16;
+    border-radius: 16px;
+    position: relative;
+      
+      span {
+        color: #1D1C16;
+        position: absolute;
+        bottom: -32px;
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+.wedding-date {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #d3d2c5;
+    padding: 64px;
+    gap: 24px;
+    box-sizing: border-box;
+}
+.floating-button {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: #fff;
+    height: 64px;
+    bottom: 120px;
+    right: 40px;
+    width: 64px;
+    position: fixed;
+    border-radius: 240px;
+    box-shadow: -9px 9px 42px rgba(105, 102, 90, 0.32);
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button-link {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    display: flex;
+    color: #1D1C16;
+    fill: #1D1C16;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: Lora;
+}
+.rekening-no {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+.button-link:hover {
+    color: #5B5746;
+    fill: #5B5746;
+}
+.profile-container {
+    height: 360px;
+    width: 360px;
+    background-image: url("./assets/Wing.png");
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.profile-pict-man {
+    width: 208px;
+    height: 240px;
+    position: absolute;
+    background-image: url("./assets/Profile\ pict\ man.jpg");
+    border-radius: 200px 200px 40px 40px;
+}
+.profile-pict-woman {
+    width: 208px;
+    height: 240px;
+    position: absolute;
+    background-image: url("./assets/profile-pict-woman.jpg");
+    border-radius: 200px 200px 40px 40px;
+}
 .side-view-bride-groom-embraced-icon {
     width: 2426px;
     height: 2426px;
@@ -38,7 +176,7 @@
 }
 .alexnor-exafator1 {
     margin: 0;
-    font-size: 48px;
+    font-size: 24px;
     font-weight: 400;
     font-family: inherit;
 }
@@ -107,20 +245,29 @@
     flex-shrink: 0;
     display: none;
 }
-.button45 {
+.Primary-button {
     cursor: pointer;
     border: 0;
     padding: 11px;
     background-color: #605a4c;
-    width: 230px;
+    max-width: 328px;
     border-radius: 80px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    gap: 0 16px;
-    z-index: 2;
+    gap: 16px;
+    height: 40px;
+    font-size: 16px;
+    font-family: Lora;
+    color: #fff;
+    padding: 0px 24px;
+    box-shadow: -10px 10px 25px 0px rgba(29, 28, 22, 0.25);
+}
+.Primary-button:hover {
+    background-color: #87836b;
+    cursor: pointer;
 }
 .call-to-action,
 .card-list12 {
@@ -131,9 +278,7 @@
 .card-list12 {
     flex-direction: column;
     position: absolute;
-    top: 35%;
     align-items: center;
-    gap: 48px 0;
 }
 .call-to-action {
     align-self: stretch;
@@ -147,7 +292,7 @@
     overflow: hidden;
     flex-shrink: 0;
 }
-.menu15 {
+.menu {
     border-radius: 16px;
     background-color: #605a4c;
     box-shadow: -4px 4px 7px rgba(105, 102, 90, 0.1);
@@ -157,6 +302,11 @@
     align-items: flex-start;
     justify-content: flex-start;
     padding: 8px;
+    cursor: pointer;
+}
+.menu:hover {
+    background-color: #87836b;
+    cursor: pointer;
 }
 .vector-stroke-icon3 {
     position: absolute;
@@ -191,6 +341,7 @@
 }
 .love3 {
     height: 40px;
+    width: 40px;
     flex: 1;
     position: relative;
 }
@@ -295,32 +446,13 @@
     padding: 8px;
     box-sizing: border-box;
 }
-.input-message-field,
-.navigation3 {
-    display: flex;
-    align-items: flex-start;
-}
-.navigation3 {
-    align-self: stretch;
-    border-radius: 24px;
-    position: fixed;
-    bottom: 40px;
-    left: 40%;
-    background-color: #fff;
-    box-shadow: -11px 13px 42px rgba(105, 102, 90, 0.2);
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 12px 24px;
-    gap: 20px;
-    z-index: 3;
-}
 .input-message-field {
-    width: 424px;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 26px 0 0;
-    box-sizing: border-box;
-    max-width: 100%;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 .whatsapp-video-2024-01-30-at-1 {
     position: absolute;
@@ -339,7 +471,6 @@
 }
 
 .pause-1-icon {
-   
     width: 160%;
     height: auto;
 }
@@ -385,29 +516,36 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    max-width: 100%;
+    width: 100%;
     gap: 20px;
     text-align: center;
     font-size: 10px;
     font-family: Optima;
 }
 .banner-image {
-    margin-top: -2px;
-    background-color: #fff;
-    overflow: hidden;
-    flex-direction: column;
+    display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100%;
-    height: 720px;
+    height: 840px;
     box-sizing: border-box;
     position: relative;
-    gap: 296px 0;
     flex-shrink: 0;
-    text-align: left;
-    font-size: 24px;
+    font-size: 16px;
     color: #fff;
     font-family: Lora;
+    background-image: url("./assets/Banner-Image-new.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.banner-image:after {
+    content:'';
+    display: block;
+    width: 100%;
+    height: 840px;
+    background-color: rgba(152, 149, 119, 0.4);
+    position: absolute;
+    bottom: 0;
 }
 .assalamualaikum-wrwb,
 .b40 {
@@ -416,7 +554,7 @@
     line-height: 140%;
 }
 .assalamualaikum-wrwb {
-    font-size: 32px;
+    font-size: 24px;
 }
 .year-selection {
     align-self: stretch;
@@ -424,47 +562,47 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    gap: 16px 0;
+    gap: 16px;
 }
 .sekalian-untuk-menghadiri,
 .tanpa-mengurangi-rasa {
     margin: 0;
 }
 .tanpa-mengurangi-rasa-container {
-    align-self: stretch;
     position: relative;
     line-height: 140%;
+    max-width: 560px;
 }
 .month-selection {
     align-self: stretch;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 16px 0;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
     text-align: center;
-    font-size: 24px;
+    font-size: 16px;
 }
 .alexnor {
     margin: 0;
     position: relative;
-    font-size: inherit;
-    line-height: 115%;
+    font-size: 24px;
+    line-height: 140%;
     font-weight: 400;
     font-family: inherit;
 }
 .putra-pertama-dari {
     position: relative;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 140%;
-    text-align: center;
+    text-align: right;
 }
 .day-of-week {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
-    gap: 16px 0;
+    gap: 16px;
     max-width: 100%;
 }
 .ig-icon6 {
@@ -492,26 +630,17 @@ a {
     display: none;
 }
 
-.button-link7,
-.date-info {
+.mempelai-info {
     display: flex;
     justify-content: center;
 }
-.button-link7 {
-    flex-direction: row;
-    align-items: center;
-    gap: 0 8px;
-    font-size: 24px;
-}
-.date-info {
+.mempelai-info {
     flex: 1;
     flex-direction: column;
     align-items: flex-end;
-    padding: 20px 0;
     box-sizing: border-box;
-    gap: 24px 0;
-    min-width: 764px;
-    max-width: 100%;
+    gap: 24px;
+    width: 100%;
 }
 .location-details-icon {
     height: 560px;
@@ -519,13 +648,13 @@ a {
     position: relative;
     max-width: 100%;
 }
-.event-title {
+.mempelai-pria {
     align-self: stretch;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 0 24px;
+    gap: 24px;
     max-width: 100%;
 }
 .event-title-child {
@@ -534,17 +663,17 @@ a {
     position: relative;
     max-width: 100%;
 }
-.exafator {
+.nama-wanita {
     margin: 0;
     position: relative;
-    font-size: inherit;
-    line-height: 115%;
+    font-size: 24px;
+    line-height: 140%;
     font-weight: 400;
     font-family: inherit;
 }
 .putra-pertama-dari1 {
     position: relative;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 140%;
 }
 .venue-name {
@@ -552,7 +681,7 @@ a {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 16px 0;
+    gap: 16px;
     max-width: 100%;
 }
 .ig-icon7 {
@@ -572,10 +701,10 @@ a {
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 0 8px;
+    gap: 8px;
     font-size: 24px;
 }
-.event-title1,
+.mempelai-wanita,
 .header-frame,
 .venue-name-parent {
     display: flex;
@@ -588,27 +717,25 @@ a {
     align-items: flex-start;
     padding: 20px 0;
     box-sizing: border-box;
-    gap: 24px 0;
+    gap: 24px;
     min-width: 764px;
 }
-.event-title1,
+.mempelai-wanita,
 .header-frame {
-    align-self: stretch;
     flex-direction: row;
     align-items: center;
-    gap: 0 24px;
+    gap: 24px;
 }
 .header-frame {
     margin-bottom: -5px;
     flex-direction: column;
-    padding: 80px;
+    padding: 64px;
     box-sizing: border-box;
-    gap: 24px 0;
+    gap: 24px;
     z-index: 5;
+    max-width: 1024px;
 }
 .kedua-mempelai-child {
-    margin-left: -200px;
-    width: 2400px;
     position: absolute;
     max-width: 124%;
     flex-shrink: 0;
@@ -620,11 +747,12 @@ a {
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: flex-start;
-    gap: 1645px 0;
-    max-width: 100%;
+    width: 100%;
     z-index: 1;
+    background-image: url("./assets/bg-kedua-mempelai.png");
+    background-position: center;
 }
 .side-view-bride-groom-hiding-f-icon {
     width: 2518px;
@@ -639,33 +767,43 @@ a {
     position: relative;
     line-height: 140%;
 }
-.card-list13 {
+.title-story {
     width: 100%;
     border: 0;
     outline: 0;
     background-color: rgba(176, 174, 151, 0.85);
     align-self: stretch;
-    height: 96px;
+    height: 64px;
     backdrop-filter: blur(20px);
     display: flex;
     flex-direction: row;
     align-items: center;
-    /* justify-content: center; */
     padding: 24px;
     box-sizing: border-box;
     font-family: Lora;
     font-weight: 700;
-    font-size: 32px;
+    font-size: 24px;
     color: #fff;
-    min-width: 250px;
+    justify-content: flex-start;
 }
 .january-2013,
 .lorem-ipsum-dolor {
     position: relative;
     line-height: 140%;
 }
-.january-2013 {
+.story-date {
     align-self: stretch;
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 600;
+    text-align: left;
+}
+.detail-story {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 140%;
+    text-align: left;
+    color: #746f5e;
 }
 .lorem-ipsum-dolor {
     width: 816px;
@@ -680,14 +818,16 @@ a {
     align-items: flex-start;
     justify-content: flex-start;
 }
-.doa-hadiah-form {
+.card-story .body-card {
     border-radius: 0 0 32px 32px;
     background-color: rgba(235, 235, 229, 0.85);
     backdrop-filter: blur(20px);
     padding: 24px;
-    gap: 16px 0;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
 }
-.input-field {
+.card-story {
     border-radius: 24px;
     box-shadow: -11px 13px 42px rgba(105, 102, 90, 0.2);
     overflow: hidden;
@@ -796,48 +936,48 @@ a {
     box-shadow: -11px 13px 42px rgba(105, 102, 90, 0.2);
     overflow: hidden;
 }
-.jam-date-picker,
-.love-story2 {
-    justify-content: flex-start;
-    gap: 24px 0;
+.love-story .content {
+    gap: 24px;
 }
-.jam-date-picker {
-    width: 864px;
+.card-story-list {
+    max-width: 864px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    max-width: 100%;
     font-size: 24px;
     color: #1d1c16;
+    gap: 24px;
 }
-.love-story2 {
+.love-story .content {
     align-items: center;
-    padding: 80px;
+    padding: 64px;
     box-sizing: border-box;
     z-index: 1;
 }
 .doa-hadiah-container,
-.love-story1,
-.love-story2 {
+.love-story,
+.content {
     align-self: stretch;
     display: flex;
     flex-direction: column;
-    max-width: 100%;
+    width: 100%;
 }
-.love-story1 {
+.love-story {
     overflow: hidden;
     align-items: center;
     justify-content: center;
     position: relative;
     z-index: 2;
-    margin-top: -3px;
-    font-size: 32px;
+    font-size: 24px;
     color: #fff;
+    height: auto;
+    background-image: url("./assets/sideviewbridegroomhidingfacesbouquetflowers-1-1@2x.png");
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .doa-hadiah-container {
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 0 0 78px;
     box-sizing: border-box;
     flex-shrink: 0;
     text-align: left;
@@ -846,7 +986,9 @@ a {
     font-family: Lora;
 }
 .wedding-time {
-    text-align: left;
+    text-align: center;
+    font-size: 24px;
+    color: #1D1C16;
 }
 .wedding-time,
 .yes-no-fields {
@@ -1027,9 +1169,15 @@ a {
     align-self: stretch;
     position: relative;
 }
-.akad-nikah3 {
-    font-size: 32px;
-    line-height: 150%;
+.title {
+    font-size: 24px;
+    line-height: 140%;
+    font-weight: 700;
+}
+.paragraph {
+    font-size: 16px;
+    line-height: 140%;
+    font-weight: 400;
 }
 .sabtu-20-januari {
     line-height: 140%;
@@ -1044,8 +1192,14 @@ a {
     position: relative;
     line-height: 140%;
 }
-.frame-parent140 {
-    align-self: stretch;
+.info-akad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px 0;
+}
+.info-resepsi {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1249,16 +1403,17 @@ a {
     justify-content: flex-start;
     gap: 48px 0;
 }
-.main-frame-child {
-    height: calc(100% - 14px);
+.flower-right {
     position: absolute;
-    margin: 0 !important;
-    top: 5px;
-    bottom: 9px;
-    left: calc(50% - 619px);
-    max-height: 100%;
+    height: 80%;
     z-index: 1;
-    -webkit-box-reflect: right 700px;
+    right: -108px;
+}
+.flower-left {
+    position: absolute;
+    height: 80%;
+    z-index: 1;
+    left: -108px;
 }
 
 .main-frame-child2 {
@@ -1280,14 +1435,14 @@ a {
     gap: 24px 0;
 }
 .main-frame {
-    align-self: stretch;
     border-radius: 48px;
     background-color: #ebebe5;
     justify-content: center;
-    padding: 80px;
+    padding: 64px;
     position: relative;
-    font-size: 24px;
+    font-size: 48px;
     color: #292721;
+    max-width: 800px;
 }
 .frame-wrapper10 {
     width: 1000px;
@@ -1302,8 +1457,8 @@ a {
     line-height: 150%;
 }
 .noapplicabledataforthesenodes-icon {
-    height: 400px;
-    width: 360px;
+    height: 360px;
+    width: 328px;
     position: absolute;
     margin: 0 !important;
     top: 0;
@@ -1318,8 +1473,8 @@ a {
 .noapplicabledataforthesenodes-icon3,
 .noapplicabledataforthesenodes-icon4,
 .noapplicabledataforthesenodes-icon5 {
-    height: 400px;
-    width: 360px;
+    height: 360px;
+    width: 328px;
     position: absolute;
     margin: 0 !important;
     top: 0;
@@ -1362,17 +1517,18 @@ a {
     align-items: flex-start;
     position: relative;
     gap: 40px 36px;
+    overflow-x: auto;
 }
 .gallery-foto {
     align-self: stretch;
     background-color: #ebebe5;
     flex-direction: column;
     align-items: center;
-    padding: 80px;
+    padding: 64px;
     box-sizing: border-box;
-    gap: 24px 0;
+    gap: 24px;
     text-align: left;
-    font-size: 32px;
+    font-size: 24px;
     color: #1d1c16;
     font-family: Lora;
 }
@@ -1395,28 +1551,27 @@ a {
     justify-content: flex-start;
 }
 .noapplicabledataforthesenodes1 {
-    border-radius: 0 0 32px 32px;
-    backdrop-filter: blur(20px);
     flex-direction: column;
     align-items: flex-start;
-    gap: 16px 0;
+    gap: 16px;
 }
 .button48 {
     width: 100%;
     border: 0;
     outline: 0;
     background-color: #605a4c;
-    height: 56px;
+    height: 40px;
     border-radius: 80px;
     flex-direction: row;
     align-items: center;
-    padding: 16px 48px;
+    padding: 0px 24px;
     box-sizing: border-box;
     font-family: Lora;
-    font-weight: 600;
-    font-size: 24px;
+    font-weight: 400;
+    font-size: 16px;
     color: #fff;
-    min-width: 250px;
+    width: 100%;
+    cursor: pointer;
 }
 .vector-icon34 {
     position: absolute;
@@ -1460,18 +1615,18 @@ a {
     width: 100%;
     border: 0;
     outline: 0;
-    font-weight: 600;
+    font-weight: 400;
     font-family: Lora;
-    font-size: 24px;
+    font-size: 16px;
     background-color: transparent;
-    height: 34px;
+    height: 40px;
     flex: 1;
     line-height: 140%;
     color: #605a4c;
     text-align: left;
     display: inline-block;
-    min-width: 250px;
-    max-width: 100%;
+    width: 100px;
+    cursor: pointer;
 }
 .add-icon30 {
     height: 24px;
@@ -1486,18 +1641,18 @@ a {
 .question7 {
     display: flex;
     justify-content: flex-start;
-    max-width: 100%;
+    width: 100%;
 }
 .button49 {
     align-self: stretch;
-    height: 56px;
+    height: 40px;
     border-radius: 80px;
     border: 1px solid #605a4c;
     box-sizing: border-box;
     flex-direction: row;
     align-items: center;
-    padding: 16px 49px 16px 47px;
-    gap: 0 16px;
+    padding: 16px 24px;
+    gap: 16px;
 }
 .payment-methods,
 .question7 {
@@ -1520,9 +1675,7 @@ a {
 }
 
 .question7 {
-    width: 634px;
-    gap: 24px 0;
-    min-width: 412px;
+    gap: 24px;
 }
 .card-list14 {
     height: 388px;
@@ -1560,16 +1713,17 @@ a {
     position: relative;
     line-height: 140%;
 }
-.card30 {
+.card-list15 .card {
     align-self: stretch;
     border-radius: 24px;
-    border: 1px solid #1d1c16;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 24px 23px;
-    gap: 16px 0;
+    padding: 24px;
+    gap: 16px;
+    background-color: #fff;
+    box-shadow: 10px 10px 25px 0px rgba(29, 28, 22, 0.1);
 }
 .mandiri6 {
     align-self: stretch;
@@ -1622,20 +1776,23 @@ a {
     max-width: 100%;
 }
 .card-list15 {
-    width: 389px;
+    width: auto;
     flex-direction: column;
-    gap: 24px 0;
+    gap: 24px;
     font-family: Besley;
+    padding: 24px;
+    background-color: #e3e4dd;
+    border-radius: 32px;
 }
 .kirim-hadiah15 {
-    width: 1280px;
+    max-width: 1280px;
     border-radius: 80px;
     background-color: #fff;
     flex-direction: row;
-    flex-wrap: wrap;
-    padding: 80px;
+    padding: 64px;
     box-sizing: border-box;
-    gap: 0 48px;
+    gap: 48px;
+    width: 100%;
 }
 .kirimkan-doa-dan {
     position: relative;
@@ -2063,9 +2220,9 @@ a {
 .doa-hadiah {
     align-self: stretch;
     background-color: #ebebe5;
-    padding: 80px;
+    padding: 64px;
     box-sizing: border-box;
-    gap: 80px 0;
+    gap: 80px;
     max-width: 100%;
     flex-shrink: 0;
     text-align: left;
@@ -2096,7 +2253,7 @@ a {
         object-fit: cover;
     }
 
-    .hero-section {
+    /* .hero-section {
         width: 100%;
         height: 100%;
         position: absolute;
@@ -2108,16 +2265,12 @@ a {
         background-color: rgba(152, 149, 119, 0.4);
         backdrop-filter: blur(20px);
         z-index: 1;
-    }
+    } */
 
     .card-list12 {
-        left: 560px;
         flex-direction: column;
         align-items: center;
-        gap: 48px 0;
-        margin: auto 0;
-        position: absolute;
-        top: 300px;
+        gap: 24px;
     }
 
     .kedua-mempelai-child {
@@ -2129,48 +2282,16 @@ a {
         flex-shrink: 0;
         z-index: 1;
     }
-
-    .navigation3 {
-        align-self: stretch;
-        border-radius: 24px;
-        position: fixed;
-        bottom: 40px;
-        left: 570px;
-        background-color: #fff;
-        box-shadow: -11px 13px 42px rgba(105, 102, 90, 0.2);
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 12px 24px;
-        gap: 20px;
-        z-index: 3;
-    }
-
-    .floating-button4 {
-        cursor: pointer;
-        border: 0;
-        padding: 0;
-        background-color: #fff;
-        height: 80px;
-        bottom: 90px;
-        left: 1400px;
-        width: 80px;
-        position: fixed;
-        border-radius: 240px;
-        box-shadow: -9px 9px 42px rgba(105, 102, 90, 0.32);
-        overflow: hidden;
-        flex-shrink: 0;
-        z-index: 3;
-    }
     .location-details-icon {
         flex: 1;
     }
-    .event-title {
+    .mempelai-pria {
         flex-wrap: wrap;
     }
     .event-title-child {
         flex: 1;
     }
-    .event-title1 {
+    .mempelai-wanita {
         flex-wrap: wrap;
     }
 }
@@ -2204,13 +2325,9 @@ a {
     }
 
     .card-list12 {
-        left: 450px;
         flex-direction: column;
         align-items: center;
-        gap: 48px 0;
-        margin: auto 0;
-        position: absolute;
-        top: 300px;
+        margin: auto;
     }
 
     .kedua-mempelai-child {
@@ -2222,38 +2339,22 @@ a {
         flex-shrink: 0;
         z-index: 1;
     }
-    .event-title {
+    .mempelai-pria {
         flex-wrap: nowrap;
     }
 
-    .event-title1 {
+    .mempelai-wanita {
         flex-wrap: nowrap;
     }
 
     .kirim-hadiah15 {
-        width: 1280px;
+        max-width: 1280px;
         border-radius: 80px;
         background-color: #fff;
         flex-direction: row;
-        flex-wrap: nowrap;
-        padding: 80px;
+        padding: 48px;
         box-sizing: border-box;
-        gap: 0 48px;
-    }
-
-    .navigation3 {
-        align-self: stretch;
-        border-radius: 24px;
-        position: fixed;
-        bottom: 40px;
-        left: 455px;
-        background-color: #fff;
-        box-shadow: -11px 13px 42px rgba(105, 102, 90, 0.2);
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 12px 24px;
-        gap: 20px;
-        z-index: 3;
+        gap: 24px;
     }
 }
 
@@ -2270,39 +2371,26 @@ a {
         left: 900px;
     }
 
-    .navigation3 {
-        left: 310px;
-    }
-
     .card-list12 {
-        left: 320px;
         flex-direction: column;
         align-items: center;
-        gap: 48px 0;
-        margin: auto 0;
-        position: absolute;
-        top: 300px;
     }
 
-    .event-title {
+    .mempelai-pria {
         align-self: stretch;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 0 0;
-        margin-right: 250px;
         max-width: 100%;
     }
 
-    .event-title1 {
-        margin-left: 250px;
+    .mempelai-wanita {
         align-self: stretch;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        gap: 0 0;
         max-width: 100%;
     }
 
@@ -2327,21 +2415,9 @@ a {
         overflow-x: auto;
     }
 
-    .kirim-hadiah15 {
-        width: 1280px;
-        border-radius: 80px;
-        background-color: #fff;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        padding: 80px;
-        box-sizing: border-box;
-        gap: 0 48px;
-    }
-
     .question7 {
         width: 100%;
-        gap: 24px 0;
-        min-width: 412px;
+        gap: 24px;
     }
     .kirim-hadiah16 {
         align-self: stretch;
@@ -2380,15 +2456,49 @@ a {
     }
 
     .card-list15 {
-        width: 100%;
-        margin-top: -600px;
+        width: auto;
         flex-direction: column;
-        gap: 24px 0;
+        gap: 24px;
         font-family: Besley;
     }
 }
 
 @media screen and (max-width: 768px) {
+    .kirim-hadiah15 {
+        padding: 24px;
+        border-radius: 48px;
+        display: flex;
+        flex-direction: column;
+    }
+    .question7 {
+        gap: 24px;
+    }
+    .card-list15 {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .doa-hadiah {
+        padding: 16px;
+    }
+    .gallery-foto {
+        padding: 16px;
+    }
+    .flower-right {
+        height: 50%;
+        z-index: 1;
+        right: -54px;
+    }
+    .flower-left {
+        height: 50%;
+        z-index: 1;
+        left: -54px;
+    }
+    .wedding-date {
+        padding: 24px 16px;
+    }
+    .love-story .content {
+        padding: 24px 16px;
+    }
     .side-view-bride-groom-embraced-icon {
         height: 2426px;
         width: 2426px;
@@ -2400,28 +2510,10 @@ a {
     }
 
     .card-list12 {
-        left: 200px;
         flex-direction: column;
         align-items: center;
-        gap: 48px 0;
         margin: auto 0;
         position: absolute;
-        top: 300px;
-    }
-
-    .navigation3 {
-        align-self: stretch;
-        border-radius: 24px;
-        position: fixed;
-        bottom: 40px;
-        left: 200px;
-        background-color: #fff;
-        box-shadow: -11px 13px 42px rgba(105, 102, 90, 0.2);
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 12px 24px;
-        gap: 20px;
-        z-index: 3;
     }
 
     .floating-button4 {
@@ -2464,12 +2556,10 @@ a {
     }
 
     .noapplicabledataforthesenodes-icon {
-        height: 400px;
-        width: 360px;
+        height: 360px;
+        width: 328px;
         position: absolute;
         margin: 0 !important;
-        top: 0;
-        left: 125px;
         border-radius: 200px 200px 32px 32px;
         overflow: hidden;
         flex-shrink: 0;
@@ -2477,12 +2567,10 @@ a {
     }
 
     .noapplicabledataforthesenodes-icon1 {
-        height: 400px;
-        width: 360px;
+        height: 360px;
+        width: 328px;
         position: absolute;
         margin: 0 !important;
-        top: 450px;
-        left: 125px;
         border-radius: 200px 200px 32px 32px;
         overflow: hidden;
         flex-shrink: 0;
@@ -2490,12 +2578,10 @@ a {
     }
 
     .noapplicabledataforthesenodes-icon2 {
-        height: 400px;
-        width: 360px;
+        height: 360px;
+        width: 328px;
         position: absolute;
         margin: 0 !important;
-        top: 900px;
-        left: 125px;
         border-radius: 200px 200px 32px 32px;
         overflow: hidden;
         flex-shrink: 0;
@@ -2503,12 +2589,10 @@ a {
     }
 
     .noapplicabledataforthesenodes-icon3 {
-        height: 400px;
-        width: 360px;
+        height: 360px;
+        width: 328px;
         position: absolute;
         margin: 0 !important;
-        top: 1350px;
-        left: 125px;
         border-radius: 200px 200px 32px 32px;
         overflow: hidden;
         flex-shrink: 0;
@@ -2516,12 +2600,10 @@ a {
     }
 
     .noapplicabledataforthesenodes-icon4 {
-        height: 400px;
-        width: 360px;
+        height: 360px;
+        width: 328px;
         position: absolute;
         margin: 0 !important;
-        top: 1810px;
-        left: 125px;
         border-radius: 200px 200px 32px 32px;
         overflow: hidden;
         flex-shrink: 0;
@@ -2529,37 +2611,39 @@ a {
     }
 
     .noapplicabledataforthesenodes-icon5 {
-        height: 400px;
-        width: 360px;
+        height: 360px;
+        width: 328px;
         position: absolute;
         margin: 0 !important;
-        top: 2270px;
-        left: 125px;
         border-radius: 200px 200px 32px 32px;
         overflow: hidden;
         flex-shrink: 0;
         object-fit: cover;
     }
 
-    .event-title {
+    .mempelai-pria {
         align-self: center;
         display: flex;
         flex-direction: column-reverse;
         align-items: center;
         justify-content: center;
         margin-right: unset;
+        gap: 0px;
     }
 
-    .date-info {
+    .mempelai-info {
         flex: 1;
         text-align: center;
         align-items: center;
         flex-direction: column;
-        padding: 20px 0;
         box-sizing: border-box;
-        gap: 24px 0;
+        gap: 24px;
         width: 100%;
-        margin-top: -24px;
+    }
+
+    .info-mempelai-wanita {
+        text-align: center;
+        align-items: center;
     }
 
     .day-of-week {
@@ -2567,15 +2651,15 @@ a {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 16px 0;
+        gap: 16px;
         max-width: 100%;
     }
 
     .alexnor {
         margin: 0;
         position: relative;
-        font-size: inherit;
-        line-height: 115%;
+        font-size: 24px;
+        line-height: 140%;
         font-weight: 400;
         font-family: inherit;
         text-align: center;
@@ -2583,21 +2667,14 @@ a {
 
     .putra-pertama-dari {
         position: relative;
-        font-size: 24px;
+        font-size: 16px;
         line-height: 140%;
-        text-align: center;
-    }
-
-    .button-link7 {
-        flex-direction: row;
-        align-items: center;
-        gap: 0 8px;
-        font-size: 24px;
+        text-align: right;
     }
 
    
 
-    .event-title1 {
+    .mempelai-wanita {
         align-self: center;
         display: flex;
         flex-direction: column;
@@ -2612,9 +2689,9 @@ a {
         text-align: center;
         align-items: center;
         flex-direction: column;
-        padding: 20px 0;
+        padding: 20px;
         box-sizing: border-box;
-        gap: 24px 0;
+        gap: 24px;
         width: 100%;
         margin-top: -32px;
     }
@@ -2641,7 +2718,7 @@ a {
 
     .putra-pertama-dari1 {
         position: relative;
-        font-size: 24px;
+        font-size: 16px;
         line-height: 140%;
     }
 
@@ -2652,10 +2729,6 @@ a {
         justify-content: center;
         gap: 0 8px;
         font-size: 24px;
-    }
-
-    .love-story2 {
-        margin-top: -70px;
     }
 
   
@@ -2701,14 +2774,6 @@ a {
         overflow: hidden;
         flex-shrink: 0;
     }
-
-    .card-list15 {
-        width: 100%;
-        margin-top: -340px;
-        flex-direction: column;
-        gap: 24px 0;
-        font-family: Besley;
-    }
 }
 
 @media screen and (max-width: 640px) {
@@ -2727,28 +2792,8 @@ a {
     }
 
     .card-list12 {
-        left: 120px;
         flex-direction: column;
         align-items: center;
-        gap: 48px 0;
-        margin: auto 0;
-        position: absolute;
-        top: 300px;
-    }
-
-    .navigation3 {
-        align-self: stretch;
-        border-radius: 24px;
-        position: fixed;
-        bottom: 40px;
-        left: 150px;
-        background-color: #fff;
-        box-shadow: -11px 13px 42px rgba(105, 102, 90, 0.2);
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 12px 24px;
-        gap: 20px;
-        z-index: 3;
     }
 
     .floating-button4 {
@@ -2798,32 +2843,13 @@ a {
         -webkit-box-reflect: right 370px;
     }
 
-    .noapplicabledataforthesenodes-icon,
-    .noapplicabledataforthesenodes-icon1,
-    .noapplicabledataforthesenodes-icon2,
-    .noapplicabledataforthesenodes-icon3,
-    .noapplicabledataforthesenodes-icon4,
-    .noapplicabledataforthesenodes-icon5 {
-        left: 70px;
-    }
-
-    .doa-hadiah {
-        padding: 50px;
-    }
-
     .question7 {
         width: 100%;
-        margin-left: -60px;
-        gap: 24px 0;
-        min-width: 500px;
+        gap: 24px;
     }
 
     .card-list14 {
         height: 480px;
         top: -190px;
-    }
-
-    .card-list15 {
-        margin-top: -390px;
     }
 }

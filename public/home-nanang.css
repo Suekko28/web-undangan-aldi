@@ -2,7 +2,340 @@
     margin: 0;
     padding: 0;
 }
+/* The actual timeline (the vertical ruler) */
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  
+  /* The actual timeline (the vertical ruler) */
+  .timeline::after {
+    content: '';
+    height: 100%;
+    top: 0px;
+    position: absolute;
+    width: 4px;
+    background-color: white;
+    margin: 0 auto; /* Mengatur margin menjadi auto untuk posisi horizontal di tengah */
+    left: 50%; /* Mengatur posisi awal menjadi di tengah */
+    transform: translateX(
+        -50%
+    ); /* Menggeser posisi sejauh setengah dari lebar elemen */
+  }
+  .scroll {
+    margin: auto;
+    width: 100%;
+    overflow: visible;
+}
 
+.scroll ul {
+    padding: 0;
+    display: flex;
+    border-radius: 10px;
+    animation: scroll 40s infinite linear;
+    gap: 24px;
+    display: flex;
+}
+
+.scroll ul:hover {
+    animation-play-state: paused;
+}
+
+.scroll li {
+    margin: 0px;
+    gap: 24px;
+    list-style: none;
+    position: relative;
+}
+
+.scroll img {
+    height: auto;
+    width: 300px;
+    cursor: pointer;
+    transition: 0.2s;
+    position: relative;
+    max-width: fit-content;
+}
+
+.scroll img:hover {
+    transform: scale(1.04);
+}
+.foto-ganjil {
+    margin-top: 40px;
+}
+.foto-genep {
+    margin-bottom: 40px;
+}
+@keyframes scroll {
+    from {
+        margin-left: 0%
+    }
+
+    to {
+        margin-left: -100%
+    }
+}
+  /* Container around content */
+  .container {
+    position: relative;
+    background-color: inherit;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .content .title {
+    color: #1D1C16;
+    text-align: start;
+  }
+  
+  /* The circles on the timeline */
+  .container::after {
+    content: '';
+    border-radius: 0px !important;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    background-color: #FFC436;
+    border: 8px solid #FFFFFF;
+    /* outline: 16px solid #9E9C98; */
+    /* top: 45%; */
+    border-radius: 50%;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  /* Place the container to the left */
+  .left {
+    justify-content: flex-start;
+  }
+  
+  /* Place the container to the right */
+  .right {
+    justify-content: flex-end;
+  }
+  
+  /* Add arrows to the left container (pointing right) */
+  /* .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid white;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  } */
+  
+  /* Add arrows to the right container (pointing left) */
+  /* .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+  } */
+  
+  /* Fix the circle for containers on the right side */
+  
+  /* The actual content */
+  .content {
+    padding: 24px;
+    background-color: white;
+    position: relative;
+    border-radius: 0px;
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 24px;
+  }
+  .foto-story-1 {
+    width: 298px;
+    height: 298px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("./assets/foto-story-1.jpg");
+  }
+  .detail-story {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .detail-story .paragraph {
+    color: #1D1C16;
+    letter-spacing: normal !important;
+    text-align: start;
+  }
+  
+  /* Media queries - Responsive timeline on screens less than 600px wide */
+  @media screen and (max-width: 600px) {
+    /* Place the timelime to the left */
+    .timeline::after {
+    left: 16px;
+    }
+    .content {
+        width: 100% !important;
+    }
+    
+    /* Full-width containers */
+    .container {
+    width: auto;
+    padding-left: 70px;
+    }
+    
+    /* Make sure that all arrows are pointing leftwards */
+    .container::before {
+    left: 60px;
+    border: medium solid white;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+    }
+  
+    /* Make sure all circles are at the same spot */
+    .left::after, .right::after {
+    left: 15px;
+    }
+    
+    /* Make all right containers behave like the left ones */
+    .right {
+    left: 0%;
+    }
+  }
+.mempelai-wanita {
+    align-self: stretch;
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+    max-width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.button-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: #3b3b3b;
+    fill: #3b3b3b;
+    font-size: 16px;
+    line-height: 140%;
+    font-family: NanumMyeongjo;
+    border: none;
+    background: transparent;
+    gap: 8px;
+    cursor: pointer;
+}
+.foto-mempelai-pria {
+    width: 480px;
+    height: 480px;
+    background-position: center;
+    background-image: url("./assets/mempelai-pria-rudi.jpg");
+    background-repeat: no-repeat;
+}
+.foto-mempelai-wanita {
+    width: 480px;
+    height: 480px;
+    background-position: center;
+    background-image: url("./assets/mempelai-wanita-arum.jpg");
+    background-repeat: no-repeat;
+}
+.button-link:hover {
+    color: #5d5d5d;
+    fill: #5d5d5d;
+    cursor: pointer;
+}
+.info-mempelai-pria .button-link {
+    justify-content: start;
+    text-decoration: none;
+}
+.info-mempelai-wanita .button-link {
+    justify-content: start;
+    text-decoration: none;
+}
+.wedding-timer {
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+}
+.floating-button {
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    background-color: #fff;
+    width: 64px;
+    height: 64px;
+    position: fixed;
+    border-radius: 120px;
+    box-shadow: -8px 8px 9.8px rgba(0, 0, 0, 0.07);
+    /* overflow: hidden; */
+    flex-shrink: 0;
+    z-index: 1;
+    bottom: 120px;
+    right: 40px;
+}
+.wedding-date-info {
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 24px;
+    border: 1px solid #fff;
+}
+.title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 140%;
+    font-family: "DM Serif Display";
+    color: #fff;
+  }
+.paragraph {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 140%;
+    font-family: NanumMyeongjo;
+  }
+#timer {  
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+    
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #3b3b3b;
+      font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    width: 64px;
+    height: 64px;
+    position: relative;
+      
+      span {
+        color: #fff;
+        position: absolute;
+        bottom: -32px;
+        display: block;
+        font-size: 16px;
+        font-weight: 400;
+        font-family: NanumMyeongjo;
+      }
+    }
+  }
 .young-japanese-couple-1-icon1 {
     height: 1285px;
     width: 2283px;
@@ -30,14 +363,14 @@
     line-height: 150%;
     font-family: NanumMyeongjo;
 }
-.question2 {
+.quotes {
     align-self: stretch;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 16px 0;
-    max-width: 100%;
+    gap: 16px;
+    width: 100%;
     text-align: left;
 }
 .text {
@@ -296,6 +629,11 @@
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
+    width: 56px;
+    height: 56px;
+}
+.menu:hover {
+    background-color: #606060;
 }
 .vector-stroke-icon {
     position: absolute;
@@ -444,7 +782,6 @@
     cursor: pointer;
 }
 .navigation {
-    width: 424px;
     margin: 0 auto; /* Mengatur margin menjadi auto untuk posisi horizontal di tengah */
     position: fixed;
     bottom: 40px;
@@ -460,7 +797,7 @@
     max-width: 100%;
     z-index: 2;
     font-size: 10px;
-    font-family: Optima;
+    padding: 8px;
 }
 
 .card-list2,
@@ -476,7 +813,7 @@
     padding: 64px;
     box-sizing: border-box;
     width: 50%;
-    height: 720px;
+    height: 840px;
     position: relative;
     z-index: 1;
 }
@@ -533,27 +870,6 @@
 .play.icon {
     transform: rotate(360deg); /* Putar 360 derajat */
 }
-.floating-button {
-    cursor: pointer;
-    border: 0;
-    padding: 0;
-    background-color: #fff;
-    height: 80px;
-    bottom: 150px;
-    left: 550px;
-    width: 80px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    border-radius: 240px;
-    box-shadow: -9px 9px 42px rgba(105, 102, 90, 0.32);
-    overflow: hidden;
-    flex-shrink: 0;
-    z-index: 3;
-    bottom: 80px; /* Ubah nilai bottom */
-    left: 1800px; /* Ubah nilai left */
-}
 
 audio {
     display: none;
@@ -565,21 +881,21 @@ audio {
     align-items: flex-start;
     justify-content: flex-start;
 }
-.banner2,
+.banner,
 .visual-icon {
     position: relative;
     overflow: hidden;
     flex-shrink: 0;
     max-width: 100%;
 }
-.banner2 {
+.banner {
     align-self: stretch;
     display: flex;
     flex-direction: row;
     align-items: flex-end;
     justify-content: space-between;
     box-sizing: border-box;
-    height: 720px;
+    height: 840px;
     width: 100%;
     text-align: center;
     font-size: 32px;
@@ -644,14 +960,6 @@ audio {
     position: relative;
     line-height: 140%;
 }
-.button-link {
-    flex-direction: row;
-    align-items: flex-end;
-    gap: 0 8px;
-    font-size: 24px;
-    color: #3b3b3b;
-}
-.button-link,
 .button-primary,
 .question3 {
     display: flex;
@@ -665,12 +973,51 @@ audio {
     gap: 24px 0;
     min-width: 258px;
 }
-.button-primary {
+.mempelai-pria {
     align-self: stretch;
     flex-direction: row;
     align-items: center;
-    gap: 0 24px;
+    gap: 24px;
     max-width: 100%;
+    display: flex;
+}
+.info-mempelai-pria {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: auto;
+}
+.info-mempelai-pria .detail {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    text-align: start;
+}
+.detail .label {
+    color: #b0aea9;
+    letter-spacing: 0.26em;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: start;
+}
+.label {
+    color: #b0aea9;
+    letter-spacing: 0.26em;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: start;
+    text-transform: uppercase;
+}
+.detail .title {
+    color: #3b3b3b;
+}
+.detail .paragraph {
+    color: #3b3b3b;
+    text-align: start;
+}
+.info-mempelai-wanita .detail .paragraph {
+    color: #3b3b3b;
+    text-align: end;
 }
 .the-bridge {
     position: relative;
@@ -703,12 +1050,12 @@ audio {
     color: #3b3b3b;
     text-align: right;
 }
-.card5 {
+.info-mempelai-wanita .detail {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     justify-content: flex-start;
-    gap: 16px 0;
+    gap: 16px;
 }
 .ig-icon1 {
     height: 40px;
@@ -733,12 +1080,12 @@ audio {
     font-size: 24px;
     color: #3b3b3b;
 }
-.card-parent {
+.info-mempelai-wanita {
     flex-direction: column;
-    padding: 20px 0;
     box-sizing: border-box;
-    gap: 24px 0;
-    min-width: 260px;
+    gap: 24px;
+    align-items: flex-end;
+    display: flex;
 }
 .visual-icon1 {
     height: 512px;
@@ -756,20 +1103,22 @@ audio {
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    gap: 0 24px;
+    gap: 24px;
     max-width: 100%;
 }
-.text-block-quote {
+.kedua-mempelai {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 80px;
+    padding: 64px;
     box-sizing: border-box;
-    gap: 48px 0;
+    gap: 48px;
     text-align: left;
     font-size: 16px;
     color: #b0aea9;
     font-family: NanumMyeongjo;
+    width: 100%;
 }
 .our-love-story {
     position: relative;
@@ -1303,13 +1652,17 @@ audio {
     background-color: #9e9c98;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 80px;
-    gap: 48px 0;
+    padding: 64px;
+    gap: 48px;
     flex-shrink: 0;
     text-align: center;
     font-size: 24px;
     color: #fff;
     font-family: NanumMyeongjo;
+}
+.our-love-story-parent .paragraph {
+    letter-spacing: 0.26em;
+    width: 100%;
 }
 .our-moment {
     position: relative;
@@ -1333,15 +1686,11 @@ audio {
     display: none;
 }
 .frame-video {
-    height: 560.3px;
-    width: 996px;
+    max-width: 996px;
+    width: 75%;
     position: absolute;
-    margin: 0 !important;
-    top: calc(50% - 281.5px);
-    right: -960px;
-    background-color: #000;
-    overflow: hidden;
-    flex-shrink: 0;
+    right: 0px;
+    position: absolute;
 }
 .kini-jadi-kenyataan1,
 .pertemuan-yang-kudambakan1,
@@ -1367,7 +1716,7 @@ audio {
     font-size: 24px;
     font-family: NanumMyeongjo;
 }
-.column,
+
 .rectangle-path,
 .text-block-path {
     display: flex;
@@ -1375,15 +1724,16 @@ audio {
     max-width: 100%;
 }
 .column {
-    flex: 1;
     background-color: rgba(59, 59, 59, 0.8);
     backdrop-filter: blur(6px);
     flex-direction: column;
-    align-items: center;
-    padding: 48px;
+    align-items: self-start;
+    padding: 24px;
     box-sizing: border-box;
-    gap: 16px 0;
+    gap: 16px;
     z-index: 1;
+    width: 50%;
+    display: flex;
 }
 .rectangle-path,
 .text-block-path {
@@ -1401,6 +1751,10 @@ audio {
     font-size: 32px;
     color: #fff;
     font-family: "DM Serif Display";
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
 }
 .foto-icon,
 .foto-icon1 {
@@ -1470,7 +1824,7 @@ audio {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 0 48px;
+    gap: 48px;
     position: relative;
     overflow-y: auto;
     flex-shrink: 0;
@@ -1493,23 +1847,47 @@ audio {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 80px 96px 80px 80px;
+    padding: 64px;
     box-sizing: border-box;
     position: relative;
-    gap: 158px 0;
-    max-width: 100%;
+    gap: 256px;
+    width: 100%;
     flex-shrink: 0;
     text-align: center;
     font-size: 24px;
     color: #3b3b3b;
     font-family: NanumMyeongjo;
 }
-.our-moment1 {
-    width: 238px;
-    position: relative;
+.spacer .paragraph {
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 140%;
     letter-spacing: 0.26em;
-    line-height: 130%;
-    display: none;
+}
+.our-moment-wrapper .paragraph {
+    letter-spacing: 0.26em;
+    width: 100%;
+}
+.foto-depan {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    background-image: url("./assets/Foto-depan.jpg");
+    width: 80%;
+    height: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.foto-belakang {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background-image: url("./assets/Foto-belakang.jpg");
+    width: 80%;
+    height: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 .foto-icon5,
 .foto-icon6 {
@@ -1535,12 +1913,10 @@ audio {
     bottom: 0;
     left: 0;
 }
-.b-c-a-mandiri-card {
+.photo-mix {
     height: 1110px;
-    width: 720px;
+    width: 50%;
     position: relative;
-    min-width: 720px;
-    max-width: 100%;
 }
 .the-groom1 {
     width: 140px;
@@ -1588,17 +1964,55 @@ audio {
     line-height: 140%;
     color: #fff;
 }
-.akad2,
 .devider5 {
     align-self: stretch;
 }
-.akad2 {
+.info-akad {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 24px 0;
-    max-width: 100%;
+    gap: 24px;
+    width: 100%;
+}
+.info-akad .detail-waktu {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    align-items: flex-start;
+}
+.info-akad .paragraph {
+    color: white;
+    text-align: start;
+}
+.detail-waktu .paragraph {
+    text-transform: uppercase;
+}
+video::-webkit-media-controls-panel {
+    display: none !important;
+    opacity: 1 !important;}
+.info-resepsi {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 24px;
+    width: 100%;
+}
+.info-resepsi .detail-waktu {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    align-items: flex-start;
+}
+.info-resepsi .paragraph {
+    color: white;
+    text-align: start;
+}
+.detail-waktu .paragraph {
+    text-transform: uppercase;
 }
 .devider5 {
     height: 1px;
@@ -1606,6 +2020,7 @@ audio {
     background-color: #797979;
     overflow: hidden;
     flex-shrink: 0;
+    width: 100%;
 }
 .the-groom2 {
     width: 140px;
@@ -1653,8 +2068,7 @@ audio {
     line-height: 140%;
     color: #fff;
 }
-.akad3,
-.frame-hari-bogor {
+.akad3 {
     align-self: stretch;
     display: flex;
     flex-direction: column;
@@ -1662,10 +2076,6 @@ audio {
     justify-content: flex-start;
     gap: 24px 0;
     max-width: 100%;
-}
-.frame-hari-bogor {
-    padding: 0 0 24px;
-    box-sizing: border-box;
 }
 .vector-icon7 {
     position: absolute;
@@ -1724,30 +2134,40 @@ audio {
     flex-shrink: 0;
     display: none;
 }
-.button18,
 .input-alamat {
     display: flex;
     box-sizing: border-box;
     max-width: 100%;
 }
-.button18 {
+.outline-button {
     cursor: pointer;
     border: 1px solid #fff;
-    padding: 15px;
+    padding: 0px 24px;
     background-color: transparent;
-    width: 375px;
+    min-width: 328px;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 0 16px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: NanumMyeongjo;
+    height: 40px;
+    color: #fff;
+    max-width: 560px;
+    text-decoration: none;
+    display: flex;
 }
-.input-alamat {
-    flex: 1;
+.outline-button:hover {
+    border: 2px solid #fff;
+    font-weight: 600;
+}
+.resepsi-akad {
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 20px 0;
-    gap: 24px 0;
+    gap: 24px;
+    display: flex;
+    width: 50%;
 }
 .anonym-card-list,
 .the-groom3 {
@@ -1981,73 +2401,74 @@ audio {
     object-fit: cover;
     max-width: 100%;
 }
-.frame-parent50,
-.rekening-field {
+.frame-parent50 {
     align-self: stretch;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: flex-end;
-    gap: 0 48px;
+    gap: 48px;
     max-width: 100%;
 }
-.rekening-field {
+.wedding-date-address {
+    align-self: stretch;
+    display: flex;
     background-color: #606060;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: flex-start;
-    padding: 80px;
+    padding: 64px;
     box-sizing: border-box;
-    gap: 48px 0;
+    gap: 48px;
     flex-shrink: 0;
     text-align: center;
-    font-size: 24px;
     color: #3b3b3b;
     font-family: NanumMyeongjo;
     z-index: 0;
+    align-items: center;
 }
-.kirim-hadiah4 {
-    position: relative;
-    letter-spacing: 0.26em;
-    line-height: 130%;
-}
-.jika-kamu-tidak2,
-.kirim-hadiah6 {
-    align-self: stretch;
-    position: relative;
-    line-height: 130%;
-}
-.jika-kamu-tidak2 {
-    font-size: 24px;
-    line-height: 150%;
-    font-family: NanumMyeongjo;
-}
-.button20,
 .kirim-hadiah-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
     align-self: stretch;
     display: flex;
     justify-content: flex-start;
+    width: 100%;
 }
-.kirim-hadiah-container {
-    border-radius: 0 0 32px 32px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 16px 0;
+.kirim-hadiah-container .title {
+    color: #1D1C16;
+}
+.hadiah-area .kirim-hadiah-container .paragraph {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 140%;
+    font-family: NanumMyeongjo;
+    letter-spacing: normal;
+    text-transform: none;
 }
 .button20 {
     width: 100%;
-    border: 0;
-    outline: 0;
+    border: none;
+    outline: none;
     background-color: #3b3b3b;
-    height: 56px;
+    height: 40px;
+    display: flex;
+    justify-content: flex-start;
     flex-direction: row;
     align-items: center;
-    padding: 16px 48px;
+    padding: 0px 24px;
     box-sizing: border-box;
     font-family: NanumMyeongjo;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 16px;
     color: #fff;
     min-width: 250px;
+    cursor: pointer;
+}
+.button20:hover {
+    background-color: #606060;
+
 }
 .vector-icon9 {
     position: absolute;
@@ -2093,7 +2514,7 @@ audio {
     outline: 0;
     display: inline-block;
     font-family: NanumMyeongjo;
-    font-size: 24px;
+    font-size: 16px;
     background-color: transparent;
     height: 34px;
     flex: 1;
@@ -2101,8 +2522,7 @@ audio {
     font-weight: 700;
     color: #3b3b3b;
     text-align: left;
-    min-width: 250px;
-    max-width: 100%;
+    cursor: pointer;
 }
 .add-icon8 {
     height: 24px;
@@ -2121,13 +2541,19 @@ audio {
 }
 .button21 {
     align-self: stretch;
-    height: 66px;
+    height: 40px;
     border: 1px solid #3b3b3b;
     box-sizing: border-box;
     flex-direction: row;
     align-items: center;
-    padding: 16px 49px 16px 47px;
-    gap: 0 16px;
+    padding: 0px 24px;
+    gap: 16px;
+    display: flex;
+    justify-content: flex-start;
+    cursor: pointer;
+}
+.button21:hover {
+    background-color: #b0aea9;
 }
 .question4,
 .substitute-present {
@@ -2136,24 +2562,14 @@ audio {
 }
 .substitute-present {
     align-self: stretch;
-    gap: 16px 0;
+    gap: 16px;
     text-align: center;
-    font-size: 10px;
+    font-size: 16px;
     color: #fff;
-    font-family: Optima;
 }
 .question4 {
-    width: 943px;
-    gap: 24px 0;
-    min-width: 613px;
-}
-.multiple-cards {
-    height: 388px;
-    width: 1px;
-    position: relative;
-    background-color: #1d1c16;
-    overflow: hidden;
-    flex-shrink: 0;
+    width: 65%;
+    gap: 24px;
 }
 .bca2 {
     width: 341px;
@@ -2205,7 +2621,13 @@ audio {
     align-items: flex-start;
     justify-content: flex-start;
     padding: 24px;
-    gap: 16px 0;
+    gap: 16px;
+}
+.card12 .title {
+    color: #1D1C16;
+}
+.card13 .title {
+    color: #1D1C16;
 }
 .mandiri2 {
     width: 341px;
@@ -2260,11 +2682,14 @@ audio {
     gap: 16px 0;
 }
 .card-list5 {
-    width: 560px;
-    gap: 24px 0;
-    font-size: 24px;
+    width: 35%;
+    gap: 24px;
+    font-size: 16px;
     color: #1d1c16;
     font-family: NanumMyeongjo;
+    padding-left: 48px;
+    border-left: 1px solid #1D1C16;
+    min-height: 328px;
 }
 .hadiah-area,
 .kirim-hadiah5 {
@@ -2281,21 +2706,28 @@ audio {
     padding: 64px;
     gap: 48px;
     text-align: left;
-    font-size: 32px;
+    font-size: 24px;
     font-family: "DM Serif Display";
+    width: 100%;
 }
 .hadiah-area {
     background-color: #fff;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
-    padding: 80px;
-    gap: 48px 0;
+    padding: 64px;
+    gap: 48px;
     flex-shrink: 0;
     text-align: center;
-    font-size: 24px;
+    font-size: 16px;
     color: #3b3b3b;
     font-family: NanumMyeongjo;
+}
+.hadiah-area .paragraph {
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+    letter-spacing: 0.26em;
 }
 .our-moment2,
 .the-groom4 {
@@ -2362,12 +2794,34 @@ audio {
     flex-direction: column;
     gap: 8px 0;
 }
-.alamat,
 .masukkan-alamat {
     width: 400px;
     position: relative;
     line-height: 150%;
     display: inline-block;
+}
+.alamat {
+    align-self: stretch;
+    border: 1px solid #1d1c16;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 24px;
+    gap: 16px;
+    display: flex;
+}
+.alamat .title {
+    color: #1D1C16;
+}
+.hadiah-area .alamat .paragraph {
+    font-size: 16px;
+    font-weight: 400;
+    text-align: left;
+    line-height: 140%;
+    font-family: NanumMyeongjo;
+    letter-spacing: normal;
+    text-transform: none;
 }
 .masukkan-alamat {
     width: 100%;
@@ -2718,11 +3172,6 @@ audio {
         object-fit: cover;
     }
 
-    .floating-button {
-        bottom: 80px; /* Ubah nilai bottom */
-        left: 1400px; /* Ubah nilai left */
-    }
-
     .untitled-1-1-icon {
         position: absolute;
         top: 0;
@@ -2767,8 +3216,7 @@ audio {
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
-        padding: 0 16px;
-        gap: 0 48px;
+        gap: 24px;
         text-align: left;
         font-size: 16px;
         color: #b0aea9;
@@ -2798,32 +3246,9 @@ audio {
         color: #3b3b3b;
     }
 
-    .foto-container {
-        align-self: stretch;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0 48px;
-        position: relative;
-        overflow-y: auto;
-        flex-shrink: 0;
-    }
-
     .text-block-path {
         width: 750px;
         position: relative;
-    }
-
-    .frame-video {
-        height: 500px;
-        width: 796px;
-        position: absolute;
-        margin: 0 !important;
-        top: calc(50% - 281.5px);
-        right: -630px;
-        background-color: #000;
-        overflow: hidden;
-        flex-shrink: 0;
     }
 
     .foto-icon1 {
@@ -2863,19 +3288,6 @@ audio {
         object-fit: cover;
     }
 
-    .column {
-        flex: 1;
-        background-color: rgba(59, 59, 59, 0.8);
-        backdrop-filter: blur(6px);
-        flex-direction: column;
-        align-items: center;
-        padding: 48px;
-        box-sizing: border-box;
-        gap: 16px 0;
-        z-index: 1;
-        margin-right: 130px;
-    }
-
     .frame-video video {
         width: 100%;
         height: 100%;
@@ -2890,23 +3302,6 @@ audio {
         bottom: -102.5px;
         left: -900px;
         object-fit: cover;
-    }
-
-    .floating-button {
-        cursor: pointer;
-        border: 0;
-        padding: 0;
-        background-color: #fff;
-        width: 64px;
-        height: 64px;
-        position: fixed;
-        border-radius: 120px;
-        box-shadow: -8px 8px 9.8px rgba(0, 0, 0, 0.07);
-        overflow: hidden;
-        flex-shrink: 0;
-        z-index: 2;
-        bottom: 80px; /* Ubah nilai bottom */
-        left: 1100px; /* Ubah nilai left */
     }
 
     .card6 {
@@ -2979,8 +3374,8 @@ audio {
         background-color: #9e9c98;
         flex-direction: column;
         justify-content: flex-start;
-        padding: 0;
-        gap: 48px 0;
+        padding: 16px;
+        gap: 24px;
         flex-shrink: 0;
         text-align: center;
         font-size: 24px;
@@ -3001,24 +3396,12 @@ audio {
         position: relative;
     }
 
-    .frame-video {
-        height: 480px;
-        width: 750px;
-        position: absolute;
-        margin: 0 !important;
-        top: calc(50% - 281.5px);
-        right: -400px;
-        background-color: #000;
-        overflow: hidden;
-        flex-shrink: 0;
-    }
-
     .input-alamat {
         flex: 1;
         flex-direction: column;
         align-items: flex-start;
         justify-content: flex-start;
-        padding: 20px 0;
+        padding: 20px;
         gap: 24px 0;
     }
 
@@ -3081,9 +3464,8 @@ audio {
     }
 
     .question4 {
-        width: 943px;
-        gap: 24px 0;
-        min-width: 500px;
+        width: 50%;
+        gap: 24px;
     }
 
     .frame-parent53 {
@@ -3110,19 +3492,6 @@ audio {
         font-family: "DM Serif Display";
     }
 
-    .column {
-        flex: 1;
-        background-color: rgba(59, 59, 59, 0.8);
-        backdrop-filter: blur(6px);
-        flex-direction: column;
-        align-items: center;
-        padding: 48px;
-        box-sizing: border-box;
-        gap: 16px 0;
-        z-index: 1;
-        margin-right: 200px;
-    }
-
     .text-block-path {
         width: 750px;
         position: relative;
@@ -3132,14 +3501,6 @@ audio {
         width: 100%;
         height: 100%;
         object-fit: cover;
-    }
-
-    .kirim-hadiah-container {
-        border-radius: 0 0 32px 32px;
-        flex-direction: column;
-        padding: 10px;
-        align-items: flex-start;
-        gap: 16px 0;
     }
 
     .substitute-present {
@@ -3177,29 +3538,33 @@ audio {
 }
 
 @media screen and (max-width: 1024px) {
+    .hadiah-area {
+        padding: 24px;
+        gap: 24px;
+    }
     .young-japanese-couple-1-icon1 {
         left: -1000px;
     }
-
-    .floating-button {
-        cursor: pointer;
-        border: 0;
-        padding: 0;
-        background-color: #fff;
-        width: 64px;
-        height: 64px;
-        position: fixed;
-        border-radius: 120px;
-        box-shadow: -8px 8px 9.8px rgba(0, 0, 0, 0.07);
-        overflow: hidden;
-        flex-shrink: 0;
-        z-index: 2;
-        bottom: 80px;
-        left: 900px;
+    .spacer {
+        padding: 24px;
+        gap: 24px;
+    }
+    .column {
+        align-items: center;
+        padding: 24px;
+        display: flex;
+        width: 75%;
+        text-align: center;
+    }
+    .rectangle-path {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     .card4 {
-        width: 60%;
+        width: 50%;
     }
 
     .card-list-parent {
@@ -3237,35 +3602,9 @@ audio {
     }
 
     .frame-video {
-        height: 460px;
-        width: 740px;
-        position: absolute;
-        margin: 0 auto !important;
-        top: 520px;
-        /* right: 50%; */
-        /* left: 60%; */
-        transform: translate(-50%, -50%);
-        background-color: #000;
-        overflow: hidden;
-        flex-shrink: 0;
-    }
-
-    .column {
-        flex: 1;
-        background-color: rgba(59, 59, 59, 0.8);
-        backdrop-filter: blur(6px);
-        flex-direction: column;
-        align-items: center;
-        padding: 48px;
-        box-sizing: border-box;
-        gap: 16px 0;
-        z-index: 1;
-        margin-right: auto;
-        margin-left: 100px;
-    }
-
-    .foto-container {
-        margin-top: 18em;
+        width: 100%;
+        position: relative;
+        margin-top: -48px;
     }
 
     .foto-icon1 {
@@ -3306,24 +3645,18 @@ audio {
     }
 
     .kirim-hadiah5 {
-        flex-direction: column;
-    }
-
-    .multiple-cards {
-        height: 1px;
-        width: 100%;
-        position: relative;
-        background-color: #1d1c16;
-        overflow: hidden;
-        flex-shrink: 0;
+        flex-direction: row;
+        padding: 24px;
+        gap: 24px;
     }
 
     .card-list5 {
-        width: 100%;
-        gap: 24px 0;
+        width: 50%;
+        gap: 24px;
         font-size: 24px;
         color: #1d1c16;
         font-family: NanumMyeongjo;
+        padding-left: 24px;
     }
 
     .card12,
@@ -3341,15 +3674,80 @@ audio {
 }
 
 @media screen and (max-width: 768px) {
-
-    .banner2 {
+    .content {
+        width: 30%;
+    }
+    .spacer {
+        padding: 16px;
+    }
+    .column {
+        text-align: center;
+        width: 80%;
+    }
+    .hadiah-area {
+        padding: 16px;
+        gap: 16px;
+    }
+    .wedding-date-address {
+        flex-direction: column;
+        padding: 16px;
+    }
+    .photo-mix {
+        width: 100%;
+        height: 480px;
+    }
+    .resepsi-akad {
+        width: 100%;
+        align-items: center;
+    }
+    .info-akad .detail-waktu {
+        align-items: center;
+    }
+    .info-akad {
+        align-items: center;
+    }
+    .info-akad .paragraph {
+        text-align: center;
+    }
+    .info-resepsi {
+        align-items: center;
+    }
+    .info-resepsi .detail-waktu {
+        align-items: center;
+    }
+    .info-resepsi .paragraph {
+        text-align: center;
+    }
+    .kedua-mempelai {
+        justify-content: center;
+        padding: 16px;
+    }
+    .foto-mempelai-pria {
+        max-width: 480px;
+        width: 100%;
+    }
+    .foto-mempelai-wanita {
+        max-width: 480px;
+        width: 100%;
+    }
+    .mempelai-pria {
+        flex-direction: column;
+        justify-content: start;
+        gap: 24px;
+    }
+    .mempelai-wanita {
+        flex-direction: column;
+        justify-content: start;
+        gap: 24px;
+    }
+    .banner {
         align-self: stretch;
         display: flex;
         flex-direction: row;
         align-items: flex-end;
         justify-content: space-between;
         box-sizing: border-box;
-        height: 720px;
+        height: 840px;
         width: 100%;
         text-align: center;
         font-size: 32px;
@@ -3360,7 +3758,7 @@ audio {
         background-size: cover;
         background-repeat: no-repeat;
     }
-    .banner2::after {
+    .banner::after {
         content: '';
         display: block;
         width: 100%;
@@ -3400,10 +3798,12 @@ audio {
         width: 100%;
         display: flex;
         align-items: center;
+        padding: 16px;
     }
+    .quotes {
+        text-align: center;
+        align-items: center;
 
-    .floating-button {
-        left: 650px;
     }
     .pertemuan-yang-kuimpikan-kini-container {
         line-height: 150%;
@@ -3425,7 +3825,7 @@ audio {
         align-self: stretch;
         flex-direction: column;
         align-items: flex-start;
-        gap: 0 24px;
+        gap: 24px;
         max-width: 100%;
     }
 
@@ -3451,11 +3851,6 @@ audio {
     .visual-icon4 {
         width: 220px;
         height: 220px;
-    }
-
-    .column {
-
-        margin-left: unset;
     }
 
     .spacer {
@@ -3563,46 +3958,16 @@ audio {
         font-family: NanumMyeongjo;
     } */
 
-    .column {
-        flex: 1;
-        background-color: rgba(59, 59, 59, 0.8);
-        backdrop-filter: blur(6px);
-        flex-direction: column;
-        align-items: center;
-        padding: 48px;
-        box-sizing: border-box;
-        gap: 16px 0;
-        z-index: 1;
-        margin-right: auto;
-    }
 
     .text-block-path {
         width: 100%;
         position: relative;
     }
 
-    .frame-video {
-        height: 360px;
-        width: 640px;
-        position: absolute;
-        margin: 0 auto !important;
-        top: 460px;
-        right: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #000;
-        overflow: hidden;
-        flex-shrink: 0;
-    }
-
     .frame-video video {
         width: 100%;
         height: 100%;
         object-fit: cover;
-    }
-
-    .foto-container {
-        margin-top: 13em;
     }
 
     .foto-icon {
@@ -3706,8 +4071,8 @@ audio {
         flex-direction: column;
         align-items: flex-start;
         justify-content: center;
-        padding: 24px;
-        gap: 48px;
+        padding: 16px;
+        gap: 24px;
         text-align: left;
         font-size: 32px;
         font-family: "DM Serif Display";
@@ -3715,7 +4080,7 @@ audio {
 
     .question4 {
         width: 100%;
-        gap: 0 0;
+        gap: 16px;
         min-width: 100%
     }
 
@@ -3761,10 +4126,15 @@ audio {
 
     .card-list5 {
         width: 100%;
-        gap: 24px 0;
+        gap: 24px;
         font-size: 24px;
         color: #1d1c16;
         font-family: NanumMyeongjo;
+        padding-top: 24px;
+        border-top: 1px solid #1D1C16;
+        padding-left: 0px;
+    border-left: none;
+    min-height: auto;
     }
 
     .frame-parent52 {
@@ -3805,10 +4175,6 @@ audio {
         object-fit: contain;
     }
 
-    .floating-button {
-        left: 550px;
-    }
-
     /* .card4 {
         align-self: stretch;
         align-items: flex-start;
@@ -3826,20 +4192,6 @@ audio {
         right: 0px;
         bottom: 50px;
     } */
-
-    .frame-video {
-        height: 360px;
-        width: 540px;
-        position: absolute;
-        margin: 0 auto !important;
-        top: 630px;
-        right: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #000;
-        overflow: hidden;
-        flex-shrink: 0;
-    }
 
     .text-block-path {
         width: 800px;
@@ -3909,7 +4261,6 @@ audio {
         gap: 0 48px;
         max-width: 100%;
     }
-
     .foto-icon5,
     .foto-icon6 {
         position: absolute;
@@ -3949,11 +4300,6 @@ audio {
     .visual-icon4 {
         width: 200px;
         height: 200px;
-    }
-
-    .column {
-
-        margin-left: unset;
     }
 
     .spacer {
