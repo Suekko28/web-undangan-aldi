@@ -319,7 +319,7 @@
         </section>
 
 
-        {{-- <section class="rsvp5" data-scroll-to="rSVP">
+        <section class="rsvp5" data-scroll-to="rSVP">
             <div class="rsvp-mobile3">
                 <h1 class="rsvp6">RSVP</h1>
                 <div class="frame-parent151">
@@ -334,12 +334,14 @@
                             Bersedia hadir di acara kami?
                         </div>
                         <div class="r-s-v-pbutton">
-                            <div class="framecontainer">
-                                <div class="ya5">Ya</div>
-                            </div>
-                            <button class="framecontainer1">
-                                <div class="tidak5">Tidak</div>
-                            </button>
+                            <label class="framecontainer1">
+                                <input type="radio" name="response" value="ya" class="">
+                                Ya
+                            </label>
+                            <label class="framecontainer1">
+                                <input type="radio" name="response" value="tidak" class="">
+                                Tidak
+                            </label>
                         </div>
                     </div>
                     <div class="ucapan-doa-container">
@@ -402,7 +404,7 @@
                     </div>
                 </div>
             </div>
-        </section> --}}
+        </section>
 
         <section class="hadiah3" data-scroll-to="hadiah">
             <footer class="kirim-hadiah17">

@@ -337,7 +337,7 @@
 
 
             </div>
-            {{-- <div class="send-prayers">
+            <div class="send-prayers">
                 <b class="kirimkan-doa-dan">Kirimkan Doa dan Ucapan</b>
                 <div class="input-name-pesan">
                     <div class="frame-nama-pesan">
@@ -409,7 +409,7 @@
                     <p class="atas-doa">Atas doa & ucapan bapak/ibu/saudara/i, Kami</p>
                     <p class="mengucapkan-terima-kasih">mengucapkan terima kasih.</p>
                 </footer>
-            </div> --}}
+            </div>
         </section>
 
     </div>

@@ -1783,7 +1783,16 @@ audio {
 }
 .ya5 {
     flex: 1;
+    position: relative;
+    font-size: 24px;
+    line-height: 140%;
     font-weight: 500;
+    font-family: "Cormorant Infant";
+    color: #bb8554;
+    text-align: justify;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .framecontainer {
     width: 128px;
@@ -1828,9 +1837,9 @@ audio {
     overflow: hidden;
     justify-content: center;
 }
-.framecontainer1:hover {
-    background-color: #e6e6e6;
-    border: 0.6px solid #a16b3b;
+.framecontainer1:target {
+    background-color: #bb8554;
+    border: 0.6px solid #000000;
     box-sizing: border-box;
 }
 .r-s-v-pbutton {

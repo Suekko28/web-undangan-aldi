@@ -46,3 +46,10 @@ Route::get('/undangan-coba', function () {
 Route::get('/undangan-alt2/index', function () {
     return view('undangan-mufli.index');
 });
+
+
+// Route::get('/', function () {
+//     return view('index');
+// });
+
+
