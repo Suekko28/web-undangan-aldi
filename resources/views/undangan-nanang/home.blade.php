@@ -43,7 +43,7 @@
         var buttonContainer = document.getElementById("buttonContainer");
         if (buttonContainer) {
             buttonContainer.addEventListener("click", function(e) {
-                window.location.href = "./index";
+                window.location.href = "./undangan-alt3/index";
             });
         }
     </script>

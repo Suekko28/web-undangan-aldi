@@ -17,6 +17,41 @@ a {
     text-decoration: none;
 }
 
+#timer {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 16px;
+        font-size: 24px;
+        font-weight: 700;
+        color: #fff;
+        width: 64px;
+        height: 64px;
+        background-color: #fd856c;
+        border-radius: 16px;
+        position: relative;
+
+        span {
+            color: #fd856c;
+            position: absolute;
+            bottom: -32px;
+            display: block;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+}
+
+span {
+    font-size: 16px;
+}
+
 .aku-tak-pernah1 {
     line-height: 150%;
     padding: 200px;
@@ -2021,7 +2056,6 @@ audio {
     position: relative;
     line-height: 130%;
     font-size: 20px;
-
 }
 .jika-kamu-tidak7 {
     font-size: 20px;
@@ -3124,18 +3158,15 @@ audio {
     .jadwal-wrapper {
         justify-content: center;
         align-self: center;
-        
     }
 
     .jadwal9 {
         padding: 16px;
     }
 
-   
-
-        .jadwal11 {
-            padding: 16px;
-        }
+    .jadwal11 {
+        padding: 16px;
+    }
 
     .asset-2-53 {
         top: -10px;
@@ -3243,8 +3274,6 @@ audio {
         max-width: unset;
         padding: 16px;
     }
-
-   
 
     .question8,
     .jika-kamu-tidak7,

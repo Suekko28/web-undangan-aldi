@@ -48,42 +48,9 @@
                 </div>
 
                 <div class="image-placeholder">
-                    <b class="days-until-we3">Days Until We Are</b>
-                    <div class="link-button">
-                        <div class="text-field">
-                            <div class="input-text">
-                                <b class="label">04</b>
-                            </div>
-                            <div class="hari11">Hari</div>
-                        </div>
-                        <div class="text-field1">
-                            <b class="b49">:</b>
-                        </div>
-                        <div class="text-field2">
-                            <div class="wrapper38">
-                                <b class="b50">01</b>
-                            </div>
-                            <div class="jam8">Jam</div>
-                        </div>
-                        <div class="text-field3">
-                            <b class="b51">:</b>
-                        </div>
-                        <div class="text-field4">
-                            <div class="wrapper39">
-                                <b class="b52">20</b>
-                            </div>
-                            <div class="menit8">Menit</div>
-                        </div>
-                        <div class="text-field5">
-                            <b class="b53">:</b>
-                        </div>
-                        <div class="text-field6">
-                            <div class="wrapper40">
-                                <b class="b54">50</b>
-                            </div>
-                            <div class="detik8">Detik</div>
-                        </div>
-                    </div>
+                    <span class="title">Days Until We Are
+                    </span>
+                    <div id="timer"></div>
                 </div>
                 <div class="navbar-mobile3">
                     <div class="button56" id="buttonContainer">
@@ -747,6 +714,45 @@
                 alert("Teks telah disalin: " + copyText.innerText);
             });
         });
+
+        function updateTimer() {
+            future = Date.parse("June 11, 2024 11:30:00");
+            now = new Date();
+            diff = future - now;
+
+            days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            hours = Math.floor(diff / (1000 * 60 * 60));
+            mins = Math.floor(diff / (1000 * 60));
+            secs = Math.floor(diff / 1000);
+
+            d = days;
+            h = hours - days * 24;
+            m = mins - hours * 60;
+            s = secs - mins * 60;
+
+            document.getElementById("timer")
+                .innerHTML =
+                '<div>' + d + '<span>Hari</span></div>' +
+                '<div>' + h + '<span>Jam</span></div>' +
+                '<div>' + m + '<span>Menit</span></div>' +
+                '<div>' + s + '<span>Detik</span></div>';
+        }
+        setInterval('updateTimer()', 1000);
+
+        function myFunction() {
+            // Get the text field
+            var copyText = document.getElementById("myInput");
+
+            // Select the text field
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
+
+            // Copy the text inside the text field
+            navigator.clipboard.writeText(copyText.value);
+
+            // Alert the copied text
+            alert("Copied the text: " + copyText.value);
+        }
     </script>
 </body>
 

@@ -34,7 +34,7 @@
                     kami
                 </div>
                 <div class="alexnor-exafator">Alexnor & Exafator</div>
-                <button  class="Secondary-button" href="undangan-alt3/index" id="button">
+                <button  class="Secondary-button" href="undangan-alt2/index" id="button">
                     Buka Undangan
                     <!-- <a class="buka-undangan4" style="text-decoration: none" href="undangan-alt3/index">Buka Undangan</a> -->
                 </button>
@@ -45,7 +45,7 @@
         var button = document.getElementById("button");
         if (button) {
             button.addEventListener("click", function(e) {
-                window.location.href = "./index";
+                window.location.href = "./undangan-alt2/index";
                 // Please sync "Home" to the project
             });
         }

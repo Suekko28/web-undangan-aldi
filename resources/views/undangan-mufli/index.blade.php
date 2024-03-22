@@ -24,31 +24,28 @@
 
 <body>
     <div class="home3">
-    <div class="navigation3">
-                        <div class="menu" id="menu15">
-                            <img class="home-icon3" loading="lazy" alt=""
-                                src="{{ asset('./assets/home.svg') }}" />
-                        </div>
-                        <div class="menu" id="menu16">
-                            <div class="love3">
-                                <img class="vector-stroke-icon3" loading="lazy" alt=""
-                                    src="{{ asset('./assets/vector-stroke.svg') }}" />
+        <div class="navigation3">
+            <div class="menu" id="menu15">
+                <img class="home-icon3" loading="lazy" alt="" src="{{ asset('./assets/home.svg') }}" />
+            </div>
+            <div class="menu" id="menu16">
+                <div class="love3">
+                    <img class="vector-stroke-icon3" loading="lazy" alt=""
+                        src="{{ asset('./assets/vector-stroke.svg') }}" />
 
-                                <div class="badge34">
-                                    <div class="div52">12</div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="menu" id="menu17">
-                            <img class="calendar-icon3" loading="lazy" alt=""
-                                src="{{ asset('./assets/calendar.svg') }}" />
-                        </div>
-                        <div class="menu" id="menu18">
-                            <img class="image-icon3" loading="lazy" alt=""
-                                src="{{ asset('./assets/image.svg') }}" />
-                        </div>
+                    <div class="badge34">
+                        <div class="div52">12</div>
                     </div>
-        <section class="banner-image" data-scroll-to='BannerImage'>           
+                </div>
+            </div>
+            <div class="menu" id="menu17">
+                <img class="calendar-icon3" loading="lazy" alt="" src="{{ asset('./assets/calendar.svg') }}" />
+            </div>
+            <div class="menu" id="menu18">
+                <img class="image-icon3" loading="lazy" alt="" src="{{ asset('./assets/image.svg') }}" />
+            </div>
+        </div>
+        <section class="banner-image" data-scroll-to='BannerImage'>
             <div class="card-list12">
                 <div class="card-item">
                     <div class="the-wedding-of2">THE WEDDING OF</div>
@@ -103,15 +100,21 @@
                                 </div>
                             </div>
                             <a target="_blank" class="button-link" href="https://www.instagram.com/" target="_blank"
-                                    style="text-direction:none;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.75 6C1.75 3.92893 3.42893 2.25 5.5 2.25H14.5C16.5711 2.25 18.25 3.92893 18.25 6V15C18.25 17.0711 16.5711 18.75 14.5 18.75H5.5C3.42893 18.75 1.75 17.0711 1.75 15V6ZM5.5 3.75C4.25736 3.75 3.25 4.75736 3.25 6V15C3.25 16.2426 4.25736 17.25 5.5 17.25H14.5C15.7426 17.25 16.75 16.2426 16.75 15V6C16.75 4.75736 15.7426 3.75 14.5 3.75H5.5Z" fill="#1D1C16"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 7.5625C8.37766 7.5625 7.0625 8.87766 7.0625 10.5C7.0625 12.1223 8.37766 13.4375 10 13.4375C11.6223 13.4375 12.9375 12.1223 12.9375 10.5C12.9375 8.87766 11.6223 7.5625 10 7.5625ZM5.5625 10.5C5.5625 8.04924 7.54924 6.0625 10 6.0625C12.4508 6.0625 14.4375 8.04924 14.4375 10.5C14.4375 12.9508 12.4508 14.9375 10 14.9375C7.54924 14.9375 5.5625 12.9508 5.5625 10.5Z" fill="#1D1C16"/>
-                                <path d="M15.6875 5.8125C15.6875 6.36478 15.2398 6.8125 14.6875 6.8125C14.1352 6.8125 13.6875 6.36478 13.6875 5.8125C13.6875 5.26022 14.1352 4.8125 14.6875 4.8125C15.2398 4.8125 15.6875 5.26022 15.6875 5.8125Z"/>
-                            </svg>
+                                style="text-direction:none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21"
+                                    viewBox="0 0 20 21" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M1.75 6C1.75 3.92893 3.42893 2.25 5.5 2.25H14.5C16.5711 2.25 18.25 3.92893 18.25 6V15C18.25 17.0711 16.5711 18.75 14.5 18.75H5.5C3.42893 18.75 1.75 17.0711 1.75 15V6ZM5.5 3.75C4.25736 3.75 3.25 4.75736 3.25 6V15C3.25 16.2426 4.25736 17.25 5.5 17.25H14.5C15.7426 17.25 16.75 16.2426 16.75 15V6C16.75 4.75736 15.7426 3.75 14.5 3.75H5.5Z"
+                                        fill="#1D1C16" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M10 7.5625C8.37766 7.5625 7.0625 8.87766 7.0625 10.5C7.0625 12.1223 8.37766 13.4375 10 13.4375C11.6223 13.4375 12.9375 12.1223 12.9375 10.5C12.9375 8.87766 11.6223 7.5625 10 7.5625ZM5.5625 10.5C5.5625 8.04924 7.54924 6.0625 10 6.0625C12.4508 6.0625 14.4375 8.04924 14.4375 10.5C14.4375 12.9508 12.4508 14.9375 10 14.9375C7.54924 14.9375 5.5625 12.9508 5.5625 10.5Z"
+                                        fill="#1D1C16" />
+                                    <path
+                                        d="M15.6875 5.8125C15.6875 6.36478 15.2398 6.8125 14.6875 6.8125C14.1352 6.8125 13.6875 6.36478 13.6875 5.8125C13.6875 5.26022 14.1352 4.8125 14.6875 4.8125C15.2398 4.8125 15.6875 5.26022 15.6875 5.8125Z" />
+                                </svg>
                                 Alexnor32
                             </a>
-                    </div>
+                        </div>
                         <div class="profile-container">
                             <div class="profile-pict-man">
                             </div>
@@ -130,12 +133,18 @@
                                 </div>
                             </div>
                             <a target="_blank" class="button-link" href="https://www.instagram.com/" target="_blank"
-                                    style="text-direction:none;">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.75 6C1.75 3.92893 3.42893 2.25 5.5 2.25H14.5C16.5711 2.25 18.25 3.92893 18.25 6V15C18.25 17.0711 16.5711 18.75 14.5 18.75H5.5C3.42893 18.75 1.75 17.0711 1.75 15V6ZM5.5 3.75C4.25736 3.75 3.25 4.75736 3.25 6V15C3.25 16.2426 4.25736 17.25 5.5 17.25H14.5C15.7426 17.25 16.75 16.2426 16.75 15V6C16.75 4.75736 15.7426 3.75 14.5 3.75H5.5Z" fill="#1D1C16"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 7.5625C8.37766 7.5625 7.0625 8.87766 7.0625 10.5C7.0625 12.1223 8.37766 13.4375 10 13.4375C11.6223 13.4375 12.9375 12.1223 12.9375 10.5C12.9375 8.87766 11.6223 7.5625 10 7.5625ZM5.5625 10.5C5.5625 8.04924 7.54924 6.0625 10 6.0625C12.4508 6.0625 14.4375 8.04924 14.4375 10.5C14.4375 12.9508 12.4508 14.9375 10 14.9375C7.54924 14.9375 5.5625 12.9508 5.5625 10.5Z" fill="#1D1C16"/>
-                                <path d="M15.6875 5.8125C15.6875 6.36478 15.2398 6.8125 14.6875 6.8125C14.1352 6.8125 13.6875 6.36478 13.6875 5.8125C13.6875 5.26022 14.1352 4.8125 14.6875 4.8125C15.2398 4.8125 15.6875 5.26022 15.6875 5.8125Z"/>
-                            </svg>
+                                style="text-direction:none;">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21"
+                                    viewBox="0 0 20 21" fill="none">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M1.75 6C1.75 3.92893 3.42893 2.25 5.5 2.25H14.5C16.5711 2.25 18.25 3.92893 18.25 6V15C18.25 17.0711 16.5711 18.75 14.5 18.75H5.5C3.42893 18.75 1.75 17.0711 1.75 15V6ZM5.5 3.75C4.25736 3.75 3.25 4.75736 3.25 6V15C3.25 16.2426 4.25736 17.25 5.5 17.25H14.5C15.7426 17.25 16.75 16.2426 16.75 15V6C16.75 4.75736 15.7426 3.75 14.5 3.75H5.5Z"
+                                        fill="#1D1C16" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M10 7.5625C8.37766 7.5625 7.0625 8.87766 7.0625 10.5C7.0625 12.1223 8.37766 13.4375 10 13.4375C11.6223 13.4375 12.9375 12.1223 12.9375 10.5C12.9375 8.87766 11.6223 7.5625 10 7.5625ZM5.5625 10.5C5.5625 8.04924 7.54924 6.0625 10 6.0625C12.4508 6.0625 14.4375 8.04924 14.4375 10.5C14.4375 12.9508 12.4508 14.9375 10 14.9375C7.54924 14.9375 5.5625 12.9508 5.5625 10.5Z"
+                                        fill="#1D1C16" />
+                                    <path
+                                        d="M15.6875 5.8125C15.6875 6.36478 15.2398 6.8125 14.6875 6.8125C14.1352 6.8125 13.6875 6.36478 13.6875 5.8125C13.6875 5.26022 14.1352 4.8125 14.6875 4.8125C15.2398 4.8125 15.6875 5.26022 15.6875 5.8125Z" />
+                                </svg>
                                 Exavator
                             </a>
                         </div>
@@ -199,38 +208,36 @@
             <span class="title">Wedding Time
             </span>
             <div id="timer"></div>
-                <div class="main-frame">
-                    <div class="info-akad">
-                            <span class="title">Akad Nikah</span>
-                            <span class="paragraph">
-                                Sabtu, 20 Januari 2024 | 08:00 WIB
-                            </span>
-                            <span class="paragraph">
-                                Jln. Dr. Samratulangi, Gg. Bungsu 6 Penengahan, Kota Bandar Lampung
-                            </span>
-                    </div>
-                    <img class="layer-2-icon" loading="lazy" alt=""
-                        src="{{ asset('./assets/layer-2.svg') }}" />
-                    <div class="info-resepsi">
-                        <span class="title">Resepsi</span>
-                            <span class="paragraph">
-                                Sabtu, 20 Januari 2024 | 10:00 WIB
-                            </span>
-                            <span class="paragraph">
-                                Jln. Dr. Samratulangi, Gg. Bungsu 6 Penengahan, Kota Bandar Lampung
-                            </span>
-                    </div>
-                    <a target="_blank" class="Primary-button" href="https://www.google.com/maps" target="_blank">
-                            Lihat Lokasi
-                            <!-- <a class="lihat-lokasi2" href="https://www.google.com/maps" target="_blank">Lihat
-                                Lokasi</a> -->
-                            <!-- <img class="add-icon29" alt="" src="{{ asset('./assets/add.svg') }}" /> -->
-</a>
-                    <img class="flower-right" alt=""
-                        src="{{ asset('./assets/Flower-right.png') }}" />
-                    <img class="flower-left" alt=""
-                        src="{{ asset('./assets/Flower-left.png') }}" />
+            <div class="main-frame">
+                <div class="info-akad">
+                    <span class="title">Akad Nikah</span>
+                    <span class="paragraph">
+                        Sabtu, 20 Januari 2024 | 08:00 WIB
+                    </span>
+                    <span class="paragraph">
+                        Jln. Dr. Samratulangi, Gg. Bungsu 6 Penengahan, Kota Bandar Lampung
+                    </span>
                 </div>
+                <img class="layer-2-icon" loading="lazy" alt=""
+                    src="{{ asset('./assets/layer-2.svg') }}" />
+                <div class="info-resepsi">
+                    <span class="title">Resepsi</span>
+                    <span class="paragraph">
+                        Sabtu, 20 Januari 2024 | 10:00 WIB
+                    </span>
+                    <span class="paragraph">
+                        Jln. Dr. Samratulangi, Gg. Bungsu 6 Penengahan, Kota Bandar Lampung
+                    </span>
+                </div>
+                <a target="_blank" class="Primary-button" href="https://www.google.com/maps" target="_blank">
+                    Lihat Lokasi
+                    <!-- <a class="lihat-lokasi2" href="https://www.google.com/maps" target="_blank">Lihat
+                                Lokasi</a> -->
+                    <!-- <img class="add-icon29" alt="" src="{{ asset('./assets/add.svg') }}" /> -->
+                </a>
+                <img class="flower-right" alt="" src="{{ asset('./assets/Flower-right.png') }}" />
+                <img class="flower-left" alt="" src="{{ asset('./assets/Flower-left.png') }}" />
+            </div>
         </section>
 
         <section class="gallery-foto" data-scroll-to="GalleryFoto">
@@ -264,7 +271,7 @@
                         <span class="paragraph">
                             Jika kamu tidak bisa hadir, kami bersedia untuk menerima hadiah
                             dalam bentuk :
-</span>
+                        </span>
                     </div>
                     <div class="payment-methods">
                         <button class="button48">Transfer ke no. rekening tertera</button>
@@ -286,11 +293,14 @@
                         <span class="title">BCA</span>
                         <div class="rekening-no">
                             <button class="button-link" onclick="myFunction()">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.25 6.5C4.25 5.25736 5.25736 4.25 6.5 4.25H16C17.2426 4.25 18.25 5.25736 18.25 6.5V16C18.25 17.2426 17.2426 18.25 16 18.25H6.5C5.25736 18.25 4.25 17.2426 4.25 16V6.5ZM6.5 5.75C6.08579 5.75 5.75 6.08579 5.75 6.5V16C5.75 16.4142 6.08579 16.75 6.5 16.75H16C16.4142 16.75 16.75 16.4142 16.75 16V6.5C16.75 6.08579 16.4142 5.75 16 5.75H6.5Z"/>
-                                    <path d="M5.5 1.75H10.5C10.9142 1.75 11.25 2.08579 11.25 2.5C11.25 2.91421 10.9142 3.25 10.5 3.25H5.5C4.25736 3.25 3.25 4.25736 3.25 5.5V10.5C3.25 10.9142 2.91421 11.25 2.5 11.25C2.08579 11.25 1.75 10.9142 1.75 10.5V5.5C1.75 3.42893 3.42893 1.75 5.5 1.75Z"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M4.25 6.5C4.25 5.25736 5.25736 4.25 6.5 4.25H16C17.2426 4.25 18.25 5.25736 18.25 6.5V16C18.25 17.2426 17.2426 18.25 16 18.25H6.5C5.25736 18.25 4.25 17.2426 4.25 16V6.5ZM6.5 5.75C6.08579 5.75 5.75 6.08579 5.75 6.5V16C5.75 16.4142 6.08579 16.75 6.5 16.75H16C16.4142 16.75 16.75 16.4142 16.75 16V6.5C16.75 6.08579 16.4142 5.75 16 5.75H6.5Z" />
+                                    <path
+                                        d="M5.5 1.75H10.5C10.9142 1.75 11.25 2.08579 11.25 2.5C11.25 2.91421 10.9142 3.25 10.5 3.25H5.5C4.25736 3.25 3.25 4.25736 3.25 5.5V10.5C3.25 10.9142 2.91421 11.25 2.5 11.25C2.08579 11.25 1.75 10.9142 1.75 10.5V5.5C1.75 3.42893 3.42893 1.75 5.5 1.75Z" />
                                 </svg>
-                             </button>
+                            </button>
                             <input type="text" disabled="disabled" value="1223242442" id="myInput">
                         </div>
                         <!-- <div class="body16">
@@ -305,11 +315,14 @@
                         <span class="title">Mandiri</span>
                         <div class="rekening-no">
                             <button class="button-link" onclick="myFunction()">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.25 6.5C4.25 5.25736 5.25736 4.25 6.5 4.25H16C17.2426 4.25 18.25 5.25736 18.25 6.5V16C18.25 17.2426 17.2426 18.25 16 18.25H6.5C5.25736 18.25 4.25 17.2426 4.25 16V6.5ZM6.5 5.75C6.08579 5.75 5.75 6.08579 5.75 6.5V16C5.75 16.4142 6.08579 16.75 6.5 16.75H16C16.4142 16.75 16.75 16.4142 16.75 16V6.5C16.75 6.08579 16.4142 5.75 16 5.75H6.5Z"/>
-                                    <path d="M5.5 1.75H10.5C10.9142 1.75 11.25 2.08579 11.25 2.5C11.25 2.91421 10.9142 3.25 10.5 3.25H5.5C4.25736 3.25 3.25 4.25736 3.25 5.5V10.5C3.25 10.9142 2.91421 11.25 2.5 11.25C2.08579 11.25 1.75 10.9142 1.75 10.5V5.5C1.75 3.42893 3.42893 1.75 5.5 1.75Z"/>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                    viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M4.25 6.5C4.25 5.25736 5.25736 4.25 6.5 4.25H16C17.2426 4.25 18.25 5.25736 18.25 6.5V16C18.25 17.2426 17.2426 18.25 16 18.25H6.5C5.25736 18.25 4.25 17.2426 4.25 16V6.5ZM6.5 5.75C6.08579 5.75 5.75 6.08579 5.75 6.5V16C5.75 16.4142 6.08579 16.75 6.5 16.75H16C16.4142 16.75 16.75 16.4142 16.75 16V6.5C16.75 6.08579 16.4142 5.75 16 5.75H6.5Z" />
+                                    <path
+                                        d="M5.5 1.75H10.5C10.9142 1.75 11.25 2.08579 11.25 2.5C11.25 2.91421 10.9142 3.25 10.5 3.25H5.5C4.25736 3.25 3.25 4.25736 3.25 5.5V10.5C3.25 10.9142 2.91421 11.25 2.5 11.25C2.08579 11.25 1.75 10.9142 1.75 10.5V5.5C1.75 3.42893 3.42893 1.75 5.5 1.75Z" />
                                 </svg>
-                             </button>
+                            </button>
                             <input type="text" disabled="disabled" value="1223242442" id="myInput">
                         </div>
                         <!-- <div class="body16">
@@ -687,44 +700,46 @@
             transferRekening.style.border = '1px solid #605a4c';
             transferRekening.style.color = '#605a4c';
         });
+
+
         function updateTimer() {
-  future  = Date.parse("June 11, 2024 11:30:00");
-  now     = new Date();
-  diff    = future - now;
+            future = Date.parse("June 11, 2024 11:30:00");
+            now = new Date();
+            diff = future - now;
 
-  days  = Math.floor( diff / (1000*60*60*24) );
-  hours = Math.floor( diff / (1000*60*60) );
-  mins  = Math.floor( diff / (1000*60) );
-  secs  = Math.floor( diff / 1000 );
+            days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            hours = Math.floor(diff / (1000 * 60 * 60));
+            mins = Math.floor(diff / (1000 * 60));
+            secs = Math.floor(diff / 1000);
 
-  d = days;
-  h = hours - days  * 24;
-  m = mins  - hours * 60;
-  s = secs  - mins  * 60;
+            d = days;
+            h = hours - days * 24;
+            m = mins - hours * 60;
+            s = secs - mins * 60;
 
-  document.getElementById("timer")
-    .innerHTML =
-      '<div>' + d + '<span>Hari</span></div>' +
-      '<div>' + h + '<span>Jam</span></div>' +
-      '<div>' + m + '<span>Menit</span></div>' +
-      '<div>' + s + '<span>Detik</span></div>' ;
-}
-setInterval('updateTimer()', 1000 );
+            document.getElementById("timer")
+                .innerHTML =
+                '<div>' + d + '<span>Hari</span></div>' +
+                '<div>' + h + '<span>Jam</span></div>' +
+                '<div>' + m + '<span>Menit</span></div>' +
+                '<div>' + s + '<span>Detik</span></div>';
+        }
+        setInterval('updateTimer()', 1000);
 
-function myFunction() {
-  // Get the text field
-  var copyText = document.getElementById("myInput");
+        function myFunction() {
+            // Get the text field
+            var copyText = document.getElementById("myInput");
 
-  // Select the text field
-  copyText.select();
-  copyText.setSelectionRange(0, 99999); // For mobile devices
+            // Select the text field
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); // For mobile devices
 
-   // Copy the text inside the text field
-  navigator.clipboard.writeText(copyText.value);
+            // Copy the text inside the text field
+            navigator.clipboard.writeText(copyText.value);
 
-  // Alert the copied text
-  alert("Copied the text: " + copyText.value);
-}
+            // Alert the copied text
+            alert("Copied the text: " + copyText.value);
+        }
     </script>
 </body>
 
