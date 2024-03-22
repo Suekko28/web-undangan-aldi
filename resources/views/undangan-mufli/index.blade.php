@@ -24,36 +24,12 @@
 
 <body>
     <div class="home3">
-        <section class="banner-image" data-scroll-to='BannerImage'>
-            <img class="side-view-bride-groom-embraced-icon" alt=""
-                src="{{ asset('./assets/sideviewbridegroomembracedstreet-1@2x.png') }}" />
-
-            <div class="hero-section"></div>
-            <div class="card-list12">
-                <div class="card-item">
-                    <div class="the-wedding-of2">THE WEDDING OF</div>
-                    <h1 class="alexnor-exafator1">Alexnor & Exafator</h1>
-                </div>
-                <button class="button45">
-                    <div class="mail27">
-                        <img class="vector-icon30" alt="" src="{{ asset('./assets/vector.svg') }}" />
-
-                        <div class="badge33">
-                            <div class="div51">12</div>
-                        </div>
-                    </div>
-                    <div class="detail" id="detail" style="font-size: 24px; color:white;">Lihat Detail</div>
-                    <img class="add-icon27" alt="" src="{{ asset('./assets/add.svg') }}" />
-                </button>
-            </div>
-            <div class="input-name-field">
-                <div class="input-message-field">
-                    <div class="navigation3">
-                        <div class="menu15" id="menu15">
+    <div class="navigation3">
+                        <div class="menu" id="menu15">
                             <img class="home-icon3" loading="lazy" alt=""
                                 src="{{ asset('./assets/home.svg') }}" />
                         </div>
-                        <div class="menu16" id="menu16">
+                        <div class="menu" id="menu16">
                             <div class="love3">
                                 <img class="vector-stroke-icon3" loading="lazy" alt=""
                                     src="{{ asset('./assets/vector-stroke.svg') }}" />
@@ -63,30 +39,38 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="menu17" id="menu17">
+                        <div class="menu" id="menu17">
                             <img class="calendar-icon3" loading="lazy" alt=""
                                 src="{{ asset('./assets/calendar.svg') }}" />
                         </div>
-                        <div class="menu18" id="menu18">
+                        <div class="menu" id="menu18">
                             <img class="image-icon3" loading="lazy" alt=""
                                 src="{{ asset('./assets/image.svg') }}" />
                         </div>
-                        <div class="menu19" id="menu19">
-                            <div class="chat3">
-                                <img class="vector-icon31" loading="lazy" alt=""
-                                    src="{{ asset('./assets/vector-1.svg') }}" />
-
-                                <div class="badge35">
-                                    <div class="div53">12</div>
-                                </div>
-                            </div>
+                    </div>
+        <section class="banner-image" data-scroll-to='BannerImage'>           
+            <div class="card-list12">
+                <div class="card-item">
+                    <div class="the-wedding-of2">THE WEDDING OF</div>
+                    <h1 class="alexnor-exafator1">Alexnor & Exafator</h1>
+                </div>
+                <!-- <button class="Primary-button">Lihat Detail
+                    <div class="mail27">
+                        <img class="vector-icon30" alt="" src="{{ asset('./assets/vector.svg') }}" />
+                        <div class="badge33">
+                            <div class="div51">12</div>
                         </div>
                     </div>
+                    <img class="add-icon27" alt="" src="{{ asset('./assets/add.svg') }}" />
+                </button> -->
+            </div>
+            <div class="input-name-field">
+                <div class="input-message-field">
                 </div>
 
                 <audio autoplay loop controls id="myAudio" src="{{ asset('./assets/lagu-mufli.mp3') }}"></audio>
 
-                <button class="floating-button4" id="floatingButton">
+                <button class="floating-button" id="floatingButton">
                     <div class="whatsapp-video-2024-01-30-at-1"></div>
                     <img class="play-icon" alt="" src="{{ asset('./assets/play.svg') }}" />
                     <img class="pause-1-icon" alt="" src="{{ asset('./assets/Pause.gif') }}" />
@@ -106,94 +90,104 @@
                         <div class="tanpa-mengurangi-rasa-container">
                             <p class="tanpa-mengurangi-rasa">
                                 Tanpa mengurangi rasa hormat. Kami mengundang
-                                Bapak/Ibu/Saudara/i serta kerabat
-                            </p>
-                            <p class="sekalian-untuk-menghadiri">
-                                sekalian untuk menghadiri acara pernikahan anak kami:
+                                Bapak/Ibu/Saudara/i serta kerabat sekalian untuk menghadiri acara pernikahan anak kami:
                             </p>
                         </div>
                     </div>
-                    <div class="event-title">
-                        <div class="date-info">
+                    <div class="mempelai-pria">
+                        <div class="mempelai-info">
                             <div class="day-of-week">
                                 <h1 class="alexnor">Alexnor</h1>
                                 <div class="putra-pertama-dari">
                                     Putra pertama dari bapak alex & ibu udi
                                 </div>
                             </div>
-                            <div class="button-link7">
-                                <a class="alexnor32" href="https://www.instagram.com/" target="_blank"
-                                    style="text-direction:none;"> <img class="ig-icon6" loading="lazy"
-                                        alt="" src="{{ asset('./assets/ig1.svg') }}" />
-                                    Alexnor32</a>
+                            <a target="_blank" class="button-link" href="https://www.instagram.com/" target="_blank"
+                                    style="text-direction:none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.75 6C1.75 3.92893 3.42893 2.25 5.5 2.25H14.5C16.5711 2.25 18.25 3.92893 18.25 6V15C18.25 17.0711 16.5711 18.75 14.5 18.75H5.5C3.42893 18.75 1.75 17.0711 1.75 15V6ZM5.5 3.75C4.25736 3.75 3.25 4.75736 3.25 6V15C3.25 16.2426 4.25736 17.25 5.5 17.25H14.5C15.7426 17.25 16.75 16.2426 16.75 15V6C16.75 4.75736 15.7426 3.75 14.5 3.75H5.5Z" fill="#1D1C16"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 7.5625C8.37766 7.5625 7.0625 8.87766 7.0625 10.5C7.0625 12.1223 8.37766 13.4375 10 13.4375C11.6223 13.4375 12.9375 12.1223 12.9375 10.5C12.9375 8.87766 11.6223 7.5625 10 7.5625ZM5.5625 10.5C5.5625 8.04924 7.54924 6.0625 10 6.0625C12.4508 6.0625 14.4375 8.04924 14.4375 10.5C14.4375 12.9508 12.4508 14.9375 10 14.9375C7.54924 14.9375 5.5625 12.9508 5.5625 10.5Z" fill="#1D1C16"/>
+                                <path d="M15.6875 5.8125C15.6875 6.36478 15.2398 6.8125 14.6875 6.8125C14.1352 6.8125 13.6875 6.36478 13.6875 5.8125C13.6875 5.26022 14.1352 4.8125 14.6875 4.8125C15.2398 4.8125 15.6875 5.26022 15.6875 5.8125Z"/>
+                            </svg>
+                                Alexnor32
+                            </a>
+                    </div>
+                        <div class="profile-container">
+                            <div class="profile-pict-man">
                             </div>
                         </div>
-                        <img class="location-details-icon" loading="lazy" alt=""
-                            src="{{ asset('./assets/frame-74.svg') }}" />
                     </div>
-                    <div class="event-title1">
-                        <img class="event-title-child" loading="lazy" alt=""
-                            src="{{ asset('./assets/frame-74-1.svg') }}" />
-
-                        <div class="venue-name-parent">
+                    <div class="mempelai-wanita">
+                        <div class="profile-container">
+                            <div class="profile-pict-woman">
+                            </div>
+                        </div>
+                        <div class="info-mempelai-wanita">
                             <div class="venue-name">
-                                <h1 class="exafator">Exafator</h1>
+                                <h1 class="nama-wanita">Exafator</h1>
                                 <div class="putra-pertama-dari1">
                                     Putra pertama dari Bapak Ilux & Ibu Risma
                                 </div>
                             </div>
-                            <div class="button-link8">
-                                <a class="alexnor32" href="https://www.instagram.com/" target="_blank"
-                                    style="text-direction:none;"> <img class="ig-icon6" loading="lazy"
-                                        alt="" src="{{ asset('./assets/ig1.svg') }}" />
-                                    Exafator</a>
-                            </div>
+                            <a target="_blank" class="button-link" href="https://www.instagram.com/" target="_blank"
+                                    style="text-direction:none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.75 6C1.75 3.92893 3.42893 2.25 5.5 2.25H14.5C16.5711 2.25 18.25 3.92893 18.25 6V15C18.25 17.0711 16.5711 18.75 14.5 18.75H5.5C3.42893 18.75 1.75 17.0711 1.75 15V6ZM5.5 3.75C4.25736 3.75 3.25 4.75736 3.25 6V15C3.25 16.2426 4.25736 17.25 5.5 17.25H14.5C15.7426 17.25 16.75 16.2426 16.75 15V6C16.75 4.75736 15.7426 3.75 14.5 3.75H5.5Z" fill="#1D1C16"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 7.5625C8.37766 7.5625 7.0625 8.87766 7.0625 10.5C7.0625 12.1223 8.37766 13.4375 10 13.4375C11.6223 13.4375 12.9375 12.1223 12.9375 10.5C12.9375 8.87766 11.6223 7.5625 10 7.5625ZM5.5625 10.5C5.5625 8.04924 7.54924 6.0625 10 6.0625C12.4508 6.0625 14.4375 8.04924 14.4375 10.5C14.4375 12.9508 12.4508 14.9375 10 14.9375C7.54924 14.9375 5.5625 12.9508 5.5625 10.5Z" fill="#1D1C16"/>
+                                <path d="M15.6875 5.8125C15.6875 6.36478 15.2398 6.8125 14.6875 6.8125C14.1352 6.8125 13.6875 6.36478 13.6875 5.8125C13.6875 5.26022 14.1352 4.8125 14.6875 4.8125C15.2398 4.8125 15.6875 5.26022 15.6875 5.8125Z"/>
+                            </svg>
+                                Exavator
+                            </a>
                         </div>
                     </div>
                 </div>
-                <img class="kedua-mempelai-child" loading="lazy" alt=""
-                    src="{{ asset('./assets/group-59.svg') }}" />
             </div>
-            <div class="love-story1">
-                <img class="side-view-bride-groom-hiding-f-icon" alt=""
-                    src="{{ asset('./assets/sideviewbridegroomhidingfacesbouquetflowers-1-1@2x.png') }}" />
-
-                <div class="love-story2">
+            <div class="love-story">
+                <div class="content">
                     <b class="love-story3">Love Story</b>
-                    <div class="jam-date-picker">
-                        <div class="input-field">
-                            <label class="card-list13" placeholder="Perkenalan" type="text">Perkenalan</label>
-                            <div class="doa-hadiah-form">
-                                <b class="january-2013">January, 2013</b>
-                                <div class="lorem-ipsum-dolor">
+                    <div class="card-story-list">
+                        <div class="card-story">
+                            <span class="title-story">Perkenalan</span>
+                            <div class="body-card">
+                                <span class="story-date">January, 2013</span>
+                                <span class="detail-story">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                                     do eiusmod tempor incididunt ut labore et dolore magna
                                     aliqua. Ut enim ad minim veniam.
-                                </div>
+                                </span>
                             </div>
                         </div>
-                        <div class="input-field1">
-                            <label class="input-field-child" placeholder="Jadian" type="text">Jadian</label>
-
-                            <div class="january-2013-parent">
-                                <b class="january-20131">January, 2013</b>
-                                <div class="lorem-ipsum-dolor1">
+                        <div class="card-story">
+                            <span class="title-story">Jadian</span>
+                            <div class="body-card">
+                                <span class="story-date">January, 2013</span>
+                                <span class="detail-story">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                                     do eiusmod tempor incididunt ut labore et dolore magna
                                     aliqua. Ut enim ad minim veniam.
-                                </div>
+                                </span>
                             </div>
                         </div>
-                        <div class="input-field2">
-                            <label class="input-field-item" placeholder="Tunangan" type="text">Tunangan</label>
-
-                            <div class="january-2013-group">
-                                <b class="january-20132">January, 2013</b>
-                                <div class="lorem-ipsum-dolor2">
+                        <div class="card-story">
+                            <span class="title-story">Tunangan</span>
+                            <div class="body-card">
+                                <span class="story-date">January, 2013</span>
+                                <span class="detail-story">
                                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                                     do eiusmod tempor incididunt ut labore et dolore magna
                                     aliqua. Ut enim ad minim veniam.
-                                </div>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="card-story">
+                            <span class="title-story">Pernikahan</span>
+                            <div class="body-card">
+                                <span class="story-date">January, 2013</span>
+                                <span class="detail-story">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                    do eiusmod tempor incididunt ut labore et dolore magna
+                                    aliqua. Ut enim ad minim veniam.
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -201,113 +195,46 @@
             </div>
         </section>
 
-        <section class="date" data-scroll-to="date">
-            <div class="frame-wrapper10">
-                <b class="wedding-time">Wedding Time</b>
-                <div class="lihat-lokasi">
-                    <div class="layout-container">
-                        <div class="nama-pesan">
-                            <div class="yes-no-fields">04</div>
-                        </div>
-                        <div class="hari9">Hari</div>
-                    </div>
-                    <div class="layout-container1">
-                        <b class="b41">:</b>
-                    </div>
-                    <div class="layout-container2">
-                        <div class="wrapper32">
-                            <div class="div54">01</div>
-                        </div>
-                        <div class="jam6">Jam</div>
-                    </div>
-                    <div class="layout-container3">
-                        <b class="b42">:</b>
-                    </div>
-                    <div class="layout-container4">
-                        <div class="wrapper33">
-                            <div class="div55">20</div>
-                        </div>
-                        <div class="menit6">Menit</div>
-                    </div>
-                    <div class="layout-container5">
-                        <b class="b43">:</b>
-                    </div>
-                    <div class="layout-container6">
-                        <div class="wrapper34">
-                            <div class="div56">50</div>
-                        </div>
-                        <div class="detik6">Detik</div>
-                    </div>
-                </div>
+        <section class="wedding-date" data-scroll-to="date">
+            <span class="title">Wedding Time
+            </span>
+            <div id="timer"></div>
                 <div class="main-frame">
-                    <div class="galeri-foto-frame">
-                        <div class="frame-parent140">
-                            <b class="akad-nikah3">Akad Nikah</b>
-                            <div class="sabtu-20-januari">
+                    <div class="info-akad">
+                            <span class="title">Akad Nikah</span>
+                            <span class="paragraph">
                                 Sabtu, 20 Januari 2024 | 08:00 WIB
-                            </div>
-                            <div class="jln-dr-samratulangi-container">
-                                <p class="jln-dr-samratulangi">
-                                    Jln. Dr. Samratulangi, Gg. Bungsu
-                                </p>
-                                <p class="penengahan-kota-bandar">
-                                    6 Penengahan, Kota Bandar Lampung
-                                </p>
-                            </div>
-                        </div>
-                        <div class="button46">
-                            <div class="mail28">
-                                <img class="vector-icon32" alt=""
-                                    src="{{ asset('./assets/vector.svg') }}" />
-
-                                <div class="badge36">
-                                    <div class="div57">12</div>
-                                </div>
-                            </div>
-                            <a class="lihat-lokasi1">Lihat Lokasi</a>
-                            <img class="add-icon28" alt="" src="{{ asset('./assets/add.svg') }}" />
-                        </div>
+                            </span>
+                            <span class="paragraph">
+                                Jln. Dr. Samratulangi, Gg. Bungsu 6 Penengahan, Kota Bandar Lampung
+                            </span>
                     </div>
                     <img class="layer-2-icon" loading="lazy" alt=""
                         src="{{ asset('./assets/layer-2.svg') }}" />
-
-                    <div class="galeri-foto-frame1">
-                        <div class="resepsi-parent1">
-                            <b class="resepsi6">Resepsi</b>
-                            <div class="sabtu-20-januari1">
+                    <div class="info-resepsi">
+                        <span class="title">Resepsi</span>
+                            <span class="paragraph">
                                 Sabtu, 20 Januari 2024 | 10:00 WIB
-                            </div>
-                            <div class="jln-dr-samratulangi-container1">
-                                <p class="jln-dr-samratulangi1">
-                                    Jln. Dr. Samratulangi, Gg. Bungsu
-                                </p>
-                                <p class="penengahan-kota-bandar1">
-                                    6 Penengahan, Kota Bandar Lampung
-                                </p>
-                            </div>
-                        </div>
-                        <button class="button47">
-                            <div class="mail29">
-                                <img class="vector-icon33" alt=""
-                                    src="{{ asset('./assets/vector.svg') }}" />
-
-                                <div class="badge37">
-                                    <div class="div58">12</div>
-                                </div>
-                            </div>
-                            <a class="lihat-lokasi2" href="https://www.google.com/maps" target="_blank">Lihat
-                                Lokasi</a>
-                            <img class="add-icon29" alt="" src="{{ asset('./assets/add.svg') }}" />
-                        </button>
+                            </span>
+                            <span class="paragraph">
+                                Jln. Dr. Samratulangi, Gg. Bungsu 6 Penengahan, Kota Bandar Lampung
+                            </span>
                     </div>
-                    <img class="main-frame-child" alt=""
-                        src="{{ asset('./assets/wedding-time-flower.png') }}" />
+                    <a target="_blank" class="Primary-button" href="https://www.google.com/maps" target="_blank">
+                            Lihat Lokasi
+                            <!-- <a class="lihat-lokasi2" href="https://www.google.com/maps" target="_blank">Lihat
+                                Lokasi</a> -->
+                            <!-- <img class="add-icon29" alt="" src="{{ asset('./assets/add.svg') }}" /> -->
+</a>
+                    <img class="flower-right" alt=""
+                        src="{{ asset('./assets/Flower-right.png') }}" />
+                    <img class="flower-left" alt=""
+                        src="{{ asset('./assets/Flower-left.png') }}" />
                 </div>
-            </div>
         </section>
 
         <section class="gallery-foto" data-scroll-to="GalleryFoto">
-            <b class="galeri-foto">Galeri Foto</b>
+            <span class="title">Galeri Foto</span>
             <div class="noapplicabledataforthesenodes">
                 <img class="noapplicabledataforthesenodes-icon" loading="lazy" alt=""
                     src="{{ asset('./assets/frame-14@2x.png') }}" />
@@ -333,52 +260,65 @@
             <div class="kirim-hadiah15">
                 <div class="question7">
                     <div class="noapplicabledataforthesenodes1">
-                        <b class="kirim-hadiah16">Kirim Hadiah</b>
-                        <div class="jika-kamu-tidak6">
+                        <span class="title">Kirim Hadiah</span>
+                        <span class="paragraph">
                             Jika kamu tidak bisa hadir, kami bersedia untuk menerima hadiah
                             dalam bentuk :
-                        </div>
+</span>
                     </div>
                     <div class="payment-methods">
-                        <button class="button48" placeholder="Transfer ke no. rekening tertera"
-                            type="text">Transfer ke no. rekening tertera</button>
+                        <button class="button48">Transfer ke no. rekening tertera</button>
                         <div class="button49">
                             <div class="mail30">
-                                <img class="vector-icon34" alt=""
-                                    src="{{ asset('./assets/vector.svg') }}" />
-
                                 <div class="badge38">
                                     <div class="div59">12</div>
                                 </div>
                             </div>
-                            <button class="kirim-kado-ke6" placeholder="Kirim kado ke alamat tertera" type="text">
+                            <button class="kirim-kado-ke6">
                                 Kirim kado ke alamat tertera</button>
 
                             <img class="add-icon30" alt="" src="{{ asset('./assets/add.svg') }}" />
                         </div>
                     </div>
                 </div>
-                <div class="card-list14"></div>
                 <div class="card-list15">
-                    <div class="card30">
-                        <div class="bca6">BCA</div>
-                        <div class="body16">
+                    <div class="card">
+                        <span class="title">BCA</span>
+                        <div class="rekening-no">
+                            <button class="button-link" onclick="myFunction()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.25 6.5C4.25 5.25736 5.25736 4.25 6.5 4.25H16C17.2426 4.25 18.25 5.25736 18.25 6.5V16C18.25 17.2426 17.2426 18.25 16 18.25H6.5C5.25736 18.25 4.25 17.2426 4.25 16V6.5ZM6.5 5.75C6.08579 5.75 5.75 6.08579 5.75 6.5V16C5.75 16.4142 6.08579 16.75 6.5 16.75H16C16.4142 16.75 16.75 16.4142 16.75 16V6.5C16.75 6.08579 16.4142 5.75 16 5.75H6.5Z"/>
+                                    <path d="M5.5 1.75H10.5C10.9142 1.75 11.25 2.08579 11.25 2.5C11.25 2.91421 10.9142 3.25 10.5 3.25H5.5C4.25736 3.25 3.25 4.25736 3.25 5.5V10.5C3.25 10.9142 2.91421 11.25 2.5 11.25C2.08579 11.25 1.75 10.9142 1.75 10.5V5.5C1.75 3.42893 3.42893 1.75 5.5 1.75Z"/>
+                                </svg>
+                             </button>
+                            <input type="text" disabled="disabled" value="1223242442" id="myInput">
+                        </div>
+                        <!-- <div class="body16">
                             <b class="copyan-rudi-hermina" id="copyText">1223242442</b>
                             <img class="copy" alt="Copy" src="{{ asset('./assets/copy.svg') }}"
                                 id="copyButton" />
-                        </div>
+                        </div> -->
 
-                        <div class="an-rudi-hermina12">an Rudi Hermina</div>
+                        <span class="paragraph">an Rudi Hermina</span>
                     </div>
-                    <div class="card31">
-                        <div class="mandiri6">Mandiri</div>
-                        <div class="body17">
-                            <b class="b44" id="copyText2">1223242442</b>
-                            <img class="copy" alt="Copy" src="{{ asset('./assets/copy.svg') }}"
-                                id="copyButton2" />
+                    <div class="card">
+                        <span class="title">Mandiri</span>
+                        <div class="rekening-no">
+                            <button class="button-link" onclick="myFunction()">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M4.25 6.5C4.25 5.25736 5.25736 4.25 6.5 4.25H16C17.2426 4.25 18.25 5.25736 18.25 6.5V16C18.25 17.2426 17.2426 18.25 16 18.25H6.5C5.25736 18.25 4.25 17.2426 4.25 16V6.5ZM6.5 5.75C6.08579 5.75 5.75 6.08579 5.75 6.5V16C5.75 16.4142 6.08579 16.75 6.5 16.75H16C16.4142 16.75 16.75 16.4142 16.75 16V6.5C16.75 6.08579 16.4142 5.75 16 5.75H6.5Z"/>
+                                    <path d="M5.5 1.75H10.5C10.9142 1.75 11.25 2.08579 11.25 2.5C11.25 2.91421 10.9142 3.25 10.5 3.25H5.5C4.25736 3.25 3.25 4.25736 3.25 5.5V10.5C3.25 10.9142 2.91421 11.25 2.5 11.25C2.08579 11.25 1.75 10.9142 1.75 10.5V5.5C1.75 3.42893 3.42893 1.75 5.5 1.75Z"/>
+                                </svg>
+                             </button>
+                            <input type="text" disabled="disabled" value="1223242442" id="myInput">
                         </div>
+                        <!-- <div class="body16">
+                            <b class="copyan-rudi-hermina" id="copyText">1223242442</b>
+                            <img class="copy" alt="Copy" src="{{ asset('./assets/copy.svg') }}"
+                                id="copyButton" />
+                        </div> -->
 
-                        <div class="an-rudi-hermina13">an Rudi Hermina</div>
+                        <span class="paragraph">an Rudi Hermina</span>
                     </div>
                 </div>
 
@@ -732,7 +672,7 @@
         kirimAlamatButton.addEventListener('click', function() {
             // Mengubah konten elemen cardList menjadi alamat
             cardList.innerHTML =
-                '<div class="alamat-tertera">Alamat :<br> Jl. Rancamaya Utama, RT.01/RW.06, Kertamaya, Kec. Bogor Sel., Kota Bogor, Jawa Barat 16139</div>';
+                '<div class="card"><span class="title">Alamat</span><span class="paragraph">Jl. Rancamaya Utama, RT.01/RW.06, Kertamaya, Kec. Bogor Sel., Kota Bogor, Jawa Barat 16139</span></div>';
             // Mengubah warna latar belakang tombol kirimAlamatButton
             kirimAlamatButton.style.backgroundColor = '#605a4c';
             // Mengubah warna teks tombol kirimAlamatButtonText menjadi putih
@@ -747,35 +687,44 @@
             transferRekening.style.border = '1px solid #605a4c';
             transferRekening.style.color = '#605a4c';
         });
+        function updateTimer() {
+  future  = Date.parse("June 11, 2024 11:30:00");
+  now     = new Date();
+  diff    = future - now;
 
-        // Tanggal target hitungan mundur
-        var countDownDate = new Date("Mar 24, 2024 08:00:00").getTime();
+  days  = Math.floor( diff / (1000*60*60*24) );
+  hours = Math.floor( diff / (1000*60*60) );
+  mins  = Math.floor( diff / (1000*60) );
+  secs  = Math.floor( diff / 1000 );
 
-        // Memperbarui hitungan mundur setiap detik
-        var x = setInterval(function() {
+  d = days;
+  h = hours - days  * 24;
+  m = mins  - hours * 60;
+  s = secs  - mins  * 60;
 
-            // Mendapatkan tanggal dan waktu saat ini
-            var now = new Date().getTime();
+  document.getElementById("timer")
+    .innerHTML =
+      '<div>' + d + '<span>Hari</span></div>' +
+      '<div>' + h + '<span>Jam</span></div>' +
+      '<div>' + m + '<span>Menit</span></div>' +
+      '<div>' + s + '<span>Detik</span></div>' ;
+}
+setInterval('updateTimer()', 1000 );
 
-            // Hitung selisih antara tanggal target dan tanggal saat ini
-            var distance = countDownDate - now;
+function myFunction() {
+  // Get the text field
+  var copyText = document.getElementById("myInput");
 
-            // Hitung hari, jam, menit, dan detik
-            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
 
-            // Tampilkan hitungan mundur dalam elemen dengan ID "countdown"
-            document.getElementById("countdown").innerHTML = days + " hari " + hours + " jam " +
-                minutes + " menit " + seconds + " detik ";
+   // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);
 
-            // Jika hitungan mundur selesai, tampilkan pesan
-            if (distance < 0) {
-                clearInterval(x);
-                document.getElementById("countdown").innerHTML = "Waktu pernikahan telah berlalu!";
-            }
-        }, 1000);
+  // Alert the copied text
+  alert("Copied the text: " + copyText.value);
+}
     </script>
 </body>
 

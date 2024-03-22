@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
+
     <link rel="stylesheet" href="{{ asset('./home-nanang.css') }}" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant Garamond:wght@700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Marck Script:wght@400&display=swap" />
@@ -22,100 +23,43 @@
 
 <body>
     <div class="home">
-        <section class="banner2">
+    <div class="navigation">
+                        <button class="menu" id="menu">
+                            <img class="home-icon" alt="" src="{{ asset('./assets/home.svg') }}" />
+                        </button>
+                        <button class="menu" id="menu1">
+                            <div class="love">
+                                <img class="vector-stroke-icon" alt=""
+                                    src="{{ asset('./assets/vector-stroke.svg') }}" />
+
+                                <div class="badge6">
+                                    <div class="div15">12</div>
+                                </div>
+                            </div>
+                        </button>
+                        <button class="menu" id="menu2">
+                            <img class="image-icon" alt="" src="{{ asset('./assets/image.svg') }}" />
+                        </button>
+                        <button class="menu" id="menu3">
+                            <img class="calendar-icon" alt="" src="{{ asset('./assets/calendar.svg') }}" />
+                        </button>
+                    </div>
+        <section class="banner">
             {{-- <img class="young-japanese-couple-1-icon1" alt=""
                 src="{{ asset('./assets/BannerImage.jpg') }}" data-scroll-to="youngJapaneseCouple1Image" /> --}}
 
-            <div class="card4">
-                <div class="question2">
-                    <div class="pertemuan-yang-kuimpikan-kini-container">
-                        <p class="pertemuan-yang-kuimpikan">
-                            “Pertemuan yang kuimpikan Kini jadi kenyataan Pertemuan yang kudambakan Ternyata bukan
-                            khayalan”
-                        </p>
+                <div class="card4">
+                    <div class="quotes">
+                        <span class="title">“Pertemuan yang kuimpikan Kini jadi kenyataan Pertemuan yang kudambakan Ternyata bukan khayalan”</span>
+                        <span class="paragraph">Rhoma Irama</span>
                     </div>
-                    <b class="rhoma-irama">Rhoma Irama</b>
-                </div>
-                <div class="row-input">
-                    <div class="input">
-                        <div class="input1">
-                            <div class="text-wrapper">
-                                <div class="text">04</div>
-                            </div>
-                            <div class="hari2">Hari</div>
-                        </div>
-                        <div class="input2">
-                            <b class="b17">:</b>
-                        </div>
-                        <div class="input3">
-                            <div class="wrapper8">
-                                <div class="div11">01</div>
-                            </div>
-                            <div class="jam2">Jam</div>
-                        </div>
-                        <div class="input4">
-                            <b class="b18">:</b>
-                        </div>
-                        <div class="input5">
-                            <div class="wrapper9">
-                                <div class="div12">20</div>
-                            </div>
-                            <div class="menit2">Menit</div>
-                        </div>
-                        <div class="input6">
-                            <b class="b19">:</b>
-                        </div>
-                        <div class="input7">
-                            <div class="wrapper10">
-                                <div class="div13">50</div>
-                            </div>
-                            <div class="detik2">Detik</div>
-                        </div>
+                    <div class="wedding-timer">
+                    <div id="timer"></div>
+                    <div class="wedding-date-info">
+                        <span class="paragraph">Kamis, 21 Oktober 2024</span>
                     </div>
-                    <div class="button17">
-                        <div class="mail5">
-                            <img class="vector-icon5" alt="" src="{{ asset('./assets/vector.svg') }}" />
-
-                            <div class="badge5">
-                                <div class="div14">12</div>
-                            </div>
-                        </div>
-                        <b class="kamis-21-oktober">Kamis, 21 Oktober 2024</b>
-                        <img class="add-icon5" alt="" src="{{ asset('./assets/add.svg') }}" />
                     </div>
                 </div>
-                <div class="navigation">
-                    <button class="menu" id="menu">
-                        <img class="home-icon" alt="" src="{{ asset('./assets/home.svg') }}" />
-                    </button>
-                    <button class="menu1" id="menu1">
-                        <div class="love">
-                            <img class="vector-stroke-icon" alt=""
-                                src="{{ asset('./assets/vector-stroke.svg') }}" />
-
-                            <div class="badge6">
-                                <div class="div15">12</div>
-                            </div>
-                        </div>
-                    </button>
-                    <button class="menu2" id="menu2">
-                        <img class="image-icon" alt="" src="{{ asset('./assets/image.svg') }}" />
-                    </button>
-                    <button class="menu3" id="menu3">
-                        <img class="calendar-icon" alt="" src="{{ asset('./assets/calendar.svg') }}" />
-                    </button>
-                    <div class="menu4" id="menuContainer">
-                        <div class="chat">
-                            <img class="vector-icon6" loading="eager" alt=""
-                                src="{{ asset('./assets/vector-1.svg') }}" />
-
-                            <div class="badge7">
-                                <div class="div16">12</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             <div class="text1">
                 <audio autoplay loop controls id="myAudio" src="{{ asset('./assets/lagu-nanang.mp3') }}"></audio>
 
@@ -126,60 +70,108 @@
             </div>
         </section>
 
-        <section class="text-block-quote" data-scroll-to="textBlockQuote">
-            <div class="button-primary">
-                <img class="visual-icon" loading="eager" alt=""
-                    src="{{ asset('./assets/visual@2x.png') }}" />
-
-                <div class="question3">
-                    <div class="card-header">
-                        <div class="icon2">
-                            <b class="the-groom">THE GROOM</b>
-                            <div class="rudi-wibowo">Rudi Wibowo</div>
-                        </div>
-                        <b class="bapak-akbar-skom-container">
-                            <p class="bapak-akbar-skom">Bapak Akbar S.kom dan<br>Ibu Siti maimunah <br>dari jakarta,
-                                Indonesia
-                            </p>
-
-                        </b>
+        <section class="kedua-mempelai" data-scroll-to="textBlockQuote">
+            <div class="mempelai-pria">
+                <div class="foto-mempelai-pria"></div>
+                <div class="info-mempelai-pria">
+                    <div class="detail">
+                        <span class="label">THE GROOM</span>
+                        <span class="title">Rudi Wibowo</span>
+                        <span class="paragraph">Bapak Akbar S.kom dan Ibu Siti maimunah dari jakarta, Indonesia</span>
                     </div>
-                    <div class="button-link">
-                        <img class="ig-icon" loading="eager" alt="" src="{{ asset('./assets/ig.svg') }}" />
-
-                        <b class="rudi-wibowo1">Rudi_wibowo</b>
-                    </div>
+                    <a target="_blank" class="button-link" href="https://www.instagram.com/" target="_blank"
+                                    style="text-direction:none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.75 6C1.75 3.92893 3.42893 2.25 5.5 2.25H14.5C16.5711 2.25 18.25 3.92893 18.25 6V15C18.25 17.0711 16.5711 18.75 14.5 18.75H5.5C3.42893 18.75 1.75 17.0711 1.75 15V6ZM5.5 3.75C4.25736 3.75 3.25 4.75736 3.25 6V15C3.25 16.2426 4.25736 17.25 5.5 17.25H14.5C15.7426 17.25 16.75 16.2426 16.75 15V6C16.75 4.75736 15.7426 3.75 14.5 3.75H5.5Z" fill="#1D1C16"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 7.5625C8.37766 7.5625 7.0625 8.87766 7.0625 10.5C7.0625 12.1223 8.37766 13.4375 10 13.4375C11.6223 13.4375 12.9375 12.1223 12.9375 10.5C12.9375 8.87766 11.6223 7.5625 10 7.5625ZM5.5625 10.5C5.5625 8.04924 7.54924 6.0625 10 6.0625C12.4508 6.0625 14.4375 8.04924 14.4375 10.5C14.4375 12.9508 12.4508 14.9375 10 14.9375C7.54924 14.9375 5.5625 12.9508 5.5625 10.5Z" fill="#1D1C16"/>
+                                <path d="M15.6875 5.8125C15.6875 6.36478 15.2398 6.8125 14.6875 6.8125C14.1352 6.8125 13.6875 6.36478 13.6875 5.8125C13.6875 5.26022 14.1352 4.8125 14.6875 4.8125C15.2398 4.8125 15.6875 5.26022 15.6875 5.8125Z"/>
+                            </svg>
+                                RWibowo
+            </a>
                 </div>
             </div>
-            <div class="button-primary1">
-                <div class="card-parent">
-                    <div class="card5">
-                        <div class="foto">
-                            <b class="the-bridge">THE BRIDGE</b>
-                            <div class="arum-kurniawati">Arum Kurniawati</div>
-                        </div>
-                        <b class="bapak-akbar-skom-container1">
-                            <p class="bapak-akbar-skom">Bapak Akbar S.kom dan<br>Ibu Siti maimunah <br>dari jakarta,
-                                Indonesia
-                            </p>
-                        </b>
+            <div class="mempelai-wanita">
+                <div class="info-mempelai-wanita">
+                    <div class="detail">
+                        <span class="label">THE BRIDGE</span>
+                        <span class="title">Arum Kurniawati</span>
+                        <span class="paragraph">Bapak Akbar S.kom dan Ibu Siti maimunah dari jakarta, Indonesia</span>
                     </div>
-                    <div class="button-link1">
-                        <img class="ig-icon1" loading="eager" alt=""
-                            src="{{ asset('./assets/ig.svg') }}" />
-
-                        <b class="rudi-wibowo2">Rudi_wibowo</b>
-                    </div>
+                    <a target="_blank" class="button-link" href="https://www.instagram.com/" target="_blank"
+                                    style="text-direction:none;">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21" viewBox="0 0 20 21" fill="none">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.75 6C1.75 3.92893 3.42893 2.25 5.5 2.25H14.5C16.5711 2.25 18.25 3.92893 18.25 6V15C18.25 17.0711 16.5711 18.75 14.5 18.75H5.5C3.42893 18.75 1.75 17.0711 1.75 15V6ZM5.5 3.75C4.25736 3.75 3.25 4.75736 3.25 6V15C3.25 16.2426 4.25736 17.25 5.5 17.25H14.5C15.7426 17.25 16.75 16.2426 16.75 15V6C16.75 4.75736 15.7426 3.75 14.5 3.75H5.5Z" fill="#1D1C16"/>
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M10 7.5625C8.37766 7.5625 7.0625 8.87766 7.0625 10.5C7.0625 12.1223 8.37766 13.4375 10 13.4375C11.6223 13.4375 12.9375 12.1223 12.9375 10.5C12.9375 8.87766 11.6223 7.5625 10 7.5625ZM5.5625 10.5C5.5625 8.04924 7.54924 6.0625 10 6.0625C12.4508 6.0625 14.4375 8.04924 14.4375 10.5C14.4375 12.9508 12.4508 14.9375 10 14.9375C7.54924 14.9375 5.5625 12.9508 5.5625 10.5Z" fill="#1D1C16"/>
+                                <path d="M15.6875 5.8125C15.6875 6.36478 15.2398 6.8125 14.6875 6.8125C14.1352 6.8125 13.6875 6.36478 13.6875 5.8125C13.6875 5.26022 14.1352 4.8125 14.6875 4.8125C15.2398 4.8125 15.6875 5.26022 15.6875 5.8125Z"/>
+                            </svg>
+                                Arum46
+            </a>
                 </div>
-                <img class="visual-icon1" loading="eager" alt=""
-                    src="{{ asset('./assets/visual-1@2x.png') }}" />
+                <div class="foto-mempelai-wanita"></div>
             </div>
         </section>
 
         <section class="our-love-story-parent">
-            <div class="our-love-story">OUR LOVE STORY</div>
-            <div class="card-list-parent">
-                <div class="card-list3">
+            <span class="paragraph">OUR LOVE STORY</span>
+            <div class="timeline-container">
+            <div class="timeline">
+  <div class="container left">
+    <div class="content">
+        <!-- <div class="foto-story-1"></div> -->
+        <div class="detail-story">
+            <span class="label">JAN 01, 2019</span>
+            <span class="title">Pertama Bertemu</span>
+            <span class="paragraph">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</span>
+        </div>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+        <div class="detail-story">
+            <span class="label">JAN 01, 2019</span>
+            <span class="title">Pertama Bertemu</span>
+            <span class="paragraph">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</span>
+        </div>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+        <div class="detail-story">
+            <span class="label">JAN 01, 2019</span>
+            <span class="title">Pertama Bertemu</span>
+            <span class="paragraph">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</span>
+        </div>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+        <div class="detail-story">
+            <span class="label">JAN 01, 2019</span>
+            <span class="title">Pertama Bertemu</span>
+            <span class="paragraph">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</span>
+        </div>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+        <div class="detail-story">
+            <span class="label">JAN 01, 2019</span>
+            <span class="title">Pertama Bertemu</span>
+            <span class="paragraph">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</span>
+        </div>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+        <div class="detail-story">
+            <span class="label">JAN 01, 2019</span>
+            <span class="title">Pertama Bertemu</span>
+            <span class="paragraph">Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</span>
+        </div>
+    </div>
+  </div>
+</div>
+                <!-- <div class="card-list3">
                     <div class="card6">
                         <img class="visual-icon2" loading="eager" alt=""
                             src="{{ asset('./assets/visual-2@2x.png') }}" />
@@ -283,112 +275,69 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
             </div>
         </section>
 
 
         <section class="spacer" data-scroll-to="spacer">
-
-            <div class="our-moment-wrapper">
-                <div class="our-moment">OUR MOMENT</div>
-            </div>
+            <span class="paragraph">OUR MOMENT</span>
             <div class="rectangle-path">
-                <div class="text-block-path">
-                    <div class="frame-video">
-                        <video autoplay loop controls src="{{ asset('./assets/video.mp4') }}"></video>
-                    </div>
                     <div class="column">
-                        <div class="pertemuan-yang-kuimpikan-kini-container1">
-                            <p class="pertemuan-yang-kuimpikan1">
-                                “Pertemuan yang kuimpikan Kini jadi kenyataan Pertemuan yang kudambakan Ternyata bukan
-                                khayalan”
-                            </p>
-                        </div>
-                        <div class="fill-space">
-                            <b class="rhoma-irama1">Rhoma Irama</b>
-                        </div>
+                        <span class="title">
+                            “Pertemuan yang kuimpikan Kini jadi kenyataan Pertemuan yang kudambakan Ternyata bukan khayalan”
+                        </span>
+                        <span class="paragraph">Rhoma Irama<span>
                     </div>
+                <div class="frame-video">
+                    <video autoplay muted loop controls src="{{ asset('./assets/video.mp4') }}"></video>
                 </div>
             </div>
-            <div class="foto-container">
-                <img class="foto-icon" loading="eager" alt="" src="{{ asset('./assets/foto@2x.png') }}" />
-
-                <div class="inner-frame">
-                    <img class="foto-icon1" loading="eager" alt=""
-                        src="{{ asset('./assets/foto-1@2x.png') }}" />
-                </div>
-                <img class="foto-icon2" loading="eager" alt=""
-                    src="{{ asset('./assets/foto-2@2x.png') }}" />
-
-                <div class="inner-frame1">
-                    <img class="foto-icon3" loading="eager" alt=""
-                        src="{{ asset('./assets/foto-3@2x.png') }}" />
-                </div>
-
-
-                <img class="foto-icon4" loading="eager" alt=""
-                    src="{{ asset('./assets/foto-4@2x.png') }}" />
-
+            <div class="scroll">
+                <ul>
+                    <li> <img class="foto-ganjil" src="{{ asset('./assets/foto-1@2x.png') }}" alt=""> </li>
+                    <li> <img class="foto-genep" src="{{ asset('./assets/foto-2@2x.png') }}" alt=""> </li>
+                    <li> <img class="foto-ganjil" class="foto-ganjil" src="{{ asset('./assets/foto@2x.png') }}" alt=""> </li>
+                    <li> <img class="foto-genep" src="{{ asset('./assets/foto-3@2x.png') }}" alt=""> </li>
+                    <li> <img class="foto-ganjil" src="{{ asset('./assets/foto-4@2x.png') }}" alt=""> </li>
+                </ul>
             </div>
         </section>
 
 
-        <section class="rekening-field" data-scroll-to="rekeningField">
-            <div class="our-moment1">OUR MOMENT</div>
-            <div class="anonym-card-list">
-                <div class="b-c-a-mandiri-card">
-                    <div class="doa-input-row">
-                        <img class="foto-icon5" alt="" src="{{ asset('./assets/foto-5@2x.png') }}" />
-                        <img class="foto-icon6" loading="eager" alt=""
-                            src="{{ asset('./assets/foto-6@2x.png') }}" />
-                    </div>
-                </div>
-                <div class="input-alamat">
-                    <div class="akad2">
-                        <div class="frame-parent49">
-                            <div class="the-groom-parent">
-                                <b class="the-groom1">THE GROOM</b>
-                                <div class="akad-nikah">Akad Nikah</div>
-                            </div>
-                            <b class="jumat-28-april-container">
-                                <p class="jumat-28-april">JUMAT, 28 APRIL 2023</p>
-                                <p class="pukul-0900-wib">PUKUL 09:00 WIB - SELESAI</p>
-                            </b>
-                        </div>
-                        <b class="plataran-menteng-jalan">Plataran Menteng, Jalan HOS. Cokroaminoto, RT.6/RW.4,
-                            Gondangdia, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta,
-                            Indonesia</b>
-                    </div>
-                    <div class="frame-hari-bogor">
-                        <div class="devider5"></div>
-                        <div class="akad3">
-                            <div class="ucapan-doa2">
-                                <div class="input-u-capan-doa">
-                                    <b class="the-groom2">THE GROOM</b>
-                                    <div class="resepsi2">Resepsi</div>
-                                </div>
-                                <b class="jumat-28-april-container1">
-                                    <p class="jumat-28-april1">JUMAT, 28 APRIL 2023</p>
-                                    <p class="pukul-1500-wib">PUKUL 15:00 WIB - SELESAI</p>
-                                </b>
-                            </div>
-                            <b class="doubletree-by-hilton">DoubleTree by Hilton Jakarta - Diponegoro Jakarta Pusat</b>
-                        </div>
-                    </div>
-                    <button class="button18">
-                        <div class="mail6">
-                            <img class="vector-icon7" alt="" src="{{ asset('./assets/vector.svg') }}" />
-                            <div class="badge8">
-                                <div class="div17">12</div>
-                            </div>
-                        </div>
-                        <a class="simpan-acara-ke" style="font-weight: bold; text-decoration:none;"
-                            href="https://www.google.com/maps" target="_blank">Lihat Lokasi</a>
-                        <img class="add-icon6" alt="" src="{{ asset('./assets/add.svg') }}" />
-                    </button>
-                </div>
+        <section class="wedding-date-address" data-scroll-to="rekeningField">
+            <div class="photo-mix">
+                <div class="foto-depan"></div>
+                <div class="foto-belakang"></div>
             </div>
+                <div class="resepsi-akad">
+                    <div class="info-akad">
+                        <span class="title">Akad Nikah</span>
+                        <div class="detail-waktu">
+                            <span class="paragpraph">JUMAT, 28 APRIL 2023</span>
+                            <span class="paragraph">PUKUL 09:00 WIB - SELESAI</span>
+                        </div>
+                        <span class="paragraph">Plataran Menteng, Jalan HOS. Cokroaminoto, RT.6/RW.4,
+                            Gondangdia, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta,
+                            Indonesia
+                        </span>
+                    </div>
+                    <div class="devider5"></div>
+                    <div class="info-resepsi">
+                        <span class="title">Akad Nikah</span>
+                        <div class="detail-waktu">
+                            <span class="paragpraph">JUMAT, 28 APRIL 2023</span>
+                            <span class="paragraph">PUKUL 09:00 WIB - SELESAI</span>
+                        </div>
+                        <span class="paragraph">Plataran Menteng, Jalan HOS. Cokroaminoto, RT.6/RW.4,
+                            Gondangdia, Kota Jakarta Pusat, Daerah Khusus Ibukota Jakarta,
+                            Indonesia
+                        </span>
+                    </div>
+                    <a target="_blank" class="outline-button" href="https://www.google.com/maps">
+                        Lihat Lokasi
+            </a>
+                </div>
 
             {{-- <div class="frame-parent50">
                 <form class="frame-form">
@@ -432,32 +381,24 @@
 
 
         <section class="hadiah-area">
-            <div class="kirim-hadiah4">KIRIM HADIAH</div>
+            <span class="paragraph">KIRIM HADIAH</span>
             <div class="kirim-hadiah5">
                 <div class="question4">
                     <div class="kirim-hadiah-container">
-                        <div class="kirim-hadiah6">Kirim Hadiah</div>
-                        <b class="jika-kamu-tidak2">Jika kamu tidak bisa hadir, kami bersedia untuk menerima hadiah
-                            dalam bentuk :</b>
+                        <span class="title">Kirim Hadiah</span>
+                        <span class="paragraph">Jika kamu tidak bisa hadir, kami bersedia untuk menerima hadiah
+                            dalam bentuk :</span>
                     </div>
                     <div class="substitute-present">
                         <button class="button20">Transfer ke no. rekening tertera</button>
                         <div class="button21">
-                            <div class="mail8">
-                                <img class="vector-icon9" alt="" src="{{ asset('./assets/vector.svg') }}" />
-                                <div class="badge10">
-                                    <div class="div19">12</div>
-                                </div>
-                            </div>
                             <button class="kirim-kado-ke2">Kirim kado ke alamat tertera</button>
-                            <img class="add-icon8" alt="" src="{{ asset('./assets/add.svg') }}" />
                         </div>
                     </div>
                 </div>
-                <div class="multiple-cards"></div>
                 <div class="card-list5">
                     <div class="card12">
-                        <div class="bca2">BCA</div>
+                        <span class="title">BCA</span>
                         <div class="body5">
                             <b class="b20" id="copyText">1223242442</b>
                             <img class="copy" alt="" id="copyButton"
@@ -466,7 +407,7 @@
                         <div class="an-rudi-hermina4">an Rudi Hermina</div>
                     </div>
                     <div class="card13">
-                        <div class="mandiri2">Mandiri</div>
+                        <span class="title">Mandiri</span>
                         <div class="body6">
                             <b class="b21" id="copyText2">1223242442</b>
                             <img class="copy2" alt="" id="copyButton2"
@@ -777,7 +718,7 @@
         kirimAlamatButton.addEventListener('click', function() {
             // Mengubah konten elemen substitutePresent menjadi alamat
             substitutePresent.innerHTML =
-                '<div class="alamat">Alamat :<br>Kedung Waringin, Kecamatan Bojonggede, Kabupaten Bogor, Jawa Barat 16923</div>';
+                '<div class="alamat"><span class="title">Alamat</span><span class="paragraph">Kedung Waringin, Kecamatan Bojonggede, Kabupaten Bogor, Jawa Barat 16923</span></div>';
 
             kirimAlamatButton.style.backgroundColor = '#3b3b3b';
             kirimAlamatButton.style.color = 'white';
@@ -802,6 +743,29 @@
                 // Contoh: Mengubah warna tombol atau menampilkan pesan konfirmasi
             });
         });
+        function updateTimer() {
+  future  = Date.parse("June 11, 2024 11:30:00");
+  now     = new Date();
+  diff    = future - now;
+
+  days  = Math.floor( diff / (1000*60*60*24) );
+  hours = Math.floor( diff / (1000*60*60) );
+  mins  = Math.floor( diff / (1000*60) );
+  secs  = Math.floor( diff / 1000 );
+
+  d = days;
+  h = hours - days  * 24;
+  m = mins  - hours * 60;
+  s = secs  - mins  * 60;
+
+  document.getElementById("timer")
+    .innerHTML =
+      '<div>' + d + '<span>Hari</span></div>' +
+      '<div>' + h + '<span>Jam</span></div>' +
+      '<div>' + m + '<span>Menit</span></div>' +
+      '<div>' + s + '<span>Detik</span></div>' ;
+}
+setInterval('updateTimer()', 1000 );
     </script>
 </body>
 
