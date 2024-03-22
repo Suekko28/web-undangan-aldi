@@ -48,8 +48,8 @@ Route::get('/undangan-alt2/index', function () {
 });
 
 
-// Route::get('/', function () {
-//     return view('index');
-// });
+Route::get('/', function () {
+    return view('index');
+});
 
 
