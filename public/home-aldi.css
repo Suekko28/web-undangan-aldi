@@ -467,18 +467,21 @@ span {
     cursor: pointer;
 }
 .navbar-mobile3 {
-    border-radius: 100px;
-    z-index: 1;
-    top: 980px;
-    background-color: #d8bd99;
-    overflow: hidden;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 12px 28px 12px 16px;
-    gap: 3px 5px;
-    max-width: 100%;
+    margin: 0 auto;
     position: fixed;
-    z-index: 999;
+    bottom: 40px;
+    left: 50%;
+    border-radius: 100px;
+    transform: translateX(-50%);
+    background-color: #d8bd99;
+    backdrop-filter: blur(6px);
+    align-items: flex-start;
+    padding: 12px 24px;
+    gap: 0 24px;
+    max-width: 100%;
+    z-index: 2;
+    font-size: 10px;
+    padding: 8px;
 }
 .rectangle {
     width: 490px;
@@ -563,16 +566,17 @@ span {
     cursor: pointer;
     border: 0;
     padding: 0;
-    height: 80px;
-    bottom: 90px;
-    left: 1750px;
-    width: 80px;
+    background-color: #fff;
+    width: 64px;
+    height: 64px;
     position: fixed;
-    border-radius: 240px;
-    box-shadow: -9px 9px 42px rgba(105, 102, 90, 0.32);
-    overflow: hidden;
+    border-radius: 120px;
+    box-shadow: -8px 8px 9.8px rgba(0, 0, 0, 0.07);
+    /* overflow: hidden; */
     flex-shrink: 0;
-    z-index: 998;
+    z-index: 1;
+    bottom: 120px;
+    right: 40px;
 }
 
 .play-icon {
@@ -1855,7 +1859,6 @@ textarea {
     display: none;
 }
 
-
 .radio_group {
     display: flex;
     gap: 16px;
@@ -1868,7 +1871,6 @@ textarea {
     justify-content: center;
     border: 0.6px solid #bb8554;
     border-radius: 100px;
-
 }
 
 .radio_group input:checked + .radio_label {
@@ -1879,9 +1881,6 @@ textarea {
 .radio_group input {
     display: none;
 }
-
-
-
 
 .r-s-v-pbutton {
     width: 298px;
@@ -2500,23 +2499,8 @@ textarea {
         transform: scale(1.2);
     }
 
-    .floating-button4 {
-        left: 1380px;
-    }
+    
 
-    .navbar-mobile3 {
-        border-radius: 100px;
-        left: 600px;
-        background-color: #d8bd99;
-        overflow: hidden;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 12px 28px 12px 16px;
-        gap: 3px 5px;
-        max-width: 100%;
-        position: fixed;
-        z-index: 999;
-    }
     .button61 {
         width: 80px;
         right: 50px;
@@ -2620,23 +2604,9 @@ textarea {
         transform: scale(1.2);
     }
 
-    .floating-button4 {
-        left: 1100px;
-    }
+   
 
-    .navbar-mobile3 {
-        border-radius: 100px;
-        left: 480px;
-        background-color: #d8bd99;
-        overflow: hidden;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 12px 28px 12px 16px;
-        gap: 3px 5px;
-        max-width: 100%;
-        position: fixed;
-        z-index: 999;
-    }
+   
     .button61 {
         width: 80px;
         right: 80px;
@@ -2743,23 +2713,7 @@ textarea {
         transform: scale(1.2);
     }
 
-    .floating-button4 {
-        left: 850px;
-    }
-
-    .navbar-mobile3 {
-        border-radius: 100px;
-        left: 340px;
-        background-color: #d8bd99;
-        overflow: hidden;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 12px 28px 12px 16px;
-        gap: 3px 5px;
-        max-width: 100%;
-        position: fixed;
-        z-index: 999;
-    }
+ 
     .button61 {
         width: 80px;
         right: 80px;
@@ -2872,14 +2826,7 @@ textarea {
         object-fit: cover;
         transform: scale(1.2);
     }
-
-    .floating-button4 {
-        left: 650px;
-    }
-
-    .navbar-mobile3 {
-        left: 230px;
-    }
+   
 
     .button61 {
         right: 50px;
@@ -3016,13 +2963,8 @@ textarea {
 }
 
 @media screen and (max-width: 640px) {
-    .floating-button4 {
-        left: 540px;
-    }
 
-    .navbar-mobile3 {
-        left: 150px;
-    }
+
 
     .jl-ir-h7,
     .jl-ir-h6 {
@@ -3117,12 +3059,7 @@ textarea {
         height: 40px;
     }
 
-    .navbar-mobile3 {
-        left: unset;
-        flex-wrap: nowrap;
-    }
 
-    
 
     .frame-inner {
         width: 240px;
@@ -3143,7 +3080,6 @@ textarea {
         gap: 6px;
     }
 
-    
     .input-text,
     .wrapper38,
     .wrapper39,
@@ -3155,15 +3091,6 @@ textarea {
 
     
 
-    .floating-button4 {
-        left: 85%;
-        height: 40px;
-        width: 40px;
-        top: 350px;
-        z-index: 999;
-    }
-
-
     .card-b-c-a {
         flex-direction: row;
     }
@@ -3174,9 +3101,6 @@ textarea {
         height: 250px;
     }
 
-  
-
-  
     .jadwal-wrapper {
         justify-content: center;
         align-self: center;
@@ -3262,11 +3186,9 @@ textarea {
         height: 150px;
     }
 
-
     .r-s-v-p-frame-title {
         align-items: flex-start;
     }
-
 
     .r-s-v-p-nope-button,
     .r-s-v-p-frame-title-child,
@@ -3286,13 +3208,11 @@ textarea {
         padding: 16px;
     }
 
- 
     .button62,
     .button63 {
         width: 100%;
         min-width: unset;
     }
-
 
     .rsvp5 {
         padding: 16px;
@@ -3310,8 +3230,6 @@ textarea {
     .radio_group {
         flex-direction: column;
     }
-
-   
 }
 
 /* @media screen and (max-width: 1525px) {
