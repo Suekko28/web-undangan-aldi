@@ -320,89 +320,57 @@
 
 
         <section class="rsvp5" data-scroll-to="rSVP">
-            <div class="rsvp-mobile3">
+            <form class="rsvp-mobile3" method="POST" action="{{url('/undangan-alt1/index')}}">
+                @csrf
                 <h1 class="rsvp6">RSVP</h1>
                 <div class="frame-parent151">
                     <div class="nama-lengkap-container">
                         <div class="nama-lengkap3">Nama Lengkap</div>
                         <div class="field34">
-                            <input class="masukkan-nama-kamu9" placeholder="Masukkan nama kamu" type="text" />
+                            <input name="nama" class="masukkan-nama-kamu9" placeholder="Masukkan nama kamu" type="text" />
                         </div>
                     </div>
                     <div class="pendekatan-perikahan-frame">
                         <div class="bersedia-hadir-di3">
                             Bersedia hadir di acara kami?
                         </div>
-                        <div class="r-s-v-pbutton">
-                            <label class="framecontainer1">
-                                <input type="radio" name="response" value="ya" class="">
-                                Ya
-                            </label>
-                            <label class="framecontainer1">
-                                <input type="radio" name="response" value="tidak" class="">
-                                Tidak
-                            </label>
+            
+                        <div class="radio_group">
+                            <input type="radio" name="kehadiran" value="1" id="radio1">
+                            <label for="radio1" class="radio_label">Ya</label>
+            
+                            <input type="radio" name="kehadiran" value="0" id="radio2">
+                            <label for="radio2" class="radio_label">Tidak</label>
                         </div>
                     </div>
                     <div class="ucapan-doa-container">
                         <div class="ucapan-doa9">Ucapan & Doa</div>
-                        <textarea class="field35" placeholder="Kirim ucapan & doa" rows="6" cols="28"></textarea>
+                        <textarea class="field35" name="ucapan" placeholder="Kirim ucapan & doa" rows="6" cols="28"></textarea>
                     </div>
                 </div>
-                <button class="cardlist">
+                <button class="cardlist" type="submit">
                     <img class="b-c-acard" alt="" src="{{ asset('./assets/frame-277.svg') }}" />
                     <div class="kirim-ucapan5">Kirim Ucapan</div>
                 </button>
-            </div>
+            </form>
+            
             <div class="ucapan-mobile">
+                @foreach ($data as $item)
                 <div class="ucapan-mobile-inner">
                     <div class="ahmad-parent">
-                        <b class="pertemuan">Ahmad</b>
+                        <b class="pertemuan">{{$item->nama}}</b>
                         <div class="devider"></div>
                         <div class="seiring-berjalannya-waktu">
-                            <p class="aku-tak-pernah">“Selamat ya !”</p>
+                            <p class="aku-tak-pernah">{{$item->ucapan}}</p>
                             <p class="aku-tak-pernah">&nbsp;</p>
                             <p class="aku-tak-pernah">&nbsp;</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="ucapan-mobile-inner">
-                    <div class="ahmad-parent">
-                        <b class="pertemuan">Ahmad</b>
-                        <div class="devider"></div>
-                        <div class="seiring-berjalannya-waktu">
-                            <p class="aku-tak-pernah">“Selamat ya !”</p>
-                            <p class="aku-tak-pernah">&nbsp;</p>
-                            <p class="aku-tak-pernah">&nbsp;</p>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
 
-                <div class="ucapan-mobile-inner">
-                    <div class="ahmad-parent">
-                        <b class="pertemuan">Ahmad</b>
-                        <div class="devider"></div>
-                        <div class="seiring-berjalannya-waktu">
-                            <p class="aku-tak-pernah">“Selamat ya !”</p>
-                            <p class="aku-tak-pernah">&nbsp;</p>
-                            <p class="aku-tak-pernah">&nbsp;</p>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="ucapan-mobile-inner">
-                    <div class="ahmad-parent">
-                        <b class="pertemuan">Ahmad</b>
-                        <div class="devider"></div>
-                        <div class="seiring-berjalannya-waktu">
-                            <p class="aku-tak-pernah">“Selamat ya !”</p>
-                            <p class="aku-tak-pernah">&nbsp;</p>
-                            <p class="aku-tak-pernah">&nbsp;</p>
-                        </div>
-                    </div>
-                </div>
+    
             </div>
         </section>
 

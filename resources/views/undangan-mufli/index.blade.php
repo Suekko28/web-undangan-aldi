@@ -337,38 +337,33 @@
 
 
             </div>
-            <div class="send-prayers">
+            <form class="send-prayers" method="POST" action="{{url('/undangan-alt2/index')}}">
+                @csrf
                 <b class="kirimkan-doa-dan">Kirimkan Doa dan Ucapan</b>
+                @include('message')
                 <div class="input-name-pesan">
                     <div class="frame-nama-pesan">
                         <div class="nama6">Nama</div>
                         <div class="field24">
-                            <input class="masukkan-nama" placeholder="Masukkan nama" type="text" />
+                            <input class="masukkan-nama" placeholder="Masukkan nama" type="text" name="nama" />
                         </div>
                     </div>
-                    <div class="frame-nama-pesan1">
-                        <div class="pesan-untuk-mempelai">Pesan Untuk Mempelai</div>
-                        <div class="field25">
-                            <input class="masukkan-pesan" placeholder="Masukkan pesan" type="text" />
-                        </div>
+                    <div class="ucapan-doa-container">
+                        <div class="ucapan-doa9">Pesan Untuk Mempelai</div>
+                        <textarea class="field35" name="ucapan" placeholder="Kirim pesan untuk mempelai" rows="6" cols="28"></textarea>
                     </div>
                     <div class="akan-hadir">
                         <div class="akan-hadir1">Akan Hadir?</div>
-                        <div class="noapplicabledataforthesenodes2">
-                            <label class="field26">
-                                <input type="radio" name="ya" id="ya" class="ya">
-                                <button class="ya3">Ya</button>
-                            </label>
-                            <div class="field26">
-                                <button class="ya3">Tidak</button>
-                            </div>
-                            <div class="field26">
-                                <div class="mungkin">Mungkin</div>
-                            </div>
+                        <div class="radio_group">
+                            <input type="radio" name="kehadiran" value="1" id="radio1">
+                            <label for="radio1" class="radio_label">Ya</label>
+
+                            <input type="radio" name="kehadiran" value="0" id="radio2">
+                            <label for="radio2" class="radio_label">Tidak</label>
                         </div>
                     </div>
                 </div>
-                <button class="button50">
+                <button class="button50" type="submit">
                     <div class="mail31">
                         <img class="vector-icon35" alt="" src="./public/vector.svg" />
 
@@ -382,34 +377,24 @@
                 <div class="gallery-title">
                     <b class="kata-mereka">Kata Mereka</b>
                     <div class="card-parent">
+                        @foreach ($data as $item)
                         <div class="card32">
-                            <b class="mufli-ahmad">Mufli Ahmad</b>
+                            <b class="mufli-ahmad">{{$item->nama}}</b>
                             <div class="selamat-ya-boy-container">
-                                <p class="selamat-ya-boy">“Selamat ya boy!”</p>
+                                <p class="selamat-ya-boy">{{$item->ucapan}}</p>
                                 <p class="blank-line19">&nbsp;</p>
                             </div>
                         </div>
-                        <div class="card33">
-                            <b class="mufli-ahmad1">Mufli Ahmad</b>
-                            <div class="selamat-ya-boy-container1">
-                                <p class="selamat-ya-boy1">“Selamat ya boy!”</p>
-                                <p class="blank-line20">&nbsp;</p>
-                            </div>
-                        </div>
-                        <div class="card34">
-                            <b class="mufli-ahmad2">Mufli Ahmad</b>
-                            <div class="selamat-ya-boy-container2">
-                                <p class="selamat-ya-boy2">“Selamat ya boy!”</p>
-                                <p class="blank-line21">&nbsp;</p>
-                            </div>
-                        </div>
+
+                        @endforeach
+                     
                     </div>
                 </div>
                 <footer class="atas-doa-container">
                     <p class="atas-doa">Atas doa & ucapan bapak/ibu/saudara/i, Kami</p>
                     <p class="mengucapkan-terima-kasih">mengucapkan terima kasih.</p>
                 </footer>
-            </div>
+            </form>
         </section>
 
     </div>

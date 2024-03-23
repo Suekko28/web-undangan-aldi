@@ -443,39 +443,37 @@
                 </div>
             </div>
         </section>
-        {{-- 
+        
         <section class="request-prayers" data-scroll-to="requestPrayers">
             <div class="our-moment2">OUR MOMENT</div>
-            <div class="frame-parent52">
+            <form class="frame-parent52" method="POST" action="{{url('/undangan-alt3/index')}}">
+                @csrf
                 <div class="frame-parent53">
                     <div class="frame-parent54">
                         <div class="the-groom-container">
                             <b class="the-groom4">THE GROOM</b>
                             <div class="ucapan-doa3">Ucapan & Doa</div>
                         </div>
+                        @include('message')
                         <div class="row-input2">
                             <div class="input10">
                                 <div class="nama1">Nama</div>
                                 <div class="field7">
-                                    <input class="masukkan-nama-kamu3" placeholder="Masukkan nama kamu"
+                                    <input name="nama" class="masukkan-nama-kamu3" placeholder="Masukkan nama kamu"
                                         type="text" />
                                 </div>
                             </div>
-                            <div class="input11">
-                                <div class="alamat">Alamat</div>
-                                <div class="field8">
-                                    <input class="masukkan-alamat" placeholder="Masukkan alamat" type="text" />
+                            <div class="input10">
+                                <div class="nama1">Alamat</div>
+                                <div class="field7">
+                                    <input name="alamat" class="masukkan-nama-kamu3" placeholder="Masukkan alamat kamu"
+                                        type="text" />
                                 </div>
                             </div>
 
-                            <div class="input12">
-                                <div class="ucapan-doa4">Ucapan & Doa</div>
-                                <div class="field9">
-                                    <div class="masukkan-ucapan-container">
-                                        <p class="masukkan-ucapan">Masukkan ucapan & doa</p>
-                                        <p class="blank-line14">&nbsp;</p>
-                                    </div>
-                                </div>
+                            <div class="ucapan-doa-container">
+                                <div class="ucapan-doa9">Ucapan & Doa</div>
+                                <textarea class="field35" name="ucapan" placeholder="Kirim ucapan & doa" rows="6" cols="28"></textarea>
                             </div>
                         </div>
                     </div>
@@ -491,43 +489,20 @@
                     </button>
                 </div>
                 <div class="button-kirim">
+                    @foreach ($data as $item)
                     <div class="frame-parent55">
                         <div class="hari-parent">
-                            <div class="hari3">Hari</div>
-                            <b class="bogor">Bogor</b>
+                            <div class="hari3">{{$item->nama}}</div>
+                            <b class="bogor">{{$item->alamat}}</b>
                         </div>
-                        <div class="selamat-yaa-luv">“Selamat yaa luv”</div>
+                        <div class="selamat-yaa-luv">{{$item->ucapan}}</div>
                     </div>
-                    <div class="frame-parent55">
-                        <div class="desta-parent">
-                            <div class="desta">Desta</div>
-                            <b class="bogor1">Bogor</b>
-                        </div>
-                        <div class="semoga-lancar-sampai">
-                            “Semoga lancar sampai hari H”
-                        </div>
-                    </div>
-                    <div class="frame-parent55">
-                        <div class="desta-parent">
-                            <div class="desta">Desta</div>
-                            <b class="bogor1">Bogor</b>
-                        </div>
-                        <div class="semoga-lancar-sampai">
-                            “Semoga lancar sampai hari H”
-                        </div>
-                    </div>
-                    <div class="frame-parent55">
-                        <div class="desta-parent">
-                            <div class="desta">Desta</div>
-                            <b class="bogor1">Bogor</b>
-                        </div>
-                        <div class="semoga-lancar-sampai">
-                            “Semoga lancar sampai hari H”
-                        </div>
-                    </div>
+                    @endforeach
+                    
+                    
                 </div>
-            </div>
-        </section> --}}
+            </form>
+        </section>
 
     </div>
 

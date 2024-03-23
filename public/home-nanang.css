@@ -2218,7 +2218,7 @@ video::-webkit-media-controls-panel {
 .nama {
     width: 239px;
     position: relative;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 150%;
     font-family: NanumMyeongjo;
     color: #fff;
@@ -2743,7 +2743,7 @@ video::-webkit-media-controls-panel {
 }
 .ucapan-doa3 {
     position: relative;
-    font-size: 32px;
+    font-size: 24px;
     line-height: 130%;
     font-family: "DM Serif Display";
     color: #fff;
@@ -2767,7 +2767,7 @@ video::-webkit-media-controls-panel {
     border: 0;
     outline: 0;
     font-family: NanumMyeongjo;
-    font-size: 24px;
+    font-size: 16px;
     background-color: transparent;
     height: 36px;
     flex: 1;
@@ -3024,6 +3024,7 @@ video::-webkit-media-controls-panel {
     align-self: stretch;
     background-color: #fff;
     display: flex;
+    font-size: 24px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
@@ -3133,6 +3134,48 @@ video::-webkit-media-controls-panel {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.field35, .frame-parent151, .ucapan-doa-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.frame-parent151, .ucapan-doa-container {
+    flex-direction: column;
+}
+
+.ucapan-doa-container {
+    align-self: stretch;
+    gap: 8px 0;
+}
+
+.ucapan-doa9 {
+    width: 149.5px;
+    position: relative;
+    line-height: 140%;
+    font-weight: 500;
+    display: inline-block;
+    overflow: hidden;
+    font-size: 24px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.field35 {
+    border: 1px solid #fff;
+    background-color: transparent;
+    height: 128px;
+    width: auto;
+    font-size: 16px;
+    outline: 0;
+    align-self: stretch;
+    border-radius: 8px;
+    flex-direction: row;
+    padding: 10px 17px 10px 15px;
+    font-family: "Cormorant Infant";
+    color: #9f9f9f;
 }
 
 /* @media only screen and (max-width: 1920px) {
@@ -4442,5 +4485,16 @@ video::-webkit-media-controls-panel {
         color: #3b3b3b;
         font-family: "DM Serif Display";
         margin-top: 48px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .frame-parent53 {
+        min-width: unset;
+    }
+
+    .button-kirim {
+        min-width: unset;
+        width: 400px;
     }
 }

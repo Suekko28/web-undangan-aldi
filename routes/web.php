@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Alt1Controller;
+use App\Http\Controllers\Alt2Controller;
+use App\Http\Controllers\Alt3Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,43 +16,45 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/', function () {
+    return view('index');
+});
+
+
+// Route::get('/undangan-alt1', function () {
+//     return view('undangan-aldi.home');
+// });
+
 Route::get('/undangan-alt1', function () {
     return view('undangan-aldi.home');
 });
 
-Route::get('/undangan-alt1/index', function () {
-    return view('undangan-aldi.index');
-});
+Route::resource('/undangan-alt1/index', Alt1Controller::class)->only(['index', 'store']);
 
-Route::get('/undangan-aldi/coba', function () {
-    return view('undangan-aldi.coba');
-});
-
-
-Route::get('/undangan-alt3', function () {
-    return view('undangan-nanang.home');
-});
-
-Route::get('/undangan-alt3/index', function () {
-    return view('undangan-nanang.index');
-});
+// Route::get('/undangan-alt1/index', function () {
+//     return view('undangan-aldi.index');
+// });
 
 
 Route::get('/undangan-alt2', function () {
     return view('undangan-mufli.home');
 });
 
-Route::get('/undangan-coba', function () {
-    return view('undangan-mufli.coba');
-});
 
-Route::get('/undangan-alt2/index', function () {
-    return view('undangan-mufli.index');
-});
+Route::resource('/undangan-alt2/index', Alt2Controller::class)->only(['index', 'store']);
 
 
-Route::get('/', function () {
-    return view('index');
+
+Route::get('/undangan-alt3', function () {
+    return view('undangan-nanang.home');
 });
+
+
+Route::resource('/undangan-alt3/index', Alt3Controller::class)->only(['index', 'store']);
+
+
+
+
+
 
 

@@ -11,13 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('alt1models', function (Blueprint $table) {
-            $table->id();
+        Schema::create('alt2models', function (Blueprint $table) {
+           $table->id();
             $table->string('nama');
             $table->text('ucapan');
             $table->integer('kehadiran');
             $table->timestamps();
-
         });
     }
 
@@ -26,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('alt1models');
+        Schema::dropIfExists('alt2models');
     }
 };

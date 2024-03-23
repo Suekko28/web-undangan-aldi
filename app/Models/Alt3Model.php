@@ -5,14 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class alt1model extends Model
+class Alt3Model extends Model
 {
     use HasFactory;
-
-
     protected $fillable = [
         'nama',
         'ucapan',
-        'kehadiran',
+        'alamat',
     ];
 }

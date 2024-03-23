@@ -55,7 +55,7 @@ span {
 .aku-tak-pernah1 {
     line-height: 150%;
     padding: 200px;
-    font-size: 20px;
+    font-size: 16px;
 }
 
 .b48 {
@@ -88,11 +88,11 @@ span {
     position: relative;
     line-height: 140%;
     z-index: 1;
-    font-size: 20px;
+    font-size: 16px;
 }
 .jamaludin-maryam5 {
     margin: 0;
-    font-size: 36px;
+    font-size: 24px;
     line-height: 150%;
     font-weight: 400;
     font-family: "Rouge Script";
@@ -624,16 +624,16 @@ audio {
 .mempelai7 {
     width: 312px;
     display: inline-block;
-    font-size: 36px;
+    font-size: 24px;
 }
 .jamaludin3 {
     align-self: stretch;
-    font-size: 36px;
+    font-size: 24px;
 }
 .anak-dari-bapak6 {
     width: 387px;
     position: relative;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 140%;
     font-family: Cormorant;
     display: inline-block;
@@ -692,12 +692,12 @@ audio {
     line-height: 150%;
     font-weight: 400;
     font-family: inherit;
-    font-size: 36px;
+    font-size: 24px;
 }
 .anak-dari-bapak7 {
     width: 387px;
     position: relative;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 140%;
     font-family: Cormorant;
     display: inline-block;
@@ -910,7 +910,7 @@ audio {
 .akad9 {
     margin: 0;
     position: relative;
-    font-size: 36px;
+    font-size: 24px;
     line-height: 150%;
     font-weight: 400;
     font-family: "Rouge Script";
@@ -965,7 +965,7 @@ audio {
 }
 .text-frame1 {
     gap: 24px;
-    font-size: 20px;
+    font-size: 16px;
     text-align: center;
 }
 .map-button-icon {
@@ -975,7 +975,7 @@ audio {
 }
 .buka-map6 {
     position: relative;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 140%;
     font-weight: 600;
     font-family: "Cormorant Infant";
@@ -1014,7 +1014,7 @@ audio {
 }
 .tambah-ke-kalender6 {
     position: relative;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 140%;
     font-weight: 600;
     font-family: "Cormorant Infant";
@@ -1138,7 +1138,7 @@ audio {
 }
 .buka-map7 {
     position: relative;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 140%;
     font-weight: 600;
     font-family: "Cormorant Infant";
@@ -1177,7 +1177,7 @@ audio {
 }
 .tambah-ke-kalender7 {
     position: relative;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 140%;
     font-weight: 600;
     font-family: "Cormorant Infant";
@@ -1299,7 +1299,7 @@ audio {
 .galeri {
     position: relative;
     line-height: 150%;
-    font-size: 36px;
+    font-size: 24px;
 }
 
 .aku-tak-pernah {
@@ -1503,7 +1503,7 @@ audio {
     font-family: inherit;
     display: inline-block;
     max-width: 100%;
-    font-size: 36px;
+    font-size: 24px;
 }
 .pertemuan3 {
     align-self: stretch;
@@ -1512,9 +1512,11 @@ audio {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    font-size: 24px;
 }
 .tidak-ada-yang3 {
     position: relative;
+    font-size: 16px;
     display: inline-block;
 }
 .r-s-v-p-name-field {
@@ -1560,6 +1562,7 @@ audio {
     align-self: stretch;
     position: relative;
     line-height: 140%;
+    font-size: 24px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -1569,6 +1572,7 @@ audio {
     position: relative;
     line-height: 140%;
     display: inline-block;
+    font-size: 16px;
 }
 .pendekatan-parent1,
 .r-s-v-p-frame-title1 {
@@ -1598,6 +1602,7 @@ audio {
 }
 .lamaran3 {
     align-self: stretch;
+    font-size: 24px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -1605,6 +1610,7 @@ audio {
 .atas-kehendak-allah3 {
     width: 776px;
     display: inline-block;
+    font-size: 16px;
 }
 .lamaran-parent1 {
     flex: 1;
@@ -1647,6 +1653,7 @@ audio {
     align-self: stretch;
     position: relative;
     line-height: 140%;
+    font-size: 24px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -1659,6 +1666,7 @@ audio {
     height: 136px;
     position: relative;
     line-height: 140%;
+    font-size: 16px;
     display: inline-block;
 }
 .pernikahan-parent1,
@@ -1715,7 +1723,7 @@ audio {
     align-self: stretch;
     position: relative;
     font-weight: normal;
-    font-size: var(--font-size-29xl);
+    font-size: 24px;
     line-height: 150%;
     font-family: var(--font-rouge-script);
 }
@@ -1727,6 +1735,7 @@ audio {
 .nama-lengkap3 {
     width: 149.5px;
     line-height: 140%;
+    font-size: 16px;
     font-weight: 500;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -1737,12 +1746,12 @@ audio {
     border: 0;
     outline: 0;
     font-family: "Cormorant Infant";
-    font-size: 24px;
+    font-size: 16px;
     background-color: transparent;
     height: 36px;
     flex: 1;
     line-height: 150%;
-    color: #dbcdbf;
+    color: black;
     text-align: left;
     min-width: 250px;
     max-width: 100%;
@@ -1837,11 +1846,43 @@ audio {
     overflow: hidden;
     justify-content: center;
 }
-.framecontainer1:target {
-    background-color: #bb8554;
-    border: 0.6px solid #000000;
-    box-sizing: border-box;
+
+textarea {
+    font-size: 16px;
 }
+
+.value {
+    display: none;
+}
+
+
+.radio_group {
+    display: flex;
+    gap: 16px;
+}
+
+.radio_group label {
+    padding: 7px 51px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.6px solid #bb8554;
+    border-radius: 100px;
+
+}
+
+.radio_group input:checked + .radio_label {
+    background: #bb8554;
+    color: white;
+}
+
+.radio_group input {
+    display: none;
+}
+
+
+
+
 .r-s-v-pbutton {
     width: 298px;
     justify-content: flex-start;
@@ -1854,6 +1895,7 @@ audio {
     align-items: flex-start;
     justify-content: flex-start;
     gap: 4px 0;
+    font-size: 16px;
 }
 .ucapan-doa9 {
     width: 149.5px;
@@ -1862,6 +1904,7 @@ audio {
     font-weight: 500;
     display: inline-block;
     overflow: hidden;
+    font-size: 16px;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
@@ -1877,6 +1920,7 @@ audio {
     background-color: transparent;
     height: 128px;
     width: auto;
+    font-size: 16px;
     outline: 0;
     align-self: stretch;
     border-radius: 8px;
@@ -1884,12 +1928,12 @@ audio {
     flex-direction: row;
     padding: 10px 16px;
     font-family: "Cormorant Infant";
-    font-size: 24px;
-    color: #dbcdbf;
+    color: black;
 }
 
 .field35::placeholder {
     color: var(--color-lightgray);
+    font-size: 16px;
 }
 .frame-parent151,
 .ucapan-doa-container {
@@ -1914,7 +1958,7 @@ audio {
 }
 .kirim-ucapan5 {
     position: relative;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 140%;
     font-weight: 600;
     font-family: "Cormorant Infant";
@@ -2010,6 +2054,7 @@ audio {
     flex-shrink: 0;
     display: flex;
     flex-direction: column;
+    font-size: 16px;
     align-items: flex-start;
     justify-content: flex-start;
     padding: 40px;
@@ -2064,10 +2109,10 @@ audio {
     align-self: stretch;
     position: relative;
     line-height: 130%;
-    font-size: 20px;
+    font-size: 24px;
 }
 .jika-kamu-tidak7 {
-    font-size: 20px;
+    font-size: 16px;
     line-height: 150%;
     font-weight: 600;
 }
@@ -2122,13 +2167,12 @@ audio {
     flex: 1;
     position: relative;
     white-space: nowrap;
-    font-size: 20px;
     line-height: 140%;
     font-weight: 600;
     font-family: "Cormorant Infant";
     display: inline-block;
     max-width: 100%;
-    font-size: 20px;
+    font-size: 16px;
     text-overflow: ellipsis;
 }
 .add-icon37 {
@@ -2196,7 +2240,7 @@ audio {
     display: none;
 }
 .kirim-kado-ke7 {
-    font-size: 20px;
+    font-size: 16px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -2302,7 +2346,7 @@ audio {
     border: 1px solid #bb8554;
     box-sizing: border-box;
     display: flex;
-    font-size: 20px;
+    font-size: 16px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
@@ -3044,11 +3088,6 @@ audio {
         min-width: unset;
     }
 
-    .ucapan-mobile {
-        margin-right: 100px;
-        width: 430px;
-    }
-
     .kami-memutuskan-untuk3 {
         width: unset;
     }
@@ -3083,13 +3122,7 @@ audio {
         flex-wrap: nowrap;
     }
 
-    .jamaludin-maryam5 {
-        font-size: 24px;
-    }
-
-    .undangan-pernikahan5 {
-        font-size: 16px;
-    }
+    
 
     .frame-inner {
         width: 240px;
@@ -3107,14 +3140,10 @@ audio {
 
     .link-button {
         justify-content: center;
-        font-size: 16px;
         gap: 6px;
     }
 
-    .days-until-we3 {
-        font-size: 16px;
-    }
-
+    
     .input-text,
     .wrapper38,
     .wrapper39,
@@ -3124,12 +3153,7 @@ audio {
         border-radius: 20px;
     }
 
-    .hari11,
-    .jam8,
-    .menit8,
-    .detik8 {
-        font-size: 16px;
-    }
+    
 
     .floating-button4 {
         left: 85%;
@@ -3139,9 +3163,6 @@ audio {
         z-index: 999;
     }
 
-    .mempelai7 {
-        font-size: 24px;
-    }
 
     .card-b-c-a {
         flex-direction: row;
@@ -3153,17 +3174,9 @@ audio {
         height: 250px;
     }
 
-    .jamaludin3,
-    .frame3,
-    .maryam3 {
-        font-size: 24px;
-    }
+  
 
-    .anak-dari-bapak6,
-    .anak-dari-bapak7 {
-        font-size: 16px;
-    }
-
+  
     .jadwal-wrapper {
         justify-content: center;
         align-self: center;
@@ -3229,7 +3242,6 @@ audio {
     }
 
     .aku-tak-pernah1 {
-        font-size: 16px;
         padding: 60px;
     }
 
@@ -3250,21 +3262,11 @@ audio {
         height: 150px;
     }
 
-    .cerita-cinta-kami3 {
-        font-size: 24px;
-    }
 
     .r-s-v-p-frame-title {
         align-items: flex-start;
     }
 
-    .pertemuan3,
-    .tidak-ada-yang3,
-    .pendekatan-parent1,
-    .lamaran-parent1,
-    .pernikahan-parent1 {
-        font-size: 16px;
-    }
 
     .r-s-v-p-nope-button,
     .r-s-v-p-frame-title-child,
@@ -3284,22 +3286,32 @@ audio {
         padding: 16px;
     }
 
-    .question8,
-    .jika-kamu-tidak7,
-    .transfer-ke-no6,
-    .kirim-kado-ke7 {
-        font-size: 20px;
-    }
-
+ 
     .button62,
     .button63 {
         width: 100%;
         min-width: unset;
     }
 
-    .card-list17 {
-        font-size: 16px;
+
+    .rsvp5 {
+        padding: 16px;
     }
+
+    .r-s-v-pbutton {
+        align-items: flex-start;
+        width: 298px;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .radio_group {
+        flex-direction: column;
+    }
+
+   
 }
 
 /* @media screen and (max-width: 1525px) {

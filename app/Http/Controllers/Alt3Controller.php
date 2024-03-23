@@ -2,21 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\alt1FormRequest;
-use App\Models\alt1model;
+use App\Http\Requests\alt3FormRequest;
+use App\Models\Alt3Model;
 use Illuminate\Http\Request;
 
-class Alt1Controller extends Controller
+class Alt3Controller extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-
-        $data = alt1model::orderBy('id', 'desc')->get();
-        return view('undangan-aldi.index', compact('data'));
-        //
+      
+        $data = Alt3Model::orderBy('id', 'desc')->get();
+        return view('undangan-nanang.index', compact('data'));
     }
 
     /**
@@ -30,13 +29,12 @@ class Alt1Controller extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(alt1FormRequest $request)
+    public function store(alt3FormRequest $request)
     {
         $data = $request->validated();
-        alt1model::create($data);
-        return redirect()->to('/undangan-alt1/index');
+        Alt3Model::create($data);
+        return redirect()->to('/undangan-alt3/index');
     }
-
 
     /**
      * Display the specified resource.
