@@ -477,7 +477,7 @@ span {
     backdrop-filter: blur(6px);
     align-items: flex-start;
     padding: 12px 24px;
-    gap: 0 24px;
+    gap: 12px;
     max-width: 100%;
     z-index: 2;
     font-size: 10px;
@@ -543,8 +543,8 @@ span {
     display: none;
 }
 .play-icon {
-    width: 80px;
-    height: 80px;
+    width: 64px;
+    height: 64px;
 }
 
 .pause-1-icon {
@@ -2642,7 +2642,6 @@ textarea {
     .anak-dari-bapak7 {
         width: 290px;
         position: relative;
-        font-size: 24px;
         line-height: 140%;
         font-family: Cormorant;
         display: inline-block;
@@ -2866,9 +2865,7 @@ textarea {
         text-align: center;
     }
 
-    .anak-dari-bapak7 {
-        width: 500px;
-    }
+    
 
     .asset-2-53 {
         top: -10px;
@@ -3054,10 +3051,10 @@ textarea {
         padding: 16px;
     }
 
-    .play-icon {
+    /* .play-icon {
         width: 40px;
         height: 40px;
-    }
+    } */
 
 
 

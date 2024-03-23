@@ -44,6 +44,9 @@
             <div class="menu" id="menu18">
                 <img class="image-icon3" loading="lazy" alt="" src="{{ asset('./assets/image.svg') }}" />
             </div>
+            <div class="menu" id="menu19">
+                <img class="image-icon3" loading="lazy" alt="" src="{{ asset('./assets/vector-1.svg') }}" />
+            </div>
         </div>
         <section class="banner-image" data-scroll-to='BannerImage'>
             <div class="card-list12">
@@ -337,7 +340,7 @@
 
 
             </div>
-            <form class="send-prayers" method="POST" action="{{url('/undangan-alt2/index')}}">
+            <form class="send-prayers" method="POST" action="{{url('/undangan-alt2/index')}}" data-scroll-to="SendPrayers">
                 @csrf
                 <b class="kirimkan-doa-dan">Kirimkan Doa dan Ucapan</b>
                 @include('message')
@@ -460,7 +463,7 @@
         var menu19 = document.getElementById("menu19");
         if (menu19) {
             menu19.addEventListener("click", function() {
-                var anchor = document.querySelector("[data-scroll-to='DoaHadiah']");
+                var anchor = document.querySelector("[data-scroll-to='SendPrayers']");
                 if (anchor) {
                     anchor.scrollIntoView({
                         block: "start",

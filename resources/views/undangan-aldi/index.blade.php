@@ -65,6 +65,11 @@
                         <img class="icon-letter3" loading="lazy" alt=""
                             src="{{ asset('./assets/icon-letter.svg') }}" />
                     </div>
+                    <div class="button60" id="buttonContainer3">
+                        <img class="icon-gift3" loading="lazy" alt=""
+                            src="{{ asset('./assets/icon-post-card.svg') }}" />
+                    </div>
+
                     <div class="button60" id="buttonContainer4">
                         <img class="icon-gift3" loading="lazy" alt=""
                             src="{{ asset('./assets/icon-gift.svg') }}" />
