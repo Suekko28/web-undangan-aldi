@@ -14,7 +14,7 @@ class Alt3Controller extends Controller
     public function index()
     {
       
-        $data = Alt3Model::orderBy('id', 'desc')->get();
+        $data = Alt3Model::orderBy('id', 'desc');
         return view('undangan-nanang.index', compact('data'));
     }
 

@@ -14,7 +14,7 @@ class Alt1Controller extends Controller
     public function index()
     {
 
-        $data = alt1model::orderBy('id', 'desc')->get();
+        $data = alt1model::orderBy('id', 'desc');
         return view('undangan-aldi.index', compact('data'));
         //
     }
