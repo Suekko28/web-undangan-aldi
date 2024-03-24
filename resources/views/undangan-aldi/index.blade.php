@@ -436,10 +436,10 @@
                         <div class="an-rudi-hermina15">an Rudi Hermina</div>
                     </div>
                     <div class="card35">
-                        <b class="mandiri7">Mandiri</b>
+                        <b class="mandiri7">BRI</b>
                         <div class="body19">
-                            <div class="div73" id="copyText2">1223242442</div>
-                            <img class="copy-icon11" id="copyButton2" loading="lazy" alt=""
+                            <div class="div73" id="copyText3">1223242442</div>
+                            <img class="copy-icon11" id="copyButton3" loading="lazy" alt=""
                                 src="{{ asset('./assets/copy2.svg') }}" />
                         </div>
                         <div class="an-rudi-hermina15">an Rudi Hermina</div>
@@ -658,6 +658,44 @@
 
             // Mendapatkan tombol yang akan mengaktifkan fungsi penyalinan
             var copyButton = document.getElementById("copyButton2");
+
+            // Menambahkan event listener ke tombol
+            copyButton.addEventListener("click", function() {
+                // Membuat sebuah elemen textarea sementara
+                var textarea = document.createElement("textarea");
+
+                // Mengatur isi teks textarea dengan teks yang ingin disalin
+                textarea.value = copyText.innerText;
+
+                // Menyembunyikan textarea di luar jendela tampilan
+                textarea.style.position = "fixed";
+                textarea.style.top = 0;
+                textarea.style.left = 0;
+                textarea.style.opacity = 0;
+
+                // Menambahkan elemen textarea ke dalam dokumen
+                document.body.appendChild(textarea);
+
+                // Memilih teks di dalam textarea
+                textarea.select();
+
+                // Menyalin teks ke dalam papan klip
+                document.execCommand("copy");
+
+                // Menghapus textarea yang sementara dibuat
+                document.body.removeChild(textarea);
+
+                // Memberi tahu pengguna bahwa teks telah disalin
+                alert("Teks telah disalin: " + copyText.innerText);
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function() {
+            // Mendapatkan elemen yang akan disalin
+            var copyText = document.getElementById("copyText3");
+
+            // Mendapatkan tombol yang akan mengaktifkan fungsi penyalinan
+            var copyButton = document.getElementById("copyButton3");
 
             // Menambahkan event listener ke tombol
             copyButton.addEventListener("click", function() {
