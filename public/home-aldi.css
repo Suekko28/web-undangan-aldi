@@ -1327,7 +1327,7 @@ audio {
     display: flex;
     position: relative;
     height: 550px;
-    background-image: url(./assets/Caption.png);
+    background-image: url("./assets/caption.png");
     background-position: right;
     background-size: cover;
 }
