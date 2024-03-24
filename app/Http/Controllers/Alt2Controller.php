@@ -13,7 +13,7 @@ class Alt2Controller extends Controller
      */
     public function index()
     {
-        $data = alt2model::orderBy('id', 'desc');
+        $data = alt2model::orderBy('id', 'desc')->get();
         return view('undangan-mufli.index', compact('data'));
         //
     }

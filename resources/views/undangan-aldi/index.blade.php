@@ -358,6 +358,7 @@
                     <div class="kirim-ucapan5">Kirim Ucapan</div>
                 </button>
             </form>
+            
             <div class="ucapan-mobile">
                 @foreach ($data as $item)
                 <div class="ucapan-mobile-inner">
@@ -370,10 +371,12 @@
                             <p class="aku-tak-pernah">&nbsp;</p>
                         </div>
                     </div>
-                </div>    
-            </div>
-            @endforeach
+                </div>
 
+                @endforeach
+
+    
+            </div>
         </section>
 
         <section class="hadiah3" data-scroll-to="hadiah">
