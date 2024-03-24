@@ -10,11 +10,11 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-  }
-  
-  /* The actual timeline (the vertical ruler) */
-  .timeline::after {
-    content: '';
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+    content: "";
     height: 100%;
     top: 0px;
     position: absolute;
@@ -25,8 +25,8 @@
     transform: translateX(
         -50%
     ); /* Menggeser posisi sejauh setengah dari lebar elemen */
-  }
-  .scroll {
+}
+.scroll {
     margin: auto;
     width: 100%;
     overflow: visible;
@@ -72,55 +72,55 @@
 }
 @keyframes scroll {
     from {
-        margin-left: 0%
+        margin-left: 0%;
     }
 
     to {
-        margin-left: -100%
+        margin-left: -100%;
     }
 }
-  /* Container around content */
-  .container {
+/* Container around content */
+.container {
     position: relative;
     background-color: inherit;
     width: 100%;
     display: flex;
     align-items: center;
-  }
-  .content .title {
-    color: #1D1C16;
+}
+.content .title {
+    color: #1d1c16;
     text-align: start;
-  }
-  
-  /* The circles on the timeline */
-  .container::after {
-    content: '';
+}
+
+/* The circles on the timeline */
+.container::after {
+    content: "";
     border-radius: 0px !important;
     position: absolute;
     width: 32px;
     height: 32px;
-    background-color: #FFC436;
-    border: 8px solid #FFFFFF;
+    background-color: #ffc436;
+    border: 8px solid #ffffff;
     /* outline: 16px solid #9E9C98; */
     /* top: 45%; */
     border-radius: 50%;
     z-index: 1;
     left: 50%;
     transform: translateX(-50%);
-  }
-  
-  /* Place the container to the left */
-  .left {
+}
+
+/* Place the container to the left */
+.left {
     justify-content: flex-start;
-  }
-  
-  /* Place the container to the right */
-  .right {
+}
+
+/* Place the container to the right */
+.right {
     justify-content: flex-end;
-  }
-  
-  /* Add arrows to the left container (pointing right) */
-  /* .left::before {
+}
+
+/* Add arrows to the left container (pointing right) */
+/* .left::before {
     content: " ";
     height: 0;
     position: absolute;
@@ -132,9 +132,9 @@
     border-width: 10px 0 10px 10px;
     border-color: transparent transparent transparent white;
   } */
-  
-  /* Add arrows to the right container (pointing left) */
-  /* .right::before {
+
+/* Add arrows to the right container (pointing left) */
+/* .right::before {
     content: " ";
     height: 0;
     position: absolute;
@@ -146,11 +146,11 @@
     border-width: 10px 10px 10px 0;
     border-color: transparent white transparent transparent;
   } */
-  
-  /* Fix the circle for containers on the right side */
-  
-  /* The actual content */
-  .content {
+
+/* Fix the circle for containers on the right side */
+
+/* The actual content */
+.content {
     padding: 24px;
     background-color: white;
     position: relative;
@@ -160,59 +160,60 @@
     flex-direction: row;
     justify-content: flex-start;
     gap: 24px;
-  }
-  .foto-story-1 {
+}
+.foto-story-1 {
     width: 298px;
     height: 298px;
     background-position: center;
     background-repeat: no-repeat;
     background-image: url("./assets/foto-story-1.jpg");
-  }
-  .detail-story {
+}
+.detail-story {
     display: flex;
     flex-direction: column;
     gap: 16px;
-  }
-  .detail-story .paragraph {
-    color: #1D1C16;
+}
+.detail-story .paragraph {
+    color: #1d1c16;
     letter-spacing: normal !important;
     text-align: start;
-  }
-  
-  /* Media queries - Responsive timeline on screens less than 600px wide */
-  @media screen and (max-width: 600px) {
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
     /* Place the timelime to the left */
     .timeline::after {
-    left: 16px;
+        left: 16px;
     }
     .content {
         width: 100% !important;
     }
-    
+
     /* Full-width containers */
     .container {
-    width: auto;
-    padding-left: 70px;
+        width: auto;
+        padding-left: 70px;
     }
-    
+
     /* Make sure that all arrows are pointing leftwards */
     .container::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+        left: 60px;
+        border: medium solid white;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
     }
-  
+
     /* Make sure all circles are at the same spot */
-    .left::after, .right::after {
-    left: 15px;
+    .left::after,
+    .right::after {
+        left: 15px;
     }
-    
+
     /* Make all right containers behave like the left ones */
     .right {
-    left: 0%;
+        left: 0%;
     }
-  }
+}
 .mempelai-wanita {
     align-self: stretch;
     flex-direction: row;
@@ -299,43 +300,44 @@
     line-height: 140%;
     font-family: "DM Serif Display";
     color: #fff;
-  }
+}
 .paragraph {
     font-size: 16px;
     font-weight: 400;
     text-align: center;
     line-height: 140%;
     font-family: NanumMyeongjo;
-  }
-#timer {  
+}
+#timer {
     display: flex;
     gap: 16px;
     margin-bottom: 32px;
-    
-    div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      background-color: #3b3b3b;
-      font-size: 24px;
+}
+
+#timer > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #3b3b3b;
+    font-size: 24px;
     font-weight: 700;
     color: #fff;
     width: 64px;
     height: 64px;
     position: relative;
-      
-      span {
-        color: #fff;
-        position: absolute;
-        bottom: -32px;
-        display: block;
-        font-size: 16px;
-        font-weight: 400;
-        font-family: NanumMyeongjo;
-      }
-    }
-  }
+}
+
+#timer > div > span {
+    color: #fff;
+    position: absolute;
+    bottom: -32px;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: NanumMyeongjo;
+}
+
 .young-japanese-couple-1-icon1 {
     height: 1285px;
     width: 2283px;
@@ -901,7 +903,7 @@ audio {
     font-size: 32px;
     color: #fff;
     font-family: "DM Serif Display";
-    background-image:url(./assets/BannerImage.jpg);
+    background-image: url(./assets/BannerImage.jpg);
     background-position: right;
     background-size: cover;
 }
@@ -1991,7 +1993,8 @@ audio {
 }
 video::-webkit-media-controls-panel {
     display: none !important;
-    opacity: 1 !important;}
+    opacity: 1 !important;
+}
 .info-resepsi {
     display: flex;
     flex-direction: column;
@@ -2436,7 +2439,7 @@ video::-webkit-media-controls-panel {
     width: 100%;
 }
 .kirim-hadiah-container .title {
-    color: #1D1C16;
+    color: #1d1c16;
 }
 .hadiah-area .kirim-hadiah-container .paragraph {
     font-size: 16px;
@@ -2468,7 +2471,6 @@ video::-webkit-media-controls-panel {
 }
 .button20:hover {
     background-color: #606060;
-
 }
 .vector-icon9 {
     position: absolute;
@@ -2624,10 +2626,10 @@ video::-webkit-media-controls-panel {
     gap: 16px;
 }
 .card12 .title {
-    color: #1D1C16;
+    color: #1d1c16;
 }
 .card13 .title {
-    color: #1D1C16;
+    color: #1d1c16;
 }
 .mandiri2 {
     width: 341px;
@@ -2688,7 +2690,7 @@ video::-webkit-media-controls-panel {
     color: #1d1c16;
     font-family: NanumMyeongjo;
     padding-left: 48px;
-    border-left: 1px solid #1D1C16;
+    border-left: 1px solid #1d1c16;
     min-height: 328px;
 }
 .hadiah-area,
@@ -2812,7 +2814,7 @@ video::-webkit-media-controls-panel {
     display: flex;
 }
 .alamat .title {
-    color: #1D1C16;
+    color: #1d1c16;
 }
 .hadiah-area .alamat .paragraph {
     font-size: 16px;
@@ -3016,7 +3018,7 @@ video::-webkit-media-controls-panel {
 .selamat-yaa-luv {
     align-self: stretch;
     position: relative;
-    font-size: 24px;
+    font-size: 16px;
     line-height: 150%;
     font-family: NanumMyeongjo;
 }
@@ -3024,7 +3026,7 @@ video::-webkit-media-controls-panel {
     align-self: stretch;
     background-color: #fff;
     display: flex;
-    font-size: 24px;
+    font-size: 16px;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
@@ -3074,15 +3076,17 @@ video::-webkit-media-controls-panel {
 }
 
 .button-kirim {
-    flex: 1;
+    border-radius: 10px;
     background-color: #3b3b3b;
-    padding: 48px;
-    gap: 24px 0;
-    font-size: 32px;
-    color: #3b3b3b;
-    font-family: "DM Serif Display";
-    overflow-y: auto; /* Menambahkan overflow-y untuk mengaktifkan gulir vertikal */
-    max-height: 700px; /* Contoh tinggi maksimum yang dapat digulir, sesuaikan sesuai kebutuhan */
+    overflow-x: hidden;
+    padding: 24px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    font-size: 24px;
+    max-height: 500px;
 }
 .button-kirim,
 .frame-parent52,
@@ -3136,13 +3140,16 @@ video::-webkit-media-controls-panel {
     object-fit: cover;
 }
 
-.field35, .frame-parent151, .ucapan-doa-container {
+.field35,
+.frame-parent151,
+.ucapan-doa-container {
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
 }
 
-.frame-parent151, .ucapan-doa-container {
+.frame-parent151,
+.ucapan-doa-container {
     flex-direction: column;
 }
 
@@ -3522,18 +3529,7 @@ video::-webkit-media-controls-panel {
         max-width: 100%;
     }
 
-    .button-kirim {
-        flex: 1;
-        background-color: #3b3b3b;
-        padding: 48px;
-        gap: 24px 0;
-        min-width: 500px;
-        min-height: 682px;
-        max-width: 100%;
-        font-size: 32px;
-        color: #3b3b3b;
-        font-family: "DM Serif Display";
-    }
+    
 
     .text-block-path {
         width: 750px;
@@ -3711,9 +3707,6 @@ video::-webkit-media-controls-panel {
         flex-direction: column;
     }
 
-    .button-kirim {
-        min-width: 800px;
-    }
 }
 
 @media screen and (max-width: 768px) {
@@ -3802,32 +3795,32 @@ video::-webkit-media-controls-panel {
         background-repeat: no-repeat;
     }
     .banner::after {
-        content: '';
+        content: "";
         display: block;
         width: 100%;
         height: 100%;
-        background:  rgba(0,0,0,.4);
+        background: rgba(0, 0, 0, 0.4);
         position: absolute;
         bottom: 0;
-        }
+    }
 
-        .question2 {
-            align-self: stretch;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            gap: 16px 0;
-            max-width: 100%;
-            text-align: center;
-        }
+    .question2 {
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px 0;
+        max-width: 100%;
+        text-align: center;
+    }
     .young-japanese-couple-1-icon1 {
         height: 100vh;
         width: 2283px;
         position: absolute;
         margin: 0 !important;
         bottom: 0;
-        left: -1200px; 
+        left: -1200px;
         object-fit: cover;
     }
 
@@ -3846,7 +3839,6 @@ video::-webkit-media-controls-panel {
     .quotes {
         text-align: center;
         align-items: center;
-
     }
     .pertemuan-yang-kuimpikan-kini-container {
         line-height: 150%;
@@ -4001,7 +3993,6 @@ video::-webkit-media-controls-panel {
         font-family: NanumMyeongjo;
     } */
 
-
     .text-block-path {
         width: 100%;
         position: relative;
@@ -4107,8 +4098,6 @@ video::-webkit-media-controls-panel {
         margin-bottom: 48px;
     }
 
-
-
     .kirim-hadiah5 {
         border: 1px solid #3b3b3b;
         flex-direction: column;
@@ -4124,7 +4113,7 @@ video::-webkit-media-controls-panel {
     .question4 {
         width: 100%;
         gap: 16px;
-        min-width: 100%
+        min-width: 100%;
     }
 
     .kirim-hadiah-container {
@@ -4174,10 +4163,10 @@ video::-webkit-media-controls-panel {
         color: #1d1c16;
         font-family: NanumMyeongjo;
         padding-top: 24px;
-        border-top: 1px solid #1D1C16;
+        border-top: 1px solid #1d1c16;
         padding-left: 0px;
-    border-left: none;
-    min-height: auto;
+        border-left: none;
+        min-height: auto;
     }
 
     .frame-parent52 {
@@ -4192,19 +4181,7 @@ video::-webkit-media-controls-panel {
         color: #b0aea9;
     }
 
-    .button-kirim {
-        flex: 1;
-        background-color: #3b3b3b;
-        padding: 48px;
-        gap: 24px 0;
-        min-width: 650px;
-        min-height: 400px;
-        max-width: 100%;
-        font-size: 32px;
-        color: #3b3b3b;
-        font-family: "DM Serif Display";
-        margin-top: 48px;
-    }
+  
 }
 
 @media screen and (max-width: 640px) {
@@ -4358,7 +4335,7 @@ video::-webkit-media-controls-panel {
         gap: 24px 0;
     }
 
-        /* .substitute-present {
+    /* .substitute-present {
             align-self: stretch;
             gap: 16px 0;
             padding: 30px;
@@ -4474,18 +4451,7 @@ video::-webkit-media-controls-panel {
         max-width: 100%;
     }
 
-    .button-kirim {
-        flex: 1;
-        background-color: #3b3b3b;
-        padding: 48px;
-        gap: 24px 0;
-        min-width: 550px;
-        min-height: 400px;
-        font-size: 32px;
-        color: #3b3b3b;
-        font-family: "DM Serif Display";
-        margin-top: 48px;
-    }
+  
 }
 
 @media screen and (max-width: 500px) {
@@ -4493,8 +4459,5 @@ video::-webkit-media-controls-panel {
         min-width: unset;
     }
 
-    .button-kirim {
-        min-width: unset;
-        width: 400px;
-    }
+  
 }
