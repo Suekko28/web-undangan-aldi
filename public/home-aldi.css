@@ -1515,7 +1515,8 @@ audio {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
-    font-size: 24px;
+    font-size: 16px;
+    font-weight: bold;
 }
 .tidak-ada-yang3 {
     position: relative;
@@ -1565,7 +1566,8 @@ audio {
     align-self: stretch;
     position: relative;
     line-height: 140%;
-    font-size: 24px;
+    font-size: 16px;
+    font-weight: bold;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -1605,7 +1607,8 @@ audio {
 }
 .lamaran3 {
     align-self: stretch;
-    font-size: 24px;
+    font-size: 16px;
+    font-weight: bold;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -1656,7 +1659,8 @@ audio {
     align-self: stretch;
     position: relative;
     line-height: 140%;
-    font-size: 24px;
+    font-size: 16px;
+    font-weight: bold;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
