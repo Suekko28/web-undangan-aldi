@@ -495,10 +495,10 @@
                     @foreach ($data as $item)
                         <div class="frame-parent55">
                             <div class="hari-parent">
-                                <div class="hari3">{{ $item->nama }}</div>
-                                <b class="bogor">{{ $item->alamat }}</b>
+                                <div class="title2">{{ $item->nama }}</div>
+                                <b class="label">{{ $item->alamat }}</b>
                             </div>
-                            <div class="selamat-yaa-luv">{{ $item->ucapan }}</div>
+                            <div class="paragraph2">{{ $item->ucapan }}</div>
                         </div>
                     @endforeach
 

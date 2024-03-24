@@ -1292,7 +1292,6 @@ audio {
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 0 0 80px;
     text-align: left;
     font-size: 24px;
     color: #bb8554;
@@ -2566,16 +2565,7 @@ textarea {
         font-family: var(--font-cormorant-infant);
     }
 
-    .ucapan-mobile {
-        overflow-x: hidden; /* Menghindari scroll horizontal */
-        overflow-y: auto; /* Mengaktifkan scroll kebawah */
-        display: flex;
-        flex-direction: column; /* Mengatur susunan card secara vertikal */
-        align-items: flex-start;
-        gap: 24px; /* Jarak antara card */
-        font-size: 24px;
-        max-height: 500px; /* Atur tinggi maksimal agar memunculkan scroll */
-    }
+    
 
     .ucapan-mobile-inner {
         width: 376px;
@@ -2594,6 +2584,8 @@ textarea {
 }
 
 @media screen and (max-width: 1280px) {
+    
+    
     .button-icon {
         height: 1176px;
         width: 2090px;
@@ -2603,9 +2595,6 @@ textarea {
         object-fit: cover;
         transform: scale(1.2);
     }
-
-   
-
    
     .button61 {
         width: 80px;
@@ -2673,16 +2662,7 @@ textarea {
         width: 550px;
         /* margin-left: 200px; */
     }
-    .ucapan-mobile {
-        overflow-x: hidden; /* Menghindari scroll horizontal */
-        overflow-y: auto; /* Mengaktifkan scroll kebawah */
-        display: flex;
-        flex-direction: column; /* Mengatur susunan card secara vertikal */
-        align-items: flex-start;
-        gap: 24px; /* Jarak antara card */
-        font-size: 24px;
-        max-height: 500px; /* Atur tinggi maksimal agar memunculkan scroll */
-    }
+    
 
     .ucapan-mobile-inner {
         width: 864px;
@@ -2697,6 +2677,34 @@ textarea {
         box-sizing: border-box;
         gap: 16px 0;
         max-width: 100%;
+    }
+
+    .banner6 {
+        padding: 64px;
+    }
+
+    .mempelai6 {
+        padding: 64px;
+    }
+
+    .jadwal9 {
+        padding: 64px;
+    }
+
+    .gallery {
+        padding: 64px;
+    }
+
+    .cerita-cinta4 {
+        padding: 64px;
+    }
+
+    .rsvp5 {
+        padding: 64px;
+    }
+
+    .hadiah3{
+        padding: 64px;
     }
 }
 
@@ -2803,15 +2811,7 @@ textarea {
     .card-list17 {
         flex-wrap: nowrap;
     }
-    .ucapan-mobile {
-        width: 620px;
-        margin-top: 24px;
-        overflow-x: auto;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 0 24px;
-        font-size: 24px;
-    }
+    
 }
 
 @media screen and (max-width: 768px) {
@@ -2935,13 +2935,7 @@ textarea {
         max-width: 500px;
     }
 
-    .ucapan-mobile {
-        overflow-x: auto;
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 0 24px;
-        font-size: 24px;
-    }
+   
 
     .ucapan-mobile-inner {
         width: 376px;
@@ -2957,6 +2951,46 @@ textarea {
         gap: 16px 0;
         max-width: 100%;
     }
+
+    .jadwal10 {
+        padding: 24px;
+    }
+
+    .ucapan-mobile {
+        margin-top: 24px;
+        flex-direction: row;
+        overflow-y: auto;
+        overflow-x: auto;
+    }
+
+    .banner6 {
+        padding: 16px;
+    }
+
+    .mempelai6 {
+        padding: 16px;
+    }
+
+    .jadwal9 {
+        padding: 16px;
+    }
+
+    .gallery {
+        padding: 16px;
+    }
+
+    .cerita-cinta4 {
+        padding: 16px;
+    }
+
+    .rsvp5 {
+        padding: 16px;
+    }
+
+    .hadiah3{
+        padding: 16px;
+    }
+
 }
 
 @media screen and (max-width: 640px) {
@@ -3226,6 +3260,12 @@ textarea {
 
     .radio_group {
         flex-direction: column;
+    }
+
+    .asset-2-63 {
+        right: -170px;
+        bottom: 103px;
+        object-fit: contain;
     }
 }
 
