@@ -20,6 +20,26 @@ Route::get('/', function () {
     return view('index');
 });
 
+Route::get('/login', function () {
+    return view('auth.login');
+});
+
+Route::get('/register', function () {
+    return view('auth.register');
+});
+
+Route::get('/dashboard', function () {
+    return view('admin.dashboard');
+});
+
+Route::get('/alt1', function () {
+    return view('admin.index-alt1');
+});
+
+Route::get('/create', function () {
+    return view('admin.create');
+});
+
 
 // Route::get('/undangan-alt1', function () {
 //     return view('undangan-aldi.home');
