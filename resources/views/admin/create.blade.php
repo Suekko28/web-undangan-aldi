@@ -57,6 +57,37 @@
                     </div>
                     
                     <div class="card-body container bg-white mt-5">
+                        <div class="mempelai text-center fw-bold fs-5">Banner Image</div>
+                        <div class="fs-6">
+                            <div class="form-group mb-3">
+                                <label for="gambar">Foto Prewedding <span class="mandatory">*</span></label>
+                                <input type="file" class="form-control" id="image" name="image" placeholder="">
+                            </div>
+                        </div>
+                        {{-- <div class="form-group mb-3">
+                            <label for="judul">Judul Artikel</label>
+                            <input type="text" class="form-control" id="judul_artikel" name="judul_artikel"
+                                placeholder="Masukkan Judul">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="Konten">Isi Artikel</label>
+                            <textarea rows="20" class="form-control" id="isi_artikel" name="isi_artikel" placeholder="Masukkan Isi Materi"></textarea>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="status">Status</label>
+                            <br>
+                            <input type="radio" id="status_publish" name="status_publish" value="publish">
+                            <label for="status_publish  ">Publish</label><br>
+                            <input type="radio" id="draft" name="status_publish" value="draft">
+                            <label for="draft">Draft</label><br>
+                        </div> --}}
+
+                        {{-- <div class="d-flex flex-row-reverse">
+                            <button type="submit" class="btn btn-primary ml-3 ms-3">Simpan</button>
+                            <a href="" class="btn btn-danger">Batal</a>
+                        </div> --}}
+                    </div>
+                    <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Mempelai</div>
                         <div class="fs-6">
                             <div class="form-group mb-3">
@@ -68,6 +99,11 @@
                                 <input type="text" class="form-control" id="header" name="header"
                                     placeholder="Masukkan Header">
                             </div>
+                            <div class="form-group mb-3">
+                                <label for="header">Instagram <span class="mandatory">*</span></label>
+                                <input type="text" class="form-control" id="header" name="header"
+                                    placeholder="Masukkan Header">
+                            </div>
 
                             <div class="form-group mb-3">
                                 <label for="gambar">Foto Mempelai Perempuan <span class="mandatory">*</span></label>
@@ -75,6 +111,11 @@
                             </div>
                             <div class="form-group mb-3">
                                 <label for="header">Nama Mempelai Perempuan <span class="mandatory">*</span></label>
+                                <input type="text" class="form-control" id="header" name="header"
+                                    placeholder="Masukkan Header">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="header">Instagram <span class="mandatory">*</span></label>
                                 <input type="text" class="form-control" id="header" name="header"
                                     placeholder="Masukkan Header">
                             </div>
@@ -104,15 +145,15 @@
                     </div>
 
                     <div class="card-body container bg-white mt-5">
-                        <div class="mempelai text-center fw-bold fs-5">Our Love Story</div>
+                        <div class="mempelai text-center fw-bold fs-5">Love Story</div>
                         <div class="fs-6">
                             <div class="form-group mb-3">
-                                <label for="tanggal_pertemuan">Tanggal Pertemuan <span class="mandatory">*</span></label>
+                                <label for="tanggal_pertemuan">Tanggal Perkenalan <span class="mandatory">*</span></label>
                                 <input type="date" class="form-control" id="tanggal_pertemuan" name="tanggal_pertemuan" placeholder="">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="pertama_bertemu">Pertama Bertemu <span class="mandatory">*</span></label>
-                                <textarea class="form-control" id="pertama_bertemu" name="pertama_bertemu" placeholder=""></textarea>
+                                <label for="pertama_bertemu">Perkenalan <span class="mandatory">*</span></label>
+                                <textarea class="form-control" rows="5" id="pertama_bertemu" name="pertama_bertemu" placeholder=""></textarea>
                             </div>     
                             <div class="form-group mb-3">
                                 <label for="tanggal_pertemuan">Tanggal Pendekatan <span class="mandatory">*</span></label>
