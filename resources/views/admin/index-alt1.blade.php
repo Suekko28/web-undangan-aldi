@@ -7,17 +7,15 @@
             @include('layouts.message')
             <!-- Responsive Table -->
             <div class="card">
-                <h5 class="card-header">Artikel</h5>
+                <h5 class="card-header">Undangan Alternative 1</h5>
                 <div class="table-responsive text-nowrap">
                     <table class="table table-bordered">
                         <thead>
                             <tr class="text-nowrap text-center">
                                 <th>No</th>
-                                <th>Gambar</th>
-                                <th>Header</th>
-                                <th>Judul Artikel</th>
-                                <th>Isi Artikel</th>
-                                <th>Status</th>
+                                <th>Foto Prewedding</th>
+                                <th>Mempelai</th>
+                                <th>Tanggal Pernikahan</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>

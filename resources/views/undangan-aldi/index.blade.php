@@ -601,7 +601,7 @@
         kirimAlamatButton.addEventListener('click', function() {
             // Mengubah konten elemen substitutePresent menjadi alamat
             substitutePresent.innerHTML =
-                '<div class="alamat">Alamat :<br>Kedung Waringin, Kecamatan Bojonggede, Kabupaten Bogor, Jawa Barat 16923</div>';
+                '<div class="alamat" style="font-size:16px;">Alamat :<br>Kedung Waringin, Kecamatan Bojonggede, Kabupaten Bogor, Jawa Barat 16923</div>';
 
             kirimAlamatButton.style.backgroundColor = '#bb8554';
             kirimAlamatButton.style.color = 'white';
