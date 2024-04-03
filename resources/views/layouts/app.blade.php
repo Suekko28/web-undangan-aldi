@@ -1,13 +1,11 @@
 <!DOCTYPE html>
-<html lang="en" class="light-style layout-menu-fixed" dir="ltr" data-theme="theme-default"
-    data-assets-path="{{ asset('assets/admin/assets/') }}" data-template="vertical-menu-template-free">
-
+<html lang="en">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-
-    <title>Admin JeWePe Mading</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">    
+    <title>Admin</title>
 
     <meta name="description" content="" />
 
@@ -37,9 +35,7 @@
 
     <!-- Page CSS -->
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Helpers -->
     <script src="{{ asset('assets/admin/assets/vendor/js/helpers.js') }}"></script>
@@ -57,45 +53,45 @@
             <!-- Menu -->
 
             <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
-                    {{-- <img src="{{ asset('./assets/asset-1-4@2x.png') }}" alt=""> --}}
+                {{-- <img src="{{ asset('./assets/asset-1-4@2x.png') }}" alt=""> --}}
 
-                <div class="menu-inner-shadow"></div>
+            <div class="menu-inner-shadow"></div>
 
-                <ul class="menu-inner py-1">
-                    <!-- Dashboard -->
-                    <li class="menu-item active">
-                        <a href="" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                            <div data-i18n="Analytics">Dashboard</div>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="javascript:void(0);" class="menu-link menu-toggle">
-                            <i class="menu-icon tf-icons bx bx-layout"></i>
-                            <div data-i18n="Layouts">Undangan</div>
-                        </a>
+            <ul class="menu-inner py-1">
+                <!-- Dashboard -->
+                <li class="menu-item active">
+                    <a href="" class="menu-link">
+                        <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                        <div data-i18n="Analytics">Dashboard</div>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <i class="menu-icon tf-icons bx bx-layout"></i>
+                        <div data-i18n="Layouts">Undangan</div>
+                    </a>
 
-                        <ul class="menu-sub">
-                            <li class="menu-item">
-                                <a href="layouts-without-menu.html" class="menu-link">
-                                    <div data-i18n="Without menu">Alternative 1</div>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="layouts-without-navbar.html" class="menu-link">
-                                    <div data-i18n="Without navbar">Alternative 2</div>
-                                </a>
-                            </li>
-                            <li class="menu-item">
-                                <a href="layouts-container.html" class="menu-link">
-                                    <div data-i18n="Container">Alternavite 3</div>
-                                </a>
-                            </li>
+                    <ul class="menu-sub">
+                        <li class="menu-item">
+                            <a href="layouts-without-menu.html" class="menu-link">
+                                <div data-i18n="Without menu">Alternative 1</div>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="layouts-without-navbar.html" class="menu-link">
+                                <div data-i18n="Without navbar">Alternative 2</div>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="layouts-container.html" class="menu-link">
+                                <div data-i18n="Container">Alternavite 3</div>
+                            </a>
+                        </li>
 
-                        </ul>
-                    </li>
-                </ul>
-            </aside>
+                    </ul>
+                </li>
+            </ul>
+        </aside>
             <!-- / Menu -->
 
             <!-- Layout container -->
@@ -114,7 +110,7 @@
                         <!-- Search -->
                         {{-- <div class="navbar-nav align-items-center">
                             <div class="nav-item d-flex align-items-center">
-                                Halaman Admin Mading JeWePe <a href=""
+                                Halaman Website Kuliner <a href="{{ route('home') }}"
                                     target="_blank"class="ms-3 btn btn-sm btn-icon btn-outline-primary">
                                     <span class= "tf-icons bx bx-link-external"></span>
                                 </a>
@@ -129,26 +125,31 @@
                             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
                                     data-bs-toggle="dropdown">
-                                    <div class="avatar avatar-online">
+                                    {{-- <div class="avatar avatar-online">
                                         <img src="../assets/admin/assets/img/avatars/1.png" alt
                                             class="w-px-40 h-auto rounded-circle" />
-                                    </div>
+                                    </div> --}}
+                                    {{ auth()->user()->name }}
+
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-end">
                                     <li>
                                         <a class="dropdown-item" href="#">
                                             <div class="d-flex">
                                                 <div class="flex-shrink-0 me-3">
-                                                    <div class="avatar avatar-online">
+                                                    {{-- <div class="avatar avatar-online">
                                                         <img src="../assets/admin/assets/img/avatars/1.png" alt
                                                             class="w-px-40 h-auto rounded-circle" />
-                                                    </div>
+                                                    </div> --}}
+
                                                 </div>
                                                 <div class="flex-grow-1">
                                                     <span class="fw-semibold d-block">
+                                                        {{ auth()->user()->name }}
 
                                                     </span>
                                                     <small class="text-muted">
+                                                        {{ auth()->user()->email }}
 
                                                     </small>
                                                 </div>
@@ -159,7 +160,7 @@
                                         <div class="dropdown-divider"></div>
                                     </li>
                                     <li>
-                                        <form action="" method="get">
+                                        <form action="{{ route('logout') }}" method="get">
                                             @csrf
                                             <!-- <a class="dropdown-item" href="#">Log out</a> -->
                                             <button type="submit" class="dropdown-item">Log out</button>
