@@ -37,7 +37,7 @@ Route::get('/alt1', function () {
 });
 
 Route::get('/create', function () {
-    return view('admin.create');
+    return view('undangan-aldi.create');
 });
 
 
