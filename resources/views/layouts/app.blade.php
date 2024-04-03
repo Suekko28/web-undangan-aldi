@@ -58,9 +58,6 @@
 
             <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
                     {{-- <img src="{{ asset('./assets/asset-1-4@2x.png') }}" alt=""> --}}
-                <div class="container p-4">
-                    <button type="submit" class="btn btn-primary h-100 w-100 p-3">+ Buat Undangan</button>
-                </div>
 
                 <div class="menu-inner-shadow"></div>
 
