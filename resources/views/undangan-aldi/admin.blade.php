@@ -3,7 +3,7 @@
 @section('navbar-admin')
     <main>
         <div class="container-xxl flex-grow-1 container-p-y">
-            <a class="btn btn-primary mb-3" href="{{ url('dashboard-article/create') }}">Tambah Data</a>
+            <a class="btn btn-primary mb-3" href="{{ url('dashboard-article/create') }}">+ Buat Undangan</a>
             @include('layouts.message')
             <!-- Responsive Table -->
             <div class="card">
@@ -16,6 +16,7 @@
                                 <th>Foto Prewedding</th>
                                 <th>Mempelai</th>
                                 <th>Tanggal Pernikahan</th>
+                                <th>Link</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>

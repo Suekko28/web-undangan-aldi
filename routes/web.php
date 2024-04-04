@@ -4,6 +4,7 @@ use App\Http\Controllers\Alt1Controller;
 use App\Http\Controllers\Alt2Controller;
 use App\Http\Controllers\Alt3Controller;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UndanganAlt1Controller;
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,11 +36,11 @@ Route::get('/dashboard', function () {
 });
 
 Route::get('/alt1', function () {
-    return view('admin.index-alt1');
+    return view('undangan-aldi.admin');
 });
 
 Route::get('/create', function () {
-    return view('undangan-nanang.create');
+    return view('undangan-aldi.create');
 });
 
 Route::get('/login', [LoginController::class, 'index'])->name('login.form');
@@ -55,6 +56,9 @@ Route::middleware(['auth'])->group(function () {
     // Route::get('/dashboard-article', [ArtikelController::class, 'index'])->name('dashboard');
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::resource('/undangan-alternative1', UndanganAlt1Controller::class);
+    Route::get('/undangan-alternative1', [UndanganAlt1Controller::class, 'index'])->name('undangan-alternative1');
+
 
 });
 
