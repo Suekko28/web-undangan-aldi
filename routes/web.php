@@ -42,10 +42,10 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/view-alternative1', [ViewAlt1Controller::class, 'index'])->name('view-alternative1');
-    Route::get('/undangan/pilih-template', [UndanganController::class, 'template'])->name('template');
-    Route::resource('/undangan', UndanganController::class);
+    // Route::get('/undangan/pilih-template', [UndanganController::class, 'template'])->name('template');
+    // Route::resource('/undangan', UndanganController::class);
     Route::resource('/undangan-alternative1', UndanganAlt1Controller::class);
-    Route::get('/undangan', [UndanganController::class, 'index'])->name('undangan');
+    Route::get('/undangan-alternative1', [UndanganAlt1Controller::class, 'index'])->name('undangan-alternative1');
 
 });
 

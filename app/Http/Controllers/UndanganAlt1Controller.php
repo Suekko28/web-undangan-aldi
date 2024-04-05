@@ -53,6 +53,16 @@ class UndanganAlt1Controller extends Controller
         $galeri_img5_path = $galeri_img5->storeAs('public/images', $galeri_img5->hashName());
         $galeri_img6_path = $galeri_img6->storeAs('public/images', $galeri_img6->hashName());
 
+        // // Memisahkan nama-nama undangan berdasarkan baris baru
+        // $namaUndanganArray = explode("\n", $request->input('nama_undangan'));
+
+        // // Membuang spasi ekstra pada setiap nama dan memfilter elemen array yang kosong
+        // $namaUndanganArray = array_filter(array_map('trim', $namaUndanganArray));
+
+        // // Simpan nama-nama undangan ke dalam database dengan satu ID
+        // $undangan = new UndanganAlt1(); // Sesuaikan dengan model Anda
+        // $undangan->nama_undangan = json_encode($namaUndanganArray);
+
         $data = $request->all();
 
         UndanganAlt1::create([

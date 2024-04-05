@@ -40,8 +40,18 @@
             <div class="container-fluid">
                 @include('layouts.message')
                 <!-- Small boxes (Stat box) -->
-                <form action="{{route('undangan')}}" method="post" enctype="multipart/form-data">
+                <form action="{{route('undangan-alternative1')}}" method="post" enctype="multipart/form-data">
                     @csrf
+
+                    <div class="card-body container bg-white mt-5">
+                        <div class="mempelai text-center fw-bold fs-5">Nama Undangan</div>
+                        <div class="fs-6">
+                            <div class="form-group mb-3">
+                                <label for="nama_undangan">Nama Undangan <span class="mandatory">*</span></label>
+                                <textarea class="form-control" rows="5" id="nama_undangan" name="nama_undangan" placeholder="Masukan nama-nama undangan"></textarea>
+                            </div>
+                        </div>
+                    </div>
                     <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Banner Image</div>
                         <div class="fs-6">
@@ -245,7 +255,7 @@
                      
                         <div class="d-flex flex-row-reverse mt-5">
                             <button type="submit" class="btn btn-primary ml-3 ms-3">Simpan</button>
-                            <a href="{{route('undangan')}}" class="btn btn-danger">Batal</a>
+                            <a href="{{route('undangan-alternative1')}}" class="btn btn-danger">Batal</a>
                         </div>
 
                     </div>
