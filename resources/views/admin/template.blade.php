@@ -15,8 +15,8 @@
                                 architecto ipsam enim odio veniam ea labore est tempora atque accusantium placeat fuga quam
                                 voluptas, fugiat soluta commodi quos?
                             </p>
-                            {{-- <a class="btn btn-outline-primary"
-                                href="{{ route('view-alternative1') }}">View List</a> --}}
+                            <a class="btn btn-outline-primary"
+                                href="{{ url('undangan-alternative1/create') }}">Gunakan Template</a>
                         </div>
                     </div>
                 </div>
@@ -30,9 +30,10 @@
                                 Necessitatibus voluptates voluptatem fuga unde iusto blanditiis velit vitae fugit esse.
                                 Temporibus odit totam dolore earum quaerat.
                             </p>
-                            {{-- <a href="javascript:void(0)" class="btn btn-outline-primary"
-                                href="{{ route('view-alternative1') }}">View List</a> --}}
-                        </div>
+                        </p>
+                        <a class="btn btn-outline-primary"
+                            href="{{ route('view-alternative1') }}">Gunakan Template</a>
+                    </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4 mb-3">
@@ -45,8 +46,10 @@
                                 corporis saepe voluptas magnam odio ut nemo quibusdam, sequi, quos tenetur architecto
                                 tempore praesentium at? Velit quasi deserunt quas?
                             </p>
-                            {{-- <a href="javascript:void(0)" class="btn btn-outline-primary">View List</a> --}}
-                        </div>
+                        </p>
+                        <a class="btn btn-outline-primary"
+                            href="{{ route('view-alternative1') }}">Gunakan Template</a>
+                    </div>
                     </div>
                 </div>
             </div>

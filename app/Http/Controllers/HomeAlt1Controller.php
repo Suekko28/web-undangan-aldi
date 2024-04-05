@@ -5,14 +5,21 @@ namespace App\Http\Controllers;
 use App\Models\UndanganAlt1;
 use Illuminate\Http\Request;
 
-class ViewAlt1Controller extends Controller
+class HomeAlt1Controller extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     */
     public function index()
     {
-        $data = UndanganAlt1::orderBy('id', 'desc')->paginate(10);
-        return view('admin.view-alt1', compact('data'));
+        $data = UndanganAlt1::orderBy('id')->get(); 
+        return view('undangan-aldi.home', compact('data'))->with('route', route('undangan-alt1-home')); 
     }
+    
 
+    /**
+     * Show the form for creating a new resource.
+     */
     public function create()
     {
         //
@@ -31,8 +38,7 @@ class ViewAlt1Controller extends Controller
      */
     public function show(string $id)
     {
-        $data = UndanganAlt1::findOrFail($id);
-        return view('undangan-aldi.home', compact('data'));
+        //
     }
 
     /**
@@ -59,5 +65,3 @@ class ViewAlt1Controller extends Controller
         //
     }
 }
-
-

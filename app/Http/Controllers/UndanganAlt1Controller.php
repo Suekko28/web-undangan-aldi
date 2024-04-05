@@ -110,7 +110,7 @@ class UndanganAlt1Controller extends Controller
         ]);
     }
 
- 
+
     public function update(UndanganAlt1FormRequest $request, string $id)
     {
         // Temukan data dengan ID yang diberikan
@@ -124,7 +124,9 @@ class UndanganAlt1Controller extends Controller
         foreach ($gambarFields as $field) {
             if ($request->hasFile($field)) {
                 // Hapus gambar yang lama
-                Storage::delete('public/images/' . $data->$field);
+                if ($data->$field) {
+                    Storage::delete($data->$field);
+                }
 
                 // Upload gambar yang baru
                 $image = $request->file($field);
@@ -135,7 +137,6 @@ class UndanganAlt1Controller extends Controller
             }
         }
 
-        // Update data lainnya
         $data->update([
             'nama_mempelai_laki' => $validatedData['nama_mempelai_laki'],
             'putra_dari_bpk' => $validatedData['putra_dari_bpk'],
@@ -160,9 +161,9 @@ class UndanganAlt1Controller extends Controller
             'alamat_tertera' => $validatedData['alamat_tertera'],
         ]);
 
-        // Redirect ke rute yang diinginkan dengan pesan sukses
         return redirect()->route('undangan-alternative1')->with('success', 'Data berhasil diperbarui');
     }
+
 
 
 

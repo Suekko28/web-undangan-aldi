@@ -40,7 +40,7 @@
             <div class="container-fluid">
                 @include('layouts.message')
                 <!-- Small boxes (Stat box) -->
-                <form action="{{ url('undangan-alternative1', $data->id)}}" method="post" enctype="multipart/form-data">
+                <form action="{{ url('undangan', $data->id)}}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
                     <div class="card-body container bg-white mt-5">
@@ -246,7 +246,7 @@
                      
                         <div class="d-flex flex-row-reverse mt-5">
                             <button type="submit" class="btn btn-primary ml-3 ms-3">Simpan</button>
-                            <a href="{{route('undangan-alternative1')}}" class="btn btn-danger">Batal</a>
+                            <a href="{{route('undangan')}}" class="btn btn-danger">Batal</a>
                         </div>
 
                     </div>

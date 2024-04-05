@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
 
-    <link rel="stylesheet" href="./global.css" />
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="{{ asset('global.css') }}" />
+    <link rel="stylesheet" href="{{ asset('index.css') }}" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant Infant:wght@400;700&display=swap" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rouge Script:wght@400&display=swap" />
-</head>
+    </head>
 
 <body>
     <div class="prototype-home-deks">
@@ -26,13 +26,14 @@
         <div class="frame-parent">
             <div class="undangan-pernikahan-parent">
                 <div class="undangan-pernikahan">Undangan Pernikahan</div>
-                <div class="jamaludin-maryam">Jamaludin & Maryam</div>
-                <b class="undangan-pernikahan">11 . 01 . 2024</b>
+                <div class="jamaludin-maryam">{{$data->nama_mempelai_laki}} & {{$data->nama_mempelai_perempuan}}</div>
+                <b class="undangan-pernikahan">{{ \Carbon\Carbon::createFromFormat('Y-m-d', $data->tgl_akad)->format('d-m-Y') }}</b>
             </div>
             <div class="ellipse-parent">
-                <img class="frame-child" alt="" src="./assets/ellipse-15@2x.png" />
+                <img class="frame-child" alt=""src="{{ Storage::url('' . $data->banner_img) }}" />
 
-                <img class="asset-1-4" alt="" src="./assets/asset-1-4@2x.png" />
+                <img class="asset-1-4" alt="" src="{{ asset('assets/asset-1-4@2x.png') }}" />
+                
 
             </div>
             <div class="frame-group">
