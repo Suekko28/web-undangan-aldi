@@ -60,7 +60,7 @@
             <ul class="menu-inner py-1">
                 <!-- Dashboard -->
                 <li class="menu-item active">
-                    <a href="" class="menu-link">
+                    <a href="{{route('dashboard')}}" class="menu-link">
                         <i class="menu-icon tf-icons bx bx-home-circle"></i>
                         <div data-i18n="Analytics">Dashboard</div>
                     </a>
@@ -73,7 +73,7 @@
 
                     <ul class="menu-sub">
                         <li class="menu-item">
-                            <a href="layouts-without-menu.html" class="menu-link">
+                            <a href="{{route('undangan-alternative1')}}" class="menu-link">
                                 <div data-i18n="Without menu">Alternative 1</div>
                             </a>
                         </li>
@@ -116,6 +116,18 @@
                                 </a>
                             </div>
                         </div> --}}
+
+                        <div class="navbar-nav align-items-center">
+                            <div class="nav-item d-flex align-items-center">
+                              <i class="bx bx-search fs-4 lh-0"></i>
+                              <input
+                                type="text"
+                                class="form-control border-0 shadow-none"
+                                placeholder="Search..."
+                                aria-label="Search..."
+                              />
+                            </div>
+                          </div>
 
                         <!-- /Search -->
 

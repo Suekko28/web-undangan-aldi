@@ -6,6 +6,7 @@ use App\Http\Controllers\Alt3Controller;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UndanganAlt1Controller;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\ViewAlt1Controller;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,29 +20,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
 
-Route::get('/login', function () {
-    return view('auth.login');
-});
 
-Route::get('/register', function () {
-    return view('auth.register');
-});
+// Routing Admin
 
-Route::get('/dashboard', function () {
-    return view('admin.dashboard');
-});
-
-Route::get('/alt1', function () {
-    return view('undangan-aldi.admin');
-});
-
-Route::get('/create', function () {
-    return view('undangan-aldi.create');
-});
 
 Route::get('/login', [LoginController::class, 'index'])->name('login.form');
 Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
@@ -56,6 +38,7 @@ Route::middleware(['auth'])->group(function () {
     // Route::get('/dashboard-article', [ArtikelController::class, 'index'])->name('dashboard');
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/view-alternative1', [ViewAlt1Controller::class, 'index'])->name('view-alternative1');
     Route::resource('/undangan-alternative1', UndanganAlt1Controller::class);
     Route::get('/undangan-alternative1', [UndanganAlt1Controller::class, 'index'])->name('undangan-alternative1');
 
@@ -63,9 +46,12 @@ Route::middleware(['auth'])->group(function () {
 });
 
 
-// Route::get('/undangan-alt1', function () {
-//     return view('undangan-aldi.home');
-// });
+
+// Routing User
+
+Route::get('/', function () {
+    return view('index');
+});
 
 Route::get('/undangan-alt1', function () {
     return view('undangan-aldi.home');
@@ -73,9 +59,7 @@ Route::get('/undangan-alt1', function () {
 
 Route::resource('/undangan-alt1/index', Alt1Controller::class)->only(['index', 'store']);
 
-// Route::get('/undangan-alt1/index', function () {
-//     return view('undangan-aldi.index');
-// });
+
 
 
 Route::get('/undangan-alt2', function () {
@@ -83,7 +67,7 @@ Route::get('/undangan-alt2', function () {
 });
 
 
-Route::resource('/undangan-alt2/index', Alt2Controller::class)->only(['index', 'store']);
+Route::resource('/undangan-alt2', Alt2Controller::class)->only(['index', 'store']);
 
 
 
@@ -92,7 +76,7 @@ Route::get('/undangan-alt3', function () {
 });
 
 
-Route::resource('/undangan-alt3/index', Alt3Controller::class)->only(['index', 'store']);
+Route::resource('/undangan-alt3', Alt3Controller::class)->only(['index', 'store']);
 
 
 

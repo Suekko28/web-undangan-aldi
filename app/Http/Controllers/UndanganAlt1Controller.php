@@ -62,7 +62,7 @@ class UndanganAlt1Controller extends Controller
             'putra_dari_bpk' => $data['putra_dari_bpk'],
             'foto_mempelai_perempuan' => $foto_mempelai_perempuan_path,
             'nama_mempelai_perempuan' => $data['nama_mempelai_perempuan'],
-            'putri_dari_bapak' => $data['putri_dari_bapak'],
+            'putri_dari_bpk' => $data['putri_dari_bpk'],
             'tgl_akad' => $data['tgl_akad'],
             'alamat_akad' => $data['alamat_akad'],
             'tgl_resepsi' => $data['tgl_resepsi'],
@@ -88,7 +88,7 @@ class UndanganAlt1Controller extends Controller
             'alamat_tertera' => $data['alamat_tertera'],
         ]);
 
-        return redirect()->route('dashboard')->with('success', 'Data berhasil ditambahkan');
+        return redirect()->route('undangan-alternative1')->with('success', 'Data berhasil ditambahkan');
     }
 
     /**
@@ -140,7 +140,7 @@ class UndanganAlt1Controller extends Controller
             'nama_mempelai_laki' => $validatedData['nama_mempelai_laki'],
             'putra_dari_bpk' => $validatedData['putra_dari_bpk'],
             'nama_mempelai_perempuan' => $validatedData['nama_mempelai_perempuan'],
-            'putri_dari_bapak' => $validatedData['putri_dari_bapak'],
+            'putri_dari_bpk' => $validatedData['putri_dari_bpk'],
             'tgl_akad' => $validatedData['tgl_akad'],
             'alamat_akad' => $validatedData['alamat_akad'],
             'tgl_resepsi' => $validatedData['tgl_resepsi'],
@@ -161,7 +161,7 @@ class UndanganAlt1Controller extends Controller
         ]);
 
         // Redirect ke rute yang diinginkan dengan pesan sukses
-        return redirect()->route('dashboard')->with('success', 'Data berhasil diperbarui');
+        return redirect()->route('undangan-alternative1')->with('success', 'Data berhasil diperbarui');
     }
 
 
@@ -171,6 +171,8 @@ class UndanganAlt1Controller extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $data = UndanganAlt1::find($id)->delete();
+        return redirect()->route('undangan-alternative1')->with('success', 'Data berhasil Dihapus');
+
     }
 }

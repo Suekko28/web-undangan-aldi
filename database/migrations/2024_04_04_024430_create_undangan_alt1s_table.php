@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('putra_dari_bpk');
             $table->string('foto_mempelai_perempuan');
             $table->string('nama_mempelai_perempuan');
-            $table->string('putri_dari_bapak');
+            $table->string('putri_dari_bpk');
             $table->date('tgl_akad');
             $table->text('alamat_akad');
             $table->date('tgl_resepsi');

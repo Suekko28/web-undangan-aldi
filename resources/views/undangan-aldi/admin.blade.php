@@ -3,7 +3,7 @@
 @section('navbar-admin')
     <main>
         <div class="container-xxl flex-grow-1 container-p-y">
-            <a class="btn btn-primary mb-3" href="{{ url('dashboard-article/create') }}">+ Buat Undangan</a>
+            <a class="btn btn-primary mb-3" href="{{ url('undangan-alternative1/create') }}">+ Buat Undangan</a>
             @include('layouts.message')
             <!-- Responsive Table -->
             <div class="card">
@@ -16,31 +16,24 @@
                                 <th>Foto Prewedding</th>
                                 <th>Mempelai</th>
                                 <th>Tanggal Pernikahan</th>
-                                <th>Link</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
-                        {{-- <tbody>
+                        <tbody>
                                 <?php $i = $data->firstItem(); ?>
                                 @foreach ($data as $item)
-                                    <tr>
+                                    <tr class="text-center">
                                         <th scope="row">{{ $i }}</th>
-                                        <th scope="row">
-                                            <img src="{{ asset('storage/images/' . $item->image) }}" class="rounded"
-                                                style="width: 150px">
-                                        </th>
-                                        <th scope="row">{{ $item->header }}</th>
-                                        <th scope="row">{{ $item->judul_artikel }}</th>
-                                        <th scope="row">{!! $item->isi_artikel !!}</th>
-                                        <th scope="row"
-                                            class=" text-center badge {{ $item->status_publish === 'publish' ? 'bg-primary text-white' : 'bg-warning text-white' }} m-2">
-                                            {{ $item->status_publish }}
-                                        </th>
+                                        <td>
+                                            <img src="{{ Storage::url (''. $item->banner_img)}}" width="100" height="100" alt="">
+                                        </td>
+                                        <td scope="row">{{$item->nama_mempelai_laki}} & {{$item->nama_mempelai_perempuan}}</td>
+                                        <td scope="row">{{ \Carbon\Carbon::createFromFormat('Y-m-d', $item->tgl_akad)->format('d-m-Y') }}</td>
                                         <td scope="row">
-                                            <a href="{{ url('dashboard-article/' . $item->id) . '/edit' }}"
+                                            <a href="{{ url('undangan-alternative1/' . $item->id) . '/edit' }}"
                                                 class="btn btn-warning mb-2"><i class=" fa fa-solid fa-pen-to-square"
                                                     style="color:white;"></i></a>
-                                            <form action="{{ url('dashboard-article/' . $item->id) }}" method="POST">
+                                            <form action="{{ url('undangan-alternative1/' . $item->id) }}" method="POST">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button class="btn btn-danger mb-2"><i
@@ -50,7 +43,7 @@
                                     </tr>
                                     <?php $i++; ?>
                             </tbody>
-                            @endforeach --}}
+                            @endforeach
                     </table>
                 </div>
             </div>  

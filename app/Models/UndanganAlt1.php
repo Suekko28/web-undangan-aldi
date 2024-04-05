@@ -21,7 +21,7 @@ class UndanganAlt1 extends Model
         'putra_dari_bpk',
         'foto_mempelai_perempuan',
         'nama_mempelai_perempuan',
-        'putri_dari_bapak',
+        'putri_dari_bpk',
         'tgl_akad',
         'alamat_akad',
         'tgl_resepsi',
