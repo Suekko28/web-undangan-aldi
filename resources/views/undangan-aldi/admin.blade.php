@@ -8,6 +8,15 @@
             <!-- Responsive Table -->
             <div class="card">
                 <h5 class="card-header">Undangan Alternative 1</h5>
+                <div class="p-3">
+                    <div class="mb-3">
+                        <input type="text" id="searchInput" class="form-control" placeholder="Cari...">
+                    </div>
+                    <div id="noDataMessage" class="alert alert-warning" style="display: none;">
+                        Data tidak ditemukan.
+                    </div>
+                </div>
+
                 <div class="table-responsive text-nowrap">
                     <table class="table table-bordered">
                         <thead>
@@ -71,4 +80,34 @@
 
     </main>
 @endsection
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const searchInput = document.getElementById('searchInput');
+        const tableRows = document.querySelectorAll('.table tbody tr');
+        const noDataMessage = document.getElementById('noDataMessage');
+
+        searchInput.addEventListener('input', function() {
+            const searchText = this.value.toLowerCase();
+            let found = false;
+
+            tableRows.forEach(function(row) {
+                const rowData = row.innerText.toLowerCase();
+                if (rowData.includes(searchText)) {
+                    row.style.display = '';
+                    found = true;
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+
+            if (!found) {
+                noDataMessage.style.display = 'block';
+            } else {
+                noDataMessage.style.display = 'none';
+            }
+        });
+    });
+</script>
+
+
 <!-- Content -->

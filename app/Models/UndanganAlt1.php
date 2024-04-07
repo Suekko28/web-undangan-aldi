@@ -15,7 +15,7 @@ class UndanganAlt1 extends Model
      * @var array
      */
     protected $fillable = [
-        'nama_undangan',
+        // 'nama_undangan',
         'banner_img',
         'foto_mempelai_laki',
         'nama_mempelai_laki',

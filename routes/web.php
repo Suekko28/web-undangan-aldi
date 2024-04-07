@@ -36,9 +36,6 @@ Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
 
 
 Route::middleware(['auth'])->group(function () {
-    // // The 'login' route was causing a conflict; use 'dashboard' instead
-    // Route::resource('/dashboard-article', ArtikelController::class);
-    // Route::get('/dashboard-article', [ArtikelController::class, 'index'])->name('dashboard');
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/view-alternative1', [ViewAlt1Controller::class, 'index'])->name('view-alternative1');

@@ -12,7 +12,7 @@ return new class extends Migration {
     {
         Schema::create('undangan_alt1s', function (Blueprint $table) {
             $table->id();
-            $table->json('nama_undangan')->default('[]');
+            // $table->json('nama_undangan')->default('[]');
             $table->string('banner_img');
             $table->string('foto_mempelai_laki');
             $table->string('nama_mempelai_laki');
