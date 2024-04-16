@@ -94,7 +94,7 @@
             <div class="card-b-c-a">
                 <div class="card-mandiri">
                     <div class="copy-field">
-                        <h1 class="jamaludin3">{{ $data->nama_mempelai_laki }}}</h1>
+                        <h1 class="jamaludin3">{{ $data->nama_mempelai_laki }}</h1>
                         <div class="anak-dari-bapak6">
                             Anak dari bapak {{ $data->putra_dari_bpk }} dan ibu {{ $data->putra_dari_ibu }}
                         </div>

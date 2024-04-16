@@ -17,7 +17,7 @@
                     </div>
                 </div>
 
-                <div class="table-responsive text-nowrap">
+                <div class="table-responsive text-nowrap p-3">
                     <table class="table table-bordered">
                         <thead>
                             <tr class="text-nowrap text-center">

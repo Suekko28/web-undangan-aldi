@@ -31,6 +31,7 @@ class ViewAlt1Controller extends Controller
      */
     public function show(string $nama_undangan)
     {
+        dd($nama_undangan);
         $data = UndanganAlt1::where('nama_undangan', $nama_undangan)->firstOrFail();
         return view('undangan-aldi.home', compact('data'));
     }

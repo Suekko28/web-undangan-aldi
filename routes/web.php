@@ -5,6 +5,7 @@ use App\Http\Controllers\Alt2Controller;
 use App\Http\Controllers\Alt3Controller;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeAlt1Controller;
+use App\Http\Controllers\IndexAlt1Controller;
 use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\UndanganAlt1Controller;
 use App\Http\Controllers\UndanganController;
@@ -39,6 +40,9 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/view-alternative1', [ViewAlt1Controller::class, 'index'])->name('view-alternative1');
+    Route::get('/home', function () {
+        return redirect()->route('dashboard');
+    });
     // Route::get('/undangan/pilih-template', [UndanganController::class, 'template'])->name('template');
     // Route::resource('/undangan', UndanganController::class);
     Route::resource('/undangan-alternative1', UndanganAlt1Controller::class);
@@ -59,6 +63,7 @@ Route::get('/', function () {
 // });
 
 Route::get('/undangan-alt1/{nama_undangan}', [ViewAlt1Controller::class, 'show'])->name('undangan-alt1-home');
+Route::get('/undangan-alt1/{id}/{nama_undangan}/index', [IndexAlt1Controller::class, 'show'])->name('undangan-alt1-index');
 
 Route::resource('/undangan-alt1/index', Alt1Controller::class)->only(['index', 'store']);
 

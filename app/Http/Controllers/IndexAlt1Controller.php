@@ -34,9 +34,9 @@ class IndexAlt1Controller extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $nama_undangan)
+    public function show(string $id)
     {
-        $data = UndanganAlt1::where('nama_undangan', $nama_undangan)->firstOrFail();
+        $data = UndanganAlt1::findOrFail($id);
         return view('undangan-aldi.index', compact('data'));
     }
 
