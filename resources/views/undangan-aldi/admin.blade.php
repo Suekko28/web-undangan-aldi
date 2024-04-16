@@ -22,6 +22,7 @@
                         <thead>
                             <tr class="text-nowrap text-center">
                                 <th>No</th>
+                                <th>Nama Undangan</th>
                                 <th>Foto Prewedding</th>
                                 <th>Mempelai</th>
                                 <th>Tanggal Pernikahan</th>
@@ -33,6 +34,7 @@
                             @foreach ($data as $item)
                                 <tr class="text-center">
                                     <th scope="row">{{ $i }}</th>
+                                    <td scope="row">{{$item->nama_undangan}}</td>
                                     <td>
                                         <img src="{{ Storage::url('' . $item->banner_img) }}" width="120" height="120"
                                             alt="Foto Prewedding">
@@ -66,8 +68,10 @@
                         @endforeach
                     </table>
                 </div>
+                 <div class="p-2">{{$data->links()}}</div>
             </div>
         </div>
+        
 
 
         <!--/ Responsive Table -->

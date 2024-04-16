@@ -29,11 +29,12 @@ class ViewAlt1Controller extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $nama_undangan)
     {
-        $data = UndanganAlt1::findOrFail($id);
+        $data = UndanganAlt1::where('nama_undangan', $nama_undangan)->firstOrFail();
         return view('undangan-aldi.home', compact('data'));
     }
+
 
     /**
      * Show the form for editing the specified resource.

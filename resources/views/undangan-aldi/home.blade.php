@@ -39,7 +39,7 @@
             <div class="frame-group">
                 <div class="yth-bapakibusaudarai-parent">
                     <div class="undangan-pernikahan">Yth Bapak/Ibu/Saudara/I</div>
-                    <b class="undangan-pernikahan">Isra Rafi Shidqi & Partner</b>
+                    <b class="undangan-pernikahan">{{$data->nama_undangan}}</b>
                 </div>
                 <div class="buka-undangan-wrapper">
                     <a class="undangan-pernikahan" style="color: white; text-decoration:none;"

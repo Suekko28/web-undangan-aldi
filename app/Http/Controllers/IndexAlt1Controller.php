@@ -5,15 +5,14 @@ namespace App\Http\Controllers;
 use App\Models\UndanganAlt1;
 use Illuminate\Http\Request;
 
-class HomeAlt1Controller extends Controller
+class IndexAlt1Controller extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $data = UndanganAlt1::orderBy('id', 'desc')->paginate(10);
-        return view('admin.view-alt1', compact('data'));
+        //
     }
 
     /**
@@ -38,10 +37,8 @@ class HomeAlt1Controller extends Controller
     public function show(string $nama_undangan)
     {
         $data = UndanganAlt1::where('nama_undangan', $nama_undangan)->firstOrFail();
-        return view('undangan-aldi.home', compact('data'));
+        return view('undangan-aldi.index', compact('data'));
     }
-
-
 
     /**
      * Show the form for editing the specified resource.

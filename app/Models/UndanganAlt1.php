@@ -15,14 +15,16 @@ class UndanganAlt1 extends Model
      * @var array
      */
     protected $fillable = [
-        // 'nama_undangan',
+        'nama_undangan',
         'banner_img',
         'foto_mempelai_laki',
         'nama_mempelai_laki',
         'putra_dari_bpk',
+        'putra_dari_ibu',
         'foto_mempelai_perempuan',
         'nama_mempelai_perempuan',
         'putri_dari_bpk',
+        'putri_dari_ibu',
         'tgl_akad',
         'alamat_akad',
         'tgl_resepsi',
@@ -41,10 +43,13 @@ class UndanganAlt1 extends Model
         'pernikahan',
         'nama_rek1',
         'no_rek1',
+        'atas_nama1',
         'nama_rek2',
         'no_rek2',
+        'atas_nama2',
         'nama_rek3',
         'no_rek3',
+        'atas_nama3',
         'alamat_tertera',
     ];
 }

@@ -32,7 +32,8 @@
             <div class="rectangle">
                 <div class="undangan-pernikahan-parent2">
                     <b class="undangan-pernikahan5">Undangan Pernikahan</b>
-                    <h1 class="jamaludin-maryam5">Jamaludin & Maryam</h1>
+                    <h1 class="jamaludin-maryam5">{{ $data->nama_mempelai_laki }} & {{ $data->nama_mempelai_perempuan }}
+                    </h1>
                 </div>
                 <div class="text-input-field">
                     {{-- <img class="button-icon" alt="" src="{{ asset('./assets/button@2x.png') }}"
@@ -93,9 +94,9 @@
             <div class="card-b-c-a">
                 <div class="card-mandiri">
                     <div class="copy-field">
-                        <h1 class="jamaludin3">Jamaludin</h1>
+                        <h1 class="jamaludin3">{{ $data->nama_mempelai_laki }}}</h1>
                         <div class="anak-dari-bapak6">
-                            Anak dari bapak Samsudin dan ibu Maimunah
+                            Anak dari bapak {{ $data->putra_dari_bpk }} dan ibu {{ $data->putra_dari_ibu }}
                         </div>
                     </div>
                     <img class="container-frame-icon" loading="lazy" alt=""
@@ -109,7 +110,7 @@
                     <div class="maryam-parent1">
                         <h1 class="maryam3">Maryam</h1>
                         <div class="anak-dari-bapak7">
-                            Anak dari bapak Samsudin dan ibu Maimunah
+                            Anak dari bapak {{ $data->putri_dari_bpk }} dan ibu Maimunah
                         </div>
                     </div>
                 </div>
@@ -134,8 +135,7 @@
                                 </div>
                                 <div class="tempat-parent3">
                                     <div class="tempat6">Tempat</div>
-                                    <b class="jl-ir-h6">Jl. Ir. H. Juanda No.16, Paledang, Kecamatan Bogor
-                                        Tengah, Kota Bogor, Jawa Barat 16122 Royal Hotel Bogor</b>
+                                    <b class="jl-ir-h6">{{ $data->alamat_akad }}</b>
                                 </div>
                             </div>
                             <div class="frame-parent144">
@@ -143,7 +143,7 @@
                                     <div class="gallery-frame2">
                                         <img class="map-button-icon" alt=""
                                             src="{{ asset('./assets/location.svg') }}" />
-                                        <a class="buka-map6" href="https://www.google.com/maps" target="_blank">Buka
+                                        <a class="buka-map6" href="{{ $data->lokasi_gmaps }}" target="_blank">Buka
                                             Map</a>
                                     </div>
                                 </button>
@@ -173,8 +173,7 @@
                                 </div>
                                 <div class="tempat-parent4">
                                     <div class="tempat7">Tempat</div>
-                                    <b class="jl-ir-h7">Jl. Ir. H. Juanda No.16, Paledang, Kecamatan Bogor
-                                        Tengah, Kota Bogor, Jawa Barat 16122 Royal Hotel Bogor</b>
+                                    <b class="jl-ir-h7">{{ $data->alamat_resepsi }}</b>
                                 </div>
                             </div>
                             <div class="frame-parent144">
@@ -182,7 +181,7 @@
                                     <div class="gallery-frame2">
                                         <img class="map-button-icon" alt=""
                                             src="{{ asset('./assets/location.svg') }}" />
-                                        <a class="buka-map6" href="https://www.google.com/maps" target="_blank">Buka
+                                        <a class="buka-map6" href="{{ $data->lokasi_gmaps }}" target="_blank">Buka
                                             Map</a>
                                     </div>
                                 </button>
@@ -240,24 +239,23 @@
             <div class="caption-parent">
                 <div class="caption">
                     <p class="aku-tak-pernah1">
-                        Aku tak pernah menunggumu. Kamu tak pernah sengaja datang.
-                        Tapi kita sengaja dipertemukan Tuhan. Entah untuk saling duduk
-                        berdampingan atau saling memberi pelajaran. Entah untuk saling
-                        mengirim undangan pernikahan, atau duduk bersama di pelaminan.
+                        {{ $data->caption }}
                     </p>
                 </div>
                 <div class="frame-parent16">
                     <div class="frame-parent17">
-                        <img class="frame-child6" alt="" src="{{ asset('./assets/frame-99@2x.png') }}" />
-
-                        <img class="frame-child6" alt="" src="{{ asset('./assets/frame-100@2x.png') }}" />
-
-                        <img class="frame-child6" alt="" src="{{ asset('./assets/frame-101@2x.png') }}" />
-                        <img class="frame-child6" alt="" src="{{ asset('./assets/frame-104@2x.png') }}" />
-
-                        <img class="frame-child6" alt="" src="{{ asset('./assets/frame-103@2x.png') }}" />
-
-                        <img class="frame-child6" alt="" src="{{ asset('./assets/frame-102@2x.png') }}" />
+                        <img class="frame-child6 " alt=""
+                            src="{{ Storage::url('' . $data->galeri_img1) }}" />
+                        <img class="frame-child6 " alt=""
+                            src="{{ Storage::url('' . $data->galeri_img2) }}" />
+                        <img class="frame-child6 " alt=""
+                            src="{{ Storage::url('' . $data->galeri_img3) }}" />
+                        <img class="frame-child6 " alt=""
+                            src="{{ Storage::url('' . $data->galeri_img4) }}" />
+                        <img class="frame-child6 " alt=""
+                            src="{{ Storage::url('' . $data->galeri_img5) }}" />
+                        <img class="frame-child6 " alt=""
+                            src="{{ Storage::url('' . $data->galeri_img6) }}" />
                     </div>
                 </div>
             </div>
@@ -272,9 +270,7 @@
                     <div class="r-s-v-p-name-field">
                         <b class="pertemuan3">Pertemuan</b>
                         <div class="tidak-ada-yang3">
-                            Tidak ada yang kebetulan, semua sudah tersusun rapih oleh Tuhan.
-                            Kami bertemu pada tahun 2020, tepatnya pada saat kami bekerja di
-                            satu tempat yang sama.
+                            {{ $data->pertemuan }}
                         </div>
                     </div>
                     <img class="r-s-v-p-nope-button" loading="lazy" alt=""
@@ -287,9 +283,7 @@
                     <div class="pendekatan-parent1">
                         <b class="pendekatan3">Pendekatan</b>
                         <div class="seiring-berjalannya-waktu3">
-                            Seiring berjalannya waktu, setelah pertemuan singkat di 2020,
-                            kami saling tidak memberi kabar dan menjalani cerita hidup
-                            masing-masing.
+                            {{ $data->pendekatan }}
                         </div>
                     </div>
                 </div>
@@ -297,9 +291,7 @@
                     <div class="lamaran-parent1">
                         <b class="lamaran3">Lamaran</b>
                         <div class="atas-kehendak-allah3">
-                            Atas kehendak Allah SWT, yang menuntun kami pada sebuah
-                            pertemuan yang tidak pernah disangka, hingga akhirnya membawa
-                            kami pada sebuah pertemuan keluarga.
+                            {{ $data->lamaran }}
                         </div>
                     </div>
                     <img class="r-s-v-p-frame-title-item" loading="lazy" alt=""
@@ -313,8 +305,7 @@
                         <b class="pernikahan3">Pernikahan</b>
                         <div class="kami-memutuskan-untuk-container3">
                             <p class="kami-memutuskan-untuk3">
-                                Kami memutuskan untuk melangsungkan janji suci pernikahan kami
-                                pada 11 November 2023
+                                {{$data->pernikahan}}
                             </p>
                             <p class="blank-line26">&nbsp;</p>
                         </div>
@@ -325,25 +316,26 @@
 
 
         <section class="rsvp5" data-scroll-to="rSVP">
-            <form class="rsvp-mobile3" method="POST" action="{{url('/undangan-alt1/index')}}">
+            <form class="rsvp-mobile3" method="POST" action="{{ url('/undangan-alt1/index') }}">
                 @csrf
                 <h1 class="rsvp6">RSVP</h1>
                 <div class="frame-parent151">
                     <div class="nama-lengkap-container">
                         <div class="nama-lengkap3">Nama Lengkap</div>
                         <div class="field34">
-                            <input name="nama" class="masukkan-nama-kamu9" placeholder="Masukkan nama kamu" type="text" />
+                            <input name="nama" class="masukkan-nama-kamu9" placeholder="Masukkan nama kamu"
+                                type="text" />
                         </div>
                     </div>
                     <div class="pendekatan-perikahan-frame">
                         <div class="bersedia-hadir-di3">
                             Bersedia hadir di acara kami?
                         </div>
-            
+
                         <div class="radio_group">
                             <input type="radio" name="kehadiran" value="1" id="radio1">
                             <label for="radio1" class="radio_label">Ya</label>
-            
+
                             <input type="radio" name="kehadiran" value="0" id="radio2">
                             <label for="radio2" class="radio_label">Tidak</label>
                         </div>
@@ -358,8 +350,8 @@
                     <div class="kirim-ucapan5">Kirim Ucapan</div>
                 </button>
             </form>
-            
-            <div class="ucapan-mobile">
+
+            {{-- <div class="ucapan-mobile">
                 @foreach ($data as $item)
                 <div class="ucapan-mobile-inner">
                     <div class="ahmad-parent">
@@ -376,7 +368,7 @@
                 @endforeach
 
     
-            </div>
+            </div> --}}
         </section>
 
         <section class="hadiah3" data-scroll-to="hadiah">
@@ -418,31 +410,31 @@
                 </div>
                 <div class="card-list17">
                     <div class="card35">
-                        <b class="bca7">BCA</b>
+                        <b class="bca7">{{$data->nama_rek1}}</b>
                         <div class="body18">
-                            <div class="copy5" id="copyText">1223242442</div>
+                            <div class="copy5" id="copyText">{{$data->no_rek1}}</div>
                             <img class="copy-icon10" id="copyButton" loading="lazy" alt=""
                                 src="{{ asset('./assets/copy2.svg') }}" />
                         </div>
-                        <div class="an-rudi-hermina14">an Rudi Hermina</div>
+                        <div class="an-rudi-hermina14">{{$data->atas_nama1}}</div>
                     </div>
                     <div class="card35">
-                        <b class="mandiri7">Mandiri</b>
+                        <b class="mandiri7">{{$data->nama_rek2}}</b>
                         <div class="body19">
-                            <div class="div73" id="copyText2">1223242442</div>
+                            <div class="div73" id="copyText2">{{$data->no_rek2}}</div>
                             <img class="copy-icon11" id="copyButton2" loading="lazy" alt=""
                                 src="{{ asset('./assets/copy2.svg') }}" />
                         </div>
-                        <div class="an-rudi-hermina15">an Rudi Hermina</div>
+                        <div class="an-rudi-hermina15">{{$data->atas_nama2}}</div>
                     </div>
                     <div class="card35">
-                        <b class="mandiri7">BRI</b>
+                        <b class="mandiri7">{{$data->nama_rek3}}</b>
                         <div class="body19">
-                            <div class="div73" id="copyText3">1223242442</div>
+                            <div class="div73" id="copyText3">{{$data->no_rek3}}</div>
                             <img class="copy-icon11" id="copyButton3" loading="lazy" alt=""
                                 src="{{ asset('./assets/copy2.svg') }}" />
                         </div>
-                        <div class="an-rudi-hermina15">an Rudi Hermina</div>
+                        <div class="an-rudi-hermina15">{{$data->atas_nama3}}</div>
                     </div>
 
                 </div>
@@ -601,7 +593,7 @@
         kirimAlamatButton.addEventListener('click', function() {
             // Mengubah konten elemen substitutePresent menjadi alamat
             substitutePresent.innerHTML =
-                '<div class="alamat" style="font-size:16px;">Alamat :<br>Kedung Waringin, Kecamatan Bojonggede, Kabupaten Bogor, Jawa Barat 16923</div>';
+                '<div class="alamat" style="font-size:16px;">Alamat :<br>{{$data->alamat_tertera}}</div>';
 
             kirimAlamatButton.style.backgroundColor = '#bb8554';
             kirimAlamatButton.style.color = 'white';

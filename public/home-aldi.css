@@ -1343,6 +1343,7 @@ audio {
     height: 320px;
     flex-shrink: 0;
     object-fit: cover;
+    border-radius: 24px;
 }
 .frame-child6,
 .frame-parent17 {
@@ -1527,7 +1528,6 @@ audio {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: flex-start;
     box-sizing: border-box;
     gap: 16px;
@@ -1621,7 +1621,6 @@ audio {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: flex-start;
     gap: 16px;
     font-size: 20px;
@@ -2550,7 +2549,6 @@ textarea {
         width: 320px;
         height: 320px;
         flex-shrink: 0;
-        object-fit: contain;
         transform: scale(1);
     }
 
@@ -2647,7 +2645,6 @@ textarea {
         width: 320px;
         height: 320px;
         flex-shrink: 0;
-        object-fit: contain;
         transform: scale(1);
     }
 

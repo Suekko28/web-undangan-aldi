@@ -12,14 +12,16 @@ return new class extends Migration {
     {
         Schema::create('undangan_alt1s', function (Blueprint $table) {
             $table->id();
-            // $table->json('nama_undangan')->default('[]');
+            $table->text('nama_undangan');
             $table->string('banner_img');
             $table->string('foto_mempelai_laki');
             $table->string('nama_mempelai_laki');
             $table->string('putra_dari_bpk');
+            $table->string('putra_dari_ibu');
             $table->string('foto_mempelai_perempuan');
             $table->string('nama_mempelai_perempuan');
             $table->string('putri_dari_bpk');
+            $table->string('putri_dari_ibu');
             $table->date('tgl_akad');
             $table->text('alamat_akad');
             $table->date('tgl_resepsi');
@@ -38,10 +40,13 @@ return new class extends Migration {
             $table->text('pernikahan');
             $table->string('nama_rek1');
             $table->integer('no_rek1');
+            $table->string('atas_nama1');
             $table->string('nama_rek2');
             $table->integer('no_rek2');
+            $table->string('atas_nama2');
             $table->string('nama_rek3');
             $table->integer('no_rek3');
+            $table->string('atas_nama3');
             $table->text('alamat_tertera');
             $table->timestamps();
         });

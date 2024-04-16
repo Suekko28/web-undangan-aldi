@@ -21,13 +21,16 @@ class UndanganAlt1FormRequest extends FormRequest
     public function rules(): array
     {
         return [
+            'nama_undangan' => ['required', 'string'],
             'banner_img' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
             'foto_mempelai_laki' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
             'nama_mempelai_laki' => ['required', 'string', 'max:100'],
             'putra_dari_bpk' => ['required', 'string', 'max:100'],
+            'putra_dari_ibu' => ['required', 'string', 'max:100'],
             'foto_mempelai_perempuan' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
             'nama_mempelai_perempuan' => ['required', 'string', 'max:100'],
             'putri_dari_bpk' => ['required', 'string', 'max:100'],
+            'putri_dari_ibu' => ['required', 'string', 'max:100'],
             'tgl_akad' => ['required', 'date'],
             'alamat_akad' => ['required', 'string'],
             'tgl_resepsi' => ['required', 'date'],
@@ -46,10 +49,13 @@ class UndanganAlt1FormRequest extends FormRequest
             'pernikahan' => ['required', 'string'],
             'nama_rek1' => ['required', 'string', 'max:100'],
             'no_rek1' => ['required', 'integer'],
+            'atas_nama1' => ['required', 'string', 'max:100'],
             'nama_rek2' => ['required', 'string', 'max:100'],
             'no_rek2' => ['required', 'integer'],
+            'atas_nama2' => ['required', 'string', 'max:100'],
             'nama_rek3' => ['required', 'string', 'max:100'],
             'no_rek3' => ['required', 'integer'],
+            'atas_nama3' => ['required', 'string', 'max:100'],
             'alamat_tertera' => ['required', 'string'],
         ];
     }

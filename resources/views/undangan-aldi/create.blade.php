@@ -81,6 +81,12 @@
                                     placeholder="Putra dari bapak">
                             </div>
 
+                            <div class="form-group mb-3">
+                                <label for="putra_dari_ibu">Putra dari Ibu <span class="mandatory">*</span></label>
+                                <input type="text" class="form-control" id="putra_dari_ibu" name="putra_dari_ibu"
+                                    placeholder="Putra dari ibu">
+                            </div>
+
 
                             <div class="form-group mb-3">
                                 <label for="foto_mempelai_perempuan">Foto Mempelai Perempuan <span
@@ -98,6 +104,11 @@
                                 <label for="putri_dari_bpk">Putri dari Bapak <span class="mandatory">*</span></label>
                                 <input type="text" class="form-control" id="putri_dari_bpk" name="putri_dari_bpk"
                                     placeholder="Putri dari bapak">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="putri_dari_ibu">Putri dari Ibu <span class="mandatory">*</span></label>
+                                <input type="text" class="form-control" id="putri_dari_ibu" name="putri_dari_ibu"
+                                    placeholder="Putri dari ibu">
                             </div>
 
                         </div>
@@ -180,6 +191,7 @@
                     <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Cerita Cinta Kami</div>
                         <div class="fs-6">
+                            
                             <div class="form-group mb-3">
                                 <label for="pertemuan">Petemuan <span class="mandatory">*</span> <span
                                         class="fst-italic">(Maksimal 200 Karakter)</span>
@@ -224,6 +236,11 @@
                                 <input type="text" class="form-control" id="no_rek1" name="no_rek1"
                                     placeholder="Masukkan nomor rekening">
                             </div>
+                            <div class="form-group mb-3">
+                                <label for="atas_nama1">Atas Nama <span class="mandatory">*</span></label>
+                                <input type="text" class="form-control" id="atas_nama1" name="atas_nama1"
+                                    placeholder="Rudi Hermawan">
+                            </div>
 
                             <div class="form-group mb-3">
                                 <label for="nama_rek2">Nama Rek Tertera <span class="mandatory">*</span></label>
@@ -235,6 +252,11 @@
                                 <input type="text" class="form-control" id="no_rek2" name="no_rek2"
                                     placeholder="Masukkan nomor rekening">
                             </div>
+                            <div class="form-group mb-3">
+                                <label for="atas_nama2">Atas Nama <span class="mandatory">*</span></label>
+                                <input type="text" class="form-control" id="atas_nama2" name="atas_nama2"
+                                    placeholder="Rudi Hermawan">
+                            </div>
 
                             <div class="form-group mb-3">
                                 <label for="nama_rek3">Nama Rek Tertera <span class="mandatory">*</span></label>
@@ -245,6 +267,11 @@
                                 <label for="no_rek3">No. Rek Tertera <span class="mandatory">*</span></label>
                                 <input type="text" class="form-control" id="no_rek3" name="no_rek3"
                                     placeholder="Masukkan nomor rekening">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="atas_nama3">Atas Nama <span class="mandatory">*</span></label>
+                                <input type="text" class="form-control" id="atas_nama3" name="atas_nama3"
+                                    placeholder="Rudi Hermawan">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="alamat_tertera">Alamat Tertera <span class="mandatory">*</span></label>
