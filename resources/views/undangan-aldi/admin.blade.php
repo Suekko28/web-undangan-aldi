@@ -32,46 +32,42 @@
                         <tbody>
                             <?php $i = $data->firstItem(); ?>
                             @foreach ($data as $item)
-                                <tr class="text-center">
-                                    <th scope="row">{{ $i }}</th>
-                                    <td scope="row">{{$item->nama_undangan}}</td>
-                                    <td>
-                                        <img src="{{ Storage::url('' . $item->banner_img) }}" width="120" height="120"
-                                            alt="Foto Prewedding">
-                                    </td>
-                                    <td scope="row">{{ $item->nama_mempelai_laki }} &
-                                        {{ $item->nama_mempelai_perempuan }}</td>
-                                    <td scope="row">
-                                        {{ \Carbon\Carbon::createFromFormat('Y-m-d', $item->tgl_akad)->format('d-m-Y') }}
-                                    </td>
-                                    {{-- <td scope="row">
-                                        @php
-                                            $namaUndanganArray = json_decode($item->nama_undangan);
-                                            $namaUndanganString = implode(', ', $namaUndanganArray);
-                                            echo $namaUndanganString;
-                                        @endphp
-                                    </td> --}}
-                                    <td scope="row">
-                                        <a href="{{ url('undangan-alternative1/' . $item->id) . '/edit' }}"
-                                            class="btn btn-warning mb-2"><i class=" fa fa-solid fa-pen-to-square"
-                                                style="color:white;"></i></a>
-                                        <form action="{{ url('undangan-alternative1/' . $item->id) }}" method="POST">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button class="btn btn-danger mb-2"><i
-                                                    class="fa fa-solid fa-trash"></i></button>
-                                        </form>
-                                    </td>
-                                </tr>
-                                <?php $i++; ?>
+                            <tr class="text-center">
+                                <th scope="row">{{ $i }}</th>
+                                <td scope="row">{{ $item->nama_undangan }}</td>
+                                <td>
+                                    <img src="{{ Storage::url('' . $item->banner_img) }}" width="120" height="120" alt="Foto Prewedding">
+                                </td>
+                                <td scope="row">{{ $item->nama_mempelai_laki }} & {{ $item->nama_mempelai_perempuan }}</td>
+                                <td scope="row">
+                                    {{ \Carbon\Carbon::createFromFormat('Y-m-d', $item->tgl_akad)->format('d-m-Y') }}
+                                </td>
+                                <td scope="row">
+                                    <a href="{{ url('undangan-alternative1/' . $item->id) . '/edit' }}" class="btn btn-warning mb-2"><i
+                                            class=" fa fa-solid fa-pen-to-square" style="color:white;"></i></a>
+                                    <form action="{{ url('undangan-alternative1/' . $item->id) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button class="btn btn-danger"><i class="fa fa-solid fa-trash"></i></button>
+                                    </form>
+                                    <a href="{{ route('undangan-alt1-home', [
+                                                'nama_mempelai_laki' => $item->nama_mempelai_laki,
+                                                'nama_mempelai_perempuan' => $item->nama_mempelai_perempuan,
+                                                'nama_undangan' => $item->nama_undangan,
+                                            ]) }}" target="_blank" class="btn btn-secondary mb-2"><i class=" fa fa-solid fa-link"
+                                            style="color:white;"></i></a>
+                                </td>
+                            </tr>
+                            <?php $i++; ?>
+                            @endforeach
                         </tbody>
-                        @endforeach
+                        
                     </table>
                 </div>
-                 <div class="p-2">{{$data->links()}}</div>
+                <div class="p-2">{{ $data->links() }}</div>
             </div>
         </div>
-        
+
 
 
         <!--/ Responsive Table -->

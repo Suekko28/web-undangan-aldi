@@ -28,7 +28,7 @@ class ViewAlt1Controller extends Controller
 
     /**
      * Display the specified resource.
-     */
+    */
     public function show(string $nama_mempelai_laki, string $nama_mempelai_perempuan, string $nama_undangan)
     {
         $data = UndanganAlt1::where('nama_undangan', $nama_undangan)->firstOrFail();

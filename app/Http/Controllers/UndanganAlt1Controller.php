@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\UndanganAlt1FormRequest;
 use App\Models\UndanganAlt1;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 
 class UndanganAlt1Controller extends Controller
@@ -14,12 +15,19 @@ class UndanganAlt1Controller extends Controller
      */
     public function index()
     {
+        // Fetch data from the respective tables
+        $nama_mempelai_laki = UndanganAlt1::value('nama_mempelai_laki');
+        $nama_mempelai_perempuan = UndanganAlt1::value('nama_mempelai_perempuan');
+        $nama_undangan = UndanganAlt1::value('nama_undangan');
+
         // Mengambil data, termasuk yang telah dihapus secara lembut
-        $data = UndanganAlt1::orderBy('id', 'asc')->withTrashed()->paginate(10);
-        
-        // Mengirimkan data ke view
-        return view('undangan-aldi.admin', compact('data'));
+        $data = UndanganAlt1::orderBy('id', 'asc')->paginate(10);
+
+        // Mengirimkan data ke view bersama dengan variabel
+        return view('undangan-aldi.admin', compact('data', 'nama_mempelai_laki', 'nama_mempelai_perempuan', 'nama_undangan'));
     }
+
+
 
     /**
      * Show the form for creating a new resource.
@@ -83,6 +91,12 @@ class UndanganAlt1Controller extends Controller
                 'no_rek3' => $request->no_rek3,
                 'atas_nama3' => $request->atas_nama3,
                 'alamat_tertera' => $request->alamat_tertera,
+                'mulai_akad' => $request->mulai_akad,
+                'selesai_akad' => $request->selesai_akad,
+                'mulai_resepsi' => $request->mulai_resepsi,
+                'selesai_resepsi' => $request->selesai_resepsi,
+
+
             ];
 
             // Periksa apakah file galeri diunggah sebelum menyimpannya
@@ -133,29 +147,29 @@ class UndanganAlt1Controller extends Controller
     {
         // Temukan data dengan ID yang diberikan
         $data = UndanganAlt1::findOrFail($id);
-    
+
         // Validasi data yang diterima dari formulir
         $validatedData = $request->validated();
-    
+
         // Simpan jalur gambar lama
         $gambarFields = ['banner_img', 'foto_mempelai_laki', 'foto_mempelai_perempuan', 'galeri_img1', 'galeri_img2', 'galeri_img3', 'galeri_img4', 'galeri_img5', 'galeri_img6'];
         foreach ($gambarFields as $field) {
             $oldImagePaths[$field] = $data->$field;
         }
-    
+
         // Update setiap gambar jika ada perubahan
         foreach ($gambarFields as $field) {
             if ($request->hasFile($field)) {
-    
+
                 // Upload gambar yang baru
                 $image = $request->file($field);
                 $imagePath = $image->storeAs('public/images', $image->hashName());
-    
+
                 // Update data dengan informasi gambar yang baru
                 $data->$field = $imagePath;
             }
         }
-    
+
         // Update data dengan informasi yang diperbarui
         $data->update([
             'nama_mempelai_laki' => $validatedData['nama_mempelai_laki'],
@@ -185,10 +199,10 @@ class UndanganAlt1Controller extends Controller
             'atas_nama3' => $validatedData['atas_nama3'],
             'alamat_tertera' => $validatedData['alamat_tertera'],
         ]);
-    
+
         return redirect()->route('undangan-alternative1')->with('success', 'Data berhasil diperbarui');
     }
-            
+
 
 
 

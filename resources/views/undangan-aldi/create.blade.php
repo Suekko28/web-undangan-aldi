@@ -9,7 +9,7 @@
     <link
         href="https://fonts.googleapis.com/draft2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="{{asset('style-admin.css')}}">
+    <link rel="stylesheet" href="{{ asset('style-admin.css') }}">
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="{{ asset('assets/admin/assets/vendor/fonts/boxicons.draft') }}" />
@@ -40,7 +40,7 @@
             <div class="container-fluid">
                 @include('layouts.message')
                 <!-- Small boxes (Stat box) -->
-                <form action="{{route('undangan-alternative1')}}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('undangan-alternative1') }}" method="post" enctype="multipart/form-data">
                     @csrf
 
                     <div class="card-body container bg-white mt-5">
@@ -48,7 +48,8 @@
                         <div class="fs-6">
                             <div class="form-group mb-3">
                                 <label for="nama_undangan">Nama Undangan <span class="mandatory">*</span></label>
-                                <textarea class="form-control" rows="5" id="nama_undangan" name="nama_undangan" placeholder="Masukan nama-nama undangan"></textarea>
+                                <textarea class="form-control" rows="5" id="nama_undangan" name="nama_undangan"
+                                    placeholder="Masukan nama-nama undangan"></textarea>
                             </div>
                         </div>
                     </div>
@@ -119,16 +120,41 @@
                         <div class="fs-6">
                             <div class="form-group mb-3">
                                 <label for="tgl_akad">Tanggal Akad <span class="mandatory">*</span></label>
-                                <input type="date" class="form-control" id="tgl_akad" name="tgl_akad" placeholder="">
+                                <input type="date" class="form-control" id="tgl_akad" name="tgl_akad"
+                                    placeholder="">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="mulai_akad">Mulai Akad <span class="mandatory">*</span></label>
+                                <input type="time" class="form-control" id="mulai_akad" name="mulai_akad"
+                                    placeholder="">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="selesai_akad">Selesai Akad <span class="mandatory">*</span></label>
+                                <input type="time" class="form-control" id="selesai_akad" name="selesai_akad"
+                                    placeholder="">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="alamat_akad">Alamat Akad <span class="mandatory">*</span></label>
-                                <textarea class="form-control" rows="5" id="alamat_akad" name="alamat_akad" placeholder="Masukan alamat akad"></textarea>
+                                <textarea class="form-control" rows="5" id="alamat_akad" name="alamat_akad"
+                                    placeholder="Masukan alamat akad"></textarea>
                             </div>
+
                             <div class="form-group mb-3">
                                 <label for="tgl_resepsi">Tanggal Resepsi <span class="mandatory">*</span></label>
                                 <input type="date" class="form-control" id="tgl_resepsi" name="tgl_resepsi"
                                     placeholder="">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="mulai_resepsi">Mulai Resepsi <span class="mandatory">*</span></label>
+                                <input type="time" class="form-control" id="mulai_resepsi" name="mulai_resepsi"
+                                    placeholder="">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="selesai_resepsi">Selesai Resepsi <span class="mandatory">*</span></label>
+                                <input type="time" class="form-control" id="selesai_resepsi" name="selesai_resepsi"
+                                    placeholder="">
+                            </div>
+                            
                             </div>
                             <div class="form-group mb-3">
                                 <label for="alamat_resepsi">Alamat Resepsi <span class="mandatory">*</span></label>
@@ -191,7 +217,7 @@
                     <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Cerita Cinta Kami</div>
                         <div class="fs-6">
-                            
+
                             <div class="form-group mb-3">
                                 <label for="pertemuan">Petemuan <span class="mandatory">*</span> <span
                                         class="fst-italic">(Maksimal 200 Karakter)</span>
@@ -275,14 +301,15 @@
                             </div>
                             <div class="form-group mb-3">
                                 <label for="alamat_tertera">Alamat Tertera <span class="mandatory">*</span></label>
-                                <textarea class="form-control" rows="5" id="alamat_tertera" name="alamat_tertera" placeholder="Masukan alamat tertera kirim hadiah"></textarea>
+                                <textarea class="form-control" rows="5" id="alamat_tertera" name="alamat_tertera"
+                                    placeholder="Masukan alamat tertera kirim hadiah"></textarea>
                             </div>
                         </div>
 
-                     
+
                         <div class="d-flex flex-row-reverse mt-5">
                             <button type="submit" class="btn btn-primary ml-3 ms-3">Simpan</button>
-                            <a href="{{route('undangan-alternative1')}}" class="btn btn-danger">Batal</a>
+                            <a href="{{ route('undangan-alternative1') }}" class="btn btn-danger">Batal</a>
                         </div>
 
                     </div>

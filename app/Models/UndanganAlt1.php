@@ -11,10 +11,6 @@ class UndanganAlt1 extends Model
 {
 use HasFactory;
 
-use SoftDeletes;
-
-protected $dates = ['deleted_at']; 
-
 /**
  * The attributes that are mass assignable.
  *
@@ -57,6 +53,10 @@ protected $fillable = [
     'no_rek3',
     'atas_nama3',
     'alamat_tertera',
+    'mulai_akad',
+    'selesai_akad',
+    'mulai_resepsi',
+    'selesai_resepsi',
 ];
 
 public function Alt1Model(): HasMany {

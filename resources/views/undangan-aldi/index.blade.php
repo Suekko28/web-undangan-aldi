@@ -132,7 +132,10 @@
                                 </div>
                                 <div class="button-frame2">
                                     <div class="waktu6">Waktu</div>
-                                    <b class="wib-selesai6">10:00 WIB - Selesai</b>
+                                    <b class="wib-selesai6">
+                                        {{ \Carbon\Carbon::parse($data->mulai_akad)->format('H:i') }} WIB -
+                                        {{ \Carbon\Carbon::parse($data->selesai_akad)->format('H:i') }} WIB
+                                    </b>
                                 </div>
                                 <div class="tempat-parent3">
                                     <div class="tempat6">Tempat</div>
@@ -171,7 +174,10 @@
                                 </div>
                                 <div class="waktu-parent3">
                                     <div class="waktu7">Waktu</div>
-                                    <b class="wib-selesai7">10:00 WIB - Selesai</b>
+                                    <b class="wib-selesai6">
+                                        {{ \Carbon\Carbon::parse($data->mulai_resepsi)->format('H:i') }} WIB -
+                                        {{ \Carbon\Carbon::parse($data->selesai_resepsi)->format('H:i') }} WIB
+                                    </b>
                                 </div>
                                 <div class="tempat-parent4">
                                     <div class="tempat7">Tempat</div>
@@ -259,9 +265,9 @@
                 </div>
             </div>
         </div>
-        
-        
-        
+
+
+
 
 
 
@@ -728,22 +734,33 @@
             now = new Date();
             diff = future - now;
 
-            days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            hours = Math.floor(diff / (1000 * 60 * 60));
-            mins = Math.floor(diff / (1000 * 60));
-            secs = Math.floor(diff / 1000);
+            if (diff <= 0) {
+                // Waktu telah berlalu, atur semua nilai menjadi 0
+                document.getElementById("timer").innerHTML =
+                    '<div>00<span>Hari</span></div>' +
+                    '<div>00<span>Jam</span></div>' +
+                    '<div>00<span>Menit</span></div>' +
+                    '<div>00<span>Detik</span></div>';
+                return;
+            }
 
-            d = days;
-            h = hours - days * 24;
-            m = mins - hours * 60;
-            s = secs - mins * 60;
+            days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+            // Format nilai untuk menambahkan angka 0 di depan jika nilainya < 10
+            days = (days < 10) ? "0" + days : days;
+            hours = (hours < 10) ? "0" + hours : hours;
+            mins = (mins < 10) ? "0" + mins : mins;
+            secs = (secs < 10) ? "0" + secs : secs;
 
             document.getElementById("timer")
                 .innerHTML =
-                '<div>' + d + '<span>Hari</span></div>' +
-                '<div>' + h + '<span>Jam</span></div>' +
-                '<div>' + m + '<span>Menit</span></div>' +
-                '<div>' + s + '<span>Detik</span></div>';
+                '<div>' + days + '<span>Hari</span></div>' +
+                '<div>' + hours + '<span>Jam</span></div>' +
+                '<div>' + mins + '<span>Menit</span></div>' +
+                '<div>' + secs + '<span>Detik</span></div>';
         }
 
         // Memanggil updateTimer() saat halaman dimuat dengan tanggal akad dari PHP

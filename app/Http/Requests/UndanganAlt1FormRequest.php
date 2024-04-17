@@ -57,6 +57,10 @@ class UndanganAlt1FormRequest extends FormRequest
             'no_rek3' => ['required', 'integer'],
             'atas_nama3' => ['required', 'string', 'max:100'],
             'alamat_tertera' => ['required', 'string'],
+            'mulai_akad' => ['required', 'date_format:H:i'],
+            'selesai_akad' => ['required', 'date_format:H:i'],
+            'mulai_resepsi' => ['required', 'date_format:H:i'],
+            'selesai_resepsi' => ['required', 'date_format:H:i'],
         ];
     }
 
