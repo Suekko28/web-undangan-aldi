@@ -80,6 +80,11 @@
                                 <input type="text" class="form-control" id="putra_dari_bpk" name="putra_dari_bpk"
                                     placeholder="Putra dari bapak" value="{{$data->putra_dari_bpk}}">
                             </div>
+                            <div class="form-group mb-3">
+                                <label for="putra_dari_ibu">Putra dari Ibu <span class="mandatory">*</span></label>
+                                <input type="text" class="form-control" id="putra_dari_ibu" name="putra_dari_ibu"
+                                    placeholder="Putra dari ibu" value="{{$data->putra_dari_ibu}}">
+                            </div>
 
 
                             <div class="form-group mb-3">
@@ -98,6 +103,11 @@
                                 <label for="putri_dari_bpk">Putri dari Bapak <span class="mandatory">*</span></label>
                                 <input type="text" class="form-control" id="putri_dari_bpk" name="putri_dari_bpk"
                                     placeholder="Putri dari bapak" value="{{$data->putri_dari_bpk}}">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="putri_dari_ibu">Putri dari Ibu <span class="mandatory">*</span></label>
+                                <input type="text" class="form-control" id="putri_dari_ibu" name="putri_dari_ibu"
+                                    placeholder="Putri dari ibu" value="{{$data->putri_dari_ibu}}">
                             </div>
 
                         </div>
@@ -224,6 +234,11 @@
                                 <input type="text" class="form-control" id="no_rek1" name="no_rek1"
                                     placeholder="Masukkan nomor rekening" value="{{$data->no_rek1}}">
                             </div>
+                            <div class="form-group mb-3">
+                                <label for="atas_nama1">Atas Nama <span class="mandatory">*</span></label>
+                                <input type="text" class="form-control" id="atas_nama1" name="atas_nama1"
+                                    placeholder="Rudi Hermawan" value="{{$data->atas_nama1}}">
+                            </div>
 
                             <div class="form-group mb-3">
                                 <label for="nama_rek2">Nama Rek Tertera <span class="mandatory">*</span></label>
@@ -235,7 +250,11 @@
                                 <input type="text" class="form-control" id="no_rek2" name="no_rek2"
                                     placeholder="Masukkan nomor rekening" value="{{$data->no_rek2}}">
                             </div>
-
+                            <div class="form-group mb-3">
+                                <label for="atas_nama2">Atas Nama <span class="mandatory">*</span></label>
+                                <input type="text" class="form-control" id="atas_nama2" name="atas_nama2"
+                                    placeholder="Rudi Hermawan" value="{{$data->atas_nama2}}">
+                            </div>
                             <div class="form-group mb-3">
                                 <label for="nama_rek3">Nama Rek Tertera <span class="mandatory">*</span></label>
                                 <input type="text" class="form-control" id="nama_rek3" name="nama_rek3"
@@ -245,6 +264,11 @@
                                 <label for="no_rek3">No. Rek Tertera <span class="mandatory">*</span></label>
                                 <input type="text" class="form-control" id="no_rek3" name="no_rek3"
                                     placeholder="Masukkan nomor rekening" value="{{$data->no_rek3}}">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="atas_nama3">Atas Nama <span class="mandatory">*</span></label>
+                                <input type="text" class="form-control" id="atas_nama3" name="atas_nama3"
+                                    placeholder="Rudi Hermawan" value="{{$data->atas_nama3}}">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="alamat_tertera">Alamat Tertera <span class="mandatory">*</span></label>

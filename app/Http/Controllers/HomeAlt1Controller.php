@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\UndanganAlt1;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class HomeAlt1Controller extends Controller
@@ -35,10 +36,10 @@ class HomeAlt1Controller extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $nama_undangan)
+    public function show(string $nama_mempelai_laki, string $nama_mempelai_perempuan, string $nama_undangan)
     {
         $data = UndanganAlt1::where('nama_undangan', $nama_undangan)->firstOrFail();
-        return view('undangan-aldi.home', compact('data'));
+        return view('undangan-aldi.home', compact('data', 'hari_akad'));
     }
 
 

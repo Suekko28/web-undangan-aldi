@@ -118,6 +118,7 @@ span {
     height: 390px;
     object-fit: cover;
     z-index: 0;
+    border-radius: 50%;
 }
 
 .text-node,
@@ -657,7 +658,7 @@ audio {
     height: 320px;
     width: 320px;
     position: relative;
-    border-radius: 32px;
+    border-radius: 50%;
     object-fit: cover;
 }
 .card-mandiri {
@@ -686,6 +687,7 @@ audio {
     width: 250px;
     position: relative;
     object-fit: cover;
+    border-radius: 50%;
 }
 .maryam3 {
     margin: 0;

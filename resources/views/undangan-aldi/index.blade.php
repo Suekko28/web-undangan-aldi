@@ -40,7 +40,7 @@
                         data-scroll-to="buttonImage" /> --}}
 
                     <img class="header-section-icon" loading="lazy" alt=""
-                        src="{{ asset('./assets/ellipse-15@2x.png') }}" />
+                        src="{{ Storage::url('' . $data->banner_img) }}" />
 
                     <div class="frame-inner"></div>
                     <div class="frame-inner2"></div>
@@ -100,12 +100,12 @@
                         </div>
                     </div>
                     <img class="container-frame-icon" loading="lazy" alt=""
-                        src="{{ asset('./assets/frame-167@2x.png') }}" />
+                        src="{{ Storage::url('' . $data->foto_mempelai_laki) }}" />
                 </div>
                 <h1 class="frame3">&</h1>
                 <div class="card-mandiri1">
                     <img class="card-mandiri-child" loading="lazy" alt=""
-                        src="{{ asset('./assets/frame-166@2x.png') }}" />
+                        src="{{ Storage::url('' . $data->foto_mempelai_perempuan) }}" />
 
                     <div class="maryam-parent1">
                         <h1 class="maryam3">Maryam</h1>
@@ -127,7 +127,8 @@
                                 <h1 class="akad9">Akad</h1>
                                 <div class="rectangle-frame">
                                     <div class="tanggal6">Tanggal</div>
-                                    <b class="sabtu-11-november6">Sabtu, 11 November 2023</b>
+                                    <b
+                                        class="sabtu-11-november6">{{ \Carbon\Carbon::createFromFormat('Y-m-d', $data->tgl_akad)->locale('id')->isoFormat('dddd, D MMMM YYYY') }}</b>
                                 </div>
                                 <div class="button-frame2">
                                     <div class="waktu6">Waktu</div>
@@ -165,7 +166,8 @@
                                 <h1 class="resepsi8">Resepsi</h1>
                                 <div class="tanggal-parent3">
                                     <div class="tanggal7">Tanggal</div>
-                                    <b class="sabtu-11-november7">Sabtu, 11 November 2023</b>
+                                    <b
+                                        class="sabtu-11-november6">{{ \Carbon\Carbon::createFromFormat('Y-m-d', $data->tgl_resepsi)->locale('id')->isoFormat('dddd, D MMMM YYYY') }}</b>
                                 </div>
                                 <div class="waktu-parent3">
                                     <div class="waktu7">Waktu</div>
@@ -244,22 +246,22 @@
                 </div>
                 <div class="frame-parent16">
                     <div class="frame-parent17">
-                        <img class="frame-child6 " alt=""
-                            src="{{ Storage::url('' . $data->galeri_img1) }}" />
-                        <img class="frame-child6 " alt=""
-                            src="{{ Storage::url('' . $data->galeri_img2) }}" />
-                        <img class="frame-child6 " alt=""
-                            src="{{ Storage::url('' . $data->galeri_img3) }}" />
-                        <img class="frame-child6 " alt=""
-                            src="{{ Storage::url('' . $data->galeri_img4) }}" />
-                        <img class="frame-child6 " alt=""
-                            src="{{ Storage::url('' . $data->galeri_img5) }}" />
-                        <img class="frame-child6 " alt=""
-                            src="{{ Storage::url('' . $data->galeri_img6) }}" />
+                        @foreach (range(1, 6) as $index)
+                            @php
+                                $galeri_field = 'galeri_img' . $index;
+                            @endphp
+                            @if ($data->$galeri_field)
+                                <img class="frame-child6" alt=""
+                                    src="{{ Storage::url('' . $data->$galeri_field) }}" />
+                            @endif
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
+        
+        
+        
 
 
 
@@ -305,7 +307,7 @@
                         <b class="pernikahan3">Pernikahan</b>
                         <div class="kami-memutuskan-untuk-container3">
                             <p class="kami-memutuskan-untuk3">
-                                {{$data->pernikahan}}
+                                {{ $data->pernikahan }}
                             </p>
                             <p class="blank-line26">&nbsp;</p>
                         </div>
@@ -369,6 +371,7 @@
 
     
             </div> --}}
+
         </section>
 
         <section class="hadiah3" data-scroll-to="hadiah">
@@ -410,31 +413,31 @@
                 </div>
                 <div class="card-list17">
                     <div class="card35">
-                        <b class="bca7">{{$data->nama_rek1}}</b>
+                        <b class="bca7">{{ $data->nama_rek1 }}</b>
                         <div class="body18">
-                            <div class="copy5" id="copyText">{{$data->no_rek1}}</div>
+                            <div class="copy5" id="copyText">{{ $data->no_rek1 }}</div>
                             <img class="copy-icon10" id="copyButton" loading="lazy" alt=""
                                 src="{{ asset('./assets/copy2.svg') }}" />
                         </div>
-                        <div class="an-rudi-hermina14">{{$data->atas_nama1}}</div>
+                        <div class="an-rudi-hermina14">{{ $data->atas_nama1 }}</div>
                     </div>
                     <div class="card35">
-                        <b class="mandiri7">{{$data->nama_rek2}}</b>
+                        <b class="mandiri7">{{ $data->nama_rek2 }}</b>
                         <div class="body19">
-                            <div class="div73" id="copyText2">{{$data->no_rek2}}</div>
+                            <div class="div73" id="copyText2">{{ $data->no_rek2 }}</div>
                             <img class="copy-icon11" id="copyButton2" loading="lazy" alt=""
                                 src="{{ asset('./assets/copy2.svg') }}" />
                         </div>
-                        <div class="an-rudi-hermina15">{{$data->atas_nama2}}</div>
+                        <div class="an-rudi-hermina15">{{ $data->atas_nama2 }}</div>
                     </div>
                     <div class="card35">
-                        <b class="mandiri7">{{$data->nama_rek3}}</b>
+                        <b class="mandiri7">{{ $data->nama_rek3 }}</b>
                         <div class="body19">
-                            <div class="div73" id="copyText3">{{$data->no_rek3}}</div>
+                            <div class="div73" id="copyText3">{{ $data->no_rek3 }}</div>
                             <img class="copy-icon11" id="copyButton3" loading="lazy" alt=""
                                 src="{{ asset('./assets/copy2.svg') }}" />
                         </div>
-                        <div class="an-rudi-hermina15">{{$data->atas_nama3}}</div>
+                        <div class="an-rudi-hermina15">{{ $data->atas_nama3 }}</div>
                     </div>
 
                 </div>
@@ -593,7 +596,7 @@
         kirimAlamatButton.addEventListener('click', function() {
             // Mengubah konten elemen substitutePresent menjadi alamat
             substitutePresent.innerHTML =
-                '<div class="alamat" style="font-size:16px;">Alamat :<br>{{$data->alamat_tertera}}</div>';
+                '<div class="alamat" style="font-size:16px;">Alamat :<br>{{ $data->alamat_tertera }}</div>';
 
             kirimAlamatButton.style.backgroundColor = '#bb8554';
             kirimAlamatButton.style.color = 'white';
@@ -720,8 +723,8 @@
             });
         });
 
-        function updateTimer() {
-            future = Date.parse("June 11, 2024 11:30:00");
+        function updateTimer(tgl_akad) {
+            future = Date.parse(tgl_akad);
             now = new Date();
             diff = future - now;
 
@@ -742,23 +745,12 @@
                 '<div>' + m + '<span>Menit</span></div>' +
                 '<div>' + s + '<span>Detik</span></div>';
         }
-        setInterval('updateTimer()', 1000);
 
-        function myFunction() {
-            // Get the text field
-            var copyText = document.getElementById("myInput");
-
-            // Select the text field
-            copyText.select();
-            copyText.setSelectionRange(0, 99999); // For mobile devices
-
-            // Copy the text inside the text field
-            navigator.clipboard.writeText(copyText.value);
-
-            // Alert the copied text
-            alert("Copied the text: " + copyText.value);
-        }
+        // Memanggil updateTimer() saat halaman dimuat dengan tanggal akad dari PHP
+        updateTimer("{{ $data->tgl_akad }}");
+        setInterval(updateTimer.bind(null, "{{ $data->tgl_akad }}"), 1000); // Memperbarui setiap detik
     </script>
+
 </body>
 
 </html>

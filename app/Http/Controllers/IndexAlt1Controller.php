@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\alt1FormRequest;
 use App\Models\UndanganAlt1;
 use Illuminate\Http\Request;
 
@@ -26,18 +27,21 @@ class IndexAlt1Controller extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(alt1FormRequest $request)
     {
-        //
+        $data = $request->validated();
+        $undangan = UndanganAlt1::where('nama_undangan', $data['nama_undangan'])->firstOrFail();
+        $undangan->alt1Models()->create($data);
+        return redirect()->route('undangan-alt1-index', ['nama_undangan' => $data['nama_undangan']]);
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(string $id)
+    public function show(string $nama_mempelai_laki, string $nama_mempelai_perempuan, string $nama_undangan)
     {
-        $data = UndanganAlt1::findOrFail($id);
-        return view('undangan-aldi.index', compact('data'));
+        $data = UndanganAlt1::where('nama_undangan', $nama_undangan)->firstOrFail();
+        return view('undangan-aldi.index', compact('data', 'nama_mempelai_laki', 'nama_mempelai_perempuan'));
     }
 
     /**

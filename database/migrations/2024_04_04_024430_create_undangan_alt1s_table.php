@@ -12,6 +12,7 @@ return new class extends Migration {
     {
         Schema::create('undangan_alt1s', function (Blueprint $table) {
             $table->id();
+            $table->softDeletes();
             $table->text('nama_undangan');
             $table->string('banner_img');
             $table->string('foto_mempelai_laki');
