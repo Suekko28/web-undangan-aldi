@@ -79,7 +79,7 @@
 
             </div>
 
-            <audio autoplay loop controls id="myAudio" src="{{ asset('./assets/lagu-aldi.mp3') }}"></audio>
+            <audio autoplay loop controls id="myAudio" src="{{ Storage::url('' . $data->music) }}"></audio>
 
             <button class="floating-button4" id="floatingButton">
                 <div class="whatsapp-video-2024-01-30-at-1"></div>
@@ -252,114 +252,141 @@
                 </div>
                 <div class="frame-parent16">
                     <div class="frame-parent17">
-                        @foreach (range(1, 6) as $index)
-                            @php
-                                $galeri_field = 'galeri_img' . $index;
-                            @endphp
-                            @if ($data->$galeri_field)
-                                <img class="frame-child6" alt=""
-                                    src="{{ Storage::url('' . $data->$galeri_field) }}" />
-                            @endif
-                        @endforeach
+                        @if ($data->galeri_img1 && Storage::exists($data->galeri_img1))
+                            <img class="frame-child6" alt="" src="{{ Storage::url($data->galeri_img1) }}" />
+                        @else
+                            <div class="frame-child6" style="display: none;"></div>
+                        @endif
+                        @if ($data->galeri_img2 && Storage::exists($data->galeri_img2))
+                            <img class="frame-child6" alt="" src="{{ Storage::url($data->galeri_img2) }}" />
+                        @else
+                            <div class="frame-child6" style="display: none;"></div>
+                        @endif
+                        @if ($data->galeri_img3 && Storage::exists($data->galeri_img3))
+                            <img class="frame-child6" alt="" src="{{ Storage::url($data->galeri_img3) }}" />
+                        @else
+                            <div class="frame-child6" style="display: none;"></div>
+                        @endif
+                        @if ($data->galeri_img4 && Storage::exists($data->galeri_img4))
+                            <img class="frame-child6" alt="" src="{{ Storage::url($data->galeri_img4) }}" />
+                        @else
+                            <div class="frame-child6" style="display: none;"></div>
+                        @endif
+                        @if ($data->galeri_img5 && Storage::exists($data->galeri_img5))
+                            <img class="frame-child6" alt="" src="{{ Storage::url($data->galeri_img5) }}" />
+                        @else
+                            <div class="frame-child6" style="display: none;"></div>
+                        @endif
+                        @if ($data->galeri_img6 && Storage::exists($data->galeri_img6))
+                            <img class="frame-child6" alt="" src="{{ Storage::url($data->galeri_img6) }}" />
+                        @else
+                            <div class="frame-child6" style="display: none;"></div>
+                        @endif
+
+
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+    <section class="cerita-cinta4">
+        <h1 class="cerita-cinta-kami3">Cerita Cinta Kami</h1>
+        <div class="r-s-v-p-mobile-frame">
+            <div class="r-s-v-p-frame-title">
+                <div class="r-s-v-p-name-field">
+                    <b class="pertemuan3">Pertemuan</b>
+                    <div class="tidak-ada-yang3">
+                        {{ $data->pertemuan }}
+                    </div>
+                </div>
+                <img class="r-s-v-p-nope-button" loading="lazy" alt=""
+                    src="{{ Storage::url('' . $data->foto_pertemuan) }}" />
+            </div>
+            <div class="r-s-v-p-frame-title1">
+                <img class="r-s-v-p-frame-title-child" loading="lazy" alt=""
+                    src="{{ Storage::url('' . $data->foto_pendekatan) }}" />
+
+                <div class="pendekatan-parent1">
+                    <b class="pendekatan3">Pendekatan</b>
+                    <div class="seiring-berjalannya-waktu3">
+                        {{ $data->pendekatan }}
+                    </div>
+                </div>
+            </div>
+            <div class="r-s-v-p-frame-title2">
+                <div class="lamaran-parent1">
+                    <b class="lamaran3">Lamaran</b>
+                    <div class="atas-kehendak-allah3">
+                        {{ $data->lamaran }}
+                    </div>
+                </div>
+                <img class="r-s-v-p-frame-title-item" loading="lazy" alt=""
+                    src="{{ Storage::url('' . $data->foto_lamaran) }}" />
+            </div>
+            <div class="r-s-v-p-frame-title3">
+                <img class="r-s-v-p-frame-title-inner" loading="lazy" alt=""
+                    src="{{ Storage::url('' . $data->foto_pernikahan) }}" />
+
+                <div class="pernikahan-parent1">
+                    <b class="pernikahan3">Pernikahan</b>
+                    <div class="kami-memutuskan-untuk-container3">
+                        <p class="kami-memutuskan-untuk3">
+                            {{ $data->pernikahan }}
+                        </p>
+                        <p class="blank-line26">&nbsp;</p>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
 
 
-
-
-
-
-        <section class="cerita-cinta4">
-            <h1 class="cerita-cinta-kami3">Cerita Cinta Kami</h1>
-            <div class="r-s-v-p-mobile-frame">
-                <div class="r-s-v-p-frame-title">
-                    <div class="r-s-v-p-name-field">
-                        <b class="pertemuan3">Pertemuan</b>
-                        <div class="tidak-ada-yang3">
-                            {{ $data->pertemuan }}
-                        </div>
-                    </div>
-                    <img class="r-s-v-p-nope-button" loading="lazy" alt=""
-                        src="{{ asset('./assets/frame-105@2x.png') }}" />
-                </div>
-                <div class="r-s-v-p-frame-title1">
-                    <img class="r-s-v-p-frame-title-child" loading="lazy" alt=""
-                        src="{{ asset('./assets/frame-106@2x.png') }}" />
-
-                    <div class="pendekatan-parent1">
-                        <b class="pendekatan3">Pendekatan</b>
-                        <div class="seiring-berjalannya-waktu3">
-                            {{ $data->pendekatan }}
-                        </div>
+    <section class="rsvp5" data-scroll-to="rSVP">
+        <form class="rsvp-mobile3" method="POST" action="{{ url('/undangan-alt1/index') }}">
+            @csrf
+            <h1 class="rsvp6">RSVP</h1>
+            <div class="frame-parent151">
+                <div class="nama-lengkap-container">
+                    <div class="nama-lengkap3">Nama Lengkap</div>
+                    <div class="field34">
+                        <input name="nama" class="masukkan-nama-kamu9" placeholder="Masukkan nama kamu"
+                            type="text" />
                     </div>
                 </div>
-                <div class="r-s-v-p-frame-title2">
-                    <div class="lamaran-parent1">
-                        <b class="lamaran3">Lamaran</b>
-                        <div class="atas-kehendak-allah3">
-                            {{ $data->lamaran }}
-                        </div>
+                <div class="pendekatan-perikahan-frame">
+                    <div class="bersedia-hadir-di3">
+                        Bersedia hadir di acara kami?
                     </div>
-                    <img class="r-s-v-p-frame-title-item" loading="lazy" alt=""
-                        src="{{ asset('./assets/frame-99@2x.png') }}" />
-                </div>
-                <div class="r-s-v-p-frame-title3">
-                    <img class="r-s-v-p-frame-title-inner" loading="lazy" alt=""
-                        src="{{ asset('./assets/frame-108@2x.png') }}" />
 
-                    <div class="pernikahan-parent1">
-                        <b class="pernikahan3">Pernikahan</b>
-                        <div class="kami-memutuskan-untuk-container3">
-                            <p class="kami-memutuskan-untuk3">
-                                {{ $data->pernikahan }}
-                            </p>
-                            <p class="blank-line26">&nbsp;</p>
-                        </div>
+                    <div class="radio_group">
+                        <input type="radio" name="kehadiran" value="1" id="radio1">
+                        <label for="radio1" class="radio_label">Ya</label>
+
+                        <input type="radio" name="kehadiran" value="0" id="radio2">
+                        <label for="radio2" class="radio_label">Tidak</label>
                     </div>
+                </div>
+                <div class="ucapan-doa-container">
+                    <div class="ucapan-doa9">Ucapan & Doa</div>
+                    <textarea class="field35" name="ucapan" placeholder="Kirim ucapan & doa" rows="6" cols="28"></textarea>
                 </div>
             </div>
-        </section>
+            <button class="cardlist" type="submit">
+                <img class="b-c-acard" alt="" src="{{ asset('./assets/frame-277.svg') }}" />
+                <div class="kirim-ucapan5">Kirim Ucapan</div>
+            </button>
+        </form>
 
-
-        <section class="rsvp5" data-scroll-to="rSVP">
-            <form class="rsvp-mobile3" method="POST" action="{{ url('/undangan-alt1/index') }}">
-                @csrf
-                <h1 class="rsvp6">RSVP</h1>
-                <div class="frame-parent151">
-                    <div class="nama-lengkap-container">
-                        <div class="nama-lengkap3">Nama Lengkap</div>
-                        <div class="field34">
-                            <input name="nama" class="masukkan-nama-kamu9" placeholder="Masukkan nama kamu"
-                                type="text" />
-                        </div>
-                    </div>
-                    <div class="pendekatan-perikahan-frame">
-                        <div class="bersedia-hadir-di3">
-                            Bersedia hadir di acara kami?
-                        </div>
-
-                        <div class="radio_group">
-                            <input type="radio" name="kehadiran" value="1" id="radio1">
-                            <label for="radio1" class="radio_label">Ya</label>
-
-                            <input type="radio" name="kehadiran" value="0" id="radio2">
-                            <label for="radio2" class="radio_label">Tidak</label>
-                        </div>
-                    </div>
-                    <div class="ucapan-doa-container">
-                        <div class="ucapan-doa9">Ucapan & Doa</div>
-                        <textarea class="field35" name="ucapan" placeholder="Kirim ucapan & doa" rows="6" cols="28"></textarea>
-                    </div>
-                </div>
-                <button class="cardlist" type="submit">
-                    <img class="b-c-acard" alt="" src="{{ asset('./assets/frame-277.svg') }}" />
-                    <div class="kirim-ucapan5">Kirim Ucapan</div>
-                </button>
-            </form>
-
-            {{-- <div class="ucapan-mobile">
+        {{-- <div class="ucapan-mobile">
                 @foreach ($data as $item)
                 <div class="ucapan-mobile-inner">
                     <div class="ahmad-parent">
@@ -378,77 +405,75 @@
     
             </div> --}}
 
-        </section>
+    </section>
 
-        <section class="hadiah3" data-scroll-to="hadiah">
-            <footer class="kirim-hadiah17">
-                <div class="question8">
-                    <div class="transfer-rekening-button-label">
-                        <b class="kirim-hadiah18">Kirim Hadiah</b>
-                        <div class="jika-kamu-tidak7">
-                            Jika kamu tidak bisa hadir, kami bersedia untuk menerima hadiah
-                            dalam bentuk :
-                        </div>
-                    </div>
-                    <div class="button-parent4">
-                        <div class="button62">
-                            <div class="mail37">
-                                <img class="vector-icon42" alt=""
-                                    src="{{ asset('./assets/vector.svg') }}" />
-                                <div class="badge47">
-                                    <div class="div71">12</div>
-                                </div>
-                            </div>
-                            <div class="transfer-ke-no6">
-                                Transfer ke no. rekening tertera
-                            </div>
-                            <img class="add-icon37" alt="" src="{{ asset('./assets/add.svg') }}" />
-                        </div>
-                        <button class="button63">
-                            <div class="mail38">
-                                <img class="vector-icon43" alt=""
-                                    src="{{ asset('./assets/vector.svg') }}" />
-                                <div class="badge48">
-                                    <div class="div72">12</div>
-                                </div>
-                            </div>
-                            <div class="kirim-kado-ke7">Kirim kado ke alamat tertera</div>
-                            <img class="add-icon38" alt="" src="{{ asset('./assets/add.svg') }}" />
-                        </button>
+    <section class="hadiah3" data-scroll-to="hadiah">
+        <footer class="kirim-hadiah17">
+            <div class="question8">
+                <div class="transfer-rekening-button-label">
+                    <b class="kirim-hadiah18">Kirim Hadiah</b>
+                    <div class="jika-kamu-tidak7">
+                        Jika kamu tidak bisa hadir, kami bersedia untuk menerima hadiah
+                        dalam bentuk :
                     </div>
                 </div>
-                <div class="card-list17">
-                    <div class="card35">
-                        <b class="bca7">{{ $data->nama_rek1 }}</b>
-                        <div class="body18">
-                            <div class="copy5" id="copyText">{{ $data->no_rek1 }}</div>
-                            <img class="copy-icon10" id="copyButton" loading="lazy" alt=""
-                                src="{{ asset('./assets/copy2.svg') }}" />
+                <div class="button-parent4">
+                    <div class="button62">
+                        <div class="mail37">
+                            <img class="vector-icon42" alt="" src="{{ asset('./assets/vector.svg') }}" />
+                            <div class="badge47">
+                                <div class="div71">12</div>
+                            </div>
                         </div>
-                        <div class="an-rudi-hermina14">{{ $data->atas_nama1 }}</div>
-                    </div>
-                    <div class="card35">
-                        <b class="mandiri7">{{ $data->nama_rek2 }}</b>
-                        <div class="body19">
-                            <div class="div73" id="copyText2">{{ $data->no_rek2 }}</div>
-                            <img class="copy-icon11" id="copyButton2" loading="lazy" alt=""
-                                src="{{ asset('./assets/copy2.svg') }}" />
+                        <div class="transfer-ke-no6">
+                            Transfer ke no. rekening tertera
                         </div>
-                        <div class="an-rudi-hermina15">{{ $data->atas_nama2 }}</div>
+                        <img class="add-icon37" alt="" src="{{ asset('./assets/add.svg') }}" />
                     </div>
-                    <div class="card35">
-                        <b class="mandiri7">{{ $data->nama_rek3 }}</b>
-                        <div class="body19">
-                            <div class="div73" id="copyText3">{{ $data->no_rek3 }}</div>
-                            <img class="copy-icon11" id="copyButton3" loading="lazy" alt=""
-                                src="{{ asset('./assets/copy2.svg') }}" />
+                    <button class="button63">
+                        <div class="mail38">
+                            <img class="vector-icon43" alt="" src="{{ asset('./assets/vector.svg') }}" />
+                            <div class="badge48">
+                                <div class="div72">12</div>
+                            </div>
                         </div>
-                        <div class="an-rudi-hermina15">{{ $data->atas_nama3 }}</div>
-                    </div>
-
+                        <div class="kirim-kado-ke7">Kirim kado ke alamat tertera</div>
+                        <img class="add-icon38" alt="" src="{{ asset('./assets/add.svg') }}" />
+                    </button>
                 </div>
-            </footer>
-        </section>
+            </div>
+            <div class="card-list17">
+                <div class="card35">
+                    <b class="bca7">{{ $data->nama_rek1 }}</b>
+                    <div class="body18">
+                        <div class="copy5" id="copyText">{{ $data->no_rek1 }}</div>
+                        <img class="copy-icon10" id="copyButton" loading="lazy" alt=""
+                            src="{{ asset('./assets/copy2.svg') }}" />
+                    </div>
+                    <div class="an-rudi-hermina14">{{ $data->atas_nama1 }}</div>
+                </div>
+                <div class="card35">
+                    <b class="mandiri7">{{ $data->nama_rek2 }}</b>
+                    <div class="body19">
+                        <div class="div73" id="copyText2">{{ $data->no_rek2 }}</div>
+                        <img class="copy-icon11" id="copyButton2" loading="lazy" alt=""
+                            src="{{ asset('./assets/copy2.svg') }}" />
+                    </div>
+                    <div class="an-rudi-hermina15">{{ $data->atas_nama2 }}</div>
+                </div>
+                <div class="card35">
+                    <b class="mandiri7">{{ $data->nama_rek3 }}</b>
+                    <div class="body19">
+                        <div class="div73" id="copyText3">{{ $data->no_rek3 }}</div>
+                        <img class="copy-icon11" id="copyButton3" loading="lazy" alt=""
+                            src="{{ asset('./assets/copy2.svg') }}" />
+                    </div>
+                    <div class="an-rudi-hermina15">{{ $data->atas_nama3 }}</div>
+                </div>
+
+            </div>
+        </footer>
+    </section>
 
     </div>
 

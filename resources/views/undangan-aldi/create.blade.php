@@ -53,13 +53,19 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="card-body container bg-white mt-5">
-                        <div class="mempelai text-center fw-bold fs-5">Banner Image</div>
+                        <div class="mempelai text-center fw-bold fs-5">Banner Image & Music</div>
                         <div class="fs-6">
                             <div class="form-group mb-3">
                                 <label for="banner_img">Foto Prewedding <span class="mandatory">*</span></label>
                                 <input type="file" class="form-control" id="banner_img" name="banner_img" placeholder="">
                             </div>
+                            <div class="form-group mb-3">
+                                <label for="music">Music <span class="mandatory">*</span></label>
+                                <input type="file" class="form-control" id="music" name="music" accept=".mp3">
+                            </div>
+                            
                         </div>
                     </div>
 
@@ -154,8 +160,7 @@
                                 <input type="time" class="form-control" id="selesai_resepsi" name="selesai_resepsi"
                                     placeholder="">
                             </div>
-                            
-                            </div>
+
                             <div class="form-group mb-3">
                                 <label for="alamat_resepsi">Alamat Resepsi <span class="mandatory">*</span></label>
                                 <textarea class="form-control" rows="5" id="alamat_resepsi" name="alamat_resepsi"
@@ -171,6 +176,7 @@
                         </div>
                     </div>
 
+
                     <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Galeri Foto</div>
                         <div class="fs-6">
@@ -181,32 +187,32 @@
                                     placeholder="Aku tak pernah menunggumu. Kamu tak pernah sengaja datang. Tapi kita sengaja dipertemukan Tuhan."></textarea>
                             </div>
                             <div class="form-group mb-3">
-                                <label for="galeri_img1">Foto 1 <span class="mandatory">*</span></label>
+                                <label for="galeri_img1">Foto 1 <span class="fst-italic">(Opsional)</span></label>
                                 <input type="file" class="form-control" id="galeri_img1" name="galeri_img1"
                                     placeholder="">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="galeri_img2">Foto 2 <span class="mandatory">*</span></label>
+                                <label for="galeri_img2">Foto 2 <span class="fst-italic">(Opsional)</span></label>
                                 <input type="file" class="form-control" id="galeri_img2" name="galeri_img2"
                                     placeholder="">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="galeri_img3">Foto 3 <span class="mandatory">*</span></label>
+                                <label for="galeri_img3">Foto 3 <span class="fst-italic">(Opsional)</span></label>
                                 <input type="file" class="form-control" id="galeri_img3" name="galeri_img3"
                                     placeholder="">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="galeri_img4">Foto 4 <span class="mandatory">*</span></label>
+                                <label for="galeri_img4">Foto 4 <span class="fst-italic">(Opsional)</span></label>
                                 <input type="file" class="form-control" id="galeri_img4" name="galeri_img4"
                                     placeholder="">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="galeri_img5">Foto 5 <span class="mandatory">*</span></label>
+                                <label for="galeri_img5">Foto 5 <span class="fst-italic">(Opsional)</span></label>
                                 <input type="file" class="form-control" id="galeri_img5" name="galeri_img5"
                                     placeholder="">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="galeri_img6">Foto 6 <span class="mandatory">*</span></label>
+                                <label for="galeri_img6">Foto 6 <span class="fst-italic">(Opsional)</span></label>
                                 <input type="file" class="form-control" id="galeri_img6" name="galeri_img6"
                                     placeholder="">
                             </div>
@@ -214,9 +220,15 @@
                         </div>
 
                     </div>
+
                     <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Cerita Cinta Kami</div>
                         <div class="fs-6">
+                            <div class="form-group mb-3">
+                                <label for="foto_pertemuan">Foto Pertemuan <span class="mandatory">*</span></label>
+                                <input type="file" class="form-control" id="foto_pertemuan" name="foto_pertemuan"
+                                    placeholder="">
+                            </div>
 
                             <div class="form-group mb-3">
                                 <label for="pertemuan">Petemuan <span class="mandatory">*</span> <span
@@ -225,12 +237,24 @@
                                 <textarea class="form-control" rows="5" id="pertemuan" name="pertemuan"
                                     placeholder="Ceritakan pertemuan kamu dengan pasanganmu"></textarea>
                             </div>
+
+                            <div class="form-group mb-3">
+                                <label for="foto_pendekatan">Foto Pendekatan <span class="mandatory">*</span></label>
+                                <input type="file" class="form-control" id="foto_pendekatan" name="foto_pendekatan"
+                                    placeholder="">
+                            </div>
+
                             <div class="form-group mb-3">
                                 <label for="pendekatan">Pendekatan <span class="mandatory">*</span> <span
                                         class="fst-italic">(Maksimal 200 Karakter)</span>
                                 </label>
                                 <textarea class="form-control" rows="5" id="pendekatan" name="pendekatan"
                                     placeholder="Ceritakan pendekatan kamu dengan pasanganmu "></textarea>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="foto_lamaran">Foto Lamaran <span class="mandatory">*</span></label>
+                                <input type="file" class="form-control" id="foto_lamaran" name="foto_lamaran" placeholder="">
                             </div>
 
                             <div class="form-group mb-3">
@@ -241,7 +265,12 @@
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="pernikahan">Pernihakan <span class="mandatory">*</span><span
+                                <label for="foto_pernikahan">Foto Pernikahan <span class="mandatory">*</span></label>
+                                <input type="file" class="form-control" id="foto_pernikahan" name="foto_pernikahan" placeholder="">
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="pernikahan">Pernikahan <span class="mandatory">*</span><span
                                         class="fst-italic">(Maksimal 200 Karakter)</span></label>
                                 <textarea class="form-control" rows="5" id="pernikahan" name="pernikahan"
                                     placeholder="Ceritakan rencana pernikahan kamu dengan pasanganmu"></textarea>

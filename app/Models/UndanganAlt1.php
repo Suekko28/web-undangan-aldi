@@ -57,6 +57,11 @@ protected $fillable = [
     'selesai_akad',
     'mulai_resepsi',
     'selesai_resepsi',
+    'music',
+    'foto_pertemuan',
+    'foto_pendekatan',
+    'foto_lamaran',
+    'foto_pernikahan',
 ];
 
 public function Alt1Model(): HasMany {

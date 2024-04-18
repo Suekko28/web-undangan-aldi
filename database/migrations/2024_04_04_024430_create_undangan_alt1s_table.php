@@ -52,6 +52,11 @@ return new class extends Migration {
             $table->integer('no_rek3');
             $table->string('atas_nama3');
             $table->text('alamat_tertera');
+            $table->string('music');
+            $table->string('foto_pertemuan');
+            $table->string('foto_pendekatan');
+            $table->string('foto_lamaran');
+            $table->string('foto_pernikahan');
             $table->timestamps();
         });
     }

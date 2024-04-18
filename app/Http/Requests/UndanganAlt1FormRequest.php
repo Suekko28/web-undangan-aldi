@@ -61,6 +61,14 @@ class UndanganAlt1FormRequest extends FormRequest
             'selesai_akad' => ['required', 'date_format:H:i'],
             'mulai_resepsi' => ['required', 'date_format:H:i'],
             'selesai_resepsi' => ['required', 'date_format:H:i'],
+            'foto_pertemuan' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
+            'foto_pendekatan' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
+            'foto_lamaran' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
+            'foto_pernikahan' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
+            'music' => ['required', 'mimes:mp3'],
+
+
+
         ];
     }
 
@@ -74,6 +82,8 @@ class UndanganAlt1FormRequest extends FormRequest
             'date' => 'Field :attribute harus dalam format tanggal yang valid.',
             'string' => 'Field :attribute harus berupa teks.',
             'integer' => 'Field :attribute harus berupa angka.',
+            'music.required' => 'Bidang musik harus diisi.',
+            'music.mimes' => 'Bidang musik harus dalam format MP3.',
         ];
     }
 }

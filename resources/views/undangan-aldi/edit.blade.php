@@ -52,13 +52,19 @@
                             </div>
                         </div>
                     </div>
+
                     <div class="card-body container bg-white mt-5">
-                        <div class="mempelai text-center fw-bold fs-5">Banner Image</div>
+                        <div class="mempelai text-center fw-bold fs-5">Banner Image & Music</div>
                         <div class="fs-6">
                             <div class="form-group mb-3">
                                 <label for="banner_img">Foto Prewedding <span class="mandatory">*</span></label>
-                                <input type="file" class="form-control" id="banner_img" name="banner_img" placeholder="">
+                                <input type="file" class="form-control" id="banner_img" name="banner_img" placeholder="" value="{{$data->banner_img}}">
                             </div>
+                            <div class="form-group mb-3">
+                                <label for="music">Music <span class="mandatory">*</span></label>
+                                <input type="file" class="form-control" id="music" name="music" accept=".mp3">
+                            </div>
+                            
                         </div>
                     </div>
 
@@ -121,6 +127,16 @@
                                 <input type="date" class="form-control" id="tgl_akad" name="tgl_akad" placeholder="" value="{{$data->tgl_akad}}">
                             </div>
                             <div class="form-group mb-3">
+                                <label for="mulai_akad">Mulai Akad <span class="mandatory">*</span></label>
+                                <input type="time" class="form-control" id="mulai_akad" name="mulai_akad"
+                                    placeholder="">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="selesai_akad">Selesai Akad <span class="mandatory">*</span></label>
+                                <input type="time" class="form-control" id="selesai_akad" name="selesai_akad"
+                                    placeholder="">
+                            </div>
+                            <div class="form-group mb-3">
                                 <label for="alamat_akad">Alamat Akad <span class="mandatory">*</span></label>
                                 <textarea class="form-control" rows="5" id="alamat_akad" name="alamat_akad" placeholder="Masukan alamat akad" value="{{$data->alamat_akad}}"></textarea>
                             </div>
@@ -128,6 +144,16 @@
                                 <label for="tgl_resepsi">Tanggal Resepsi <span class="mandatory">*</span></label>
                                 <input type="date" class="form-control" id="tgl_resepsi" name="tgl_resepsi"
                                     placeholder="" value="{{$data->tgl_resepsi}}">
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="mulai_resepsi">Mulai Resepsi <span class="mandatory">*</span></label>
+                                <input type="time" class="form-control" id="mulai_resepsi" name="mulai_resepsi"
+                                    placeholder="" >
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="selesai_resepsi">Selesai Resepsi <span class="mandatory">*</span></label>
+                                <input type="time" class="form-control" id="selesai_resepsi" name="selesai_resepsi"
+                                    placeholder="">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="alamat_resepsi">Alamat Resepsi <span class="mandatory">*</span></label>
@@ -191,11 +217,21 @@
                         <div class="mempelai text-center fw-bold fs-5">Cerita Cinta Kami</div>
                         <div class="fs-6">
                             <div class="form-group mb-3">
+                                <label for="foto_pertemuan">Foto Pertemuan <span class="mandatory">*</span></label>
+                                <input type="file" class="form-control" id="foto_pertemuan" name="foto_pertemuan"
+                                    placeholder="" value="{{$data->foto_pertemuan}}">
+                            </div>
+                            <div class="form-group mb-3">
                                 <label for="pertemuan">Petemuan <span class="mandatory">*</span> <span
                                         class="fst-italic">(Maksimal 200 Karakter)</span>
                                 </label>
                                 <textarea class="form-control" rows="5" id="pertemuan" name="pertemuan"
                                     placeholder="Ceritakan pertemuan kamu dengan pasanganmu" value="{{$data->pertemuan}}"></textarea>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="foto_pendekatan">Foto Pendekatan <span class="mandatory">*</span></label>
+                                <input type="file" class="form-control" id="foto_pendekatan" name="foto_pendekatan"
+                                    placeholder="" value="{{$data->foto_pendekatan}}">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="pendekatan">Pendekatan <span class="mandatory">*</span> <span
@@ -205,11 +241,22 @@
                                     placeholder="Ceritakan pendekatan kamu dengan pasanganmu " value="{{$data->pendekatan}}"></textarea>
                             </div>
 
+                            
+                            <div class="form-group mb-3">
+                                <label for="foto_lamaran">Foto Lamaran <span class="mandatory">*</span></label>
+                                <input value="{{$data->foto_lamaran}}" type="file" class="form-control" id="foto_lamaran" name="foto_lamaran" placeholder="">
+                            </div>
+
                             <div class="form-group mb-3">
                                 <label for="lamaran">Lamaran <span class="mandatory">*</span><span
                                         class="fst-italic">(Maksimal 200 Karakter)</span></label>
                                 <textarea class="form-control" rows="5" id="lamaran" name="lamaran"
                                     placeholder="Ceritakan lamaran kamu dengan pasanganmu" value="{{$data->lamaran}}"></textarea>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="foto_pernikahan">Foto Pernikahan <span class="mandatory">*</span></label>
+                                <input value="{{$data->foto_pernikahan}}" type="file" class="form-control" id="foto_pernikahan" name="foto_pernikahan" placeholder="">
                             </div>
 
                             <div class="form-group mb-3">

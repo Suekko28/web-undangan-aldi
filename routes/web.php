@@ -47,6 +47,8 @@ Route::middleware(['auth'])->group(function () {
     // Route::resource('/undangan', UndanganController::class);
     Route::resource('/undangan-alternative1', UndanganAlt1Controller::class);
     Route::get('/undangan-alternative1', [UndanganAlt1Controller::class, 'index'])->name('undangan-alternative1');
+    Route::delete('undangan-alternative1/delete', [UndanganAlt1Controller::class, 'destroy'])->name('undangan-alternative1.delete');
+
 
 });
 
@@ -58,9 +60,9 @@ Route::get('/', function () {
     return view('index');
 });
 
-// Route::get('/undangan-alt1', function () {
-//     return view('undangan-aldi.home');
-// });
+Route::get('/undangan-alt1', function () {
+    return view('undangan-aldi.home');
+});
 
 Route::get('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/{nama_undangan}', [ViewAlt1Controller::class, 'show'])->name('undangan-alt1-home');
 Route::get('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/{nama_undangan}/index', [IndexAlt1Controller::class, 'show'])->name('undangan-alt1-index');

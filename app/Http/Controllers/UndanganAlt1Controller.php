@@ -47,11 +47,24 @@ class UndanganAlt1Controller extends Controller
         $banner_img = $request->file('banner_img');
         $foto_mempelai_laki = $request->file('foto_mempelai_laki');
         $foto_mempelai_perempuan = $request->file('foto_mempelai_perempuan');
+        $foto_pertemuan = $request->file('foto_pertemuan');
+        $foto_pendekatan = $request->file('foto_pendekatan');
+        $foto_lamaran = $request->file('foto_lamaran');
+        $foto_pernikahan = $request->file('foto_pernikahan');
+        $music = $request->file('music');
+
+
 
         // Simpan jalur penyimpanan untuk gambar utama
         $banner_img_path = $banner_img->storeAs('public/images', $banner_img->hashName());
         $foto_mempelai_laki_path = $foto_mempelai_laki->storeAs('public/images', $foto_mempelai_laki->hashName());
         $foto_mempelai_perempuan_path = $foto_mempelai_perempuan->storeAs('public/images', $foto_mempelai_perempuan->hashName());
+        $foto_pertemuan_path = $foto_pertemuan->storeAs('public/images', $foto_pertemuan->hashName());
+        $foto_pendekatan_path = $foto_pendekatan->storeAs('public/images', $foto_pendekatan->hashName());
+        $foto_lamaran_path = $foto_lamaran->storeAs('public/images', $foto_lamaran->hashName());
+        $foto_pernikahan_path = $foto_pernikahan->storeAs('public/images', $foto_pernikahan->hashName());
+        $music_path = $music->storeAs('public/images', $music->hashName());
+
 
         // Memisahkan nama undangan yang dipisahkan oleh baris menjadi array
         $nama_undangans = explode("\n", $request->nama_undangan);
@@ -95,8 +108,11 @@ class UndanganAlt1Controller extends Controller
                 'selesai_akad' => $request->selesai_akad,
                 'mulai_resepsi' => $request->mulai_resepsi,
                 'selesai_resepsi' => $request->selesai_resepsi,
-
-
+                'music' => $music_path,
+                'foto_pertemuan' => $foto_pertemuan_path,
+                'foto_pendekatan' => $foto_pendekatan_path,
+                'foto_lamaran' => $foto_lamaran_path,
+                'foto_pernikahan' => $foto_pernikahan_path,
             ];
 
             // Periksa apakah file galeri diunggah sebelum menyimpannya
@@ -152,7 +168,8 @@ class UndanganAlt1Controller extends Controller
         $validatedData = $request->validated();
 
         // Simpan jalur gambar lama
-        $gambarFields = ['banner_img', 'foto_mempelai_laki', 'foto_mempelai_perempuan', 'galeri_img1', 'galeri_img2', 'galeri_img3', 'galeri_img4', 'galeri_img5', 'galeri_img6'];
+        // Simpan jalur gambar lama
+        $gambarFields = ['banner_img', 'foto_mempelai_laki', 'foto_mempelai_perempuan', 'galeri_img1', 'galeri_img2', 'galeri_img3', 'galeri_img4', 'galeri_img5', 'galeri_img6', 'music', 'foto_pertemuan', 'foto_pendekatan', 'foto_lamaran', 'foto_pernikahan'];
         foreach ($gambarFields as $field) {
             $oldImagePaths[$field] = $data->$field;
         }
@@ -160,18 +177,24 @@ class UndanganAlt1Controller extends Controller
         // Update setiap gambar jika ada perubahan
         foreach ($gambarFields as $field) {
             if ($request->hasFile($field)) {
-
                 // Upload gambar yang baru
                 $image = $request->file($field);
                 $imagePath = $image->storeAs('public/images', $image->hashName());
 
                 // Update data dengan informasi gambar yang baru
                 $data->$field = $imagePath;
+            } elseif ($request->has($field)) {
+                // Jika bidang tidak diunggah tetapi ada dalam permintaan, pertahankan nilai yang ada
+                $data->$field = $request->$field;
+            } else {
+                // Jika tidak ada file yang diunggah dan tidak ada nilai baru dalam permintaan, pertahankan gambar lama
+                $data->$field = $oldImagePaths[$field];
             }
         }
 
         // Update data dengan informasi yang diperbarui
         $data->update([
+            'nama_undangan' => $validatedData['nama_undangan'],
             'nama_mempelai_laki' => $validatedData['nama_mempelai_laki'],
             'putra_dari_bpk' => $validatedData['putra_dari_bpk'],
             'putra_dari_ibu' => $validatedData['putra_dari_ibu'],
@@ -179,8 +202,12 @@ class UndanganAlt1Controller extends Controller
             'putri_dari_bpk' => $validatedData['putri_dari_bpk'],
             'putri_dari_ibu' => $validatedData['putri_dari_ibu'],
             'tgl_akad' => $validatedData['tgl_akad'],
+            'mulai_akad' => $validatedData['mulai_akad'],
+            'selesai_akad' => $validatedData['selesai_akad'],
             'alamat_akad' => $validatedData['alamat_akad'],
             'tgl_resepsi' => $validatedData['tgl_resepsi'],
+            'mulai_resepsi' => $validatedData['mulai_resepsi'],
+            'selesai_resepsi' => $validatedData['selesai_resepsi'],
             'alamat_resepsi' => $validatedData['alamat_resepsi'],
             'lokasi_gmaps' => $validatedData['lokasi_gmaps'],
             'caption' => $validatedData['caption'],
@@ -209,10 +236,15 @@ class UndanganAlt1Controller extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Request $request)
     {
-        $data = UndanganAlt1::find($id)->delete();
-        return redirect()->route('undangan-alternative1')->with('success', 'Data berhasil Dihapus');
-
+        // Mendapatkan data yang dipilih dari form
+        $selectedIds = $request->input('selected', []);
+    
+        // Menghapus data yang dipilih
+        UndanganAlt1::whereIn('id', $selectedIds)->delete();
+    
+        return redirect()->route('undangan-alternative1')->with('success', 'Data yang dipilih berhasil dihapus');
     }
+    
 }
