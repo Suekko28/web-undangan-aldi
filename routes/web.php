@@ -47,7 +47,7 @@ Route::middleware(['auth'])->group(function () {
     // Route::resource('/undangan', UndanganController::class);
     Route::resource('/undangan-alternative1', UndanganAlt1Controller::class);
     Route::get('/undangan-alternative1', [UndanganAlt1Controller::class, 'index'])->name('undangan-alternative1');
-    Route::delete('undangan-alternative1/delete', [UndanganAlt1Controller::class, 'destroy'])->name('undangan-alternative1.delete');
+    Route::delete('/undangan-alternative1', [UndanganAlt1Controller::class, 'destroy'])->name('undangan-alternative1.destroy');
 
 
 });

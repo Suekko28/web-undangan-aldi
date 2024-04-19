@@ -18,25 +18,29 @@
                 </div>
 
                 <div class="table-responsive text-nowrap p-3">
-                    <form id="deleteForm" action="{{ url('undangan-alternative1/delete') }}" method="POST">
+                    <form id="deleteForm" action="{{ route('undangan-alternative1.destroy') }}" method="POST">
                         @csrf
                         @method('DELETE')
                         <table class="table table-bordered">
+                            <button type="submit" class="btn btn-danger mb-3" id="deleteSelected">Hapus yang
+                                Dipilih</button>
                             <thead>
                                 <tr class="text-nowrap text-center">
+                                    <th><input type="checkbox" id="selectAll"></th>
                                     <th>No</th>
                                     <th>Nama Undangan</th>
                                     <th>Foto Prewedding</th>
                                     <th>Mempelai</th>
                                     <th>Tanggal Pernikahan</th>
                                     <th>Aksi</th>
-                                    <th><input type="checkbox" id="selectAll"></th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php $i = $data->firstItem(); ?>
                                 @foreach ($data as $item)
                                     <tr class="text-center">
+                                        <td><input type="checkbox" class="delete-checkbox" name="selected[]"
+                                                value="{{ $item->id }}"></td>
                                         <td scope="row">{{ $i }}</td>
                                         <td>{{ $item->nama_undangan }}</td>
                                         <td>
@@ -47,30 +51,23 @@
                                         <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d', $item->tgl_akad)->format('d-m-Y') }}
                                         </td>
                                         <td>
-                                            <a href="{{ url('undangan-alternative1/' . $item->id) . '/edit' }}"
-                                                class="btn btn-warning mb-2"><i class="fa fa-pen-to-square"
-                                                    style="color:white;"></i></a>
-                                            <form action="{{ url('undangan-alternative1/' . $item->id) }}" method="POST">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button class="btn btn-danger"><i class="fa fa-trash"></i></button>
-                                            </form>
-                                            <a href="{{ route('undangan-alt1-home', [
-                                                'nama_mempelai_laki' => $item->nama_mempelai_laki,
-                                                'nama_mempelai_perempuan' => $item->nama_mempelai_perempuan,
-                                                'nama_undangan' => $item->nama_undangan,
-                                            ]) }}"
-                                                target="_blank" class="btn btn-primary"><i class="fa fa-link"
-                                                    style="color:white;"></i></a>
+                                            <div class="btn-group-vertical">
+                                                <a href="{{ url('undangan-alternative1/' . $item->id) . '/edit' }}" class="btn btn-warning mb-2"><i class="fa fa-pen-to-square" style="color:white;"></i></a>
+                                                <button class="btn btn-danger delete-btn mb-2" data-id="{{ $item->id }}"><i class="fa fa-trash"></i></button>
+                                                <a href="{{ route('undangan-alt1-home', [
+                                                    'nama_mempelai_laki' => $item->nama_mempelai_laki,
+                                                    'nama_mempelai_perempuan' => $item->nama_mempelai_perempuan,
+                                                    'nama_undangan' => $item->nama_undangan,
+                                                ]) }}" target="_blank" class="btn btn-primary mb-2"><i class="fa fa-link" style="color:white;"></i></a>
+                                            </div>
                                         </td>
-                                        <td><input type="checkbox" class="delete-checkbox" name="selected[]"
-                                                value="{{ $item->id }}"></td>
+                                        
+
                                     </tr>
                                     <?php $i++; ?>
                                 @endforeach
                             </tbody>
                         </table>
-                        <button type="submit" class="btn btn-danger" id="deleteSelected">Hapus yang Dipilih</button>
                     </form>
                 </div>
                 <div class="p-2">{{ $data->links() }}</div>
@@ -87,9 +84,106 @@
                     checkbox.checked = document.getElementById('selectAll').checked;
                 });
             });
+
+            // Menangani klik pada tombol delete
+            var deleteButtons = document.querySelectorAll('.delete-btn');
+            deleteButtons.forEach(function(button) {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var itemId = this.getAttribute('data-id');
+                    Swal.fire({
+                        title: "Are you sure?",
+                        text: "You won't be able to revert this!",
+                        icon: "warning",
+                        showCancelButton: true,
+                        confirmButtonColor: "#3085d6",
+                        cancelButtonColor: "#d33",
+                        confirmButtonText: "Yes, delete it!"
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            document.getElementById('deleteForm').action =
+                                "{{ url('undangan-alternative1') }}/" + itemId;
+                            document.getElementById('deleteForm').submit();
+                            Swal.fire(
+                                'Deleted',
+                                'Your file has been deleted',
+                                'success'
+                            )
+                        }
+                    });
+                });
+            });
+
+            // Menangani pencarian
+            const searchInput = document.getElementById('searchInput');
+            const tableRows = document.querySelectorAll('.table tbody tr');
+            const noDataMessage = document.getElementById('noDataMessage');
+
+            searchInput.addEventListener('input', function() {
+                const searchText = this.value.toLowerCase();
+                let found = false;
+
+                tableRows.forEach(function(row) {
+                    const rowData = row.innerText.toLowerCase();
+                    if (rowData.includes(searchText)) {
+                        row.style.display = '';
+                        found = true;
+                    } else {
+                        row.style.display = 'none';
+                    }
+                });
+
+                if (!found) {
+                    noDataMessage.style.display = 'block';
+                } else {
+                    noDataMessage.style.display = 'none';
+                }
+            });
+
+            // Menangani penghapusan saat tombol "Hapus yang Dipilih" ditekan
+            document.getElementById('deleteSelected').addEventListener('click', function(event) {
+                event.preventDefault();
+
+                // Cek apakah ada setidaknya satu checkbox yang dicentang
+                var anyChecked = false;
+                var checkboxes = document.querySelectorAll('.delete-checkbox');
+                checkboxes.forEach(function(checkbox) {
+                    if (checkbox.checked) {
+                        anyChecked = true;
+                    }
+                });
+
+                if (anyChecked) {
+                    Swal.fire({
+                        title: "Are you sure?",
+                        text: "You won't be able to revert this!",
+                        icon: "warning",
+                        showCancelButton: true,
+                        confirmButtonColor: "#3085d6",
+                        cancelButtonColor: "#d33",
+                        confirmButtonText: "Yes, delete it!"
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            // Di sini kamu bisa menambahkan logika untuk penghapusan multiple
+                            // Lakukan pengiriman form di sini
+                            document.getElementById('deleteForm').submit();
+                            Swal.fire(
+                                'Deleted',
+                                'Your file has been deleted',
+                                'success'
+                            )
+                        }
+                    });
+                } else {
+                    Swal.fire(
+                        'No checkbox selected',
+                        'Please select at least one item to delete',
+                        'error'
+                    );
+                }
+            });
         });
     </script>
-
 
 
 
