@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\alt1FormRequest;
+use App\Models\alt1model;
 use App\Models\UndanganAlt1;
 use Illuminate\Http\Request;
 
@@ -21,7 +22,7 @@ class IndexAlt1Controller extends Controller
      */
     public function create()
     {
-        //
+        // return view('undangan-aldi.create');
     }
 
     /**
@@ -29,20 +30,30 @@ class IndexAlt1Controller extends Controller
      */
     public function store(alt1FormRequest $request)
     {
-        $data = $request->validated();
-        $undangan = UndanganAlt1::where('nama_undangan', $data['nama_undangan'])->firstOrFail();
-        $undangan->alt1Models()->create($data);
-        return redirect()->route('undangan-alt1-index', ['nama_undangan' => $data['nama_undangan']]);
+        // $data = $request->validated(); // Mendapatkan data yang sudah divalidasi dari form
+        // alt1model::create($data); // Simpan data ke dalam database
+        // return redirect()->route('undangan-alt1-index', [
+        //     'nama' => $data['nama'],
+        //     'ucapan' => $data['ucapan'],
+        // ])->with('success', 'Data berhasil disimpan');
     }
+
 
     /**
      * Display the specified resource.
      */
     public function show(string $nama_mempelai_laki, string $nama_mempelai_perempuan, string $nama_undangan)
     {
-        $data = UndanganAlt1::where('nama_undangan', $nama_undangan)->firstOrFail();
-        return view('undangan-aldi.index', compact('data', 'nama_mempelai_laki', 'nama_mempelai_perempuan'));
+        $data = UndanganAlt1::where('nama_undangan', $nama_undangan)
+            ->where('nama_mempelai_laki', $nama_mempelai_laki)
+            ->where('nama_mempelai_perempuan', $nama_mempelai_perempuan)
+            ->firstOrFail();
+
+        $alt1Data = alt1model::get();
+
+        return view('undangan-aldi.index', compact('alt1Data', 'data', 'nama_mempelai_laki', 'nama_mempelai_perempuan', 'nama_undangan'));
     }
+
 
     /**
      * Show the form for editing the specified resource.

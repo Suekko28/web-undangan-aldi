@@ -64,8 +64,10 @@ Route::get('/undangan-alt1', function () {
     return view('undangan-aldi.home');
 });
 
-Route::get('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/{nama_undangan}', [ViewAlt1Controller::class, 'show'])->name('undangan-alt1-home');
+Route::get('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/{nama_undangan}', [HomeAlt1Controller::class, 'show'])->name('undangan-alt1-home');
+// Route::resource('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/{nama_undangan}/index', IndexAlt1Controller::class)->only(['show', 'store', 'create']);
 Route::get('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/{nama_undangan}/index', [IndexAlt1Controller::class, 'show'])->name('undangan-alt1-index');
+Route::post('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/{nama_undangan}/index', [Alt1Controller::class, 'store'])->name('undangan-alt1-post');
 
 Route::resource('/undangan-alt1/index', Alt1Controller::class)->only(['index', 'store']);
 

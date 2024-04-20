@@ -25,12 +25,7 @@ class Alt1Controller extends Controller
      */
     public function create(string $nama_undangan, Request $request)
     {
-        $data = UndanganAlt1::where('nama_undangan', $nama_undangan)->firstOrFail();
-
-        return view('undangan-aldi.create', [
-            'nama_undangan' => $nama_undangan,
-            'data' => $data,
-        ]);
+        
     }
 
 
@@ -39,10 +34,7 @@ class Alt1Controller extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validated();
-        $data['id_alt1'] = $request->id;
-        alt1model::create($data);
-        return redirect()->route('undangan-aldi.index', ['nama_undangan' => $request->nama_undangan]);
+       
     }
 
 

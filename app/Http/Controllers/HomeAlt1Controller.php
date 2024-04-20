@@ -17,9 +17,6 @@ class HomeAlt1Controller extends Controller
         return view('admin.view-alt1', compact('data'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         //
@@ -38,9 +35,16 @@ class HomeAlt1Controller extends Controller
      */
     public function show(string $nama_mempelai_laki, string $nama_mempelai_perempuan, string $nama_undangan)
     {
-        $data = UndanganAlt1::where('nama_undangan', $nama_undangan)->firstOrFail();
-        return view('undangan-aldi.home', compact('data', 'hari_akad'));
+        $data = UndanganAlt1::where('nama_undangan', $nama_undangan)
+            ->where('nama_mempelai_laki', $nama_mempelai_laki)
+            ->where('nama_mempelai_perempuan', $nama_mempelai_perempuan)
+            ->firstOrFail();
+        return view('undangan-aldi.home', compact('data', 'nama_mempelai_laki', 'nama_mempelai_perempuan', 'nama_undangan'));
     }
+
+
+
+
 
 
 
