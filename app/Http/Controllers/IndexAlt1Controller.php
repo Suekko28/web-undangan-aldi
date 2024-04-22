@@ -30,12 +30,12 @@ class IndexAlt1Controller extends Controller
      */
     public function store(alt1FormRequest $request)
     {
-        // $data = $request->validated(); // Mendapatkan data yang sudah divalidasi dari form
-        // alt1model::create($data); // Simpan data ke dalam database
-        // return redirect()->route('undangan-alt1-index', [
-        //     'nama' => $data['nama'],
-        //     'ucapan' => $data['ucapan'],
-        // ])->with('success', 'Data berhasil disimpan');
+        $data = $request->validated(); // Mendapatkan data yang sudah divalidasi dari form
+        alt1model::create($data); // Simpan data ke dalam database
+        return redirect()->route('undangan-alt1-index', [
+            'nama' => $data['nama'],
+            'ucapan' => $data['ucapan'],
+        ])->with('success', 'Data berhasil disimpan');
     }
 
 

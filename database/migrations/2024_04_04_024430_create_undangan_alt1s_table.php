@@ -30,7 +30,8 @@ return new class extends Migration {
             $table->time('mulai_resepsi');
             $table->time('selesai_resepsi');
             $table->text('alamat_resepsi');
-            $table->string('lokasi_gmaps');
+            $table->string('lokasi_gmaps_akad');
+            $table->string('lokasi_gmaps_resepsi');
             $table->text('caption');
             $table->string('galeri_img1');
             $table->string('galeri_img2');

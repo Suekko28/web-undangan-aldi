@@ -146,6 +146,12 @@
                             </div>
 
                             <div class="form-group mb-3">
+                                <label for="lokasi_gmaps_akad">Lokasi Maps Akad <span class="mandatory">*</span></label>
+                                <input type="text" class="form-control" id="lokasi_gmaps_akad" name="lokasi_gmaps_akad"
+                                    placeholder="Masukkan link alamat maps">
+                            </div>
+
+                            <div class="form-group mb-3">
                                 <label for="tgl_resepsi">Tanggal Resepsi <span class="mandatory">*</span></label>
                                 <input type="date" class="form-control" id="tgl_resepsi" name="tgl_resepsi"
                                     placeholder="">
@@ -168,8 +174,8 @@
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="lokasi_gmaps">Lokasi Google Maps <span class="mandatory">*</span></label>
-                                <input type="text" class="form-control" id="lokasi_gmaps" name="lokasi_gmaps"
+                                <label for="lokasi_gmaps_resepsi">Lokasi Maps Resepsi <span class="mandatory">*</span></label>
+                                <input type="text" class="form-control" id="lokasi_gmaps_resepsi" name="lokasi_gmaps_resepsi"
                                     placeholder="Masukkan link alamat maps">
                             </div>
 

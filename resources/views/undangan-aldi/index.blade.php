@@ -147,7 +147,7 @@
                                     <div class="gallery-frame2">
                                         <img class="map-button-icon" alt=""
                                             src="{{ asset('./assets/location.svg') }}" />
-                                        <a class="buka-map6" href="{{ $data->lokasi_gmaps }}" target="_blank">Buka
+                                        <a class="buka-map6" href="{{ $data->lokasi_gmaps_akad }}" target="_blank">Buka
                                             Map</a>
                                     </div>
                                 </button>
@@ -189,7 +189,7 @@
                                     <div class="gallery-frame2">
                                         <img class="map-button-icon" alt=""
                                             src="{{ asset('./assets/location.svg') }}" />
-                                        <a class="buka-map6" href="{{ $data->lokasi_gmaps }}" target="_blank">Buka
+                                        <a class="buka-map6" href="{{ $data->lokasi_gmaps_resepsi }}" target="_blank">Buka
                                             Map</a>
                                     </div>
                                 </button>

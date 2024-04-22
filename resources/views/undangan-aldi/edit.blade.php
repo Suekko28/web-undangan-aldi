@@ -141,6 +141,11 @@
                                 <textarea class="form-control" rows="5" id="alamat_akad" name="alamat_akad" placeholder="Masukan alamat akad" value="{{$data->alamat_akad}}"></textarea>
                             </div>
                             <div class="form-group mb-3">
+                                <label for="$data->lokasi_gmaps_akad">Lokasi Maps Resepsi <span class="mandatory">*</span></label>
+                                <input type="text" class="form-control" id="lokasi_gmaps_akad" name="lokasi_gmaps_akad"
+                                    placeholder="Masukkan link alamat maps" value="{{$data->lokasi_gmaps_akad}}">
+                            </div>
+                            <div class="form-group mb-3">
                                 <label for="tgl_resepsi">Tanggal Resepsi <span class="mandatory">*</span></label>
                                 <input type="date" class="form-control" id="tgl_resepsi" name="tgl_resepsi"
                                     placeholder="" value="{{$data->tgl_resepsi}}">
@@ -162,9 +167,9 @@
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="lokasi_gmaps">Lokasi Google Maps <span class="mandatory">*</span></label>
-                                <input type="text" class="form-control" id="lokasi_gmaps" name="lokasi_gmaps"
-                                    placeholder="Masukkan link alamat maps" value="{{$data->lokasi_gmaps}}">
+                                <label for="$data->lokasi_gmaps_resepsi">Lokasi Maps Resepsi <span class="mandatory">*</span></label>
+                                <input type="text" class="form-control" id="lokasi_gmaps" name="$data->lokasi_gmaps_resepsi"
+                                    placeholder="Masukkan link alamat maps" value="{{$data->lokasi_gmaps_resepsi}}">
                             </div>
 
                         </div>
