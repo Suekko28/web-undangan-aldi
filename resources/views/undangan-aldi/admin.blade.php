@@ -53,22 +53,23 @@
                                         <td>
                                             <div class="btn-group-vertical">
                                                 <a href="{{ url('undangan-alternative1/' . $item->id) . '/edit' }}"
-                                                    class="btn btn-warning mb-2"><i class="fa fa-pen-to-square"
+                                                    class="btn btn-warning mb-2 rounded"><i class="fa fa-pen-to-square"
                                                         style="color:white;"></i></a>
-                                                <button class="btn btn-danger delete-btn mb-2"
+                                                <button class="btn btn-danger delete-btn rounded mb-2"
                                                     data-id="{{ $item->id }}"><i class="fa fa-trash"></i></button>
+                                                    <a href="{{ url('undangan-alternative1/' . $item->id) . '/edit' }}"
+                                                        class="btn btn-info rounded mb-2"><i class="fa fa-eye"
+                                                            style="color:white;"></i></a>
                                                 <a href="{{ route('undangan-alt1-home', [
                                                     'nama_mempelai_laki' => $item->nama_mempelai_laki,
                                                     'nama_mempelai_perempuan' => $item->nama_mempelai_perempuan,
                                                     'nama_undangan' => $item->nama_undangan,
                                                 ]) }}"
-                                                    target="_blank" class="btn btn-primary mb-2">
+                                                    target="_blank" class="btn btn-primary rounded mb-2">
                                                     <i class="fa fa-link" style="color:white;"></i>
                                                 </a>
                                             </div>
                                         </td>
-
-
                                     </tr>
                                     <?php $i++; ?>
                                 @endforeach
