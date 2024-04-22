@@ -43,7 +43,7 @@
                 <form action="{{ route('undangan-alternative1') }}" method="post" enctype="multipart/form-data">
                     @csrf
 
-                    <div class="card-body container bg-white mt-5">
+                    {{-- <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Nama Undangan</div>
                         <div class="fs-6">
                             <div class="form-group mb-3">
@@ -52,7 +52,7 @@
                                     placeholder="Masukan nama-nama undangan"></textarea>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Banner Image & Music</div>

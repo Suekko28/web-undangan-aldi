@@ -28,8 +28,8 @@
                                 <tr class="text-nowrap text-center">
                                     <th><input type="checkbox" id="selectAll"></th>
                                     <th>No</th>
-                                    <th>Nama Undangan</th>
-                                    <th>Foto Prewedding</th>
+                                    {{-- <th>Nama Undangan</th> --}}
+                                    {{-- <th>Foto Prewedding</th> --}}
                                     <th>Mempelai</th>
                                     <th>Tanggal Pernikahan</th>
                                     <th>Aksi</th>
@@ -42,11 +42,11 @@
                                         <td><input type="checkbox" class="delete-checkbox" name="selected[]"
                                                 value="{{ $item->id }}"></td>
                                         <td scope="row">{{ $i }}</td>
-                                        <td>{{ $item->nama_undangan }}</td>
-                                        <td>
+                                        {{-- <td>{{ $item->nama_undangan }}</td> --}}
+                                        {{-- <td>
                                             <img src="{{ Storage::url('' . $item->banner_img) }}" width="120"
                                                 height="120" alt="Foto Prewedding">
-                                        </td>
+                                        </td> --}}
                                         <td>{{ $item->nama_mempelai_laki }} & {{ $item->nama_mempelai_perempuan }}</td>
                                         <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d', $item->tgl_akad)->format('d-m-Y') }}
                                         </td>
@@ -57,13 +57,13 @@
                                                         style="color:white;"></i></a>
                                                 <button class="btn btn-danger delete-btn rounded mb-2"
                                                     data-id="{{ $item->id }}"><i class="fa fa-trash"></i></button>
-                                                    <a href="{{ url('undangan-alternative1/' . $item->id) . '/edit' }}"
-                                                        class="btn btn-info rounded mb-2"><i class="fa fa-eye"
-                                                            style="color:white;"></i></a>
+                                                <a href="{{ route('undangan-alternative1-view', ['id' => $item->id]) }}"
+                                                    class="btn btn-info rounded mb-2">
+                                                    <i class="fa fa-eye" style="color:white;"></i>
+                                                </a>
                                                 <a href="{{ route('undangan-alt1-home', [
                                                     'nama_mempelai_laki' => $item->nama_mempelai_laki,
                                                     'nama_mempelai_perempuan' => $item->nama_mempelai_perempuan,
-                                                    'nama_undangan' => $item->nama_undangan,
                                                 ]) }}"
                                                     target="_blank" class="btn btn-primary rounded mb-2">
                                                     <i class="fa fa-link" style="color:white;"></i>

@@ -18,13 +18,13 @@ class UndanganAlt1Controller extends Controller
         // Fetch data from the respective tables
         $nama_mempelai_laki = UndanganAlt1::value('nama_mempelai_laki');
         $nama_mempelai_perempuan = UndanganAlt1::value('nama_mempelai_perempuan');
-        $nama_undangan = UndanganAlt1::value('nama_undangan');
+        // $nama_undangan = UndanganAlt1::value('nama_undangan');
 
         // Mengambil data, termasuk yang telah dihapus secara lembut
         $data = UndanganAlt1::orderBy('id', 'asc')->paginate(10);
 
         // Mengirimkan data ke view bersama dengan variabel
-        return view('undangan-aldi.admin', compact('data', 'nama_mempelai_laki', 'nama_mempelai_perempuan', 'nama_undangan'));
+        return view('undangan-aldi.admin', compact('data', 'nama_mempelai_laki', 'nama_mempelai_perempuan'));
     }
 
 
@@ -70,70 +70,69 @@ class UndanganAlt1Controller extends Controller
         $nama_undangans = explode("\n", $request->nama_undangan);
 
         // Buat entri baru untuk setiap nama undangan dengan ID yang berbeda
-        foreach ($nama_undangans as $key => $nama_undangan) {
-            $nama_undangan = trim($nama_undangan);
-            $data = [
-                'nama_undangan' => $nama_undangan,
-                'id' => $key + 1,
-                'banner_img' => $banner_img_path,
-                'foto_mempelai_laki' => $foto_mempelai_laki_path,
-                'nama_mempelai_laki' => $request->nama_mempelai_laki,
-                'putra_dari_bpk' => $request->putra_dari_bpk,
-                'putra_dari_ibu' => $request->putra_dari_ibu,
-                'foto_mempelai_perempuan' => $foto_mempelai_perempuan_path,
-                'nama_mempelai_perempuan' => $request->nama_mempelai_perempuan,
-                'putri_dari_bpk' => $request->putri_dari_bpk,
-                'putri_dari_ibu' => $request->putri_dari_ibu,
-                'tgl_akad' => $request->tgl_akad,
-                'alamat_akad' => $request->alamat_akad,
-                'tgl_resepsi' => $request->tgl_resepsi,
-                'alamat_resepsi' => $request->alamat_resepsi,
-                'lokasi_gmaps_akad' => $request->lokasi_gmaps_akad,
-                'lokasi_gmaps_resepsi' => $request->lokasi_gmaps_resepsi,
-                'caption' => $request->caption,
-                'pertemuan' => $request->pertemuan,
-                'pendekatan' => $request->pendekatan,
-                'lamaran' => $request->lamaran,
-                'pernikahan' => $request->pernikahan,
-                'nama_rek1' => $request->nama_rek1,
-                'no_rek1' => $request->no_rek1,
-                'atas_nama1' => $request->atas_nama1,
-                'nama_rek2' => $request->nama_rek2,
-                'no_rek2' => $request->no_rek2,
-                'atas_nama2' => $request->atas_nama2,
-                'nama_rek3' => $request->nama_rek3,
-                'no_rek3' => $request->no_rek3,
-                'atas_nama3' => $request->atas_nama3,
-                'alamat_tertera' => $request->alamat_tertera,
-                'mulai_akad' => $request->mulai_akad,
-                'selesai_akad' => $request->selesai_akad,
-                'mulai_resepsi' => $request->mulai_resepsi,
-                'selesai_resepsi' => $request->selesai_resepsi,
-                'music' => $music_path,
-                'foto_pertemuan' => $foto_pertemuan_path,
-                'foto_pendekatan' => $foto_pendekatan_path,
-                'foto_lamaran' => $foto_lamaran_path,
-                'foto_pernikahan' => $foto_pernikahan_path,
-            ];
+        // foreach ($nama_undangans as $key => $nama_undangan) {
+        //     $nama_undangan = trim($nama_undangan);
+        $data = [
+            // 'nama_undangan' => $nama_undangan,
+            // 'id' => $key + 1,
+            'banner_img' => $banner_img_path,
+            'foto_mempelai_laki' => $foto_mempelai_laki_path,
+            'nama_mempelai_laki' => $request->nama_mempelai_laki,
+            'putra_dari_bpk' => $request->putra_dari_bpk,
+            'putra_dari_ibu' => $request->putra_dari_ibu,
+            'foto_mempelai_perempuan' => $foto_mempelai_perempuan_path,
+            'nama_mempelai_perempuan' => $request->nama_mempelai_perempuan,
+            'putri_dari_bpk' => $request->putri_dari_bpk,
+            'putri_dari_ibu' => $request->putri_dari_ibu,
+            'tgl_akad' => $request->tgl_akad,
+            'alamat_akad' => $request->alamat_akad,
+            'tgl_resepsi' => $request->tgl_resepsi,
+            'alamat_resepsi' => $request->alamat_resepsi,
+            'lokasi_gmaps_akad' => $request->lokasi_gmaps_akad,
+            'lokasi_gmaps_resepsi' => $request->lokasi_gmaps_resepsi,
+            'caption' => $request->caption,
+            'pertemuan' => $request->pertemuan,
+            'pendekatan' => $request->pendekatan,
+            'lamaran' => $request->lamaran,
+            'pernikahan' => $request->pernikahan,
+            'nama_rek1' => $request->nama_rek1,
+            'no_rek1' => $request->no_rek1,
+            'atas_nama1' => $request->atas_nama1,
+            'nama_rek2' => $request->nama_rek2,
+            'no_rek2' => $request->no_rek2,
+            'atas_nama2' => $request->atas_nama2,
+            'nama_rek3' => $request->nama_rek3,
+            'no_rek3' => $request->no_rek3,
+            'atas_nama3' => $request->atas_nama3,
+            'alamat_tertera' => $request->alamat_tertera,
+            'mulai_akad' => $request->mulai_akad,
+            'selesai_akad' => $request->selesai_akad,
+            'mulai_resepsi' => $request->mulai_resepsi,
+            'selesai_resepsi' => $request->selesai_resepsi,
+            'music' => $music_path,
+            'foto_pertemuan' => $foto_pertemuan_path,
+            'foto_pendekatan' => $foto_pendekatan_path,
+            'foto_lamaran' => $foto_lamaran_path,
+            'foto_pernikahan' => $foto_pernikahan_path,
+        ];
 
-            // Periksa apakah file galeri diunggah sebelum menyimpannya
-            foreach (range(1, 6) as $index) {
-                $galeri_field = 'galeri_img' . $index;
-                if ($request->hasFile($galeri_field)) {
-                    $galeri_img = $request->file($galeri_field);
-                    $galeri_img_path = $galeri_img->storeAs('public/images', $galeri_img->hashName());
-                    $data[$galeri_field] = $galeri_img_path;
-                } else {
-                    // Jika file galeri tidak diunggah, set bidang galeri menjadi default
-                    $data[$galeri_field] = 'default.jpg'; // Atur default.jpg sesuai kebutuhan Anda
-                }
+        // Periksa apakah file galeri diunggah sebelum menyimpannya
+        foreach (range(1, 6) as $index) {
+            $galeri_field = 'galeri_img' . $index;
+            if ($request->hasFile($galeri_field)) {
+                $galeri_img = $request->file($galeri_field);
+                $galeri_img_path = $galeri_img->storeAs('public/images', $galeri_img->hashName());
+                $data[$galeri_field] = $galeri_img_path;
+            } else {
+                // Jika file galeri tidak diunggah, set bidang galeri menjadi default
+                $data[$galeri_field] = 'default.jpg'; // Atur default.jpg sesuai kebutuhan Anda
             }
-
-            UndanganAlt1::create($data);
         }
 
+        UndanganAlt1::create($data);
         return redirect()->route('undangan-alternative1')->with('success', 'Data berhasil ditambahkan');
     }
+
 
 
 
@@ -145,7 +144,8 @@ class UndanganAlt1Controller extends Controller
      */
     public function show(string $id)
     {
-        //
+        $data = UndanganAlt1::findOrFail($id);
+        return view('undangan-aldi.view', compact('data'));
     }
 
     /**
@@ -195,7 +195,7 @@ class UndanganAlt1Controller extends Controller
 
         // Update data dengan informasi yang diperbarui
         $data->update([
-            'nama_undangan' => $validatedData['nama_undangan'],
+            // 'nama_undangan' => $validatedData['nama_undangan'],
             'nama_mempelai_laki' => $validatedData['nama_mempelai_laki'],
             'putra_dari_bpk' => $validatedData['putra_dari_bpk'],
             'putra_dari_ibu' => $validatedData['putra_dari_ibu'],
@@ -244,10 +244,10 @@ class UndanganAlt1Controller extends Controller
         if ($id === null) {
             // Mendapatkan data yang dipilih dari form
             $selectedIds = $request->input('selected', []);
-    
+
             // Menghapus data yang dipilih
             UndanganAlt1::whereIn('id', $selectedIds)->delete();
-    
+
             return redirect()->route('undangan-alternative1')->with('success', 'Data yang dipilih berhasil dihapus');
         } else {
             // Hapus data tunggal berdasarkan ID yang diterima
@@ -260,6 +260,6 @@ class UndanganAlt1Controller extends Controller
             }
         }
     }
-    
+
 
 }

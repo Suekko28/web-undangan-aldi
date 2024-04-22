@@ -44,7 +44,7 @@
                     </div>
                     <div class="buka-undangan-wrapper">
                         <a class="undangan-pernikahan" style="color: white; text-decoration:none;"
-                            href="{{ route('undangan-alt1-index', ['nama_mempelai_laki' => $nama_mempelai_laki, 'nama_mempelai_perempuan' => $nama_mempelai_perempuan, 'nama_undangan' => $nama_undangan]) }}">Buka Undangan</a>
+                            href="{{ route('undangan-alt1-index', ['nama_mempelai_laki' => $nama_mempelai_laki, 'nama_mempelai_perempuan' => $nama_mempelai_perempuan, ]) }}">Buka Undangan</a>
                     </div>
                     
                     

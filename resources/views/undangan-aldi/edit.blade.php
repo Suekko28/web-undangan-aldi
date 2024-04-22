@@ -43,15 +43,7 @@
                 <form action="{{ url('undangan-alternative1', $data->id)}}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
-                    <div class="card-body container bg-white mt-5">
-                        <div class="mempelai text-center fw-bold fs-5">Nama Undangan</div>
-                        <div class="fs-6">
-                            <div class="form-group mb-3">
-                                <label for="nama_undangan">Nama Undangan <span class="mandatory">*</span></label>
-                                <textarea class="form-control" rows="5" id="nama_undangan" name="nama_undangan" placeholder="Masukan nama-nama undangan"></textarea>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                     <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Banner Image & Music</div>

@@ -47,6 +47,7 @@ Route::middleware(['auth'])->group(function () {
     // Route::resource('/undangan', UndanganController::class);
     Route::resource('/undangan-alternative1', UndanganAlt1Controller::class);
     Route::get('/undangan-alternative1', [UndanganAlt1Controller::class, 'index'])->name('undangan-alternative1');
+    Route::get('/undangan-alternative1/{id}/view', [UndanganAlt1Controller::class, 'show'])->name('undangan-alternative1-view');
     Route::delete('/undangan-alternative1', [UndanganAlt1Controller::class, 'destroy'])->name('undangan-alternative1.destroy');
 
 
@@ -64,10 +65,10 @@ Route::get('/undangan-alt1', function () {
     return view('undangan-aldi.home');
 });
 
-Route::get('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/{nama_undangan}', [HomeAlt1Controller::class, 'show'])->name('undangan-alt1-home');
+Route::get('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/preview', [HomeAlt1Controller::class, 'show'])->name('undangan-alt1-home');
 // Route::resource('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/{nama_undangan}/index', IndexAlt1Controller::class)->only(['show', 'store', 'create']);
-Route::get('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/{nama_undangan}/index', [IndexAlt1Controller::class, 'show'])->name('undangan-alt1-index');
-Route::post('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/{nama_undangan}/index', [IndexAlt1Controller::class, 'store'])->name('undangan-alt1-post');
+// Route::get('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/index', [IndexAlt1Controller::class, 'show'])->name('undangan-alt1-index');
+Route::post('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/preview', [IndexAlt1Controller::class, 'store'])->name('undangan-alt1-post');
 
 Route::resource('/undangan-alt1/index', Alt1Controller::class)->only(['index', 'store']);
 
