@@ -6,6 +6,7 @@ use App\Http\Controllers\Alt3Controller;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HomeAlt1Controller;
 use App\Http\Controllers\IndexAlt1Controller;
+use App\Http\Controllers\NamaUndanganController;
 use App\Http\Controllers\TemplateController;
 use App\Http\Controllers\UndanganAlt1Controller;
 use App\Http\Controllers\UndanganController;
@@ -52,6 +53,10 @@ Route::middleware(['auth'])->group(function () {
 
 
 });
+
+Route::resource('/nama-undangan', NamaUndanganController::class);
+Route::get('/nama-undangan/{id}', [NamaUndanganController::class, 'index'])->name('nama-undangan-index');
+
 
 
 

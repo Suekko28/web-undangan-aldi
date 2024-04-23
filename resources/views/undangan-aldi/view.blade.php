@@ -45,7 +45,7 @@
                     @method('PUT')
                     
 
-                    <div class="card-body container bg-white mt-5">
+                    {{-- <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Banner Image & Music</div>
                         <div class="fs-6">
                             <div class="form-group mb-3">
@@ -58,16 +58,16 @@
                             </div>
                             
                         </div>
-                    </div>
+                    </div> --}}
 
                     <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Mempelai</div>
                         <div class="fs-6">
-                            <div class="form-group mb-3">
+                            {{-- <div class="form-group mb-3">
                                 <label for="foto_mempelai_laki">Foto Mempelai Laki <span class="mandatory">*</span></label>
                                 <input disabled type="file" class="form-control" id="foto_mempelai_laki" name="foto_mempelai_laki"
                                     placeholder="">
-                            </div>
+                            </div> --}}
                             <div class="form-group mb-3">
                                 <label for="nama_mempelai_laki">Nama Mempelai Laki <span class="mandatory">*</span></label>
                                 <input disabled type="text" class="form-control" id="nama_mempelai_laki" name="nama_mempelai_laki"
@@ -85,12 +85,12 @@
                             </div>
 
 
-                            <div class="form-group mb-3">
+                            {{-- <div class="form-group mb-3">
                                 <label for="foto_mempelai_perempuan">Foto Mempelai Perempuan <span
                                         class="mandatory">*</span></label>
                                 <input disabled type="file" class="form-control" id="foto_mempelai_perempuan"
                                     name="foto_mempelai_perempuan" placeholder="">
-                            </div>
+                            </div> --}}
                             <div class="form-group mb-3">
                                 <label for="nama_mempelai_perempuan">Nama Mempelai Perempuan <span
                                         class="mandatory">*</span></label>
@@ -128,10 +128,10 @@
                                 <input disabled type="time" class="form-control" id="selesai_akad" name="selesai_akad"
                                     placeholder="">
                             </div>
-                            <div class="form-group mb-3">
+                            {{-- <div class="form-group mb-3">
                                 <label for="alamat_akad">Alamat Akad <span class="mandatory">*</span></label>
-                                <textarea class="form-control" rows="5" id="alamat_akad" name="alamat_akad" placeholder="Masukan alamat akad" value="{{$data->alamat_akad}}"></textarea>
-                            </div>
+                                <textarea disabled class="form-control" rows="5" id="alamat_akad" name="alamat_akad" placeholder="Masukan alamat akad" value="{{$data->alamat_akad}}"></textarea>
+                            </div> --}}
                             <div class="form-group mb-3">
                                 <label for="$data->lokasi_gmaps_akad">Lokasi Maps Resepsi <span class="mandatory">*</span></label>
                                 <input disabled type="text" class="form-control" id="lokasi_gmaps_akad" name="lokasi_gmaps_akad"
@@ -152,11 +152,11 @@
                                 <input disabled type="time" class="form-control" id="selesai_resepsi" name="selesai_resepsi"
                                     placeholder="">
                             </div>
-                            <div class="form-group mb-3">
+                            {{-- <div class="form-group mb-3">
                                 <label for="alamat_resepsi">Alamat Resepsi <span class="mandatory">*</span></label>
                                 <textarea class="form-control" rows="5" id="alamat_resepsi" name="alamat_resepsi"
                                     placeholder="Masukan alamat resepsi" value="{{$data->alamat_resepsi}}"></textarea>
-                            </div>
+                            </div> --}}
 
                             <div class="form-group mb-3">
                                 <label for="$data->lokasi_gmaps_resepsi">Lokasi Maps Resepsi <span class="mandatory">*</span></label>
@@ -165,9 +165,8 @@
                             </div>
 
                         </div>
-                    </div>
 
-                    <div class="card-body container bg-white mt-5">
+                    {{-- <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Galeri Foto</div>
                         <div class="fs-6">
                             <div class="form-group mb-3">
@@ -209,8 +208,9 @@
 
                         </div>
 
-                    </div>
-                    <div class="card-body container bg-white mt-5">
+                    </div> --}}
+
+                    {{-- <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Cerita Cinta Kami</div>
                         <div class="fs-6">
                             <div class="form-group mb-3">
@@ -263,8 +263,8 @@
                                     placeholder="Ceritakan rencana pernikahan kamu dengan pasanganmu" value="{{$data->pernikahan}}"></textarea>
                             </div>
                         </div>
-                    </div>
-
+                    </div> --}}
+{{-- 
                     <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Kirim Hadiah</div>
                         <div class="fs-6">
@@ -321,18 +321,19 @@
                         </div>
 
                      
-                        {{-- <div class="d-flex flex-row-reverse mt-5">
+                        <div class="d-flex flex-row-reverse mt-5">
                             <button type="submit" class="btn btn-primary ml-3 ms-3">Simpan</button>
                             <a href="{{route('undangan-alternative1')}}" class="btn btn-danger">Batal</a>
-                        </div> --}}
+                        </div>
 
-                    </div>
+                    </div> --}}
 
                     <!-- /.card-body -->
 
                 </form>
 
                 <table class="table table-bordered">
+                    <h6>Daftar Tamu Undangan<a href="{{route('nama-undangan.index')}}" target="_blank" rel="noopener noreferrer" class="link-underline-primary"> Sharelink</a></Undangan></h6>
                     <thead>
                         <tr class="text-nowrap text-center">
                             {{-- <th><input type="checkbox" id="selectAll"></th> --}}
@@ -381,6 +382,12 @@
                         @endforeach
                     </tbody>
                 </table>
+                <div class="d-flex flex-row-reverse mt-5 mb-3">
+                <a href="{{route('undangan-alternative1')}}" class="btn btn-primary ">Kembali</a>
+                </div>
+            </div>
+
+
 
                 <!-- /.row (main row) -->
             </div><!-- /.container-fluid -->

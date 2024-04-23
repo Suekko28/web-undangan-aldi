@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
@@ -65,7 +66,7 @@ protected $fillable = [
     'foto_pernikahan',
 ];
 
-public function Alt1Model(): HasMany {
-    return $this->hasMany(alt1model::class, 'id_alt1', 'id');
+public function NamaUndangan(): BelongsTo {
+    return $this->belongsTo(NamaUndangan::class, 'undangan_alt1s_id', 'id');
 }
 }
