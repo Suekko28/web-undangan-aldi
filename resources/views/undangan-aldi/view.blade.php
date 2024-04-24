@@ -40,10 +40,10 @@
             <div class="container-fluid">
                 @include('layouts.message')
                 <!-- Small boxes (Stat box) -->
-                <form action="{{ url('undangan-alternative1', $data->id)}}" method="post" enctype="multipart/form-data">
+                <form action="{{ url('undangan-alternative1', $data->id) }}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
-                    
+
 
                     {{-- <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Banner Image & Music</div>
@@ -70,18 +70,20 @@
                             </div> --}}
                             <div class="form-group mb-3">
                                 <label for="nama_mempelai_laki">Nama Mempelai Laki <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="nama_mempelai_laki" name="nama_mempelai_laki"
-                                    placeholder="Masukan nama mempelai laki-laki" value="{{$data->nama_mempelai_laki}}">
+                                <input disabled type="text" class="form-control" id="nama_mempelai_laki"
+                                    name="nama_mempelai_laki" placeholder="Masukan nama mempelai laki-laki"
+                                    value="{{ $data->nama_mempelai_laki }}">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="putra_dari_bpk">Putra dari Bapak <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="putra_dari_bpk" name="putra_dari_bpk"
-                                    placeholder="Putra dari bapak" value="{{$data->putra_dari_bpk}}">
+                                <input disabled type="text" class="form-control" id="putra_dari_bpk"
+                                    name="putra_dari_bpk" placeholder="Putra dari bapak"
+                                    value="{{ $data->putra_dari_bpk }}">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="putra_dari_ibu">Putra dari Ibu <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="putra_dari_ibu" name="putra_dari_ibu"
-                                    placeholder="Putra dari ibu" value="{{$data->putra_dari_ibu}}">
+                                <input disabled type="text" class="form-control" id="putra_dari_ibu"
+                                    name="putra_dari_ibu" placeholder="Putra dari ibu" value="{{ $data->putra_dari_ibu }}">
                             </div>
 
 
@@ -95,17 +97,19 @@
                                 <label for="nama_mempelai_perempuan">Nama Mempelai Perempuan <span
                                         class="mandatory">*</span></label>
                                 <input disabled type="text" class="form-control" id="nama_mempelai_perempuan"
-                                    name="nama_mempelai_perempuan" placeholder="Masukan nama mempelai perempuan" value="{{$data->nama_mempelai_perempuan}}">
+                                    name="nama_mempelai_perempuan" placeholder="Masukan nama mempelai perempuan"
+                                    value="{{ $data->nama_mempelai_perempuan }}">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="putri_dari_bpk">Putri dari Bapak <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="putri_dari_bpk" name="putri_dari_bpk"
-                                    placeholder="Putri dari bapak" value="{{$data->putri_dari_bpk}}">
+                                <input disabled type="text" class="form-control" id="putri_dari_bpk"
+                                    name="putri_dari_bpk" placeholder="Putri dari bapak"
+                                    value="{{ $data->putri_dari_bpk }}">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="putri_dari_ibu">Putri dari Ibu <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="putri_dari_ibu" name="putri_dari_ibu"
-                                    placeholder="Putri dari ibu" value="{{$data->putri_dari_ibu}}">
+                                <input disabled type="text" class="form-control" id="putri_dari_ibu"
+                                    name="putri_dari_ibu" placeholder="Putri dari ibu" value="{{ $data->putri_dari_ibu }}">
                             </div>
 
                         </div>
@@ -116,57 +120,62 @@
                         <div class="fs-6">
                             <div class="form-group mb-3">
                                 <label for="tgl_akad">Tanggal Akad <span class="mandatory">*</span></label>
-                                <input disabled type="date" class="form-control" id="tgl_akad" name="tgl_akad" placeholder="" value="{{$data->tgl_akad}}">
+                                <input disabled type="date" class="form-control" id="tgl_akad" name="tgl_akad"
+                                    placeholder="" value="{{ $data->tgl_akad }}">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="mulai_akad">Mulai Akad <span class="mandatory">*</span></label>
                                 <input disabled type="time" class="form-control" id="mulai_akad" name="mulai_akad"
-                                    placeholder="">
+                                    placeholder="" value="{{$data->mulai_akad}}">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="selesai_akad">Selesai Akad <span class="mandatory">*</span></label>
-                                <input disabled type="time" class="form-control" id="selesai_akad" name="selesai_akad"
-                                    placeholder="">
+                                <input disabled type="time" class="form-control" id="selesai_akad"
+                                    name="selesai_akad" placeholder="" value="{{$data->selesai_akad}}">
                             </div>
-                            {{-- <div class="form-group mb-3">
-                                <label for="alamat_akad">Alamat Akad <span class="mandatory">*</span></label>
-                                <textarea disabled class="form-control" rows="5" id="alamat_akad" name="alamat_akad" placeholder="Masukan alamat akad" value="{{$data->alamat_akad}}"></textarea>
-                            </div> --}}
                             <div class="form-group mb-3">
-                                <label for="$data->lokasi_gmaps_akad">Lokasi Maps Resepsi <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="lokasi_gmaps_akad" name="lokasi_gmaps_akad"
-                                    placeholder="Masukkan link alamat maps" value="{{$data->lokasi_gmaps_akad}}">
+                                <label for="alamat_akad">Alamat Akad <span class="mandatory">*</span></label>
+                                <textarea disabled class="form-control" rows="5" id="alamat_akad" name="alamat_akad" placeholder="Masukan alamat akad">{{$data->alamat_akad}}</textarea>
+                            </div>
+                            <div class="form-group mb-3">
+                                <label for="$data->lokasi_gmaps_akad">Lokasi Maps Resepsi <span
+                                        class="mandatory">*</span></label>
+                                <input disabled type="text" class="form-control" id="lokasi_gmaps_akad"
+                                    name="lokasi_gmaps_akad" placeholder="Masukkan link alamat maps"
+                                    value="{{ $data->lokasi_gmaps_akad }}">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="tgl_resepsi">Tanggal Resepsi <span class="mandatory">*</span></label>
                                 <input disabled type="date" class="form-control" id="tgl_resepsi" name="tgl_resepsi"
-                                    placeholder="" value="{{$data->tgl_resepsi}}">
+                                    placeholder="" value="{{ $data->tgl_resepsi }}">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="mulai_resepsi">Mulai Resepsi <span class="mandatory">*</span></label>
-                                <input disabled type="time" class="form-control" id="mulai_resepsi" name="mulai_resepsi"
-                                    placeholder="" >
+                                <input disabled type="time" class="form-control" id="mulai_resepsi"
+                                    name="mulai_resepsi" placeholder="" value="{{$data->mulai_resepsi}}">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="selesai_resepsi">Selesai Resepsi <span class="mandatory">*</span></label>
-                                <input disabled type="time" class="form-control" id="selesai_resepsi" name="selesai_resepsi"
-                                    placeholder="">
+                                <input disabled type="time" class="form-control" id="selesai_resepsi"
+                                    name="selesai_resepsi" placeholder="" value="{{$data->selesai_resepsi}}">
                             </div>
-                            {{-- <div class="form-group mb-3">
+                            <div class="form-group mb-3">
                                 <label for="alamat_resepsi">Alamat Resepsi <span class="mandatory">*</span></label>
                                 <textarea class="form-control" rows="5" id="alamat_resepsi" name="alamat_resepsi"
-                                    placeholder="Masukan alamat resepsi" value="{{$data->alamat_resepsi}}"></textarea>
-                            </div> --}}
+                                    placeholder="Masukan alamat resepsi" disabled>{{$data->alamat_resepsi}}</textarea>
+                            </div>
 
                             <div class="form-group mb-3">
-                                <label for="$data->lokasi_gmaps_resepsi">Lokasi Maps Resepsi <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="lokasi_gmaps" name="$data->lokasi_gmaps_resepsi"
-                                    placeholder="Masukkan link alamat maps" value="{{$data->lokasi_gmaps_resepsi}}">
+                                <label for="$data->lokasi_gmaps_resepsi">Lokasi Maps Resepsi <span
+                                        class="mandatory">*</span></label>
+                                <input disabled type="text" class="form-control" id="lokasi_gmaps"
+                                    name="$data->lokasi_gmaps_resepsi" placeholder="Masukkan link alamat maps"
+                                    value="{{ $data->lokasi_gmaps_resepsi }}">
                             </div>
 
                         </div>
 
-                    {{-- <div class="card-body container bg-white mt-5">
+                        {{-- <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Galeri Foto</div>
                         <div class="fs-6">
                             <div class="form-group mb-3">
@@ -210,7 +219,7 @@
 
                     </div> --}}
 
-                    {{-- <div class="card-body container bg-white mt-5">
+                        {{-- <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Cerita Cinta Kami</div>
                         <div class="fs-6">
                             <div class="form-group mb-3">
@@ -264,7 +273,7 @@
                             </div>
                         </div>
                     </div> --}}
-{{-- 
+                        {{-- 
                     <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Kirim Hadiah</div>
                         <div class="fs-6">
@@ -328,68 +337,41 @@
 
                     </div> --}}
 
-                    <!-- /.card-body -->
+                        <!-- /.card-body -->
 
                 </form>
 
                 <table class="table table-bordered">
-                    <h6>Daftar Tamu Undangan<a href="{{route('nama-undangan-list', ['id' => $data])}}" target="_blank" rel="noopener noreferrer" class="link-underline-primary"> Sharelink</a></h6>
+                    <h6>Daftar Tamu Undangan<a href="{{ route('nama-undangan-list', ['id' => $data]) }}" target="_blank"
+                            rel="noopener noreferrer" class="link-underline-primary"> Sharelink</a></h6>
                     <thead>
                         <tr class="text-nowrap text-center">
-                            {{-- <th><input type="checkbox" id="selectAll"></th> --}}
                             <th>No</th>
-                            {{-- <th>Nama Undangan</th> --}}
-                            {{-- <th>Foto Prewedding</th> --}}
                             <th>Nama Undangan</th>
                             <th>Template Message</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($data as $item)
+                        <?php $i = 1; ?>
+                        @foreach ($nama_undangan as $item)
                             <tr class="text-center">
-                                {{-- <td><input type="checkbox" class="delete-checkbox" name="selected[]"
-                                        value="{{ $item->id }}"></td> --}}
-                                {{-- <td scope="row">{{ $i }}</td> --}}
-                                {{-- <td>{{ $item->nama_undangan }}</td> --}}
-                                {{-- <td>
-                                    <img src="{{ Storage::url('' . $item->banner_img) }}" width="120"
-                                        height="120" alt="Foto Prewedding">
-                                </td> --}}
-                                {{-- <td>{{ $item->nama_mempelai_laki }} & {{ $item->nama_mempelai_perempuan }}</td>
-                                <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d', $item->tgl_akad)->format('d-m-Y') }}
-                                </td> --}}
-                                {{-- <td>
-                                    <div class="btn-group-vertical">
-                                        <a href="{{ url('undangan-alternative1/' . $item->id) . '/edit' }}"
-                                            class="btn btn-warning mb-2 rounded"><i class="fa fa-pen-to-square"
-                                                style="color:white;"></i></a>
-                                        <button class="btn btn-danger delete-btn rounded mb-2"
-                                            data-id="{{ $item->id }}"><i class="fa fa-trash"></i></button>
-                                        <a href="{{ route('undangan-alternative1-view', ['id' => $item->id]) }}"
-                                            class="btn btn-info rounded mb-2">
-                                            <i class="fa fa-eye" style="color:white;"></i>
-                                        </a>
-                                        <a href="{{ route('undangan-alt1-home', [
-                                            'nama_mempelai_laki' => $item->nama_mempelai_laki,
-                                            'nama_mempelai_perempuan' => $item->nama_mempelai_perempuan,
-                                        ]) }}"
-                                            target="_blank" class="btn btn-primary rounded mb-2">
-                                            <i class="fa fa-link" style="color:white;"></i>
-                                        </a>
-                                    </div>
-                                </td> --}}
+                                <td scope="row">{{ $i }}</td>
+                                <td scope="row">{{ $item->nama_undangan }}</td>
+                                {{-- Other table cells --}}
                             </tr>
+                            <?php $i++; ?>
                         @endforeach
                     </tbody>
+
                 </table>
                 <div class="d-flex flex-row-reverse mt-5 mb-3">
-                <a href="{{route('undangan-alternative1')}}" class="btn btn-primary ">Kembali</a>
+                    <a href="{{ route('undangan-alternative1') }}" class="btn btn-primary ">Kembali</a>
                 </div>
             </div>
 
 
 
-                <!-- /.row (main row) -->
+            <!-- /.row (main row) -->
             </div><!-- /.container-fluid -->
         </section>
         <script src="https://cdn.ckeditor.com/4.13.1/standard/ckeditor.js"></script>

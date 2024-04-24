@@ -70,24 +70,65 @@ class NamaUndanganController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
+    // Di dalam controller
     public function edit(string $id)
     {
-        //
+        $data = NamaUndangan::find($id);
+        $undanganAlt1Id = $data->undangan_alt1_id;
+        return view('user.edit', [
+            'data' => $data,
+            'undanganAlt1Id' => $undanganAlt1Id,
+        ]);
     }
+
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $undanganAlt1Id, string $id)
     {
-        //
+        // Mendapatkan instance NamaUndangan berdasarkan ID
+        $namaUndangan = NamaUndangan::findOrFail($id);
+
+        // Update nama undangan
+        $namaUndangan->nama_undangan = $request->nama_undangan;
+
+        // Simpan perubahan
+        $namaUndangan->save();
+
+        // Redirect ke halaman list dengan pesan sukses
+        return redirect()->route('nama-undangan-list', $undanganAlt1Id)->with('success', 'Berhasil memperbarui data');
     }
+
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Request $request, $id = null)
     {
-        //
+        // Cek apakah ada ID yang diterima, jika tidak, artinya sedang menghapus data yang dipilih
+        if ($id === null) {
+            // Mendapatkan data yang dipilih dari form
+            $selectedIds = $request->input('selected', []);
+
+            // Menghapus data yang dipilih
+            NamaUndangan::whereIn('id', $selectedIds)->delete();
+
+            return redirect()->route('nama-undangan-list')->with('success', 'Data yang dipilih berhasil dihapus');
+        } else {
+            // Hapus data tunggal berdasarkan ID yang diterima
+            $data = NamaUndangan::find($id);
+            if ($data) {
+                $data->delete();
+                // Redirect back to the previous page
+                return redirect()->back()->with('success', 'Data berhasil dihapus');
+            } else {
+                return redirect()->back()->with('error', 'Data tidak ditemukan');
+            }
+        }
     }
+
+
+
+
 }

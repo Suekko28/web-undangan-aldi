@@ -43,8 +43,6 @@
                 <form action="{{ url('undangan-alternative1', $data->id)}}" method="post" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')
-                    
-
                     <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Banner Image & Music</div>
                         <div class="fs-6">
@@ -130,7 +128,7 @@
                             </div>
                             <div class="form-group mb-3">
                                 <label for="alamat_akad">Alamat Akad <span class="mandatory">*</span></label>
-                                <textarea class="form-control" rows="5" id="alamat_akad" name="alamat_akad" placeholder="Masukan alamat akad" value="{{$data->alamat_akad}}"></textarea>
+                                <textarea class="form-control" rows="5" id="alamat_akad" name="alamat_akad" placeholder="Masukan alamat akad">{{$data->alamat_akad}}</textarea>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="$data->lokasi_gmaps_akad">Lokasi Maps Resepsi <span class="mandatory">*</span></label>
@@ -155,7 +153,7 @@
                             <div class="form-group mb-3">
                                 <label for="alamat_resepsi">Alamat Resepsi <span class="mandatory">*</span></label>
                                 <textarea class="form-control" rows="5" id="alamat_resepsi" name="alamat_resepsi"
-                                    placeholder="Masukan alamat resepsi" value="{{$data->alamat_resepsi}}"></textarea>
+                                    placeholder="Masukan alamat resepsi">{{$data->alamat_resepsi}}</textarea>
                             </div>
 
                             <div class="form-group mb-3">
@@ -174,7 +172,7 @@
                                 <label for="caption">Caption <span class="mandatory">*</span></label>
                                 <span class="fst-italic">(Maksimal 288 Karakter)</span>
                                 <textarea class="form-control" rows="5" id="caption" name="caption"
-                                    placeholder="Aku tak pernah menunggumu. Kamu tak pernah sengaja datang. Tapi kita sengaja dipertemukan Tuhan." value="{{$data->caption}}"></textarea>
+                                    placeholder="Aku tak pernah menunggumu. Kamu tak pernah sengaja datang. Tapi kita sengaja dipertemukan Tuhan.">{{$data->caption}}</textarea>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="galeri_img1">Foto 1 <span class="mandatory">*</span></label>
@@ -223,7 +221,7 @@
                                         class="fst-italic">(Maksimal 200 Karakter)</span>
                                 </label>
                                 <textarea class="form-control" rows="5" id="pertemuan" name="pertemuan"
-                                    placeholder="Ceritakan pertemuan kamu dengan pasanganmu" value="{{$data->pertemuan}}"></textarea>
+                                    placeholder="Ceritakan pertemuan kamu dengan pasanganmu">{{$data->pertemuan}}</textarea>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="foto_pendekatan">Foto Pendekatan <span class="mandatory">*</span></label>
@@ -260,7 +258,7 @@
                                 <label for="pernikahan">Pernihakan <span class="mandatory">*</span><span
                                         class="fst-italic">(Maksimal 200 Karakter)</span></label>
                                 <textarea class="form-control" rows="5" id="pernikahan" name="pernikahan"
-                                    placeholder="Ceritakan rencana pernikahan kamu dengan pasanganmu" value="{{$data->pernikahan}}"></textarea>
+                                    placeholder="Ceritakan rencana pernikahan kamu dengan pasanganmu">{{$data->pernikahan}}</textarea>
                             </div>
                         </div>
                     </div>
@@ -316,7 +314,7 @@
                             </div>
                             <div class="form-group mb-3">
                                 <label for="alamat_tertera">Alamat Tertera <span class="mandatory">*</span></label>
-                                <textarea class="form-control" rows="5" id="alamat_tertera" name="alamat_tertera" placeholder="Masukan alamat tertera kirim hadiah" value="{{$data->alamat_tertera}}"></textarea>
+                                <textarea class="form-control" rows="5" id="alamat_tertera" name="alamat_tertera" placeholder="Masukan alamat tertera kirim hadiah" value="">{{$data->alamat_tertera}}</textarea>
                             </div>
                         </div>
 

@@ -58,6 +58,8 @@ Route::resource('/nama-undangan', NamaUndanganController::class);
 Route::get('/nama-undangan/{id}/list', [NamaUndanganController::class, 'index'])->name('nama-undangan-list');
 Route::get('/nama-undangan/{id}/create', [NamaUndanganController::class, 'create'])->name('nama-undangan-create');
 Route::post('/nama-undangan/{id}/list', [NamaUndanganController::class, 'store'])->name('nama-undangan-store');
+Route::put('/nama-undangan/{undanganAlt1Id}/{id}', [NamaUndanganController::class, 'update'])->name('nama-undangan-update');
+Route::delete('/nama-undangan/{id}', [NamaUndanganController::class, 'destroy'])->name('nama-undangan.destroy');
 
 
 

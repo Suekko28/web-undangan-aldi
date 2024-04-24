@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UndanganAlt1FormRequest;
+use App\Models\NamaUndangan;
 use App\Models\UndanganAlt1;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -145,7 +146,8 @@ class UndanganAlt1Controller extends Controller
     public function show(string $id)
     {
         $data = UndanganAlt1::findOrFail($id);
-        return view('undangan-aldi.view', compact('data'));
+        $nama_undangan = $data->namaUndangan;
+        return view('undangan-aldi.view', compact('data', 'nama_undangan'));
     }
 
     /**
