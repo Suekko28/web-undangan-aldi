@@ -3,7 +3,7 @@
 @section('navbar-admin')
     <main>
         <div class="container-xxl flex-grow-1 container-p-y">
-            <a class="btn btn-primary mb-3" href="{{ url('undangan-alternative1/create') }}">+ Buat Undangan</a>
+        <a class="btn btn-primary mb-3" href="{{ route('nama-undangan-create', ['id' => $undanganAlt1->id]) }}">+ Buat Undangan</a>
             @include('layouts.message')
             <!-- Responsive Table -->
             <div class="card">
@@ -12,8 +12,8 @@
                     <div class="mb-3">
                         <input type="text" id="searchInput" class="form-control" placeholder="Cari...">
                     </div>
-                    <div id="noDataMessage" class="alert alert-warning" style="display: none;">
-                        Data tidak ditemukan.
+                    <div id="nonamaUndangansMessage" class="alert alert-warning" style="display: none;">
+                        namaUndangans tidak ditemukan.
                     </div>
                 </div>
 
@@ -30,33 +30,32 @@
                                     <th>No</th>
                                     {{-- <th>Nama Undangan</th> --}}
                                     {{-- <th>Foto Prewedding</th> --}}
-                                    <th>Mempelai</th>
-                                    <th>Tanggal Pernikahan</th>
+                                    <th>Nama Undangan</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php $i = $data->firstItem(); ?>
-                                @foreach ($data as $item)
+                                <?php $i = $namaUndangans->firstItem(); ?>
+                                @foreach ($namaUndangans as $item)
                                     <tr class="text-center">
                                         <td><input type="checkbox" class="delete-checkbox" name="selected[]"
                                                 value="{{ $item->id }}"></td>
                                         <td scope="row">{{ $i }}</td>
+                                        <td scope="row">{{$item->nama_undangan}}</td>
                                         {{-- <td>{{ $item->nama_undangan }}</td> --}}
                                         {{-- <td>
                                             <img src="{{ Storage::url('' . $item->banner_img) }}" width="120"
                                                 height="120" alt="Foto Prewedding">
                                         </td> --}}
-                                        <td>{{ $item->nama_mempelai_laki }} & {{ $item->nama_mempelai_perempuan }}</td>
-                                        <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d', $item->tgl_akad)->format('d-m-Y') }}
-                                        </td>
-                                        <td>
+                                        {{-- <td>{{ $item->nama_mempelai_laki }} & {{ $item->nama_mempelai_perempuan }}</td>
+                                        <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d', $item->tgl_akad)->format('d-m-Y') }} --}}
+                                        {{-- <td>
                                             <div class="btn-group-vertical">
                                                 <a href="{{ url('undangan-alternative1/' . $item->id) . '/edit' }}"
                                                     class="btn btn-warning mb-2 rounded"><i class="fa fa-pen-to-square"
                                                         style="color:white;"></i></a>
                                                 <button class="btn btn-danger delete-btn rounded mb-2"
-                                                    data-id="{{ $item->id }}"><i class="fa fa-trash"></i></button>
+                                                    namaUndangans-id="{{ $item->id }}"><i class="fa fa-trash"></i></button>
                                                 <a href="{{ route('undangan-alternative1-view', ['id' => $item->id]) }}"
                                                     class="btn btn-info rounded mb-2">
                                                     <i class="fa fa-eye" style="color:white;"></i>
@@ -69,7 +68,7 @@
                                                     <i class="fa fa-link" style="color:white;"></i>
                                                 </a>
                                             </div>
-                                        </td>
+                                        </td> --}}
                                     </tr>
                                     <?php $i++; ?>
                                 @endforeach
@@ -77,7 +76,7 @@
                         </table>
                     </form>
                 </div>
-                <div class="p-2">{{ $data->links() }}</div>
+                <div class="p-2">{{ $namaUndangans->links() }}</div>
             </div>
         </div>
     </main>
@@ -97,7 +96,7 @@
             deleteButtons.forEach(function(button) {
                 button.addEventListener('click', function(event) {
                     event.preventDefault();
-                    var itemId = this.getAttribute('data-id');
+                    var itemId = this.getAttribute('namaUndangans-id');
                     Swal.fire({
                         title: "Are you sure?",
                         text: "You won't be able to revert this!",
@@ -124,15 +123,15 @@
             // Menangani pencarian
             const searchInput = document.getElementById('searchInput');
             const tableRows = document.querySelectorAll('.table tbody tr');
-            const noDataMessage = document.getElementById('noDataMessage');
+            const nonamaUndangansMessage = document.getElementById('nonamaUndangansMessage');
 
             searchInput.addEventListener('input', function() {
                 const searchText = this.value.toLowerCase();
                 let found = false;
 
                 tableRows.forEach(function(row) {
-                    const rowData = row.innerText.toLowerCase();
-                    if (rowData.includes(searchText)) {
+                    const rownamaUndangans = row.innerText.toLowerCase();
+                    if (rownamaUndangans.includes(searchText)) {
                         row.style.display = '';
                         found = true;
                     } else {
@@ -141,9 +140,9 @@
                 });
 
                 if (!found) {
-                    noDataMessage.style.display = 'block';
+                    nonamaUndangansMessage.style.display = 'block';
                 } else {
-                    noDataMessage.style.display = 'none';
+                    nonamaUndangansMessage.style.display = 'none';
                 }
             });
 
@@ -208,15 +207,15 @@
     document.addEventListener("DOMContentLoaded", function() {
         const searchInput = document.getElementById('searchInput');
         const tableRows = document.querySelectorAll('.table tbody tr');
-        const noDataMessage = document.getElementById('noDataMessage');
+        const nonamaUndangansMessage = document.getElementById('nonamaUndangansMessage');
 
         searchInput.addEventListener('input', function() {
             const searchText = this.value.toLowerCase();
             let found = false;
 
             tableRows.forEach(function(row) {
-                const rowData = row.innerText.toLowerCase();
-                if (rowData.includes(searchText)) {
+                const rownamaUndangans = row.innerText.toLowerCase();
+                if (rownamaUndangans.includes(searchText)) {
                     row.style.display = '';
                     found = true;
                 } else {
@@ -225,9 +224,9 @@
             });
 
             if (!found) {
-                noDataMessage.style.display = 'block';
+                nonamaUndangansMessage.style.display = 'block';
             } else {
-                noDataMessage.style.display = 'none';
+                nonamaUndangansMessage.style.display = 'none';
             }
         });
     });

@@ -40,72 +40,90 @@
             <div class="container-fluid">
                 @include('layouts.message')
                 <!-- Small boxes (Stat box) -->
-                <form action="{{ url('undangan-alternative1', $data->id)}}" method="post" enctype="multipart/form-data">
+                <form action="{{ route('nama-undangan-store', ['id' => $undanganAlt1Id]) }}" method="post" enctype="multipart/form-data">
                     @csrf
-                    @method('PUT')
-                    
+                    <input type="hidden" name="undangan_alt1_id" value="{{ $undanganAlt1->id }}">
+                    <div class="card-body container bg-white mt-5">
+                        <div class="mempelai text-center fw-bold fs-5">Nama Undangan</div>
+                        <div class="fs-6">
+                            <div class="form-group mb-3">
+                                <label for="nama_undangan">Nama Undangan <span class="mandatory">*</span></label>
+                                <textarea class="form-control" rows="5" id="nama_undangan" name="nama_undangan"
+                                    placeholder="Masukan nama-nama undangan"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="d-flex flex-row-reverse mt-5">
+                            <button type="submit" class="btn btn-primary ml-3 ms-3">Simpan</button>
+                            <a href="{{ route('nama-undangan-list', ['id' => $undanganAlt1Id]) }}" class="btn btn-danger">Batal</a>
+                        </div>
+
+                    </div>
+
+
 
                     {{-- <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Banner Image & Music</div>
                         <div class="fs-6">
                             <div class="form-group mb-3">
                                 <label for="banner_img">Foto Prewedding <span class="mandatory">*</span></label>
-                                <input disabled type="file" class="form-control" id="banner_img" name="banner_img" placeholder="" value="{{$data->banner_img}}">
+                                <input type="file" class="form-control" id="banner_img" name="banner_img" placeholder="">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="music">Music <span class="mandatory">*</span></label>
-                                <input disabled type="file" class="form-control" id="music" name="music" accept=".mp3">
+                                <input type="file" class="form-control" id="music" name="music" accept=".mp3">
                             </div>
                             
                         </div>
-                    </div> --}}
+                    </div>
 
                     <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Mempelai</div>
                         <div class="fs-6">
-                            {{-- <div class="form-group mb-3">
+                            <div class="form-group mb-3">
                                 <label for="foto_mempelai_laki">Foto Mempelai Laki <span class="mandatory">*</span></label>
-                                <input disabled type="file" class="form-control" id="foto_mempelai_laki" name="foto_mempelai_laki"
+                                <input type="file" class="form-control" id="foto_mempelai_laki" name="foto_mempelai_laki"
                                     placeholder="">
-                            </div> --}}
+                            </div>
                             <div class="form-group mb-3">
                                 <label for="nama_mempelai_laki">Nama Mempelai Laki <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="nama_mempelai_laki" name="nama_mempelai_laki"
-                                    placeholder="Masukan nama mempelai laki-laki" value="{{$data->nama_mempelai_laki}}">
+                                <input type="text" class="form-control" id="nama_mempelai_laki" name="nama_mempelai_laki"
+                                    placeholder="Masukan nama mempelai laki-laki">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="putra_dari_bpk">Putra dari Bapak <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="putra_dari_bpk" name="putra_dari_bpk"
-                                    placeholder="Putra dari bapak" value="{{$data->putra_dari_bpk}}">
+                                <input type="text" class="form-control" id="putra_dari_bpk" name="putra_dari_bpk"
+                                    placeholder="Putra dari bapak">
                             </div>
+
                             <div class="form-group mb-3">
                                 <label for="putra_dari_ibu">Putra dari Ibu <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="putra_dari_ibu" name="putra_dari_ibu"
-                                    placeholder="Putra dari ibu" value="{{$data->putra_dari_ibu}}">
+                                <input type="text" class="form-control" id="putra_dari_ibu" name="putra_dari_ibu"
+                                    placeholder="Putra dari ibu">
                             </div>
 
 
-                            {{-- <div class="form-group mb-3">
+                            <div class="form-group mb-3">
                                 <label for="foto_mempelai_perempuan">Foto Mempelai Perempuan <span
                                         class="mandatory">*</span></label>
-                                <input disabled type="file" class="form-control" id="foto_mempelai_perempuan"
+                                <input type="file" class="form-control" id="foto_mempelai_perempuan"
                                     name="foto_mempelai_perempuan" placeholder="">
-                            </div> --}}
+                            </div>
                             <div class="form-group mb-3">
                                 <label for="nama_mempelai_perempuan">Nama Mempelai Perempuan <span
                                         class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="nama_mempelai_perempuan"
-                                    name="nama_mempelai_perempuan" placeholder="Masukan nama mempelai perempuan" value="{{$data->nama_mempelai_perempuan}}">
+                                <input type="text" class="form-control" id="nama_mempelai_perempuan"
+                                    name="nama_mempelai_perempuan" placeholder="Masukan nama mempelai perempuan">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="putri_dari_bpk">Putri dari Bapak <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="putri_dari_bpk" name="putri_dari_bpk"
-                                    placeholder="Putri dari bapak" value="{{$data->putri_dari_bpk}}">
+                                <input type="text" class="form-control" id="putri_dari_bpk" name="putri_dari_bpk"
+                                    placeholder="Putri dari bapak">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="putri_dari_ibu">Putri dari Ibu <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="putri_dari_ibu" name="putri_dari_ibu"
-                                    placeholder="Putri dari ibu" value="{{$data->putri_dari_ibu}}">
+                                <input type="text" class="form-control" id="putri_dari_ibu" name="putri_dari_ibu"
+                                    placeholder="Putri dari ibu">
                             </div>
 
                         </div>
@@ -116,279 +134,229 @@
                         <div class="fs-6">
                             <div class="form-group mb-3">
                                 <label for="tgl_akad">Tanggal Akad <span class="mandatory">*</span></label>
-                                <input disabled type="date" class="form-control" id="tgl_akad" name="tgl_akad" placeholder="" value="{{$data->tgl_akad}}">
+                                <input type="date" class="form-control" id="tgl_akad" name="tgl_akad"
+                                    placeholder="">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="mulai_akad">Mulai Akad <span class="mandatory">*</span></label>
-                                <input disabled type="time" class="form-control" id="mulai_akad" name="mulai_akad"
+                                <input type="time" class="form-control" id="mulai_akad" name="mulai_akad"
                                     placeholder="">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="selesai_akad">Selesai Akad <span class="mandatory">*</span></label>
-                                <input disabled type="time" class="form-control" id="selesai_akad" name="selesai_akad"
+                                <input type="time" class="form-control" id="selesai_akad" name="selesai_akad"
                                     placeholder="">
                             </div>
-                            {{-- <div class="form-group mb-3">
-                                <label for="alamat_akad">Alamat Akad <span class="mandatory">*</span></label>
-                                <textarea disabled class="form-control" rows="5" id="alamat_akad" name="alamat_akad" placeholder="Masukan alamat akad" value="{{$data->alamat_akad}}"></textarea>
-                            </div> --}}
                             <div class="form-group mb-3">
-                                <label for="$data->lokasi_gmaps_akad">Lokasi Maps Resepsi <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="lokasi_gmaps_akad" name="lokasi_gmaps_akad"
-                                    placeholder="Masukkan link alamat maps" value="{{$data->lokasi_gmaps_akad}}">
+                                <label for="alamat_akad">Alamat Akad <span class="mandatory">*</span></label>
+                                <textarea class="form-control" rows="5" id="alamat_akad" name="alamat_akad"
+                                    placeholder="Masukan alamat akad"></textarea>
                             </div>
+
+                            <div class="form-group mb-3">
+                                <label for="lokasi_gmaps_akad">Lokasi Maps Akad <span class="mandatory">*</span></label>
+                                <input type="text" class="form-control" id="lokasi_gmaps_akad" name="lokasi_gmaps_akad"
+                                    placeholder="Masukkan link alamat maps">
+                            </div>
+
                             <div class="form-group mb-3">
                                 <label for="tgl_resepsi">Tanggal Resepsi <span class="mandatory">*</span></label>
-                                <input disabled type="date" class="form-control" id="tgl_resepsi" name="tgl_resepsi"
-                                    placeholder="" value="{{$data->tgl_resepsi}}">
+                                <input type="date" class="form-control" id="tgl_resepsi" name="tgl_resepsi"
+                                    placeholder="">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="mulai_resepsi">Mulai Resepsi <span class="mandatory">*</span></label>
-                                <input disabled type="time" class="form-control" id="mulai_resepsi" name="mulai_resepsi"
-                                    placeholder="" >
+                                <input type="time" class="form-control" id="mulai_resepsi" name="mulai_resepsi"
+                                    placeholder="">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="selesai_resepsi">Selesai Resepsi <span class="mandatory">*</span></label>
-                                <input disabled type="time" class="form-control" id="selesai_resepsi" name="selesai_resepsi"
+                                <input type="time" class="form-control" id="selesai_resepsi" name="selesai_resepsi"
                                     placeholder="">
                             </div>
-                            {{-- <div class="form-group mb-3">
-                                <label for="alamat_resepsi">Alamat Resepsi <span class="mandatory">*</span></label>
-                                <textarea class="form-control" rows="5" id="alamat_resepsi" name="alamat_resepsi"
-                                    placeholder="Masukan alamat resepsi" value="{{$data->alamat_resepsi}}"></textarea>
-                            </div> --}}
 
                             <div class="form-group mb-3">
-                                <label for="$data->lokasi_gmaps_resepsi">Lokasi Maps Resepsi <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="lokasi_gmaps" name="$data->lokasi_gmaps_resepsi"
-                                    placeholder="Masukkan link alamat maps" value="{{$data->lokasi_gmaps_resepsi}}">
+                                <label for="alamat_resepsi">Alamat Resepsi <span class="mandatory">*</span></label>
+                                <textarea class="form-control" rows="5" id="alamat_resepsi" name="alamat_resepsi"
+                                    placeholder="Masukan alamat resepsi"></textarea>
+                            </div>
+
+                            <div class="form-group mb-3">
+                                <label for="lokasi_gmaps_resepsi">Lokasi Maps Resepsi <span class="mandatory">*</span></label>
+                                <input type="text" class="form-control" id="lokasi_gmaps_resepsi" name="lokasi_gmaps_resepsi"
+                                    placeholder="Masukkan link alamat maps">
                             </div>
 
                         </div>
+                    </div>
 
-                    {{-- <div class="card-body container bg-white mt-5">
+
+                    <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Galeri Foto</div>
                         <div class="fs-6">
                             <div class="form-group mb-3">
                                 <label for="caption">Caption <span class="mandatory">*</span></label>
                                 <span class="fst-italic">(Maksimal 288 Karakter)</span>
                                 <textarea class="form-control" rows="5" id="caption" name="caption"
-                                    placeholder="Aku tak pernah menunggumu. Kamu tak pernah sengaja datang. Tapi kita sengaja dipertemukan Tuhan." value="{{$data->caption}}"></textarea>
+                                    placeholder="Aku tak pernah menunggumu. Kamu tak pernah sengaja datang. Tapi kita sengaja dipertemukan Tuhan."></textarea>
                             </div>
                             <div class="form-group mb-3">
-                                <label for="galeri_img1">Foto 1 <span class="mandatory">*</span></label>
-                                <input disabled type="file" class="form-control" id="galeri_img1" name="galeri_img1"
+                                <label for="galeri_img1">Foto 1 <span class="fst-italic">(Opsional)</span></label>
+                                <input type="file" class="form-control" id="galeri_img1" name="galeri_img1"
                                     placeholder="">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="galeri_img2">Foto 2 <span class="mandatory">*</span></label>
-                                <input disabled type="file" class="form-control" id="galeri_img2" name="galeri_img2"
+                                <label for="galeri_img2">Foto 2 <span class="fst-italic">(Opsional)</span></label>
+                                <input type="file" class="form-control" id="galeri_img2" name="galeri_img2"
                                     placeholder="">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="galeri_img3">Foto 3 <span class="mandatory">*</span></label>
-                                <input disabled type="file" class="form-control" id="galeri_img3" name="galeri_img3"
+                                <label for="galeri_img3">Foto 3 <span class="fst-italic">(Opsional)</span></label>
+                                <input type="file" class="form-control" id="galeri_img3" name="galeri_img3"
                                     placeholder="">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="galeri_img4">Foto 4 <span class="mandatory">*</span></label>
-                                <input disabled type="file" class="form-control" id="galeri_img4" name="galeri_img4"
+                                <label for="galeri_img4">Foto 4 <span class="fst-italic">(Opsional)</span></label>
+                                <input type="file" class="form-control" id="galeri_img4" name="galeri_img4"
                                     placeholder="">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="galeri_img5">Foto 5 <span class="mandatory">*</span></label>
-                                <input disabled type="file" class="form-control" id="galeri_img5" name="galeri_img5"
+                                <label for="galeri_img5">Foto 5 <span class="fst-italic">(Opsional)</span></label>
+                                <input type="file" class="form-control" id="galeri_img5" name="galeri_img5"
                                     placeholder="">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="galeri_img6">Foto 6 <span class="mandatory">*</span></label>
-                                <input disabled type="file" class="form-control" id="galeri_img6" name="galeri_img6"
+                                <label for="galeri_img6">Foto 6 <span class="fst-italic">(Opsional)</span></label>
+                                <input type="file" class="form-control" id="galeri_img6" name="galeri_img6"
                                     placeholder="">
                             </div>
 
                         </div>
 
-                    </div> --}}
+                    </div>
 
-                    {{-- <div class="card-body container bg-white mt-5">
+                    <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Cerita Cinta Kami</div>
                         <div class="fs-6">
                             <div class="form-group mb-3">
                                 <label for="foto_pertemuan">Foto Pertemuan <span class="mandatory">*</span></label>
-                                <input disabled type="file" class="form-control" id="foto_pertemuan" name="foto_pertemuan"
-                                    placeholder="" value="{{$data->foto_pertemuan}}">
+                                <input type="file" class="form-control" id="foto_pertemuan" name="foto_pertemuan"
+                                    placeholder="">
                             </div>
+
                             <div class="form-group mb-3">
                                 <label for="pertemuan">Petemuan <span class="mandatory">*</span> <span
                                         class="fst-italic">(Maksimal 200 Karakter)</span>
                                 </label>
                                 <textarea class="form-control" rows="5" id="pertemuan" name="pertemuan"
-                                    placeholder="Ceritakan pertemuan kamu dengan pasanganmu" value="{{$data->pertemuan}}"></textarea>
+                                    placeholder="Ceritakan pertemuan kamu dengan pasanganmu"></textarea>
                             </div>
+
                             <div class="form-group mb-3">
                                 <label for="foto_pendekatan">Foto Pendekatan <span class="mandatory">*</span></label>
-                                <input disabled type="file" class="form-control" id="foto_pendekatan" name="foto_pendekatan"
-                                    placeholder="" value="{{$data->foto_pendekatan}}">
+                                <input type="file" class="form-control" id="foto_pendekatan" name="foto_pendekatan"
+                                    placeholder="">
                             </div>
+
                             <div class="form-group mb-3">
                                 <label for="pendekatan">Pendekatan <span class="mandatory">*</span> <span
                                         class="fst-italic">(Maksimal 200 Karakter)</span>
                                 </label>
                                 <textarea class="form-control" rows="5" id="pendekatan" name="pendekatan"
-                                    placeholder="Ceritakan pendekatan kamu dengan pasanganmu " value="{{$data->pendekatan}}"></textarea>
+                                    placeholder="Ceritakan pendekatan kamu dengan pasanganmu "></textarea>
                             </div>
 
-                            
                             <div class="form-group mb-3">
                                 <label for="foto_lamaran">Foto Lamaran <span class="mandatory">*</span></label>
-                                <input disabled value="{{$data->foto_lamaran}}" type="file" class="form-control" id="foto_lamaran" name="foto_lamaran" placeholder="">
+                                <input type="file" class="form-control" id="foto_lamaran" name="foto_lamaran" placeholder="">
                             </div>
 
                             <div class="form-group mb-3">
                                 <label for="lamaran">Lamaran <span class="mandatory">*</span><span
                                         class="fst-italic">(Maksimal 200 Karakter)</span></label>
                                 <textarea class="form-control" rows="5" id="lamaran" name="lamaran"
-                                    placeholder="Ceritakan lamaran kamu dengan pasanganmu" value="{{$data->lamaran}}"></textarea>
+                                    placeholder="Ceritakan lamaran kamu dengan pasanganmu"></textarea>
                             </div>
 
                             <div class="form-group mb-3">
                                 <label for="foto_pernikahan">Foto Pernikahan <span class="mandatory">*</span></label>
-                                <input disabled value="{{$data->foto_pernikahan}}" type="file" class="form-control" id="foto_pernikahan" name="foto_pernikahan" placeholder="">
+                                <input type="file" class="form-control" id="foto_pernikahan" name="foto_pernikahan" placeholder="">
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="pernikahan">Pernihakan <span class="mandatory">*</span><span
+                                <label for="pernikahan">Pernikahan <span class="mandatory">*</span><span
                                         class="fst-italic">(Maksimal 200 Karakter)</span></label>
                                 <textarea class="form-control" rows="5" id="pernikahan" name="pernikahan"
-                                    placeholder="Ceritakan rencana pernikahan kamu dengan pasanganmu" value="{{$data->pernikahan}}"></textarea>
+                                    placeholder="Ceritakan rencana pernikahan kamu dengan pasanganmu"></textarea>
                             </div>
                         </div>
-                    </div> --}}
-{{-- 
+                    </div>
+
                     <div class="card-body container bg-white mt-5">
                         <div class="mempelai text-center fw-bold fs-5">Kirim Hadiah</div>
                         <div class="fs-6">
                             <div class="form-group mb-3">
                                 <label for="nama_rek1">Nama Rek Tertera <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="nama_rek1" name="nama_rek1"
-                                    placeholder="BCA, BRI, Dll" value="{{$data->nama_rek1}}">
+                                <input type="text" class="form-control" id="nama_rek1" name="nama_rek1"
+                                    placeholder="BCA, BRI, Dll">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="no_rek1">No. Rek Tertera <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="no_rek1" name="no_rek1"
-                                    placeholder="Masukkan nomor rekening" value="{{$data->no_rek1}}">
+                                <input type="text" class="form-control" id="no_rek1" name="no_rek1"
+                                    placeholder="Masukkan nomor rekening">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="atas_nama1">Atas Nama <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="atas_nama1" name="atas_nama1"
-                                    placeholder="Rudi Hermawan" value="{{$data->atas_nama1}}">
+                                <input type="text" class="form-control" id="atas_nama1" name="atas_nama1"
+                                    placeholder="Rudi Hermawan">
                             </div>
 
                             <div class="form-group mb-3">
                                 <label for="nama_rek2">Nama Rek Tertera <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="nama_rek2" name="nama_rek2"
-                                    placeholder="BCA, BRI, Dll" value="{{$data->nama_rek2}}">
+                                <input type="text" class="form-control" id="nama_rek2" name="nama_rek2"
+                                    placeholder="BCA, BRI, Dll">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="no_rek2">No. Rek Tertera <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="no_rek2" name="no_rek2"
-                                    placeholder="Masukkan nomor rekening" value="{{$data->no_rek2}}">
+                                <input type="text" class="form-control" id="no_rek2" name="no_rek2"
+                                    placeholder="Masukkan nomor rekening">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="atas_nama2">Atas Nama <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="atas_nama2" name="atas_nama2"
-                                    placeholder="Rudi Hermawan" value="{{$data->atas_nama2}}">
+                                <input type="text" class="form-control" id="atas_nama2" name="atas_nama2"
+                                    placeholder="Rudi Hermawan">
                             </div>
+
                             <div class="form-group mb-3">
                                 <label for="nama_rek3">Nama Rek Tertera <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="nama_rek3" name="nama_rek3"
-                                    placeholder="BCA, BRI, Dll" value="{{$data->nama_rek3}}">
+                                <input type="text" class="form-control" id="nama_rek3" name="nama_rek3"
+                                    placeholder="BCA, BRI, Dll">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="no_rek3">No. Rek Tertera <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="no_rek3" name="no_rek3"
-                                    placeholder="Masukkan nomor rekening" value="{{$data->no_rek3}}">
+                                <input type="text" class="form-control" id="no_rek3" name="no_rek3"
+                                    placeholder="Masukkan nomor rekening">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="atas_nama3">Atas Nama <span class="mandatory">*</span></label>
-                                <input disabled type="text" class="form-control" id="atas_nama3" name="atas_nama3"
-                                    placeholder="Rudi Hermawan" value="{{$data->atas_nama3}}">
+                                <input type="text" class="form-control" id="atas_nama3" name="atas_nama3"
+                                    placeholder="Rudi Hermawan">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="alamat_tertera">Alamat Tertera <span class="mandatory">*</span></label>
-                                <textarea class="form-control" rows="5" id="alamat_tertera" name="alamat_tertera" placeholder="Masukan alamat tertera kirim hadiah" value="{{$data->alamat_tertera}}"></textarea>
+                                <textarea class="form-control" rows="5" id="alamat_tertera" name="alamat_tertera"
+                                    placeholder="Masukan alamat tertera kirim hadiah"></textarea>
                             </div>
                         </div>
 
-                     
-                        <div class="d-flex flex-row-reverse mt-5">
-                            <button type="submit" class="btn btn-primary ml-3 ms-3">Simpan</button>
-                            <a href="{{route('undangan-alternative1')}}" class="btn btn-danger">Batal</a>
-                        </div>
+
+                       
 
                     </div> --}}
 
                     <!-- /.card-body -->
 
                 </form>
-
-                <table class="table table-bordered">
-                    <h6>Daftar Tamu Undangan<a href="{{route('nama-undangan-list', ['id' => $data])}}" target="_blank" rel="noopener noreferrer" class="link-underline-primary"> Sharelink</a></h6>
-                    <thead>
-                        <tr class="text-nowrap text-center">
-                            {{-- <th><input type="checkbox" id="selectAll"></th> --}}
-                            <th>No</th>
-                            {{-- <th>Nama Undangan</th> --}}
-                            {{-- <th>Foto Prewedding</th> --}}
-                            <th>Nama Undangan</th>
-                            <th>Template Message</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @foreach ($data as $item)
-                            <tr class="text-center">
-                                {{-- <td><input type="checkbox" class="delete-checkbox" name="selected[]"
-                                        value="{{ $item->id }}"></td> --}}
-                                {{-- <td scope="row">{{ $i }}</td> --}}
-                                {{-- <td>{{ $item->nama_undangan }}</td> --}}
-                                {{-- <td>
-                                    <img src="{{ Storage::url('' . $item->banner_img) }}" width="120"
-                                        height="120" alt="Foto Prewedding">
-                                </td> --}}
-                                {{-- <td>{{ $item->nama_mempelai_laki }} & {{ $item->nama_mempelai_perempuan }}</td>
-                                <td>{{ \Carbon\Carbon::createFromFormat('Y-m-d', $item->tgl_akad)->format('d-m-Y') }}
-                                </td> --}}
-                                {{-- <td>
-                                    <div class="btn-group-vertical">
-                                        <a href="{{ url('undangan-alternative1/' . $item->id) . '/edit' }}"
-                                            class="btn btn-warning mb-2 rounded"><i class="fa fa-pen-to-square"
-                                                style="color:white;"></i></a>
-                                        <button class="btn btn-danger delete-btn rounded mb-2"
-                                            data-id="{{ $item->id }}"><i class="fa fa-trash"></i></button>
-                                        <a href="{{ route('undangan-alternative1-view', ['id' => $item->id]) }}"
-                                            class="btn btn-info rounded mb-2">
-                                            <i class="fa fa-eye" style="color:white;"></i>
-                                        </a>
-                                        <a href="{{ route('undangan-alt1-home', [
-                                            'nama_mempelai_laki' => $item->nama_mempelai_laki,
-                                            'nama_mempelai_perempuan' => $item->nama_mempelai_perempuan,
-                                        ]) }}"
-                                            target="_blank" class="btn btn-primary rounded mb-2">
-                                            <i class="fa fa-link" style="color:white;"></i>
-                                        </a>
-                                    </div>
-                                </td> --}}
-                            </tr>
-                        @endforeach
-                    </tbody>
-                </table>
-                <div class="d-flex flex-row-reverse mt-5 mb-3">
-                <a href="{{route('undangan-alternative1')}}" class="btn btn-primary ">Kembali</a>
-                </div>
-            </div>
-
-
-
                 <!-- /.row (main row) -->
             </div><!-- /.container-fluid -->
         </section>

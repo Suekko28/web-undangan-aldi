@@ -58,6 +58,10 @@ return new class extends Migration {
             $table->string('foto_pendekatan');
             $table->string('foto_lamaran');
             $table->string('foto_pernikahan');
+            $table->string('judul_cerita1');
+            $table->string('judul_cerita2');
+            $table->string('judul_cerita3');
+            $table->string('judul_cerita4');
             $table->timestamps();
         });
     }

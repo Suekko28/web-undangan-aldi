@@ -67,6 +67,11 @@ class UndanganAlt1FormRequest extends FormRequest
             'foto_lamaran' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
             'foto_pernikahan' => ['required', 'image', 'mimes:jpeg,png,jpg', 'max:2048'],
             'music' => ['required', 'mimes:mp3'],
+            'judul_cerita1' => ['required', 'string'],
+            'judul_cerita2' => ['required', 'string'],
+            'judul_cerita3' => ['required', 'string'],
+            'judul_cerita4' => ['required', 'string'],
+
 
 
 

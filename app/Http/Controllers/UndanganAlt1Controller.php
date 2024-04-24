@@ -114,6 +114,10 @@ class UndanganAlt1Controller extends Controller
             'foto_pendekatan' => $foto_pendekatan_path,
             'foto_lamaran' => $foto_lamaran_path,
             'foto_pernikahan' => $foto_pernikahan_path,
+            'judul_cerita1' => $request->judul_cerita1,
+            'judul_cerita2' => $request->judul_cerita2,
+            'judul_cerita3' => $request->judul_cerita3,
+            'judul_cerita4' => $request->judul_cerita4,
         ];
 
         // Periksa apakah file galeri diunggah sebelum menyimpannya
@@ -132,10 +136,6 @@ class UndanganAlt1Controller extends Controller
         UndanganAlt1::create($data);
         return redirect()->route('undangan-alternative1')->with('success', 'Data berhasil ditambahkan');
     }
-
-
-
-
 
 
 
@@ -227,6 +227,10 @@ class UndanganAlt1Controller extends Controller
             'no_rek3' => $validatedData['no_rek3'],
             'atas_nama3' => $validatedData['atas_nama3'],
             'alamat_tertera' => $validatedData['alamat_tertera'],
+            'judul_cerita1' => $validatedData['judul_cerita1'],
+            'judul_cerita2' => $validatedData['judul_cerita2'],
+            'judul_cerita3' => $validatedData['judul_cerita3'],
+            'judul_cerita4' => $validatedData['judul_cerita4'],
         ]);
 
         return redirect()->route('undangan-alternative1')->with('success', 'Data berhasil diperbarui');

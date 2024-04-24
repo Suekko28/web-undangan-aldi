@@ -303,7 +303,7 @@
         <div class="r-s-v-p-mobile-frame">
             <div class="r-s-v-p-frame-title">
                 <div class="r-s-v-p-name-field">
-                    <b class="pertemuan3">Pertemuan</b>
+                    <b class="pertemuan3">{{$data->judul_cerita1}}</b>
                     <div class="tidak-ada-yang3">
                         {{ $data->pertemuan }}
                     </div>
@@ -316,7 +316,7 @@
                     src="{{ Storage::url('' . $data->foto_pendekatan) }}" />
 
                 <div class="pendekatan-parent1">
-                    <b class="pendekatan3">Pendekatan</b>
+                    <b class="pendekatan3">{{$data->judul_cerita2}}</b>
                     <div class="seiring-berjalannya-waktu3">
                         {{ $data->pendekatan }}
                     </div>
@@ -324,7 +324,7 @@
             </div>
             <div class="r-s-v-p-frame-title2">
                 <div class="lamaran-parent1">
-                    <b class="lamaran3">Lamaran</b>
+                    <b class="lamaran3">{{$data->judul_cerita3}}</b>
                     <div class="atas-kehendak-allah3">
                         {{ $data->lamaran }}
                     </div>
@@ -337,7 +337,7 @@
                     src="{{ Storage::url('' . $data->foto_pernikahan) }}" />
 
                 <div class="pernikahan-parent1">
-                    <b class="pernikahan3">Pernikahan</b>
+                    <b class="pernikahan3">{{$data->judul_cerita4}}</b>
                     <div class="kami-memutuskan-untuk-container3">
                         <p class="kami-memutuskan-untuk3">
                             {{ $data->pernikahan }}

@@ -14,9 +14,12 @@ return new class extends Migration
         Schema::create('nama_undangans', function (Blueprint $table) {
             $table->id();
             $table->text('nama_undangan');
-            $table->unsignedBigInteger('undangan_alt1s_id');
+            $table->unsignedBigInteger('undangan_alt1_id');
+            $table->foreign('undangan_alt1_id')
+            ->references('id')
+            ->on('undangan_alt1s')
+            ->onDelete('cascade');
             $table->timestamps();
-            $table->foreign('undangan_alt1s_id')->references('id')->on('undangan_alt1s')->onDelete('cascade');
         });
     }
 
