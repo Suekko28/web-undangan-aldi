@@ -77,46 +77,40 @@
                                     </div>
                                     <div class="modal-body">
                                         <div class="radio_group">
-                                            <input type="radio" name="kehadiran" value="0" id="radio1">
-                                            <label for="radio1" class="radio_label">1</label>
+                                            <input type="radio" name="kehadiran" value="1"
+                                                id="radio1{{ $item->id }}"
+                                                data-nama-undangan="{{ $item->nama_undangan }}"
+                                                data-item-id="{{ $item->id }}">
+                                            <label for="radio1{{ $item->id }}" class="radio_label">1</label>
 
-                                            <input type="radio" name="kehadiran" value="1" id="radio2">
-                                            <label for="radio2" class="radio_label">2</label>
+                                            <input type="radio" name="kehadiran" value="2"
+                                                id="radio2{{ $item->id }}"
+                                                data-nama-undangan="{{ $item->nama_undangan }}"
+                                                data-item-id="{{ $item->id }}">
+                                            <label for="radio2{{ $item->id }}" class="radio_label">2</label>
 
-                                            <input type="radio" name="kehadiran" value="2" id="radio3">
-                                            <label for="radio3" class="radio_label">3</label>
+                                            <input type="radio" name="kehadiran" value="3"
+                                                id="radio3{{ $item->id }}"
+                                                data-nama-undangan="{{ $item->nama_undangan }}"
+                                                data-item-id="{{ $item->id }}">
+                                            <label for="radio3{{ $item->id }}" class="radio_label">3</label>
                                         </div>
                                         <textarea class="form-control mt-3" rows="20" id="nama_undangan{{ $item->id }}" name="nama_undangan"
-                                            placeholder="Masukkan nama-nama undangan">
-Assalamu'alaikum Wr. Wb
-Bismillahirahmanirrahim
-Yth. {{$item->nama_undangan}},
-                                                        
-Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i, teman sekaligus sahabat, untuk menghadiri acara pernikahan kami:
-                                                        
-{{ $undanganAlt1->nama_mempelai_laki}} & {{$undanganAlt1->nama_mempelai_perempuan}}
-                                                        
-Berikut link undangan kami untuk informasi lengkap tentang acara dapat dilihat di sini:
-127.0.0.1:8000/{{$undanganAlt1->nama_mempelai_laki}}&{{$undanganAlt1->nama_mempelai_perempuan}}/{{$item->nama_undangan}}
-                                                        
-Merupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.
-                                                        
-Mohon maaf perihal undangan hanya dibagikan melalui pesan ini. Terima kasih banyak atas perhatiannya.
-                                                        
-Wassalamu'alaikum Wr. Wb.
-                                                        
-Terima Kasih.
-                                    </textarea>
+                                            placeholder="Masukkan nama-nama undangan" readonly></textarea>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary" onclick="shareOnWhatsApp('{{ $item->nama_undangan }}')" data-nama-undangan="{{ $item->nama_undangan }}">Share</button>
-                                        </div>
+                                        <button type="button" class="btn btn-primary"
+                                            onclick="shareOnWhatsApp('{{ $item->nama_undangan }}', '{{ $item->id }}')"
+                                            data-nama-undangan="{{ $item->nama_undangan }}"
+                                            id="shareButton{{ $item->id }}" disabled>Share</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     @endforeach
+
                     <div class="p-2">{{ $namaUndangans->links() }}</div>
                 </div>
             </div>
@@ -126,27 +120,68 @@ Terima Kasih.
 
 
     <script>
-        function shareOnWhatsApp(namaUndangan) {
-    // Membuat pesan yang ingin dibagikan
-    var message = encodeURIComponent("Assalamu'alaikum Wr. Wb\n\n" +
-        "Bismillahirahmanirrahim\n\n" +
-        "Yth. " + namaUndangan + ",\n\n" +
-        "Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i, teman sekaligus sahabat, untuk menghadiri acara pernikahan kami:\n\n" +
-        "{{ $undanganAlt1->nama_mempelai_laki }} & {{ $undanganAlt1->nama_mempelai_perempuan }}\n\n" +
-        "Berikut link undangan kami untuk informasi lengkap tentang acara dapat dilihat di sini:\n\n" +
-        "127.0.0.1:8000/{{ $undanganAlt1->nama_mempelai_laki }}&{{ $undanganAlt1->nama_mempelai_perempuan }}/" + namaUndangan + "\n\n" +
-        "Merupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.\n\n" +
-        "Mohon maaf perihal undangan hanya dibagikan melalui pesan ini. Terima kasih banyak atas perhatiannya.\n\n" +
-        "Wassalamu'alaikum Wr. Wb.\n\n" +
-        "Terima Kasih.");
+        document.querySelectorAll('input[name="kehadiran"]').forEach(function(radio) {
+            radio.addEventListener('change', function() {
+                var radioButton = this.value;
+                var namaUndangan = this.getAttribute('data-nama-undangan');
+                var itemId = this.getAttribute('data-item-id');
 
-    // Mengarahkan ke aplikasi WhatsApp dengan pesan yang sudah ditentukan
-    window.location.href = "whatsapp://send?text=" + message;
-}
+                updateMessage(radioButton, namaUndangan, itemId);
+                toggleShareButton(itemId); // Panggil fungsi untuk menyesuaikan status tombol "Share"
+            });
+        });
 
+        function toggleShareButton(itemId) {
+            var shareButton = document.getElementById('shareButton' + itemId);
+            var selectedRadio = document.querySelector('input[name="kehadiran"]:checked');
+            if (selectedRadio) {
+                shareButton.removeAttribute('disabled');
+            } else {
+                shareButton.setAttribute('disabled', 'disabled');
+            }
+        }
 
+        function updateMessage(radioButton, namaUndangan, itemId) {
+            var message = '';
+            if (radioButton === '1') {
+                message = "Assalamu'alaikum Wr. Wb\n" +
+                    "Bismillahirahmanirrahim\n" +
+                    "Yth. " + namaUndangan + ",\n\n" +
+                    "Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i, teman sekaligus sahabat, untuk menghadiri acara pernikahan kami:\n\n" +
+                    namaUndangan + "\n\n" +
+                    "Berikut link undangan kami untuk informasi lengkap tentang acara dapat dilihat di sini:\n\n" +
+                    "127.0.0.1:8000/{{ $undanganAlt1->nama_mempelai_laki }}&{{ $undanganAlt1->nama_mempelai_perempuan }}/" +
+                    namaUndangan + "\n\n" +
+                    "Merupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.\n\n" +
+                    "Mohon maaf perihal undangan hanya dibagikan melalui pesan ini. Terima kasih banyak atas perhatiannya.\n\n" +
+                    "\n\n" +
+                    "Terima Kasih.";
+            } else if (radioButton === '2') {
+                message = "Shalom\n" +
+                    "Yth. " + namaUndangan + ",\n\n" +
+                    "Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i, teman sekaligus sahabat, untuk menghadiri acara pernikahan kami:\n\n" +
+                    namaUndangan + "\n\n" +
+                    "Berikut link undangan kami untuk informasi lengkap tentang acara dapat dilihat di sini:\n\n" +
+                    "127.0.0.1:8000/{{ $undanganAlt1->nama_mempelai_laki }}&{{ $undanganAlt1->nama_mempelai_perempuan }}/" +
+                    namaUndangan + "\n\n" +
+                    "Merupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.\n\n" +
+                    "Mohon maaf perihal undangan hanya dibagikan melalui pesan ini. Terima kasih banyak atas perhatiannya.\n\n" +
+                    "\n\n" +
+                    "Terima Kasih.";
+            } else if (radioButton === '3') {
+                message = "Pesanan untuk radio button 3";
+            }
+
+            document.getElementById('nama_undangan' + itemId).value = message;
+        }
+
+        function shareOnWhatsApp(namaUndangan, itemId) {
+            var message = document.getElementById('nama_undangan' + itemId).value;
+            window.location.href = "whatsapp://send?text=" + encodeURIComponent(message);
+        }
     </script>
-    
+
+
 
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/fontawesome.js"
         integrity="sha384-dPBGbj4Uoy1OOpM4+aRGfAOc0W37JkROT+3uynUgTHZCHZNMHfGXsmmvYTffZjYO" crossorigin="anonymous">
@@ -235,6 +270,7 @@ Terima Kasih.
         });
     </script>
 @endsection
+
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const searchInput = document.getElementById('searchInput');
