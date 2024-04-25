@@ -40,12 +40,18 @@
                 <div class="frame-group">
                     <div class="yth-bapakibusaudarai-parent">
                         <div class="undangan-pernikahan">Yth Bapak/Ibu/Saudara/I</div>
-                        <b class="undangan-pernikahan">{{ $data->nama_undangan }}</b>
+                        <b class="undangan-pernikahan">{{ $nama_undangan }}</b>
                     </div>
                     <div class="buka-undangan-wrapper">
                         <a class="undangan-pernikahan" style="color: white; text-decoration:none;"
-                            href="{{ route('undangan-alt1-index', ['nama_mempelai_laki' => $nama_mempelai_laki, 'nama_mempelai_perempuan' => $nama_mempelai_perempuan, ]) }}">Buka Undangan</a>
+                            href="{{ route('undangan-alt1-index', [
+                                'nama_mempelai_laki' => $nama_mempelai_laki,
+                                'nama_mempelai_perempuan' => $nama_mempelai_perempuan,
+                                'nama_undangan' => $nama_undangan // Pastikan $nama_undangan telah diberikan nilai sebelumnya
+                            ]) }}">Buka Undangan</a>
                     </div>
+                    
+                    
                     
                     
                 </div>

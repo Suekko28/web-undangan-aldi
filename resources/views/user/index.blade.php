@@ -90,13 +90,14 @@
                                             placeholder="Masukkan nama-nama undangan">
 Assalamu'alaikum Wr. Wb
 Bismillahirahmanirrahim
-Yth. Nanang Kurniawan,
+Yth. {{$item->nama_undangan}},
                                                         
 Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i, teman sekaligus sahabat, untuk menghadiri acara pernikahan kami:
                                                         
-{{ $item->nama_undangan }}
+{{ $undanganAlt1->nama_mempelai_laki}} & {{$undanganAlt1->nama_mempelai_perempuan}}
                                                         
-Berikut link undangan kami untuk informasi lengkap tentang acara dapat dilihat di sini: (URL)
+Berikut link undangan kami untuk informasi lengkap tentang acara dapat dilihat di sini:
+127.0.0.1:8000/{{$undanganAlt1->nama_mempelai_laki}}&{{$undanganAlt1->nama_mempelai_perempuan}}/{{$item->nama_undangan}}
                                                         
 Merupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.
                                                         
@@ -110,8 +111,8 @@ Terima Kasih.
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary">Share</button>
-                                    </div>
+                                            <button type="button" class="btn btn-primary" onclick="shareOnWhatsApp('{{ $item->nama_undangan }}')" data-nama-undangan="{{ $item->nama_undangan }}">Share</button>
+                                        </div>
                                 </div>
                             </div>
                         </div>
@@ -124,6 +125,28 @@ Terima Kasih.
     @include('layouts.footer')
 
 
+    <script>
+        function shareOnWhatsApp(namaUndangan) {
+    // Membuat pesan yang ingin dibagikan
+    var message = encodeURIComponent("Assalamu'alaikum Wr. Wb\n\n" +
+        "Bismillahirahmanirrahim\n\n" +
+        "Yth. " + namaUndangan + ",\n\n" +
+        "Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i, teman sekaligus sahabat, untuk menghadiri acara pernikahan kami:\n\n" +
+        "{{ $undanganAlt1->nama_mempelai_laki }} & {{ $undanganAlt1->nama_mempelai_perempuan }}\n\n" +
+        "Berikut link undangan kami untuk informasi lengkap tentang acara dapat dilihat di sini:\n\n" +
+        "127.0.0.1:8000/{{ $undanganAlt1->nama_mempelai_laki }}&{{ $undanganAlt1->nama_mempelai_perempuan }}/" + namaUndangan + "\n\n" +
+        "Merupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.\n\n" +
+        "Mohon maaf perihal undangan hanya dibagikan melalui pesan ini. Terima kasih banyak atas perhatiannya.\n\n" +
+        "Wassalamu'alaikum Wr. Wb.\n\n" +
+        "Terima Kasih.");
+
+    // Mengarahkan ke aplikasi WhatsApp dengan pesan yang sudah ditentukan
+    window.location.href = "whatsapp://send?text=" + message;
+}
+
+
+    </script>
+    
 
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/fontawesome.js"
         integrity="sha384-dPBGbj4Uoy1OOpM4+aRGfAOc0W37JkROT+3uynUgTHZCHZNMHfGXsmmvYTffZjYO" crossorigin="anonymous">

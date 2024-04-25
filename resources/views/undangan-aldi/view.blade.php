@@ -126,16 +126,17 @@
                             <div class="form-group mb-3">
                                 <label for="mulai_akad">Mulai Akad <span class="mandatory">*</span></label>
                                 <input disabled type="time" class="form-control" id="mulai_akad" name="mulai_akad"
-                                    placeholder="" value="{{$data->mulai_akad}}">
+                                    placeholder="" value="{{ $data->mulai_akad }}">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="selesai_akad">Selesai Akad <span class="mandatory">*</span></label>
                                 <input disabled type="time" class="form-control" id="selesai_akad"
-                                    name="selesai_akad" placeholder="" value="{{$data->selesai_akad}}">
+                                    name="selesai_akad" placeholder="" value="{{ $data->selesai_akad }}">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="alamat_akad">Alamat Akad <span class="mandatory">*</span></label>
-                                <textarea disabled class="form-control" rows="5" id="alamat_akad" name="alamat_akad" placeholder="Masukan alamat akad">{{$data->alamat_akad}}</textarea>
+                                <textarea disabled class="form-control" rows="5" id="alamat_akad" name="alamat_akad"
+                                    placeholder="Masukan alamat akad">{{ $data->alamat_akad }}</textarea>
                             </div>
                             <div class="form-group mb-3">
                                 <label for="$data->lokasi_gmaps_akad">Lokasi Maps Resepsi <span
@@ -152,17 +153,17 @@
                             <div class="form-group mb-3">
                                 <label for="mulai_resepsi">Mulai Resepsi <span class="mandatory">*</span></label>
                                 <input disabled type="time" class="form-control" id="mulai_resepsi"
-                                    name="mulai_resepsi" placeholder="" value="{{$data->mulai_resepsi}}">
+                                    name="mulai_resepsi" placeholder="" value="{{ $data->mulai_resepsi }}">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="selesai_resepsi">Selesai Resepsi <span class="mandatory">*</span></label>
                                 <input disabled type="time" class="form-control" id="selesai_resepsi"
-                                    name="selesai_resepsi" placeholder="" value="{{$data->selesai_resepsi}}">
+                                    name="selesai_resepsi" placeholder="" value="{{ $data->selesai_resepsi }}">
                             </div>
                             <div class="form-group mb-3">
                                 <label for="alamat_resepsi">Alamat Resepsi <span class="mandatory">*</span></label>
                                 <textarea class="form-control" rows="5" id="alamat_resepsi" name="alamat_resepsi"
-                                    placeholder="Masukan alamat resepsi" disabled>{{$data->alamat_resepsi}}</textarea>
+                                    placeholder="Masukan alamat resepsi" disabled>{{ $data->alamat_resepsi }}</textarea>
                             </div>
 
                             <div class="form-group mb-3">
@@ -342,8 +343,8 @@
                 </form>
 
                 <table class="table table-bordered">
-                    <h6>Daftar Tamu Undangan<a href="{{ route('nama-undangan-list', ['id' => $data]) }}" target="_blank"
-                            rel="noopener noreferrer" class="link-underline-primary"> Sharelink</a></h6>
+                    <h6>Daftar Tamu Undangan <a href="{{ route('nama-undangan-list', ['id' => $data]) }}" target="_blank"
+                            rel="noopener noreferrer" class="link-underline-primary"><u>Sharelink</u></a></h6>
                     <thead>
                         <tr class="text-nowrap text-center">
                             <th>No</th>

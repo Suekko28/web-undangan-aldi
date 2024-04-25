@@ -53,6 +53,9 @@ class IndexAlt1Controller extends Controller
 
         return view('undangan-aldi.index', compact('alt1Data', 'data', 'nama_mempelai_laki', 'nama_mempelai_perempuan', 'nama_undangan'));
     }
+    
+
+
 
 
     /**
@@ -77,5 +80,17 @@ class IndexAlt1Controller extends Controller
     public function destroy(string $id)
     {
         //
+    }
+
+    public function showDetail(string $nama_mempelai_laki, string $nama_mempelai_perempuan, string $nama_undangan)
+    {
+        $data = UndanganAlt1::where('nama_mempelai_laki', $nama_mempelai_laki)
+            ->where('nama_mempelai_perempuan', $nama_mempelai_perempuan)
+            ->whereHas('namaUndangan', function ($query) use ($nama_undangan) {
+                $query->where('nama_undangan', $nama_undangan);
+            })
+            ->firstOrFail();
+
+        return view('undangan-aldi.index', compact('data', 'nama_mempelai_laki', 'nama_mempelai_perempuan', 'nama_undangan'));
     }
 }
