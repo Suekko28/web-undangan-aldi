@@ -11,12 +11,13 @@ class NamaUndanganController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index($undanganAlt1Id)
-    {
-        $undanganAlt1 = UndanganAlt1::findOrFail($undanganAlt1Id);
-        $namaUndangans = $undanganAlt1->NamaUndangan()->paginate(10);
-        return view('user.index', compact('namaUndangans', 'undanganAlt1'));
-    }
+        public function index($undanganAlt1Id)
+        {
+            $undanganAlt1 = UndanganAlt1::findOrFail($undanganAlt1Id);
+            $namaUndangans = $undanganAlt1->NamaUndangan()->paginate(10);
+
+            return view('user.index', compact('namaUndangans', 'undanganAlt1'));
+        }
 
 
 

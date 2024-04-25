@@ -240,7 +240,6 @@ class UndanganAlt1Controller extends Controller
 
 
 
-
     /**
      * Remove the specified resource from storage.
      */

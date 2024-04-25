@@ -348,7 +348,7 @@
                         <tr class="text-nowrap text-center">
                             <th>No</th>
                             <th>Nama Undangan</th>
-                            <th>Template Message</th>
+                            {{-- <th>Template Message</th> --}}
                         </tr>
                     </thead>
                     <tbody>

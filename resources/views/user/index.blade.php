@@ -50,9 +50,12 @@
                                                 <button class="btn btn-danger delete-btn rounded mb-2"
                                                     namaUndangans-id="{{ $item->id }}"><i
                                                         class="fa fa-trash"></i></button>
-                                                <a href="" target="_blank" class="btn btn-primary rounded mb-2">
+                                                <a href="#exampleModal{{ $item->id }}"
+                                                    class="btn btn-primary rounded mb-2" data-bs-toggle="modal"
+                                                    data-bs-target="#exampleModal{{ $item->id }}">
                                                     <i class="fa fa-link" style="color:white;"></i>
                                                 </a>
+
                                             </div>
                                         </td>
                                     </tr>
@@ -61,100 +64,152 @@
                             </tbody>
                         </table>
                     </form>
+                    @foreach ($namaUndangans as $item)
+                        <div class="modal fade" id="exampleModal{{ $item->id }}" tabindex="-1"
+                            aria-labelledby="exampleModalLabel{{ $item->id }}" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5" id="exampleModalLabel{{ $item->id }}">Template
+                                            Message</h1>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="radio_group">
+                                            <input type="radio" name="kehadiran" value="0" id="radio1">
+                                            <label for="radio1" class="radio_label">1</label>
+
+                                            <input type="radio" name="kehadiran" value="1" id="radio2">
+                                            <label for="radio2" class="radio_label">2</label>
+
+                                            <input type="radio" name="kehadiran" value="2" id="radio3">
+                                            <label for="radio3" class="radio_label">3</label>
+                                        </div>
+                                        <textarea class="form-control mt-3" rows="20" id="nama_undangan{{ $item->id }}" name="nama_undangan"
+                                            placeholder="Masukkan nama-nama undangan">
+Assalamu'alaikum Wr. Wb
+Bismillahirahmanirrahim
+Yth. Nanang Kurniawan,
+                                                        
+Tanpa mengurangi rasa hormat, perkenankan kami mengundang Bapak/Ibu/Saudara/i, teman sekaligus sahabat, untuk menghadiri acara pernikahan kami:
+                                                        
+{{ $item->nama_undangan }}
+                                                        
+Berikut link undangan kami untuk informasi lengkap tentang acara dapat dilihat di sini: (URL)
+                                                        
+Merupakan suatu kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan untuk hadir dan memberikan doa restu.
+                                                        
+Mohon maaf perihal undangan hanya dibagikan melalui pesan ini. Terima kasih banyak atas perhatiannya.
+                                                        
+Wassalamu'alaikum Wr. Wb.
+                                                        
+Terima Kasih.
+                                    </textarea>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-primary">Share</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                    <div class="p-2">{{ $namaUndangans->links() }}</div>
                 </div>
-                <div class="p-2">{{ $namaUndangans->links() }}</div>
             </div>
-        </div>
     </main>
 
     @include('layouts.footer')
+
+
 
     <script defer src="https://use.fontawesome.com/releases/v5.15.4/js/fontawesome.js"
         integrity="sha384-dPBGbj4Uoy1OOpM4+aRGfAOc0W37JkROT+3uynUgTHZCHZNMHfGXsmmvYTffZjYO" crossorigin="anonymous">
     </script>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-    // Fungsi untuk menangani pemilihan semua checkbox
-    document.getElementById('selectAll').addEventListener('change', function() {
-        var checkboxes = document.querySelectorAll('.delete-checkbox');
-        checkboxes.forEach(function(checkbox) {
-            checkbox.checked = document.getElementById('selectAll').checked;
-        });
-    });
+        document.addEventListener('DOMContentLoaded', function() {
+            // Fungsi untuk menangani pemilihan semua checkbox
+            document.getElementById('selectAll').addEventListener('change', function() {
+                var checkboxes = document.querySelectorAll('.delete-checkbox');
+                checkboxes.forEach(function(checkbox) {
+                    checkbox.checked = document.getElementById('selectAll').checked;
+                });
+            });
 
-    // Menangani klik pada tombol delete
-    var deleteButtons = document.querySelectorAll('.delete-btn');
-    deleteButtons.forEach(function(button) {
-        button.addEventListener('click', function(event) {
-            event.preventDefault();
-            var itemId = this.getAttribute('namaUndangans-id');
-            Swal.fire({
-                title: "Are you sure?",
-                text: "You won't be able to revert this!",
-                icon: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#3085d6",
-                cancelButtonColor: "#d33",
-                confirmButtonText: "Yes, delete it!"
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    document.getElementById('deleteForm').action =
-                        "{{ route('nama-undangan.destroy', ['id' => ':id']) }}"
-                        .replace(':id', itemId);
-                    document.getElementById('deleteForm').submit();
+            // Menangani klik pada tombol delete
+            var deleteButtons = document.querySelectorAll('.delete-btn');
+            deleteButtons.forEach(function(button) {
+                button.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    var itemId = this.getAttribute('namaUndangans-id');
+                    Swal.fire({
+                        title: "Are you sure?",
+                        text: "You won't be able to revert this!",
+                        icon: "warning",
+                        showCancelButton: true,
+                        confirmButtonColor: "#3085d6",
+                        cancelButtonColor: "#d33",
+                        confirmButtonText: "Yes, delete it!"
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            document.getElementById('deleteForm').action =
+                                "{{ route('nama-undangan.destroy', ['id' => ':id']) }}"
+                                .replace(':id', itemId);
+                            document.getElementById('deleteForm').submit();
+                            Swal.fire(
+                                'Deleted!',
+                                'Your file has been deleted.',
+                                'success'
+                            );
+                        }
+                    });
+                });
+            });
+
+            // Menangani penghapusan saat tombol "Hapus yang Dipilih" ditekan
+            document.getElementById('deleteSelected').addEventListener('click', function(event) {
+                event.preventDefault();
+
+                // Cek apakah ada setidaknya satu checkbox yang dicentang
+                var anyChecked = false;
+                var checkboxes = document.querySelectorAll('.delete-checkbox');
+                checkboxes.forEach(function(checkbox) {
+                    if (checkbox.checked) {
+                        anyChecked = true;
+                    }
+                });
+
+                if (anyChecked) {
+                    Swal.fire({
+                        title: "Are you sure?",
+                        text: "You won't be able to revert this!",
+                        icon: "warning",
+                        showCancelButton: true,
+                        confirmButtonColor: "#3085d6",
+                        cancelButtonColor: "#d33",
+                        confirmButtonText: "Yes, delete it!"
+                    }).then((result) => {
+                        if (result.isConfirmed) {
+                            document.getElementById('deleteForm').submit();
+                            Swal.fire(
+                                'Deleted!',
+                                'Your files have been deleted.',
+                                'success'
+                            );
+                        }
+                    });
+                } else {
                     Swal.fire(
-                        'Deleted!',
-                        'Your file has been deleted.',
-                        'success'
+                        'No checkbox selected',
+                        'Please select at least one item to delete',
+                        'error'
                     );
                 }
             });
         });
-    });
-
-    // Menangani penghapusan saat tombol "Hapus yang Dipilih" ditekan
-    document.getElementById('deleteSelected').addEventListener('click', function(event) {
-        event.preventDefault();
-
-        // Cek apakah ada setidaknya satu checkbox yang dicentang
-        var anyChecked = false;
-        var checkboxes = document.querySelectorAll('.delete-checkbox');
-        checkboxes.forEach(function(checkbox) {
-            if (checkbox.checked) {
-                anyChecked = true;
-            }
-        });
-
-        if (anyChecked) {
-            Swal.fire({
-                title: "Are you sure?",
-                text: "You won't be able to revert this!",
-                icon: "warning",
-                showCancelButton: true,
-                confirmButtonColor: "#3085d6",
-                cancelButtonColor: "#d33",
-                confirmButtonText: "Yes, delete it!"
-            }).then((result) => {
-                if (result.isConfirmed) {
-                    document.getElementById('deleteForm').submit();
-                    Swal.fire(
-                        'Deleted!',
-                        'Your files have been deleted.',
-                        'success'
-                    );
-                }
-            });
-        } else {
-            Swal.fire(
-                'No checkbox selected',
-                'Please select at least one item to delete',
-                'error'
-            );
-        }
-    });
-});
-
     </script>
 @endsection
 <script>

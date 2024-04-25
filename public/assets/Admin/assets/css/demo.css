@@ -3,6 +3,29 @@
 * File include item demo only specific css only
 ******************************************************************************/
 
+.radio_group {
+  display: flex;
+  gap: 16px;
+}
+
+.radio_group label {
+  padding: 7px 51px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.6px solid #696cff;
+}
+
+.radio_group input:checked + .radio_label {
+  background: #696cff;
+  color: white;
+}
+
+.radio_group input {
+  display: none;
+}
+
+
 .menu .app-brand.demo {
   height: 64px;
   margin-top: 12px;
