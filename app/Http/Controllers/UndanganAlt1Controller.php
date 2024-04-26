@@ -48,34 +48,19 @@ class UndanganAlt1Controller extends Controller
         $banner_img = $request->file('banner_img');
         $foto_mempelai_laki = $request->file('foto_mempelai_laki');
         $foto_mempelai_perempuan = $request->file('foto_mempelai_perempuan');
-        $foto_pertemuan = $request->file('foto_pertemuan');
-        $foto_pendekatan = $request->file('foto_pendekatan');
-        $foto_lamaran = $request->file('foto_lamaran');
-        $foto_pernikahan = $request->file('foto_pernikahan');
         $music = $request->file('music');
-
-
 
         // Simpan jalur penyimpanan untuk gambar utama
         $banner_img_path = $banner_img->storeAs('public/images', $banner_img->hashName());
         $foto_mempelai_laki_path = $foto_mempelai_laki->storeAs('public/images', $foto_mempelai_laki->hashName());
         $foto_mempelai_perempuan_path = $foto_mempelai_perempuan->storeAs('public/images', $foto_mempelai_perempuan->hashName());
-        $foto_pertemuan_path = $foto_pertemuan->storeAs('public/images', $foto_pertemuan->hashName());
-        $foto_pendekatan_path = $foto_pendekatan->storeAs('public/images', $foto_pendekatan->hashName());
-        $foto_lamaran_path = $foto_lamaran->storeAs('public/images', $foto_lamaran->hashName());
-        $foto_pernikahan_path = $foto_pernikahan->storeAs('public/images', $foto_pernikahan->hashName());
         $music_path = $music->storeAs('public/images', $music->hashName());
-
 
         // Memisahkan nama undangan yang dipisahkan oleh baris menjadi array
         $nama_undangans = explode("\n", $request->nama_undangan);
 
         // Buat entri baru untuk setiap nama undangan dengan ID yang berbeda
-        // foreach ($nama_undangans as $key => $nama_undangan) {
-        //     $nama_undangan = trim($nama_undangan);
         $data = [
-            // 'nama_undangan' => $nama_undangan,
-            // 'id' => $key + 1,
             'banner_img' => $banner_img_path,
             'foto_mempelai_laki' => $foto_mempelai_laki_path,
             'nama_mempelai_laki' => $request->nama_mempelai_laki,
@@ -111,10 +96,6 @@ class UndanganAlt1Controller extends Controller
             'mulai_resepsi' => $request->mulai_resepsi,
             'selesai_resepsi' => $request->selesai_resepsi,
             'music' => $music_path,
-            'foto_pertemuan' => $foto_pertemuan_path,
-            'foto_pendekatan' => $foto_pendekatan_path,
-            'foto_lamaran' => $foto_lamaran_path,
-            'foto_pernikahan' => $foto_pernikahan_path,
             'judul_cerita1' => $request->judul_cerita1,
             'judul_cerita2' => $request->judul_cerita2,
             'judul_cerita3' => $request->judul_cerita3,
@@ -133,6 +114,19 @@ class UndanganAlt1Controller extends Controller
                 $data[$galeri_field] = 'default.jpg'; // Atur default.jpg sesuai kebutuhan Anda
             }
         }
+
+        // Check if files are uploaded before saving them
+        // Check if files are uploaded before saving them
+        foreach (['foto_pertemuan', 'foto_pendekatan', 'foto_lamaran', 'foto_pernikahan'] as $file) {
+            if ($request->hasFile($file)) {
+                $fileInstance = $request->file($file);
+                $filePath = $fileInstance->storeAs('public/images', $fileInstance->hashName());
+                $data[$file] = $filePath;
+            } else {
+                $data[$file] = 'default.jpg'; // or set it to null if preferred
+            }
+        }
+
 
         UndanganAlt1::create($data);
         return redirect()->route('undangan-alternative1')->with('success', 'Data berhasil ditambahkan');

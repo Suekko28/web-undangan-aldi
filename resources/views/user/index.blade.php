@@ -96,13 +96,13 @@
                                             <label for="radio3{{ $item->id }}" class="radio_label">3</label>
                                         </div>
                                         <textarea class="form-control mt-3" rows="20" id="nama_undangan{{ $item->id }}" name="nama_undangan"
-                                            placeholder="Masukkan nama-nama undangan" readonly></textarea>
+                                            placeholder="Silahkan pilih template message terlebih dahulu" readonly></textarea>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary"
                                             data-bs-dismiss="modal">Close</button>
-                                        <button type="button" class="btn btn-primary"
-                                            onclick="shareOnWhatsApp('{{ $item->nama_undangan }}', '{{ $item->id }}')"
+                                        <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                                            data-bs-target="#shareModal{{ $item->id }}"
                                             data-nama-undangan="{{ $item->nama_undangan }}"
                                             id="shareButton{{ $item->id }}" disabled>Share</button>
                                     </div>
@@ -113,7 +113,45 @@
 
                     <div class="p-2">{{ $namaUndangans->links() }}</div>
                 </div>
+
+                @foreach ($namaUndangans as $item)
+                    <div class="modal fade" id="shareModal{{ $item->id }}" tabindex="-1"
+                        aria-labelledby="shareModalLabel{{ $item->id }}" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="shareModalLabel">Modal title</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- Isi modal -->
+                                    <p>Content of your modal goes here...</p>
+                                    <div>
+                                        <button class="btn btn-primary"
+                                            onclick="copyLink('{{ $item->id }}', '{{ $undanganAlt1->nama_mempelai_laki }}', '{{ $undanganAlt1->nama_mempelai_perempuan }}', '{{ $item->nama_undangan }}')">
+                                            <i class="fas fa-copy"></i> Copy Link
+                                        </button>
+                                        <a href="#" class="btn btn-primary" id="shareOptionWhatsApp"
+                                            data-nama-undangan="{{ $item->nama_undangan }}"
+                                            id="shareButton{{ $item->id }}" class="btn btn-primary"
+                                            onclick="shareOnWhatsApp('{{ $item->nama_undangan }}', '{{ $item->id }}')">
+                                            <i class="fab fa-whatsapp"></i> Share on WhatsApp
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+
+
             </div>
+
     </main>
 
     @include('layouts.footer')
@@ -177,7 +215,20 @@
 
         function shareOnWhatsApp(namaUndangan, itemId) {
             var message = document.getElementById('nama_undangan' + itemId).value;
-            window.location.href = "whatsapp://send?text=" + encodeURIComponent(message);
+            var encodedMessage = encodeURIComponent(message);
+            var whatsappLink = "https://wa.me/?text=" + encodedMessage;
+            window.open(whatsappLink, '_blank');
+        }
+
+        function copyLink(itemId, namaMempelaiLaki, namaMempelaiPerempuan, namaUndangan) {
+            var link = "127.0.0.1:8000/" + namaMempelaiLaki + "&" + namaMempelaiPerempuan + "/" + namaUndangan;
+            navigator.clipboard.writeText(link)
+                .then(function() {
+                    alert("Link berhasil disalin: " + link);
+                })
+                .catch(function(error) {
+                    console.error("Gagal menyalin link: ", error);
+                });
         }
     </script>
 
@@ -267,6 +318,20 @@
                     );
                 }
             });
+
+            function copyLink(url) {
+                // Membuat elemen input untuk menampung URL
+                var tempInput = document.createElement('input');
+                tempInput.value = url;
+                document.body.appendChild(tempInput);
+                tempInput.select();
+                tempInput.setSelectionRange(0, 99999); // Untuk perangkat mobile
+                document.execCommand('copy');
+                document.body.removeChild(tempInput);
+
+                // Memberikan umpan balik kepada pengguna
+                alert('Link berhasil disalin!');
+            }
         });
     </script>
 @endsection

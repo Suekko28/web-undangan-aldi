@@ -65,7 +65,7 @@
                                 <label for="music">Music <span class="mandatory">*</span></label>
                                 <input type="file" class="form-control" id="music" name="music" accept=".mp3">
                             </div>
-                            
+
                         </div>
                     </div>
 
@@ -147,8 +147,8 @@
 
                             <div class="form-group mb-3">
                                 <label for="lokasi_gmaps_akad">Lokasi Maps Akad <span class="mandatory">*</span></label>
-                                <input type="text" class="form-control" id="lokasi_gmaps_akad" name="lokasi_gmaps_akad"
-                                    placeholder="Masukkan link alamat maps">
+                                <input type="text" class="form-control" id="lokasi_gmaps_akad"
+                                    name="lokasi_gmaps_akad" placeholder="Masukkan link alamat maps">
                             </div>
 
                             <div class="form-group mb-3">
@@ -174,9 +174,10 @@
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="lokasi_gmaps_resepsi">Lokasi Maps Resepsi <span class="mandatory">*</span></label>
-                                <input type="text" class="form-control" id="lokasi_gmaps_resepsi" name="lokasi_gmaps_resepsi"
-                                    placeholder="Masukkan link alamat maps">
+                                <label for="lokasi_gmaps_resepsi">Lokasi Maps Resepsi <span
+                                        class="mandatory">*</span></label>
+                                <input type="text" class="form-control" id="lokasi_gmaps_resepsi"
+                                    name="lokasi_gmaps_resepsi" placeholder="Masukkan link alamat maps">
                             </div>
 
                         </div>
@@ -231,18 +232,18 @@
                         <div class="mempelai text-center fw-bold fs-5">Cerita Cinta Kami</div>
                         <div class="fs-6">
                             <div class="form-group mb-3">
-                                <label for="judul_cerita1">Judul Cerita <span class="mandatory">*</span></label>
+                                <label for="judul_cerita1">Judul Cerita <span class="fst-italic">(Opsional)</span></label>
                                 <input type="text" class="form-control" id="judul_cerita1" name="judul_cerita1"
                                     placeholder="Masukkan Judul Ceritamu">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="foto_pertemuan">Foto <span class="mandatory">*</span></label>
+                                <label for="foto_pertemuan">Foto <span class="fst-italic">(Opsional)</span></label>
                                 <input type="file" class="form-control" id="foto_pertemuan" name="foto_pertemuan"
                                     placeholder="">
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="pertemuan">Cerita <span class="mandatory">*</span> <span
+                                <label for="pertemuan">Cerita <span class="fst-italic">(Opsional)</span><span
                                         class="fst-italic">(Maksimal 200 Karakter)</span>
                                 </label>
                                 <textarea class="form-control" rows="5" id="pertemuan" name="pertemuan"
@@ -250,20 +251,20 @@
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="judul_cerita2">Judul Cerita <span class="mandatory">*</span></label>
+                                <label for="judul_cerita2">Judul Cerita <span class="fst-italic">(Opsional)</span></label>
                                 <input type="text" class="form-control" id="judul_cerita2" name="judul_cerita2"
                                     placeholder="Masukkan Judul Ceritamu">
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="foto_pendekatan">Foto <span class="mandatory">*</span></label>
+                                <label for="foto_pendekatan">Foto <span class="fst-italic">(Opsional)</span></label>
                                 <input type="file" class="form-control" id="foto_pendekatan" name="foto_pendekatan"
                                     placeholder="">
                             </div>
 
 
                             <div class="form-group mb-3">
-                                <label for="pendekatan">Cerita <span class="mandatory">*</span> <span
+                                <label for="pendekatan">Cerita <span class="fst-italic">(Opsional)</span><span
                                         class="fst-italic">(Maksimal 200 Karakter)</span>
                                 </label>
                                 <textarea class="form-control" rows="5" id="pendekatan" name="pendekatan"
@@ -271,38 +272,38 @@
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="judul_cerita3">Judul Cerita <span class="mandatory">*</span></label>
+                                <label for="judul_cerita3">Judul Cerita <span class="fst-italic">(Opsional)</span></label>
                                 <input type="text" class="form-control" id="judul_cerita3" name="judul_cerita3"
                                     placeholder="Masukkan Judul Ceritamu">
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="foto_lamaran">Foto <span class="mandatory">*</span></label>
-                                <input type="file" class="form-control" id="foto_lamaran" name="foto_lamaran" placeholder="">
+                                <label for="foto_lamaran">Foto <span class="fst-italic">(Opsional)</span></label>
+                                <input type="file" class="form-control" id="foto_lamaran" name="foto_lamaran"
+                                    placeholder="">
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="lamaran">Cerita <span class="mandatory">*</span><span
-                                        class="fst-italic">(Maksimal 200 Karakter)</span></label>
+                                <label for="lamaran">Cerita <span class="fst-italic">(Opsional)</span></label>
                                 <textarea class="form-control" rows="5" id="lamaran" name="lamaran"
                                     placeholder="Ceritakan lamaran kamu dengan pasanganmu"></textarea>
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="judul_cerita4">Judul Cerita <span class="mandatory">*</span></label>
+                                <label for="judul_cerita4">Judul Cerita <span class="fst-italic">(Opsional)</span></label>
                                 <input type="text" class="form-control" id="judul_cerita4" name="judul_cerita4"
                                     placeholder="Masukkan Judul Ceritamu">
                             </div>
-                            
+
 
                             <div class="form-group mb-3">
-                                <label for="foto_pernikahan">Foto <span class="mandatory">*</span></label>
-                                <input type="file" class="form-control" id="foto_pernikahan" name="foto_pernikahan" placeholder="">
+                                <label for="foto_pernikahan">Foto <span class="fst-italic">(Opsional)</span></label>
+                                <input type="file" class="form-control" id="foto_pernikahan" name="foto_pernikahan"
+                                    placeholder="">
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="pernikahan">Cerita <span class="mandatory">*</span><span
-                                        class="fst-italic">(Maksimal 200 Karakter)</span></label>
+                                <label for="pernikahan">Cerita <span class="fst-italic">(Opsional)</span></label>
                                 <textarea class="form-control" rows="5" id="pernikahan" name="pernikahan"
                                     placeholder="Ceritakan rencana pernikahan kamu dengan pasanganmu"></textarea>
                             </div>
@@ -313,54 +314,55 @@
                         <div class="mempelai text-center fw-bold fs-5">Kirim Hadiah</div>
                         <div class="fs-6">
                             <div class="form-group mb-3">
-                                <label for="nama_rek1">Nama Rek Tertera <span class="mandatory">*</span></label>
+                                <label for="nama_rek1">Nama Rek Tertera <span class="fst-italic">(Opsional)</span></label>
                                 <input type="text" class="form-control" id="nama_rek1" name="nama_rek1"
                                     placeholder="BCA, BRI, Dll">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="no_rek1">No. Rek Tertera <span class="mandatory">*</span></label>
+                                <label for="no_rek1">No. Rek Tertera <span class="fst-italic">(Opsional)</span></label>
                                 <input type="text" class="form-control" id="no_rek1" name="no_rek1"
                                     placeholder="Masukkan nomor rekening">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="atas_nama1">Atas Nama <span class="mandatory">*</span></label>
+                                <label for="atas_nama1">Atas Nama <span class="fst-italic">(Opsional)</span></label>
                                 <input type="text" class="form-control" id="atas_nama1" name="atas_nama1"
                                     placeholder="Rudi Hermawan">
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="nama_rek2">Nama Rek Tertera <span class="mandatory">*</span></label>
+                                <label for="nama_rek2">Nama Rek Tertera <span class="fst-italic">(Opsional)</span></label>
                                 <input type="text" class="form-control" id="nama_rek2" name="nama_rek2"
                                     placeholder="BCA, BRI, Dll">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="no_rek2">No. Rek Tertera <span class="mandatory">*</span></label>
+                                <label for="no_rek2">No. Rek Tertera <span class="fst-italic">(Opsional)</span></label>
                                 <input type="text" class="form-control" id="no_rek2" name="no_rek2"
                                     placeholder="Masukkan nomor rekening">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="atas_nama2">Atas Nama <span class="mandatory">*</span></label>
+                                <label for="atas_nama2">Atas Nama <span class="fst-italic">(Opsional)</span></label>
                                 <input type="text" class="form-control" id="atas_nama2" name="atas_nama2"
                                     placeholder="Rudi Hermawan">
                             </div>
 
                             <div class="form-group mb-3">
-                                <label for="nama_rek3">Nama Rek Tertera <span class="mandatory">*</span></label>
+                                <label for="nama_rek3">Nama Rek Tertera <span class="fst-italic">(Opsional)</span></label>
                                 <input type="text" class="form-control" id="nama_rek3" name="nama_rek3"
                                     placeholder="BCA, BRI, Dll">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="no_rek3">No. Rek Tertera <span class="mandatory">*</span></label>
+                                <label for="no_rek3">No. Rek Tertera <span class="fst-italic">(Opsional)</span></label>
                                 <input type="text" class="form-control" id="no_rek3" name="no_rek3"
                                     placeholder="Masukkan nomor rekening">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="atas_nama3">Atas Nama <span class="mandatory">*</span></label>
+                                <label for="atas_nama3">Atas Nama <span class="fst-italic">(Opsional)</span></label>
                                 <input type="text" class="form-control" id="atas_nama3" name="atas_nama3"
                                     placeholder="Rudi Hermawan">
                             </div>
                             <div class="form-group mb-3">
-                                <label for="alamat_tertera">Alamat Tertera <span class="mandatory">*</span></label>
+                                <label for="alamat_tertera">Alamat Tertera <span
+                                        class="fst-italic">(Opsional)</span></label>
                                 <textarea class="form-control" rows="5" id="alamat_tertera" name="alamat_tertera"
                                     placeholder="Masukan alamat tertera kirim hadiah"></textarea>
                             </div>
