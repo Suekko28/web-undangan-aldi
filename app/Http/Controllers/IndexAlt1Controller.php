@@ -42,16 +42,12 @@ class IndexAlt1Controller extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $nama_mempelai_laki, string $nama_mempelai_perempuan, string $nama_undangan)
+    public function show(string $nama_mempelai_laki, string $nama_mempelai_perempuan)
     {
-        $data = UndanganAlt1::where('nama_undangan', $nama_undangan)
-            ->where('nama_mempelai_laki', $nama_mempelai_laki)
+        $data = UndanganAlt1::where('nama_mempelai_laki', $nama_mempelai_laki)
             ->where('nama_mempelai_perempuan', $nama_mempelai_perempuan)
             ->firstOrFail();
-
-        $alt1Data = alt1model::get();
-
-        return view('undangan-aldi.index', compact('alt1Data', 'data', 'nama_mempelai_laki', 'nama_mempelai_perempuan', 'nama_undangan'));
+        return view('undangan-aldi.index', compact('data', 'nama_mempelai_laki', 'nama_mempelai_perempuan'));
     }
     
 

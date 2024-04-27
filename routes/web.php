@@ -77,6 +77,7 @@ Route::delete('/nama-undangan/{id}', [NamaUndanganController::class, 'destroy'])
 
 
 Route::get('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/preview', [HomeAlt1Controller::class, 'show'])->name('undangan-alt1-home');
+Route::get('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/preview/index', [IndexAlt1Controller::class, 'show'])->name('undangan-alt1-preview');
 Route::get('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/{nama_undangan}', [HomeAlt1Controller::class, 'showDetail'])->name('undangan-alt1-first');
 // Route::resource('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/{nama_undangan}/index', IndexAlt1Controller::class)->only(['show', 'store', 'create']);
 Route::get('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/{nama_undangan}/index', [IndexAlt1Controller::class, 'showDetail'])->name('undangan-alt1-index');
