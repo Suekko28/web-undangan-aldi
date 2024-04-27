@@ -147,7 +147,8 @@
                                     <div class="gallery-frame2">
                                         <img class="map-button-icon" alt=""
                                             src="{{ asset('./assets/location.svg') }}" />
-                                        <a class="buka-map6" href="{{ $data->lokasi_gmaps_akad }}" target="_blank">Buka
+                                        <a class="buka-map6" href="{{ $data->lokasi_gmaps_akad }}"
+                                            target="_blank">Buka
                                             Map</a>
                                     </div>
                                 </button>
@@ -189,7 +190,8 @@
                                     <div class="gallery-frame2">
                                         <img class="map-button-icon" alt=""
                                             src="{{ asset('./assets/location.svg') }}" />
-                                        <a class="buka-map6" href="{{ $data->lokasi_gmaps_resepsi }}" target="_blank">Buka
+                                        <a class="buka-map6" href="{{ $data->lokasi_gmaps_resepsi }}"
+                                            target="_blank">Buka
                                             Map</a>
                                     </div>
                                 </button>
@@ -303,20 +305,29 @@
         <div class="r-s-v-p-mobile-frame">
             <div class="r-s-v-p-frame-title">
                 <div class="r-s-v-p-name-field">
-                    <b class="pertemuan3">{{$data->judul_cerita1}}</b>
+                    <b class="pertemuan3">{{ $data->judul_cerita1 }}</b>
                     <div class="tidak-ada-yang3">
                         {{ $data->pertemuan }}
                     </div>
                 </div>
-                <img class="r-s-v-p-nope-button" loading="lazy" alt=""
-                    src="{{ Storage::url('' . $data->foto_pertemuan) }}" />
+                @if ($data->foto_pertemuan && Storage::exists($data->foto_pertemuan))
+                    <img class="r-s-v-p-nope-button" loading="lazy" alt=""
+                        src="{{ Storage::url('' . $data->foto_pertemuan) }}" />
+                @else
+                    <div class="r-s-v-p-nope-button" style="display: none"></div>
+                @endif
             </div>
             <div class="r-s-v-p-frame-title1">
-                <img class="r-s-v-p-frame-title-child" loading="lazy" alt=""
-                    src="{{ Storage::url('' . $data->foto_pendekatan) }}" />
+                @if ($data->foto_pendekatan && Storage::exists($data->foto_pendekatan))
+                    <img class="r-s-v-p-frame-title-child" loading="lazy" alt=""
+                        src="{{ Storage::url('' . $data->foto_pendekatan) }}" />
+                @else
+                    <div class="r-s-v-p-frame-title-child"style="display: none"></div>
+                @endif
+
 
                 <div class="pendekatan-parent1">
-                    <b class="pendekatan3">{{$data->judul_cerita2}}</b>
+                    <b class="pendekatan3">{{ $data->judul_cerita2 }}</b>
                     <div class="seiring-berjalannya-waktu3">
                         {{ $data->pendekatan }}
                     </div>
@@ -324,20 +335,27 @@
             </div>
             <div class="r-s-v-p-frame-title2">
                 <div class="lamaran-parent1">
-                    <b class="lamaran3">{{$data->judul_cerita3}}</b>
+                    <b class="lamaran3">{{ $data->judul_cerita3 }}</b>
                     <div class="atas-kehendak-allah3">
                         {{ $data->lamaran }}
                     </div>
                 </div>
-                <img class="r-s-v-p-frame-title-item" loading="lazy" alt=""
-                    src="{{ Storage::url('' . $data->foto_lamaran) }}" />
+                @if ($data->foto_lamaran && Storage::exists($data->foto_lamaran))
+                    <img class="r-s-v-p-frame-title-item" loading="lazy" alt=""
+                        src="{{ Storage::url('' . $data->foto_lamaran) }}" />
+                @else
+                    <div class="r-s-v-p-frame-title-item" style="display: none"></div>
+                @endif
             </div>
             <div class="r-s-v-p-frame-title3">
-                <img class="r-s-v-p-frame-title-inner" loading="lazy" alt=""
-                    src="{{ Storage::url('' . $data->foto_pernikahan) }}" />
-
+                @if ($data->foto_pernikahan && Storage::exists($data->foto_pernikahan))
+                    <img class="r-s-v-p-frame-title-inner" loading="lazy" alt=""
+                        src="{{ Storage::url('' . $data->foto_pernikahan) }}" />
+                @else
+                    <div class="r-s-v-p-frame-title-inner" style="display: none"></div>
+                @endif
                 <div class="pernikahan-parent1">
-                    <b class="pernikahan3">{{$data->judul_cerita4}}</b>
+                    <b class="pernikahan3">{{ $data->judul_cerita4 }}</b>
                     <div class="kami-memutuskan-untuk-container3">
                         <p class="kami-memutuskan-untuk3">
                             {{ $data->pernikahan }}
@@ -351,7 +369,8 @@
 
 
     <section class="rsvp5" data-scroll-to="rSVP">
-        <form class="rsvp-mobile3" method="POST" action="{{ route('undangan-alt1-post', ['nama_mempelai_laki' => $nama_mempelai_laki, 'nama_mempelai_perempuan' => $nama_mempelai_perempuan]) }}">
+        <form class="rsvp-mobile3" method="POST"
+            action="{{ route('undangan-alt1-post', ['nama_mempelai_laki' => $nama_mempelai_laki, 'nama_mempelai_perempuan' => $nama_mempelai_perempuan]) }}">
             @csrf
             <h1 class="rsvp6">RSVP</h1>
             <div class="frame-parent151">
@@ -443,33 +462,60 @@
                 </div>
             </div>
             <div class="card-list17">
-                <div class="card35">
-                    <b class="bca7">{{ $data->nama_rek1 }}</b>
-                    <div class="body18">
-                        <div class="copy5" id="copyText">{{ $data->no_rek1 }}</div>
-                        <img class="copy-icon10" id="copyButton" loading="lazy" alt=""
-                            src="{{ asset('./assets/copy2.svg') }}" />
+                @if (!empty($data->nama_rek1) || !empty($data->no_rek1) || !empty($data->atas_nama1))
+                    <div class="card35">
+                        @if (!empty($data->nama_rek1))
+                            <b class="bca7">{{ $data->nama_rek1 }}</b>
+                        @endif
+                        <div class="body18">
+                            @if (!empty($data->no_rek1))
+                                <div class="copy5" id="copyText">{{ $data->no_rek1 }}</div>
+                                <img class="copy-icon10" id="copyButton" loading="lazy" alt=""
+                                    src="{{ asset('./assets/copy2.svg') }}" />
+                            @endif
+                        </div>
+                        @if (!empty($data->atas_nama1))
+                            <div class="an-rudi-hermina14">{{ $data->atas_nama1 }}</div>
+                        @endif
                     </div>
-                    <div class="an-rudi-hermina14">{{ $data->atas_nama1 }}</div>
-                </div>
+                @endif
+
+                @if (!empty($data->nama_rek2) || !empty($data->no_rek2) || !empty($data->atas_nama2))
                 <div class="card35">
-                    <b class="mandiri7">{{ $data->nama_rek2 }}</b>
+                    @if (!empty($data->nama_rek2))
+                        <b class="mandiri7">{{ $data->nama_rek2 }}</b>
+                    @endif
                     <div class="body19">
-                        <div class="div73" id="copyText2">{{ $data->no_rek2 }}</div>
-                        <img class="copy-icon11" id="copyButton2" loading="lazy" alt=""
-                            src="{{ asset('./assets/copy2.svg') }}" />
+                        @if (!empty($data->no_rek2))
+                            <div class="div73" id="copyText2">{{ $data->no_rek2 }}</div>
+                            <img class="copy-icon11" id="copyButton2" loading="lazy" alt=""
+                                src="{{ asset('./assets/copy2.svg') }}" />
+                        @endif
                     </div>
-                    <div class="an-rudi-hermina15">{{ $data->atas_nama2 }}</div>
+                    @if (!empty($data->atas_nama2))
+                        <div class="an-rudi-hermina15">{{ $data->atas_nama2 }}</div>
+                    @endif
                 </div>
-                <div class="card35">
+            @endif
+            
+            @if (!empty($data->nama_rek3) || !empty($data->no_rek3) || !empty($data->atas_nama3))
+            <div class="card35">
+                @if (!empty($data->nama_rek3))
                     <b class="mandiri7">{{ $data->nama_rek3 }}</b>
-                    <div class="body19">
+                @endif
+                <div class="body19">
+                    @if (!empty($data->no_rek3))
                         <div class="div73" id="copyText3">{{ $data->no_rek3 }}</div>
                         <img class="copy-icon11" id="copyButton3" loading="lazy" alt=""
                             src="{{ asset('./assets/copy2.svg') }}" />
-                    </div>
-                    <div class="an-rudi-hermina15">{{ $data->atas_nama3 }}</div>
+                    @endif
                 </div>
+                @if (!empty($data->atas_nama3))
+                    <div class="an-rudi-hermina15">{{ $data->atas_nama3 }}</div>
+                @endif
+            </div>
+        @endif
+        
 
             </div>
         </footer>
