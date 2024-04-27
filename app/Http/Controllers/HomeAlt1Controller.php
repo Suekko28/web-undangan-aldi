@@ -38,7 +38,7 @@ class HomeAlt1Controller extends Controller
         $data = UndanganAlt1::where('nama_mempelai_laki', $nama_mempelai_laki)
             ->where('nama_mempelai_perempuan', $nama_mempelai_perempuan)
             ->firstOrFail();
-        return view('undangan-aldi.index', compact('data', 'nama_mempelai_laki', 'nama_mempelai_perempuan'));
+        return view('admin.home', compact('data', 'nama_mempelai_laki', 'nama_mempelai_perempuan'));
     }
 
 
