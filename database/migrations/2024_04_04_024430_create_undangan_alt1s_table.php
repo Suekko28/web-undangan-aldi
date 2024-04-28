@@ -63,6 +63,7 @@ return new class extends Migration {
             $table->string('judul_cerita3')->nullable();
             $table->string('judul_cerita4')->nullable();
             $table->timestamps();
+            
         });
     }
 

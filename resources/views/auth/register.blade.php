@@ -85,6 +85,7 @@
               </div>
               <!-- /Logo -->
               <h4 class="mb-2">Selamat Datang di About Food Admin</h4>
+              @include('layouts.message')
               <form id="formAuthentication" class="mb-3" action="{{ route('register.submit') }}" method="POST">
                 @csrf
                 <div class="mb-3">

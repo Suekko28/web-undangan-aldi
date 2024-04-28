@@ -370,11 +370,7 @@
 
     <section class="rsvp5" data-scroll-to="rSVP">
         <form class="rsvp-mobile3" method="POST"
-            action="{{ route('undangan-alt1-post', [
-                'nama_mempelai_laki' => $nama_mempelai_laki,
-                'nama_mempelai_perempuan' => $nama_mempelai_perempuan,
-                'nama_undangan' => $nama_undangan,
-            ]) }}">
+            action="">
             @csrf
             <h1 class="rsvp6">RSVP</h1>
             <div class="frame-parent151">
@@ -409,7 +405,7 @@
             </button>
         </form>
 
-        <div class="ucapan-mobile">
+        {{-- <div class="ucapan-mobile">
                 @foreach ($alt1models as $item)
                 <div class="ucapan-mobile-inner">
                     <div class="ahmad-parent">
@@ -426,7 +422,7 @@
                 @endforeach
 
     
-            </div>
+            </div> --}}
 
     </section>
 

@@ -32,36 +32,25 @@ class Alt1Controller extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(alt1FormRequest $request)
+    public function store(alt1FormRequest $request, $undanganAlt1Id, $nama_mempelai_laki, $nama_mempelai_perempuan, $nama_undangan)
     {
-        // Validasi request
-        $validatedData = $request->validated();
-
-        // Cari data undangan berdasarkan nama undangan
-        $undangan = UndanganAlt1::where('nama_undangan', $validatedData['nama_undangan'])
-            ->first();
-
-        // Jika tidak ditemukan, buat baru
-        if (!$undangan) {
-            $undangan = new UndanganAlt1();
-            $undangan->nama_undangan = $validatedData['nama_undangan'];
-            // Atur properti lainnya sesuai kebutuhan
-            $undangan->save();
-        }
-
-        // Simpan data alt1
-        $alt1 = new Alt1Model();
-        $alt1->id_alt1 = $undangan->id; // Menggunakan ID undangan yang baru dibuat atau yang sudah ada
-        // Atur properti lainnya sesuai kebutuhan
-        $alt1->save();
-
-        // Redirect atau berikan respons sesuai kebutuhan aplikasi Anda
+        // Temukan undangan berdasarkan ID yang diberikan
+        $undanganAlt1 = UndanganAlt1::findOrFail($undanganAlt1Id);
+    
+        // Buat instance baru dari Alt1Model dan isi dengan data yang diberikan
+        $alt1Model = new Alt1Model();
+        $alt1Model->fill($request->validated());
+    
+        // Simpan Alt1Model ke dalam relasi undanganAlt1RSVP pada UndanganAlt1 yang sesuai
+        $undanganAlt1->alt1Models()->save($alt1Model);
+    
         return redirect()->route('undangan-alt1-index', [
-            'alt1',
-            'undangan'
-        ])->with('success', 'Data berhasil disimpan');
+            'nama_mempelai_laki' => $nama_mempelai_laki,
+            'nama_mempelai_perempuan' => $nama_mempelai_perempuan,
+            'nama_undangan' => $nama_undangan
+        ])->with('success', 'Berhasil menambahkan data');
     }
-
+    
 
 
     /**
