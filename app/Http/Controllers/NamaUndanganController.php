@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\NamaUndangan;
 use App\Models\UndanganAlt1;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class NamaUndanganController extends Controller
 {
@@ -33,30 +34,46 @@ class NamaUndanganController extends Controller
 
     public function store(Request $request, $undanganAlt1Id)
     {
+        // Definisikan pesan untuk validasi
+        $messages = [
+            'required' => 'Kolom :attribute harus diisi.',
+            'string' => 'Kolom :attribute harus berupa teks.',
+            'nama_undangan.required' => 'Nama undangan harus diisi.',
+        ];
+    
+        // Validasi input nama undangan
+        $validator = Validator::make($request->all(), [
+            'nama_undangan' => 'required|string', // Anda dapat menyesuaikan aturan validasi sesuai kebutuhan
+        ], $messages);
+    
+        // Jika validasi gagal, kembalikan ke halaman sebelumnya dengan pesan error
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+    
         // Mendapatkan instance UndanganAlt1 berdasarkan ID
         $undanganAlt1 = UndanganAlt1::findOrFail($undanganAlt1Id);
-
+    
         // Memecah nama undangan menjadi array
         $nama_undangans = explode("\n", $request->nama_undangan);
-
+    
         foreach ($nama_undangans as $nama_undangan) {
             $nama_undangan = trim($nama_undangan);
-
+    
             $data = [
                 'nama_undangan' => $nama_undangan,
             ];
-
+    
             // Buat instance NamaUndangan
             $namaUndangan = new NamaUndangan($data);
-
+    
             // Simpan model NamaUndangan terkait dengan UndanganAlt1
             $undanganAlt1->namaUndangan()->save($namaUndangan);
         }
-
+    
         // Redirect ke halaman index dengan pesan sukses
         return redirect()->route('nama-undangan-list', $undanganAlt1Id)->with('success', 'Berhasil menambahkan data');
     }
-
 
 
 
