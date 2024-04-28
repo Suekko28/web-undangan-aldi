@@ -378,7 +378,7 @@
                     <div class="nama-lengkap3">Nama Lengkap</div>
                     <div class="field34">
                         <input name="nama" class="masukkan-nama-kamu9" placeholder="Masukkan nama kamu"
-                            type="text" />
+                            type="text" disabled/>
                     </div>
                 </div>
                 <div class="pendekatan-perikahan-frame">
@@ -396,7 +396,7 @@
                 </div>
                 <div class="ucapan-doa-container">
                     <div class="ucapan-doa9">Ucapan & Doa</div>
-                    <textarea class="field35" name="ucapan" placeholder="Kirim ucapan & doa" rows="6" cols="28"></textarea>
+                    <textarea class="field35" disabled name="ucapan" placeholder="Kirim ucapan & doa" rows="6" cols="28"></textarea>
                 </div>
             </div>
             <button class="cardlist" type="submit">
