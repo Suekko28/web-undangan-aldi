@@ -56,7 +56,7 @@
                             </a>
                         </div>
                         <!-- /Logo -->
-                        <h4 class="mb-2">Welcome to admin Undangan</h4>
+                        <h4 class="mb-2">Welcome to Admin Undangan</h4>
                         <p class="mb-4"></p>
                         @include('layouts.message')
                         <form id="formAuthentication" class="mb-3"  action="{{ route('login.submit') }}" method="POST">

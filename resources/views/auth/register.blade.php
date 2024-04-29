@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="light-style customizer-hide" dir="ltr" data-theme="theme-default"
-    data-assets-path="{{ asset('.assets/admin/') }}" data-template="vertical-menu-template-free">
+    data-assets-path="{{ asset('../assets/admin/') }}" data-template="vertical-menu-template-free">
 
 <head>
     <meta charset="utf-8" />
@@ -14,7 +14,7 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ asset('assets/admin/assets/img/favicon/favicon.ico') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('../assets/admin/assets/img/favicon/favicon.ico') }}" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,27 +24,27 @@
         rel="stylesheet" />
 
     <!-- Icons. Uncomment required icon fonts -->
-    <link rel="stylesheet" href="{{ asset('assets/admin/assets/vendor/fonts/boxicons.css') }}" />
+    <link rel="stylesheet" href="{{ asset('../assets/admin/assets/vendor/fonts/boxicons.css') }}" />
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/admin/assets/vendor/css/core.css') }}"
+    <link rel="stylesheet" href="{{ asset('../assets/admin/assets/vendor/css/core.css') }}"
         class="template-customizer-core-css" />
-    <link rel="stylesheet" href="{{ asset('assets/admin/assets/vendor/css/theme-default.css') }}"
+    <link rel="stylesheet" href="{{ asset('../assets/admin/assets/vendor/css/theme-default.css') }}"
         class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="{{ asset('assets/admin/assets/css/demo.css') }}" />
+    <link rel="stylesheet" href="{{ asset('../assets/admin/assets/css/demo.css') }}" />
 
     <!-- Vendors CSS -->
     <link rel="stylesheet"
-        href="{{ asset('assets/admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
+        href="{{ asset('../assets/admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
 
     <!-- Page CSS -->
 
     <!-- Helpers -->
-    <script src="{{ asset('assets/admin/assets/vendor/js/helpers.js') }}"></script>
+    <script src="{{ asset('../assets/admin/assets/vendor/js/helpers.js') }}"></script>
 
     <!-- Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!-- Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
-    <script src="{{ asset('assets/admin/assets/js/config.js') }}"></script>
+    <script src="{{ asset('../assets/admin/assets/js/config.js') }}"></script>
 </head>
 
 <body>
@@ -64,7 +64,7 @@
                             </a>
                         </div>
                         <!-- /Logo -->
-                        <h4 class="mb-2">Selamat Datang di About Food admin</h4>
+                        <h4 class="mb-2">Selamat Datang di About Food Admin</h4>
                         @include('layouts.message')
                         <form id="formAuthentication" class="mb-3" action="{{ route('register.submit') }}"
                             method="POST">
@@ -117,18 +117,19 @@
 
     <!-- Core JS -->
     <!-- build:js assets/admin/vendor/js/core.js -->
-    <script src="{{ asset('assets/admin/assets/vendor/libs/jquery/jquery.js') }}"></script>
-    <script src="{{ asset('assets/admin/assets/vendor/libs/popper/popper.js') }}"></script>
-    <script src="{{ asset('assets/admin/assets/vendor/js/bootstrap.js') }}"></script>
-    <script src="{{ asset('assets/admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
+    <script src="{{ asset('../assets/admin/assets/vendor/libs/jquery/jquery.js') }}"></script>
+    <script src="{{ asset('../assets/admin/assets/vendor/libs/popper/popper.js') }}"></script>
+    <script src="{{ asset('../assets/admin/assets/vendor/js/bootstrap.js') }}"></script>
+    <script src="{{ asset('../assets/admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js') }}"></script>
 
-    <script src="{{ asset('assets/admin/assets/vendor/js/menu.js') }}"></script>
+    <script src="{{ asset('../assets/admin/assets/vendor/js/menu.js') }}"></script>
     <!-- endbuild -->
 
     <!-- Vendors JS -->
 
     <!-- Main JS -->
-    <script src="{{ asset('assets/admin/assets/js/main.js') }}"></script>
+    <script src="{{ asset('../assets/admin/assets/js/main.js') }}"></script>
+
     <!-- Page JS -->
 
     <!-- Place this tag in your head or just before your close body tag. -->
