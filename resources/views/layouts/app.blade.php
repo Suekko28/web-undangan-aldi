@@ -69,8 +69,9 @@
                     </li>
 
                     <!-- Undangan -->
+                    <!-- Undangan -->
                     <li class="menu-item">
-                        <a href="javascript:void(0);" class="menu-link menu-toggle">
+                        <a href="#" class="menu-link menu-toggle">
                             <i class="menu-icon tf-icons bx bx-layout"></i>
                             <div data-i18n="Layouts">Undangan</div>
                         </a>
@@ -92,13 +93,13 @@
                             </li>
                         </ul>
                     </li>
+
                 </ul>
             </aside>
             <!-- / Menu -->
 
             <!-- Layout container -->
             <div class="layout-page">
-                
                 <!-- Navbar -->
                 <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
                     id="layout-navbar">
@@ -126,11 +127,11 @@
                         <ul class="navbar-nav flex-row align-items-center ms-auto">
                             <!-- User -->
                             <li class="nav-item navbar-dropdown dropdown-user dropdown">
-                                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);"
-                                    data-bs-toggle="dropdown">
+                                <a class="nav-link dropdown-toggle hide-arrow" href="#" id="navbarDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     {{ auth()->user()->name }}
                                 </a>
-                                <ul class="dropdown-menu dropdown-menu-end">
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                     <li>
                                         <a class="dropdown-item" href="#">
                                             <div class="d-flex">
@@ -145,17 +146,17 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <div class="dropdown-divider"></div>
+                                        <hr class="dropdown-divider">
                                     </li>
                                     <li>
-                                        <form action="{{ route('logout') }}" method="get">
+                                        <form action="{{ route('logout') }}" method="GET">
                                             @csrf
                                             <button type="submit" class="dropdown-item">Log out</button>
                                         </form>
-
                                     </li>
                                 </ul>
                             </li>
+
                             <!--/ User -->
                         </ul>
                     </div>
@@ -167,11 +168,18 @@
                     <!-- Navbar Admin Content -->
                     @yield('navbar-admin')
                     <!-- / Navbar Admin Content -->
-                    <!-- / Layout wrapper -->
+
+                    <!-- Other content goes here -->
                 </div>
+                <!-- / Content wrapper -->
             </div>
+            <!-- / Layout container -->
         </div>
     </div>
+    <!-- / Layout wrapper -->
+
+    <!-- JavaScript -->
+    <!-- Add any additional scripts here -->
 
 </body>
 
