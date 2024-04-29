@@ -152,16 +152,8 @@
                 <!-- Content wrapper -->
                 <div class="content-wrapper">
                     <!-- Navbar Admin Content -->
-                    @yield('navbar-Admin')
+                    @yield('navbar-admin')
                     <!-- / Navbar Admin Content -->
-
-                    <!-- Other content goes here -->
-                </div>
-                <!-- / Content wrapper -->
-            </div>
-            <!-- / Layout container -->
-        </div>
-    </div>
     <!-- / Layout wrapper -->
 
     <!-- JavaScript -->
