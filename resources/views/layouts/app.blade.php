@@ -10,7 +10,7 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ asset('assets/admin/assets/img/favicon/favicon.ico') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/Admin/assets/img/favicon/favicon.ico') }}" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,29 +20,29 @@
         rel="stylesheet" />
 
     <!-- Icons. Uncomment required icon fonts -->
-    <link rel="stylesheet" href="{{ asset('assets/admin/assets/vendor/fonts/boxicons.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/Admin/assets/vendor/fonts/boxicons.css') }}" />
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/admin/assets/vendor/css/core.css') }}"
+    <link rel="stylesheet" href="{{ asset('assets/Admin/assets/vendor/css/core.css') }}"
         class="template-customizer-core-css" />
-    <link rel="stylesheet" href="{{ asset('assets/admin/assets/vendor/css/theme-default.css') }}"
+    <link rel="stylesheet" href="{{ asset('assets/Admin/assets/vendor/css/theme-default.css') }}"
         class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="{{ asset('assets/admin/assets/css/demo.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/Admin/assets/css/demo.css') }}" />
 
     <!-- Vendors CSS -->
     <link rel="stylesheet"
-        href="{{ asset('assets/admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
+        href="{{ asset('assets/Admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
 
     <!-- Page CSS -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- Helpers -->
-    <script src="{{ asset('assets/admin/assets/vendor/js/helpers.js') }}"></script>
+    <script src="{{ asset('assets/Admin/assets/vendor/js/helpers.js') }}"></script>
 
     <!-- Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!-- Config: Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file. -->
-    <script src="{{ asset('assets/admin/assets/js/config.js') }}"></script>
+    <script src="{{ asset('assets/Admin/assets/js/config.js') }}"></script>
 
 </head>
 
@@ -148,9 +148,9 @@
 
                 <!-- Content wrapper -->
                 <div class="content-wrapper">
-                    <!-- Navbar admin Content -->
+                    <!-- Navbar Admin Content -->
                     @yield('navbar-admin')
-                    <!-- / Navbar admin Content -->
+                    <!-- / Navbar Admin Content -->
 
                     <!-- Other content goes here -->
                 </div>
