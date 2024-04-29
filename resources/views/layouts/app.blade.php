@@ -11,7 +11,7 @@
     <meta name="description" content="" />
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ asset('./assets/Admin/assets/img/favicon/favicon.ico') }}" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/Admin/assets/img/favicon/favicon.ico') }}" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -21,18 +21,18 @@
         rel="stylesheet" />
 
     <!-- Icons. Uncomment required icon fonts -->
-    <link rel="stylesheet" href="{{ asset('./assets/Admin/assets/vendor/fonts/boxicons.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/Admin/assets/vendor/fonts/boxicons.css') }}" />
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href="{{ asset('./assets/Admin/assets/vendor/css/core.css') }}"
+    <link rel="stylesheet" href="{{ asset('assets/Admin/assets/vendor/css/core.css') }}"
         class="template-customizer-core-css" />
-    <link rel="stylesheet" href="{{ asset('./assets/Admin/assets/vendor/css/theme-default.css') }}"
+    <link rel="stylesheet" href="{{ asset('assets/Admin/assets/vendor/css/theme-default.css') }}"
         class="template-customizer-theme-css" />
-    <link rel="stylesheet" href="{{ asset('./assets/Admin/assets/css/demo.css') }}" />
+    <link rel="stylesheet" href="{{ asset('assets/Admin/assets/css/demo.css') }}" />
 
     <!-- Vendors CSS -->
     <link rel="stylesheet"
-        href="{{ asset('./assets/Admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
+        href="{{ asset('assets/Admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
 
     <!-- Page CSS -->
     <!-- Add any additional page-specific CSS here -->
@@ -98,7 +98,7 @@
 
             <!-- Layout container -->
             <div class="layout-page">
-
+                
                 <!-- Navbar -->
                 <nav class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
                     id="layout-navbar">
@@ -172,9 +172,6 @@
             </div>
         </div>
     </div>
-
-    <!-- JavaScript -->
-    <!-- Add any additional scripts here -->
 
 </body>
 
