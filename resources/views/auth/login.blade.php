@@ -17,7 +17,7 @@
   class="light-style customizer-hide"
   dir="ltr"
   data-theme="theme-default"
-  data-assets-path="..//assets/Admin//assets//"
+  data-assets-path="../assets/Admin//assets//"
   data-template="vertical-menu-template-free"
 >
   <head>

@@ -15,21 +15,25 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet" />
 
     <!-- Icons. Uncomment required icon fonts -->
     <link rel="stylesheet" href="{{ asset('assets/Admin/assets/vendor/fonts/boxicons.css') }}" />
 
     <!-- Core CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/Admin/assets/vendor/css/core.css') }}" class="template-customizer-core-css" />
-    <link rel="stylesheet" href="{{ asset('assets/Admin/assets/vendor/css/theme-default.css') }}" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="{{ asset('assets/Admin/assets/vendor/css/core.css') }}"
+        class="template-customizer-core-css" />
+    <link rel="stylesheet" href="{{ asset('assets/Admin/assets/vendor/css/theme-default.css') }}"
+        class="template-customizer-theme-css" />
     <link rel="stylesheet" href="{{ asset('assets/Admin/assets/css/demo.css') }}" />
 
     <!-- Vendors CSS -->
-    <link rel="stylesheet" href="{{ asset('assets/Admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
+    <link rel="stylesheet"
+        href="{{ asset('assets/Admin/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css') }}" />
 
     <!-- Page CSS -->
-    <!-- Add any additional page-specific CSS here -->
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -39,7 +43,6 @@
     <!-- Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
     <!-- Config: Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file. -->
     <script src="{{ asset('assets/Admin/assets/js/config.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </head>
 
@@ -152,20 +155,8 @@
                 <!-- Content wrapper -->
                 <div class="content-wrapper">
                     <!-- Navbar Admin Content -->
-                    @yield('navbar-admin')
+                    @yield('navbar-Admin')
                     <!-- / Navbar Admin Content -->
-
-                    <!-- Other content goes here -->
-                </div>
-                <!-- / Content wrapper -->
-            </div>
-            <!-- / Layout container -->
-        </div>
-    </div>
-    <!-- / Layout wrapper -->
-
-    <!-- JavaScript -->
-    <!-- Add any additional scripts here -->
     
 </body>
 </html>
