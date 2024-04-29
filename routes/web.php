@@ -35,9 +35,9 @@ Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
 Route::get('/register', [LoginController::class, 'register'])->name('register.form');
 Route::post('/create', [LoginController::class, 'create'])->name('register.submit');
 Route::get('/logout', [LoginController::class, 'logout'])->name('logout');
-Route::get('/', function () {
-    return redirect()->route('login.form');
-});
+// Route::get('/', function () {
+//     return redirect()->route('login.form');
+// });
 
 
 Route::middleware(['auth'])->group(function () {
@@ -63,9 +63,9 @@ Route::middleware(['auth'])->group(function () {
 
 // Routing User
 
-// Route::get('/', function () {
-//     return view('index');
-// });
+Route::get('/', function () {
+    return view('index');
+});
 
 // Route::get('/undangan-alt1', function () {
 //     return view('undangan-aldi.home');
@@ -87,7 +87,7 @@ Route::get('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/{nama_undangan}/inde
 
 Route::post('/{nama_mempelai_laki}&{nama_mempelai_perempuan}/{nama_undangan}/index', [IndexAlt1Controller::class, 'store'])->name('undangan-alt1-post');
 
-// Route::resource('/undangan-alt1/index', Alt1Controller::class)->only(['index', 'store']);
+Route::resource('/undangan-alt1/index', Alt1Controller::class)->only(['index', 'store']);
 
 
 
@@ -97,7 +97,7 @@ Route::get('/undangan-alt2', function () {
 });
 
 
-Route::resource('/undangan-alt2', Alt2Controller::class)->only(['index', 'store']);
+Route::resource('/undangan-alt2/index', Alt2Controller::class)->only(['index', 'store']);
 
 
 
@@ -106,7 +106,7 @@ Route::get('/undangan-alt3', function () {
 });
 
 
-Route::resource('/undangan-alt3', Alt3Controller::class)->only(['index', 'store']);
+Route::resource('/undangan-alt3/index', Alt3Controller::class)->only(['index', 'store']);
 
 
 
